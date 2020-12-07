@@ -14,5 +14,7 @@
         <module>base-microservice</module>
         <module>backstage-service</module>
         <module>backstage-service/backstage-user-service</module>
+        <module>backstage-service/backstage-maintenance-service</module>
+        <module>backstage-service/backstage-exam-service</module>
     </modules>
 </project>
