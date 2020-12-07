@@ -9,6 +9,8 @@
         <module name="base-zuul-gateway" />
         <module name="base-hystrix-dashborad" />
         <module name="backstage-service" />
+        <module name="backstage-maintenance-service" />
+        <module name="backstage-exam-service" />
         <module name="base-security" />
         <module name="backstage-admin-service" />
         <module name="base-eureka" />
