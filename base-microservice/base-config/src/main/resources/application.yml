@@ -1,0 +1,36 @@
+server:
+  port: 7101
+
+spring:
+  security:
+    user:
+      name: admin
+      password: a
+  application:
+    name: base-config
+  cloud:
+    config:
+      server:
+#        git:
+#          uri: https://github.com/shanxiaozhi/yc-learning-config.git
+#          default-label: main        # 一定要配置，因为github升级后，已经没有 master 分支了， 而config server 默认是 master,  现在已经是 main
+#          username: shanxiaozhi
+#          password: 1999080304xyly
+         git: #git服务器配置
+           uri: https://github.com/jjyyds/pic-config.git
+           basedir: D:/git-config #指定缓存路径
+           default-label: main
+#    bus:
+#      trace:
+#        enabled: true
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: 39.105.183.155
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:a@localhost:7301/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: base-config

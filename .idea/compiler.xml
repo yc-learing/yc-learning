@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base-zuul-gateway" />
+        <module name="base-hystrix-dashborad" />
+        <module name="backstage-service" />
+        <module name="base-security" />
+        <module name="backstage-admin-service" />
+        <module name="base-eureka" />
+        <module name="base-turbine" />
+        <module name="backstage-user-service" />
+        <module name="base-config" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backstage-admin-service" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

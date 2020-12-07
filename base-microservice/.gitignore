@@ -1,0 +1,3 @@
+# Project exclude paths
+/base-config/target/
+/base-eureka/target/

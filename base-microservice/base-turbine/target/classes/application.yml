@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: BASE-TURBINE
+server:
+  port: 9101

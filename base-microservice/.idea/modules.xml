@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/base-config/base-config.iml" filepath="$PROJECT_DIR$/base-config/base-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-eureka/base-eureka.iml" filepath="$PROJECT_DIR$/base-eureka/base-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-hystrix-dashborad/base-hystrix-dashborad.iml" filepath="$PROJECT_DIR$/base-hystrix-dashborad/base-hystrix-dashborad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice.iml" filepath="$PROJECT_DIR$/base-microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-security/base-security.iml" filepath="$PROJECT_DIR$/base-security/base-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-turbine/base-turbine.iml" filepath="$PROJECT_DIR$/base-turbine/base-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-zuul-gateway/base-zuul-gateway.iml" filepath="$PROJECT_DIR$/base-zuul-gateway/base-zuul-gateway.iml" />
+    </modules>
+  </component>
+</project>
