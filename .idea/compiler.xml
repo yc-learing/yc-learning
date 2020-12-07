@@ -21,6 +21,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="backstage-admin-service" target="1.5" />
+      <module name="learning-domain" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
