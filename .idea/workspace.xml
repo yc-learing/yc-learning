@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,10 +12,19 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="liyan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\repository" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1lMTqeV0fKPXiMl99ILcEZYifMh" />
   <component name="ProjectViewState">
@@ -30,6 +39,44 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.ZuulApp">
+    <configuration name="ConfigApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.ConfigApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.EurekaApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HystrixDashboradApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-hystrix-dashborad" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.HystrixDashboradApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurbineApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-turbine" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.TurbineApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="base-zuul-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.ZuulApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -55,15 +102,68 @@
       <updated>1607406156060</updated>
       <workItem from="1607406172214" duration="148000" />
     </task>
+    <task id="LOCAL-00001" summary="还原">
+      <created>1607407984029</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607407984029</updated>
+    </task>
+    <task id="LOCAL-00002" summary="还原">
+      <created>1607408773475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607408773475</updated>
+    </task>
+    <task id="LOCAL-00003" summary="还原">
+      <created>1607408819698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607408819698</updated>
+    </task>
+    <task id="LOCAL-00004" summary="还原">
+      <created>1607409328312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607409328312</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="还原" />
+    <option name="LAST_COMMIT_MESSAGE" value="还原" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="95" key="SettingsEditor" timestamp="1607406256088">
+    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409311020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607406256088" />
+    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409311020" />
+    <state x="719" y="208" key="FileChooserDialogImpl" timestamp="1607408515777">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="208" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607408515777" />
+    <state x="440" y="95" key="SettingsEditor" timestamp="1607408518247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607408518247" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607409125800">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409125800" />
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607408051779">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607408051779" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607409236190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607409236190" />
   </component>
 </project>
