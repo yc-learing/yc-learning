@@ -12,11 +12,10 @@
     <artifactId>backstage-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>backstage-admin-service</module>
-        <module>backstage-exam-service</module>
-        <module>backstage-maintenance-service</module>
-        <module>backstage-user-service</module>
-        <module>backstage-web-service</module>
+        <module>backstage-web</module>
+        <module>backstage-domain</module>
+        <module>backstage-restapi</module>
+        <module>backstage-client</module>
     </modules>
 
 

@@ -13,5 +13,8 @@
     <modules>
         <module>base-microservice</module>
         <module>backstage-service</module>
+        <module>learning-commons</module>
+
+        <module>yc-learning-service</module>
     </modules>
 </project>
