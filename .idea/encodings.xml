@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/backstage-service/backstage-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backstage-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-microservice/base-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-microservice/base-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-microservice/base-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-microservice/base-turbine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-microservice/base-zuul-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yc-learning-service/learning-exam-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yc-learning-service/learning-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yc-learning-service/src/main/java" charset="UTF-8" />
+  </component>
+</project>
