@@ -18,6 +18,12 @@
         <module name="backstage-user-service" />
         <module name="base-config" />
       </profile>
+      <profile name="Annotation profile for yc-learning" enabled="true">
+        <sourceOutputDir name="../../backstage-web-service/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../backstage-web-service/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="backstage-web-service" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="backstage-admin-service" target="1.5" />

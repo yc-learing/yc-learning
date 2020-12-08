@@ -16,5 +16,6 @@
         <module>backstage-service/backstage-user-service</module>
         <module>backstage-service/backstage-maintenance-service</module>
         <module>backstage-service/backstage-exam-service</module>
+        <module>backstage-web-service</module>
     </modules>
 </project>
