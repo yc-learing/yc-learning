@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/base-microservice/base-config/src/main/java/com/yc/learning/ConfigApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-config/src/main/java/com/yc/learning/ConfigApp.java" afterDir="false" />
@@ -160,17 +169,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607408518247" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607409537764">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607424499941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409537764" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607424499941" />
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607408051779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607408051779" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607409236190">
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607424495031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607409236190" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607424495031" />
   </component>
 </project>
