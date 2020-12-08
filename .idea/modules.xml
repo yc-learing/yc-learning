@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" />
     </modules>
   </component>
 </project>

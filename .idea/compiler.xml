@@ -8,12 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="base-zuul-gateway" />
         <module name="base-hystrix-dashborad" />
-        <module name="backstage-service" />
         <module name="backstage-maintenance-service" />
         <module name="backstage-exam-service" />
         <module name="base-security" />
         <module name="backstage-admin-service" />
+        <module name="admin-client" />
         <module name="base-eureka" />
+        <module name="admin-domain" />
         <module name="base-turbine" />
         <module name="backstage-user-service" />
         <module name="base-config" />
@@ -27,6 +28,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="backstage-admin-service" target="1.5" />
+      <module name="backstage-web-service" target="1.5" />
       <module name="learning-domain" target="1.5" />
     </bytecodeTargetLevel>
   </component>
