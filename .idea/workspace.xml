@@ -11,53 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_17_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_base_1_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_core_1_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_extra_1_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_1_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_2_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_2_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_weekend_1_1_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/AdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ChapterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/CourseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ExamMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ExercisesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/RecordMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/MisBaseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/learning-practice-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-base-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-base-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -216,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607428970863</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="基础服务框架搭建">
+      <created>1607432941248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607432941248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +208,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607432767160" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1607433318187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607433318187" />
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
