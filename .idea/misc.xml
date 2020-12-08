@@ -9,6 +9,10 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/backstage-service/backstage-exam-service/pom.xml" />
+        <option value="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/pom.xml" />
         <option value="$PROJECT_DIR$/base-microservice/learning-domain/pom.xml" />
       </set>
     </option>

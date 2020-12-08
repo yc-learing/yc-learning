@@ -11,7 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-config/src/main/java/com/yc/learning/ConfigApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-config/src/main/java/com/yc/learning/ConfigApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -36,6 +43,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1lMTqeV0fKPXiMl99ILcEZYifMh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -173,13 +181,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607424499941" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607408051779">
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607429372160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607408051779" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607424495031">
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607429372160" />
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607429623851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607424495031" />
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607429623851" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607429506346">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607429506346" />
   </component>
 </project>
