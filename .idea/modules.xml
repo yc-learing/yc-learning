@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-exam-service/backstage-exam-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-exam-service/backstage-exam-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-maintenance-service/backstage-maintenance-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/backstage-maintenance-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-service.iml" />
