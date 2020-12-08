@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>backstage-service</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>backstage-admin-service/admin-client</module>
-        <module>backstage-admin-service/admin-domain</module>
-        <module>backstage-admin-service/admin-web</module>
-    </modules>
+    <artifactId>backstage-web-service</artifactId>
 
 
 </project>

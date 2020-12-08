@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base-microservice/base-config/src/main/java/com/yc/learning/ConfigApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-config/src/main/java/com/yc/learning/ConfigApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="liyan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +50,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ZuulApp">
     <configuration name="ConfigApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-config" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.ConfigApp" />
@@ -124,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607408819698</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="还原">
+      <created>1607409328312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607409328312</updated>
+    </task>
+    <task id="LOCAL-00005" summary="还原">
+      <created>1607409518901</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607409518901</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,10 +157,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="还原" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409311020">
+    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409311020" />
+    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409518322" />
     <state x="719" y="208" key="FileChooserDialogImpl" timestamp="1607408515777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -147,17 +169,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607408518247" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607409125800">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607424499941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409125800" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607424499941" />
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607408051779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607408051779" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607409236190">
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607424495031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607409236190" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607424495031" />
   </component>
 </project>
