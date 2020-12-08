@@ -11,9 +11,9 @@
     <file url="file://$PROJECT_DIR$/base-microservice/base-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-microservice/base-turbine/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-microservice/base-zuul-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/yc-learning-service/learning-base-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yc-learning-service/learning-exam-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yc-learning-service/learning-user-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yc-learning-service/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -11,61 +11,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建">
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_17_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_base_1_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_core_1_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_extra_1_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_1_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_2_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_weekend_1_1_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/AdminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ChapterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/CourseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ExamMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ExercisesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/RecordMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/MisBaseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/learning-practice-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_yc_learning_learning_domain_0_0_1_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_unknown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_unknown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_12_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_12_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-config/base-config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-config/base-config.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/base-hystrix-dashborad.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/base-hystrix-dashborad.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-turbine/base-turbine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-turbine/base-turbine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/base-zuul-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/base-zuul-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-base-service/learning-base-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-base-service/learning-base-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/learning-practice-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/learning-practice-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/yc-learning-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/yc-learning-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-base-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-base-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HillCheung" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -230,10 +240,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="基础服务框架搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1607431176309">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1607432767160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607431176309" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607432767160" />
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -262,6 +272,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607428910447" />
+    <state x="292" y="55" key="MergeDialog" timestamp="1607432084299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="292" y="55" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607432084299" />
+    <state x="597" y="352" width="942" height="274" key="MultipleFileMergeDialog" timestamp="1607432084302">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="597" y="352" width="942" height="274" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607432084302" />
     <state x="600" y="224" key="NewModule_or_Project.wizard" timestamp="1607426952074">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -270,29 +288,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607430192719" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607429005940">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607432043714">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607429005940" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607432043714" />
     <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607426476686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607426476686" />
-    <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607426723023">
+    <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607431936187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607426723023" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607408051779">
+    <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431936187" />
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607432049258">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607408051779" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607430280027">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607432049258" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607431876394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607430280027" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431876394" />
     <state x="335" y="181" key="new project wizard" timestamp="1607431226079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607431226079" />
+    <state x="725" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1607432366343">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="725" y="401" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607432366343" />
   </component>
 </project>

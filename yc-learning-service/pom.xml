@@ -13,7 +13,7 @@
 
 
     <modules>
-        <module>learning-base-service</module>
+        <module>learning-user-service</module>
         <module>learning-exam-service</module>
         <module>learning-practice-service</module>
     </modules>
