@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/backstage-admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-exam-service/backstage-exam-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-exam-service/backstage-exam-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-maintenance-service/backstage-maintenance-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/backstage-maintenance-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-user-service/backstage-user-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-user-service/backstage-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-config/base-config.iml" filepath="$PROJECT_DIR$/base-microservice/base-config/base-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-eureka/base-eureka.iml" filepath="$PROJECT_DIR$/base-microservice/base-eureka/base-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/base-hystrix-dashborad.iml" filepath="$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/base-hystrix-dashborad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-microservice.iml" filepath="$PROJECT_DIR$/base-microservice/base-microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-security/base-security.iml" filepath="$PROJECT_DIR$/base-microservice/base-security/base-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-turbine/base-turbine.iml" filepath="$PROJECT_DIR$/base-microservice/base-turbine/base-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-microservice/base-zuul-gateway/base-zuul-gateway.iml" filepath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/base-zuul-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yc-learning.iml" filepath="$PROJECT_DIR$/yc-learning.iml" />
     </modules>
   </component>
 </project>

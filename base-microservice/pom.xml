@@ -17,7 +17,7 @@
 	</properties>
 	<parent>
 		<artifactId>yc-learning</artifactId>
-		<groupId>org.example</groupId>
+		<groupId>com.yc</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modules>
@@ -27,7 +27,6 @@
 		<module>base-turbine</module>
 		<module>base-zuul-gateway</module>
 		<module>base-config</module>
-		<module>learning-domain</module>
 	</modules>
 	<!--  会实际下载jar包,子项目会继承这些依赖   -->
 	<dependencies>

@@ -6,28 +6,40 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-zuul-gateway" />
-        <module name="base-hystrix-dashborad" />
-        <module name="backstage-service" />
-        <module name="backstage-maintenance-service" />
-        <module name="backstage-exam-service" />
         <module name="base-security" />
-        <module name="backstage-admin-service" />
-        <module name="base-eureka" />
-        <module name="base-turbine" />
-        <module name="backstage-user-service" />
-        <module name="base-config" />
-      </profile>
-      <profile name="Annotation profile for yc-learning" enabled="true">
-        <sourceOutputDir name="../../backstage-web-service/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../backstage-web-service/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
+        <module name="admin-client" />
         <module name="backstage-web-service" />
+        <module name="backstage-user-service" />
+        <module name="admin-service" />
+        <module name="base-eureka" />
+        <module name="base-config" />
+        <module name="base-hystrix-dashborad" />
+        <module name="admin-web" />
+        <module name="base-zuul-gateway" />
+        <module name="backstage-maintenance-service" />
+        <module name="admin-domain" />
+        <module name="backstage-exam-service" />
+        <module name="base-turbine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="backstage-admin-service" target="1.5" />
-      <module name="learning-domain" target="1.5" />
+      <module name="admin-client" target="1.5" />
+      <module name="admin-domain" target="1.5" />
+      <module name="admin-service" target="1.5" />
+      <module name="admin-web" target="1.5" />
+      <module name="backstage-exam-service" target="1.5" />
+      <module name="backstage-maintenance-service" target="1.5" />
+      <module name="backstage-service" target="1.5" />
+      <module name="backstage-user-service" target="1.5" />
+      <module name="backstage-web-service" target="1.5" />
+      <module name="base-config" target="1.8" />
+      <module name="base-eureka" target="1.8" />
+      <module name="base-hystrix-dashborad" target="1.8" />
+      <module name="base-microservice" target="1.8" />
+      <module name="base-security" target="1.8" />
+      <module name="base-turbine" target="1.8" />
+      <module name="base-zuul-gateway" target="1.8" />
+      <module name="yc-learning" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
