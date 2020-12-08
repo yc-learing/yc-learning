@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>yc-learning</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.yc</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,9 +12,11 @@
     <artifactId>backstage-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>backstage-admin-service/admin-client</module>
-        <module>backstage-admin-service/admin-domain</module>
-        <module>backstage-admin-service/admin-web</module>
+        <module>backstage-admin-service</module>
+        <module>backstage-exam-service</module>
+        <module>backstage-maintenance-service</module>
+        <module>backstage-user-service</module>
+        <module>backstage-web-service</module>
     </modules>
 
 
