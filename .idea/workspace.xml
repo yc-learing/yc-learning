@@ -10,12 +10,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建">
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" afterDir="false" />
-    </list>
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607432941248</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="基础服务框架搭建">
+      <created>1607434134073</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607434134073</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,10 +206,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="基础服务框架搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1607432767160">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1607433948043">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607432767160" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607433948043" />
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1607433318187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -256,10 +258,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607430192719" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607432043714">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607434157875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607432043714" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607434157875" />
     <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607426476686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,14 +270,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431936187" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607432049258">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607434168146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607432049258" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607431876394">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434168146" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607434187369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431876394" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434187369" />
     <state x="335" y="181" key="new project wizard" timestamp="1607431226079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
