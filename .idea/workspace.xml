@@ -11,38 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/backstage-maintenance-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-user-service/backstage-user-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-config/base-config.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-eureka/base-eureka.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/base-hystrix-dashborad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-microservice.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/base-security.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-turbine/base-turbine.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/base-zuul-gateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-admin-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-admin-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-exam-service/backstage-exam-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-exam-service/backstage-exam-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-exam-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-exam-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web-service/backstage-web-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-microservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-microservice.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +98,18 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -189,12 +170,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="还原" />
@@ -249,14 +231,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607426723023" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607408051779">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607431040033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607408051779" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607426472081">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431040033" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607430992272">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607426472081" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607430992272" />
     <state x="335" y="181" key="new project wizard" timestamp="1607427168189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
