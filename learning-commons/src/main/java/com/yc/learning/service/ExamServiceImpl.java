@@ -28,22 +28,7 @@ public class ExamServiceImpl implements ExamService{
         return list;
     }
 
-    @Transactional(readOnly = true)
-    @Override
-    public PageDomain<Exam> listByPage(ExamDomain examDomain) {
-        Example example =new Example(Exam.class);  //条件
-        //分页查询条件
-        PageHelper.startPage(examDomain.getPage(), examDomain.getPageSize());
-        //排序条件
-        //Criteria：查询的规则
-        Example.Criteria c = example.createCriteria();
-        if (CommonUtils.isNotNull(examDomain.getEname())) {
-            //条件创建  where 1= 1 and description like '%xxx%'
 
-            c.andLike("description", "%" + examDomain.getEname() + "%");
-        }
-        return  null;
-    }
 
     @Override
     public void delete(Integer id) {

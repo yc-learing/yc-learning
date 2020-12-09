@@ -27,22 +27,7 @@ public class CourseServiceImpl implements  CourseService {
         return list;
     }
 
-    @Transactional(readOnly = true)
-    @Override
-    public PageDomain<Course> listByPage(CourseDomain picDomain) {
-        Example example =new Example(Course.class);  //条件
-        //分页查询条件
-        PageHelper.startPage(picDomain.getPage(), picDomain.getPageSize());
-        //排序条件
-        //Criteria：查询的规则
-        Example.Criteria c = example.createCriteria();
-        if (CommonUtils.isNotNull(picDomain.getCoursename())) {
-            //条件创建  where 1= 1 and description like '%xxx%'
 
-            c.andLike("description", "%" + picDomain.getCoursename() + "%");
-        }
-        return  null;
-    }
 
     @Override
     public void delete(Integer id) {

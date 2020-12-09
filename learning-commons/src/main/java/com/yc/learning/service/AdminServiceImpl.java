@@ -1,15 +1,11 @@
 package com.yc.learning.service;
 
-import com.github.pagehelper.PageHelper;
 import com.yc.learning.dao.impl.AdminMapper;
 import com.yc.learning.domain.AdminDomain;
-import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
-import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -28,22 +24,7 @@ public class AdminServiceImpl implements  AdminService{
         return list;
     }
 
-    @Transactional(readOnly = true)
-    @Override
-    public PageDomain<Admin> listByPage(AdminDomain adminDomain) {
-        Example example =new Example(Admin.class);  //条件
-        //分页查询条件
-        PageHelper.startPage(adminDomain.getPage(), adminDomain.getPageSize());
-        //排序条件
-        //Criteria：查询的规则
-        Example.Criteria c = example.createCriteria();
-        if (CommonUtils.isNotNull(adminDomain.getAname())) {
-            //条件创建  where 1= 1 and description like '%xxx%'
 
-            c.andLike("description", "%" + adminDomain.getAname() + "%");
-        }
-        return  null;
-    }
 
     @Override
     public void delete(Integer id) {

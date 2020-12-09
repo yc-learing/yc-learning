@@ -1,6 +1,5 @@
 package com.yc.learning.service;
 
-import com.yc.learning.domain.PageDomain;
 import com.yc.learning.domain.UserDomain;
 import com.yc.learning.entity.User;
 
@@ -17,7 +16,6 @@ public interface UserService {
     /**
      * 查询指定的管理员（分页查询）
      */
-    public PageDomain<User> listByPage(UserDomain User);
 
 
     /**
