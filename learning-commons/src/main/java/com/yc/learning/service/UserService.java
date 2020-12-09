@@ -1,7 +1,7 @@
 package com.yc.learning.service;
 
-import com.yc.learning.domain.UserDomain;
 import com.yc.learning.domain.PageDomain;
+import com.yc.learning.domain.UserDomain;
 import com.yc.learning.entity.User;
 
 import java.util.List;

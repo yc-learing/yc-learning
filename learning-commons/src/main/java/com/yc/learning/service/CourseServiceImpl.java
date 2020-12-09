@@ -1,19 +1,17 @@
 package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
-import com.yc.learning.dao.impl.CourseMapper;
-import com.yc.learning.domain.CourseDomain;
 import com.yc.learning.domain.CourseDomain;
 import com.yc.learning.domain.PageDomain;
-import com.yc.learning.entity.Course;
 import com.yc.learning.entity.Course;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
-
+import com.yc.learning.impl.CourseMapper;
 import java.util.List;
+
 @Service
 @Transactional
 public class CourseServiceImpl implements  CourseService {

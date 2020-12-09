@@ -1,20 +1,18 @@
 package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
-import com.yc.learning.dao.impl.ChapterMapper;
-import com.yc.learning.dao.impl.ChapterMapper;
-import com.yc.learning.domain.ChapterDomain;
 import com.yc.learning.domain.ChapterDomain;
 import com.yc.learning.domain.PageDomain;
-import com.yc.learning.entity.Chapter;
 import com.yc.learning.entity.Chapter;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
+import com.yc.learning.dao.impl.ChapterMapper;
 
 import java.util.List;
+
 @Service
 @Transactional
 public class ChapterServiceImpl implements  ChapterService{

@@ -1,6 +1,7 @@
 package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
+import com.yc.learning.dao.impl.ExamMapper;
 import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Exam;
@@ -11,12 +12,13 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
+
 @Service
 @Transactional
 public class ExamServiceImpl implements ExamService{
 
     @Autowired(required = false)
-    private com.yc.learning.dao.impl.ExamMapper ExamMapper;
+    private ExamMapper ExamMapper;
 
     @Transactional(readOnly = true)
     @Override

@@ -1,25 +1,23 @@
 package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
-import com.yc.learning.dao.impl.RecordMapper;
-import com.yc.learning.domain.RecordDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.domain.RecordDomain;
-import com.yc.learning.entity.Record;
 import com.yc.learning.entity.Record;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
-
+import com.yc.learning.dao.impl.RecordMapper;
 import java.util.List;
+
 @Service
 @Transactional
 public class RecordServiceImpl implements  RecordService {
 
     @Autowired(required = false)
-    private com.yc.learning.dao.impl.RecordMapper RecordMapper;
+    private RecordMapper RecordMapper;
 
     @Transactional(readOnly = true)
     @Override
