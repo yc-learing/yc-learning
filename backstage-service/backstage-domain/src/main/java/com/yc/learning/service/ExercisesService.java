@@ -1,26 +1,23 @@
 package com.yc.learning.service;
 
-import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.domain.ExercisesDomain;
 import com.yc.learning.domain.PageDomain;
-import com.yc.learning.entity.Admin;
+import com.yc.learning.entity.Exercises;
 
 import java.util.List;
 
-/**
- *
- */
-public interface AdminService {
+public interface ExercisesService {
 
     /**
      * 查询所有的管理员
      */
-    public List<Admin> findAll();
+    public List<Exercises> findAll();
 
 
     /**
      * 查询指定的管理员（分页查询）
      */
-    public PageDomain<Admin> listByPage(AdminDomain admin);
+    public PageDomain<Exercises> listByPage(ExercisesDomain Exercises);
 
 
     /**
@@ -34,12 +31,12 @@ public interface AdminService {
      * @param id
      * @return
      */
-    public AdminDomain findOne(Integer id);
+    public ExercisesDomain findOne(Integer id);
 
     /**
      * 修改管理员的信息
-     * @param admin
+     * @param Exercises
      * @return
      */
-    public void insert(AdminDomain admin);
+    public void insert(ExercisesDomain Exercises);
 }

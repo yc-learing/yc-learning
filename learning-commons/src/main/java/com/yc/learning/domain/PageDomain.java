@@ -1,10 +1,14 @@
 package com.yc.learning.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 //分页的实体
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class PageDomain<T> {
     private Integer page = 0;   //当前第几页

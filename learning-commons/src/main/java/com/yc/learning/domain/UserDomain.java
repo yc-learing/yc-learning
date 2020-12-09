@@ -1,9 +1,13 @@
 package com.yc.learning.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class UserDomain extends PageDomain{
     private Integer uid;
@@ -18,20 +22,4 @@ public class UserDomain extends PageDomain{
     private Date endtime;
     private Integer status;
 
-    public UserDomain(Integer uid, String uname, String upwd, String tel, String email, String qq, String vx, Integer classes, Date registrytime, Date endtime, Integer status) {
-        this.uid = uid;
-        this.uname = uname;
-        this.upwd = upwd;
-        this.tel = tel;
-        this.email = email;
-        this.qq = qq;
-        this.vx = vx;
-        this.classes = classes;
-        this.registrytime = registrytime;
-        this.endtime = endtime;
-        this.status = status;
-    }
-
-    public UserDomain() {
-    }
 }

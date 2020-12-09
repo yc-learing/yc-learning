@@ -1,11 +1,17 @@
 package com.yc.learning.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Id;
 import java.util.Date;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class ExercisesDomain extends PageDomain{
+    @Id
     private Integer eid;
     private Integer cid;
     private Integer type;
@@ -18,22 +24,7 @@ public class ExercisesDomain extends PageDomain{
     private String analysis;
     private Date inputtime;
     private String aname;
+    private String temp;
 
-    public ExercisesDomain(Integer eid, Integer cid, Integer type, String content, String optionA, String optionB, String optionC, String optionD, String answer, String analysis, Date inputtime, String aname) {
-        this.eid = eid;
-        this.cid = cid;
-        this.type = type;
-        this.content = content;
-        this.optionA = optionA;
-        this.optionB = optionB;
-        this.optionC = optionC;
-        this.optionD = optionD;
-        this.answer = answer;
-        this.analysis = analysis;
-        this.inputtime = inputtime;
-        this.aname = aname;
-    }
 
-    public ExercisesDomain() {
-    }
 }

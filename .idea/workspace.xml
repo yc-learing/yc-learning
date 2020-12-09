@@ -10,7 +10,37 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建" />
+    <list default="true" id="d722c7b8-2c59-4e5f-a4b1-cbefd3ddb8a9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/ChapterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/ChapterServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/CourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/CourseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/ExamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/ExamServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/ExercisesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/ExercisesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/RecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/RecordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ExercisesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/dao/impl/ExercisesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/AdminDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/AdminDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/ChapterDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/ChapterDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/CourseDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/CourseDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/ExamDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/ExamDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/ExercisesDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/ExercisesDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/PageDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/PageDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/RecordDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/RecordDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/UserDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/domain/UserDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Chapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Chapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exercises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +57,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HillCheung" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,6 +106,53 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ConfigApp">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="backstage-client" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="backstage-client" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-config" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.ConfigApp" />
@@ -202,18 +279,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="基础服务框架搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1607432767160">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1607512722730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607432767160" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1607433318187">
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607512722730" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1607514860408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607433318187" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607514860408" />
+    <state x="698" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607511814939">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="698" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607511814939" />
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409518322" />
+    <state x="192" y="85" key="DiffContextDialog" timestamp="1607510472165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="192" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607510472165" />
     <state x="719" y="208" key="FileChooserDialogImpl" timestamp="1607426950594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -266,10 +351,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431936187" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607432049258">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607510466289">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607432049258" />
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607510466289" />
     <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607431876394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -13,4 +13,5 @@ public class Chapter {
     private String cname;
     private Integer pchid;
     private Integer cid;
+    private String temp;
 }

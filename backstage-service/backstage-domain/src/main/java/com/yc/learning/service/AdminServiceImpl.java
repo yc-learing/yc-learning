@@ -48,16 +48,26 @@ public class AdminServiceImpl implements  AdminService{
 
     @Override
     public void delete(Integer id) {
-
+            this.adminMapper.deleteByPrimaryKey(id);
     }
 
     @Override
-    public Admin findOne(Integer id) {
-        return null;
+    public AdminDomain findOne(Integer id) {
+        Admin admin =this.adminMapper.selectByPrimaryKey(id);
+        AdminDomain adminDomain = new AdminDomain(admin.getAid(), admin.getAname(), admin.getApwd(), admin.getStatus());
+        return adminDomain;
     }
 
     @Override
-    public int update(Admin admin) {
-        return 0;
+    public void insert(AdminDomain admin) {
+        Admin a = new Admin();
+        a.setAname(admin.getAname());
+        a.setApwd(admin.getApwd());
+        a.setStatus(admin.getStatus());
+        this.adminMapper.insert(a);
+        // 在这里  mybatis完成了两步操作: 1. insert   2. select 到最新的id后，存到admin中
+        //admin中的id已经获取到
+        //关键:
+        admin.setAid(a.getAid());
     }
 }

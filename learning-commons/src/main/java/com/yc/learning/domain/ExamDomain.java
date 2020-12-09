@@ -14,6 +14,7 @@ public class ExamDomain extends PageDomain{
     private Integer classes;
     private String aname;
     private Integer status;
+    private String temp;
 
     public ExamDomain(Integer exid, String ename, String eids, Date createtime, Integer examtime, Integer classes, String aname, Integer status) {
         this.exid = exid;

@@ -1,7 +1,11 @@
 package com.yc.learning.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class CourseDomain extends PageDomain{
     private Integer cid;
@@ -10,14 +14,5 @@ public class CourseDomain extends PageDomain{
     private String pic;
     private Integer status;
 
-    public CourseDomain(Integer cid, String coursename, String describe, String pic, Integer status) {
-        this.cid = cid;
-        this.coursename = coursename;
-        this.describe = describe;
-        this.pic = pic;
-        this.status = status;
-    }
 
-    public CourseDomain() {
-    }
 }

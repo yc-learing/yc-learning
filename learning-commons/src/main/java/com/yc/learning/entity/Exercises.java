@@ -9,6 +9,7 @@ import java.util.Date;
 @Data
 @Table(name = "exercises")
 public class Exercises {
+    @Id
     private Integer eid;
     private Integer cid;
     private Integer type;
@@ -21,4 +22,5 @@ public class Exercises {
     private String analysis;
     private Date inputtime;
     private String aname;
+    private String temp;
 }
