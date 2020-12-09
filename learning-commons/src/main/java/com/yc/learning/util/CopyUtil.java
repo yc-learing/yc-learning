@@ -1,6 +1,5 @@
 package com.yc.learning.util;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -10,7 +9,7 @@ import java.util.List;
 
 public class CopyUtil {
 
-    private static Logger logger = LoggerFactory.getLogger(com.yc.learning.util.CopyUtil.class);
+    private static Logger logger = LoggerFactory.getLogger(CopyUtil.class);
 
     /**
      * 复制对象

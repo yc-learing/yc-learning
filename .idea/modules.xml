@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-client/admin-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-domain/admin-domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-admin-service/admin-web/admin-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" filepath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" />
