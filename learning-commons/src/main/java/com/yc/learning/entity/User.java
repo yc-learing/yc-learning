@@ -1,10 +1,15 @@
 package com.yc.learning.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Table(name = "user")
 public class User {
@@ -20,4 +25,6 @@ public class User {
     private Date registrytime;
     private Date endtime;
     private Integer status;
+
+
 }

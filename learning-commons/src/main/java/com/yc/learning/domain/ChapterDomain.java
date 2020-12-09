@@ -1,21 +1,18 @@
 package com.yc.learning.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class ChapterDomain extends PageDomain{
     private Integer chid;
     private String cname;
     private Integer pchid;
     private Integer cid;
+    private String temp;
 
-    public ChapterDomain(Integer chid, String cname, Integer pchid, Integer cid) {
-        this.chid = chid;
-        this.cname = cname;
-        this.pchid = pchid;
-        this.cid = cid;
-    }
 
-    public ChapterDomain() {
-    }
 }
