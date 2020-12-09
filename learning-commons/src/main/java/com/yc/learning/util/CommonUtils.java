@@ -2,8 +2,6 @@ package com.yc.learning.util;
 
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import org.jboss.logging.Logger;
 
 import java.io.*;
 import java.lang.reflect.Array;
@@ -13,6 +11,7 @@ import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,7 +21,7 @@ import java.util.regex.Pattern;
  * @author zbk
  */
 public class CommonUtils {
-    private final static Logger logger = Logger.getLogger(com.yc.piclib.util.CommonUtils.class);
+    private final static Logger logger = Logger.getLogger(CommonUtils.class.getName());
 
     // 默认日期格式
     public static final String DATE_FMT = "yyyy-MM-dd"; // 日期
@@ -83,7 +82,7 @@ public class CommonUtils {
      */
     public static Double moneyToYuan(String fen) {
         try {
-            if (com.yc.piclib.util.CommonUtils.isNull(fen) || "null".equals(fen)) {
+            if (CommonUtils.isNull(fen) || "null".equals(fen)) {
                 return 0d;
             }
             long amont = Long.parseLong(fen);
@@ -100,7 +99,7 @@ public class CommonUtils {
      * @return
      */
     public static Double moneyToyuan(Long fen) {
-        if (com.yc.piclib.util.CommonUtils.isNull(fen)) {
+        if (CommonUtils.isNull(fen)) {
             return 0d;
         }
         return div(fen.doubleValue(), 100D, 2);
@@ -554,7 +553,7 @@ public class CommonUtils {
         InputStreamReader read = null;
         try {
 //            List<String> list = Lists.newArrayList();
-            in = new com.yc.piclib.util.CommonUtils().getClass().getResourceAsStream("/keyword.txt");
+            in = new CommonUtils().getClass().getResourceAsStream("/keyword.txt");
             read = new InputStreamReader(in, "UTF-8");//考虑到编码格式
             BufferedReader bufferedReader = new BufferedReader(read);
             String lineTxt = null;
@@ -566,7 +565,7 @@ public class CommonUtils {
             ex.printStackTrace();
         } finally {
             try {
-                if (com.yc.piclib.util.CommonUtils.isNotNull(in) && com.yc.piclib.util.CommonUtils.isNotNull(read)) {
+                if (CommonUtils.isNotNull(in) && CommonUtils.isNotNull(read)) {
                     in.close();
                     read.close();
                 }
@@ -591,7 +590,7 @@ public class CommonUtils {
         InputStreamReader read = null;
         try {
             BufferedReader reader = null;
-            File file = new File(new com.yc.piclib.util.CommonUtils().getClass().getResource("/").getPath() + "keyword.txt");
+            File file = new File(new CommonUtils().getClass().getResource("/").getPath() + "keyword.txt");
             reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
             String lineTxt = null;
             while ((lineTxt = reader.readLine()) != null) {
@@ -602,7 +601,7 @@ public class CommonUtils {
             ex.printStackTrace();
         } finally {
             try {
-                if (com.yc.piclib.util.CommonUtils.isNotNull(in) && com.yc.piclib.util.CommonUtils.isNotNull(read)) {
+                if (CommonUtils.isNotNull(in) && CommonUtils.isNotNull(read)) {
                     in.close();
                     read.close();
                 }
@@ -634,11 +633,4 @@ public class CommonUtils {
         return writer.toString();
     }
 
-    public static void main(String[] args) {
-        Map<String, String> map = Maps.newHashMap();
-        map.put("te", "11");
-        if (map.containsKey("te")) {
-            System.out.println("111111111111111111111111111111");
-        }
-    }
 }
