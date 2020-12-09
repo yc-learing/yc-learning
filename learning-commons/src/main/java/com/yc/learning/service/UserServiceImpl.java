@@ -1,14 +1,10 @@
 package com.yc.learning.service;
 
-import com.github.pagehelper.PageHelper;
-import com.yc.learning.domain.PageDomain;
+import com.yc.learning.dao.impl.UserMapper;
 import com.yc.learning.domain.UserDomain;
 import com.yc.learning.entity.User;
-import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
-import  com.yc.learning.dao.impl.UserMapper;
 
 import java.util.List;
 
