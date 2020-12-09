@@ -54,7 +54,7 @@ public class ExamServiceImpl implements ExamService{
     public ExamDomain findOne(Integer id) {
         Exam Exam =this.ExamMapper.selectByPrimaryKey(id);
         ExamDomain ExamDomain = new ExamDomain(Exam.getExid(), Exam.getEname(), Exam.getEids(), Exam.getCreatetime()
-        ,Exam.getExamtime(),Exam.getClasses(),Exam.getAname(),Exam.getStatus());
+        ,Exam.getExamtime(),Exam.getClasses(),Exam.getAname(),Exam.getStatus(),Exam.getTemp());
         return ExamDomain;
     }
 

@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
-import com.yc.learning.impl.CourseMapper;
+import com.yc.learning.dao.impl.CourseMapper;
 import java.util.List;
 
 @Service
