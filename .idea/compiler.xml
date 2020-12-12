@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="base-hystrix-dashborad" />
+        <module name="user-service-client" />
         <module name="learning-commons" />
         <module name="learning-exam-service" />
         <module name="learning-practice-service" />
@@ -19,7 +20,9 @@
         <module name="backstage-web" />
         <module name="base-eureka" />
         <module name="base-turbine" />
-        <module name="learning-user-service" />
+        <module name="learning-web" />
+        <module name="user-service-domain" />
+        <module name="user-service-restapi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -46,6 +49,10 @@
       <module name="learning-exam-service" target="1.8" />
       <module name="learning-practice-service" target="1.8" />
       <module name="learning-user-service" target="1.8" />
+      <module name="learning-web" target="1.8" />
+      <module name="user-service-client" target="1.8" />
+      <module name="user-service-domain" target="1.8" />
+      <module name="user-service-restapi" target="1.8" />
       <module name="yc-learning" target="1.8" />
       <module name="yc-learning-service" target="1.8" />
     </bytecodeTargetLevel>
