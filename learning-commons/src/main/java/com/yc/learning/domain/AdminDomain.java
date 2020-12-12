@@ -12,6 +12,4 @@ public class AdminDomain extends PageDomain{
     private String aname;
     private String apwd;
     private Integer status;
-
-
 }

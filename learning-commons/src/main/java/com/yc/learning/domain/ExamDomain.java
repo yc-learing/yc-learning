@@ -1,9 +1,14 @@
 package com.yc.learning.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class ExamDomain extends PageDomain{
     private Integer exid;
@@ -15,18 +20,4 @@ public class ExamDomain extends PageDomain{
     private String aname;
     private Integer status;
     private String temp;
-
-    public ExamDomain(Integer exid, String ename, String eids, Date createtime, Integer examtime, Integer classes, String aname, Integer status) {
-        this.exid = exid;
-        this.ename = ename;
-        this.eids = eids;
-        this.createtime = createtime;
-        this.examtime = examtime;
-        this.classes = classes;
-        this.aname = aname;
-        this.status = status;
-    }
-
-    public ExamDomain() {
-    }
 }

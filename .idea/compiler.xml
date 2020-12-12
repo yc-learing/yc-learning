@@ -6,19 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-hystrix-dashborad" />
-        <module name="learning-commons" />
-        <module name="learning-exam-service" />
-        <module name="learning-practice-service" />
-        <module name="backstage-domain" />
-        <module name="backstage-client" />
-        <module name="base-config" />
-        <module name="base-security" />
-        <module name="base-zuul-gateway" />
-        <module name="backstage-restapi" />
         <module name="backstage-web" />
+        <module name="learning-commons" />
+        <module name="backstage-domain" />
+        <module name="base-security" />
+        <module name="practice-service-restapi" />
         <module name="base-eureka" />
+        <module name="base-config" />
+        <module name="base-hystrix-dashborad" />
+        <module name="backstage-client" />
+        <module name="learning-practice-service" />
+        <module name="base-zuul-gateway" />
+        <module name="practice-service-domain" />
+        <module name="backstage-restapi" />
         <module name="base-turbine" />
+        <module name="learning-exam-service" />
         <module name="learning-user-service" />
       </profile>
     </annotationProcessing>
@@ -46,6 +48,8 @@
       <module name="learning-exam-service" target="1.8" />
       <module name="learning-practice-service" target="1.8" />
       <module name="learning-user-service" target="1.8" />
+      <module name="practice-service-domain" target="1.8" />
+      <module name="practice-service-restapi" target="1.8" />
       <module name="yc-learning" target="1.8" />
       <module name="yc-learning-service" target="1.8" />
     </bytecodeTargetLevel>

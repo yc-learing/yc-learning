@@ -1,7 +1,6 @@
 package com.yc.learning.service;
 
 import com.yc.learning.domain.AdminDomain;
-import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
 
 import java.util.List;
@@ -15,12 +14,6 @@ public interface AdminService {
      * 查询所有的管理员
      */
     public List<Admin> findAll();
-
-
-    /**
-     * 查询指定的管理员（分页查询）
-     */
-    public PageDomain<Admin> listByPage(AdminDomain admin);
 
 
     /**
