@@ -1,9 +1,9 @@
 package com.yc.learning.controller;
 
 import com.google.gson.Gson;
-import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
-import com.yc.learning.service.BackModule_AdminService;
+import com.yc.learning.domain.RecordDomain;
+import com.yc.learning.service.BackModule_RecordService;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,31 +15,25 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
-@RequestMapping("/back-admin")
-public class BackModule_AdminController {
+@RequestMapping("/back-record")
+public class BackModule_RecordController {
     @Autowired(required = false)
-    private BackModule_AdminService adminService;
+    private BackModule_RecordService recordService;
 
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
-    public CompletableFuture<String> findByPage(Integer page, Integer pageSize,  String aname, Integer status) {
+    public CompletableFuture<String> findByPage(Integer page, Integer pageSize) {
         return CompletableFuture.supplyAsync(() -> {
             Map<String, Object> map = new HashMap<>();
             try {
-                AdminDomain adminDomain = new AdminDomain();
+                RecordDomain recordDomain = new RecordDomain();
 
                 if (CommonUtils.isNotNull(page)) {
-                    adminDomain.setPage(page);
+                    recordDomain.setPage(page);
                 }
                 if (CommonUtils.isNotNull(pageSize)) {
-                    adminDomain.setPageSize(pageSize);
+                    recordDomain.setPageSize(pageSize);
                 }
-                if (CommonUtils.isNotNull(aname)) {
-                    adminDomain.setAname(aname);
-                }
-                if (CommonUtils.isNotNull(status)) {
-                    adminDomain.setStatus(status);
-                }
-                PageDomain<AdminDomain> pageDomain = adminService.findByPage(adminDomain);
+                PageDomain<RecordDomain> pageDomain = recordService.findByPage(recordDomain);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);

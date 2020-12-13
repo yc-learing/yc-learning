@@ -22,7 +22,8 @@ public class BackModule_AdminService extends AdminServiceImpl {
     @Autowired(required = false)
     private AdminMapper adminMapper;
 
-    public PageDomain<AdminDomain> listByPage(AdminDomain adminDomain) {
+    @Transactional(readOnly = true)
+    public PageDomain<AdminDomain> findByPage(AdminDomain adminDomain) {
         Example example = new Example(Admin.class);   //条件
         //分页条件设置
         PageHelper.startPage(adminDomain.getPage(), adminDomain.getPageSize());

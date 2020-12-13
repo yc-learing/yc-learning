@@ -1,15 +1,12 @@
 package com.yc.learning.service;
 
-import com.github.pagehelper.PageHelper;
+import com.yc.learning.dao.impl.ExercisesMapper;
 import com.yc.learning.domain.ExercisesDomain;
-import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Exercises;
-import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
-import com.yc.learning.dao.impl.ExercisesMapper;
+
 import java.util.List;
 
 @Service
@@ -61,9 +58,6 @@ public class ExercisesServiceImpl implements  ExercisesService{
        exercises.setInputtime(domain.getInputtime());
        exercises.setAname(domain.getAname());
        exercises.setTemp(domain.getTemp());
-        /**
-         *TODO:uuid生成
-         */
        this.ExercisesMapper.insert(exercises);
        domain.setEid(exercises.getEid());
     }

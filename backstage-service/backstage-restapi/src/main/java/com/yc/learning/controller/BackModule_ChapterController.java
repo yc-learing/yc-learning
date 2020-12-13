@@ -1,9 +1,9 @@
 package com.yc.learning.controller;
 
 import com.google.gson.Gson;
-import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.domain.ChapterDomain;
 import com.yc.learning.domain.PageDomain;
-import com.yc.learning.service.BackModule_AdminService;
+import com.yc.learning.service.BackModule_ChapterService;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,31 +15,28 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
-@RequestMapping("/back-admin")
-public class BackModule_AdminController {
-    @Autowired(required = false)
-    private BackModule_AdminService adminService;
+@RequestMapping("/back-chapter")
+public class BackModule_ChapterController {
+    @Autowired
+    private BackModule_ChapterService chapterService;
 
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
-    public CompletableFuture<String> findByPage(Integer page, Integer pageSize,  String aname, Integer status) {
+    public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String cname) {
         return CompletableFuture.supplyAsync(() -> {
             Map<String, Object> map = new HashMap<>();
             try {
-                AdminDomain adminDomain = new AdminDomain();
+                ChapterDomain chapterDomain = new ChapterDomain();
 
                 if (CommonUtils.isNotNull(page)) {
-                    adminDomain.setPage(page);
+                    chapterDomain.setPage(page);
                 }
                 if (CommonUtils.isNotNull(pageSize)) {
-                    adminDomain.setPageSize(pageSize);
+                    chapterDomain.setPageSize(pageSize);
                 }
-                if (CommonUtils.isNotNull(aname)) {
-                    adminDomain.setAname(aname);
+                if (CommonUtils.isNotNull(cname)) {
+                    chapterDomain.setCname(cname);
                 }
-                if (CommonUtils.isNotNull(status)) {
-                    adminDomain.setStatus(status);
-                }
-                PageDomain<AdminDomain> pageDomain = adminService.findByPage(adminDomain);
+                PageDomain<ChapterDomain> pageDomain = chapterService.findByPage(chapterDomain);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);

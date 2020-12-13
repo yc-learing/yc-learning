@@ -15,7 +15,6 @@ public class Chapter {
     @Id
     private Integer chid;
     private String cname;
-    private Integer pchid;
     private Integer cid;
     private String temp;
 }
