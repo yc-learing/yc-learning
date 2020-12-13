@@ -18,10 +18,10 @@
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-service.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/learning-practice-service.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/learning-practice-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/user-service-client.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/user-service-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/user-service-domain.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/user-service-domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/user-service-restapi.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/user-service-restapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning.iml" filepath="$PROJECT_DIR$/yc-learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/yc-learning-service.iml" filepath="$PROJECT_DIR$/yc-learning-service/yc-learning-service.iml" />
     </modules>

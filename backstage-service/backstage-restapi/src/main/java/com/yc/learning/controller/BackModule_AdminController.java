@@ -17,15 +17,11 @@ import java.util.concurrent.CompletableFuture;
 @RestController
 @RequestMapping("/back-admin")
 public class BackModule_AdminController {
-
-
-    @Autowired
+    @Autowired(required = false)
     private BackModule_AdminService adminService;
 
-
-
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
-    public CompletableFuture<String> findByPage(Integer page, Integer pageSize, Integer aid, String aname, Integer status) {
+    public CompletableFuture<String> findByPage(Integer page, Integer pageSize,  String aname, Integer status) {
         return CompletableFuture.supplyAsync(() -> {
             Map<String, Object> map = new HashMap<>();
             try {
@@ -37,14 +33,13 @@ public class BackModule_AdminController {
                 if (CommonUtils.isNotNull(pageSize)) {
                     adminDomain.setPageSize(pageSize);
                 }
-                if (CommonUtils.isNotNull(aid)) {
-                    adminDomain.setAid(aid);
-                }if (CommonUtils.isNotNull(aname)) {
+                if (CommonUtils.isNotNull(aname)) {
                     adminDomain.setAname(aname);
-                }if (CommonUtils.isNotNull(status)) {
+                }
+                if (CommonUtils.isNotNull(status)) {
                     adminDomain.setStatus(status);
                 }
-                PageDomain<AdminDomain> pageDomain = adminService.listByPage(adminDomain);
+                PageDomain<AdminDomain> pageDomain = adminService.findByPage(adminDomain);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);
