@@ -25,6 +25,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.7.4" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.1.17.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.17.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.17.RELEASE" level="project" />
