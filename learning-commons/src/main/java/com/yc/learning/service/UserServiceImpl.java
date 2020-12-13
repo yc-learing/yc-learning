@@ -1,14 +1,10 @@
 package com.yc.learning.service;
 
-import com.github.pagehelper.PageHelper;
-import com.yc.learning.domain.PageDomain;
+import com.yc.learning.dao.impl.UserMapper;
 import com.yc.learning.domain.UserDomain;
 import com.yc.learning.entity.User;
-import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
-import  com.yc.learning.dao.impl.UserMapper;
 
 import java.util.List;
 
@@ -25,22 +21,7 @@ public class UserServiceImpl implements UserService{
         return list;
     }
 
-    @Transactional(readOnly = true)
-    @Override
-    public PageDomain<User> listByPage(UserDomain domain) {
-        Example example =new Example(User.class);  //条件
-        //分页查询条件
-        PageHelper.startPage(domain.getPage(), domain.getPageSize());
-        //排序条件
-        //Criteria：查询的规则
-        Example.Criteria c = example.createCriteria();
-        if (CommonUtils.isNotNull(domain.getUid())) {
-            //条件创建  where 1= 1 and description like '%xxx%'
 
-            c.andLike("description", "%" + domain.getUid() + "%");
-        }
-        return  null;
-    }
 
     @Override
     public void delete(Integer id) {

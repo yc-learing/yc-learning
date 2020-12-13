@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -20,4 +19,6 @@ public class ExamDomain extends PageDomain{
     private String aname;
     private Integer status;
     private String temp;
+
+
 }

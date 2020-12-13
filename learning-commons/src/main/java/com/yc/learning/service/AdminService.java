@@ -17,6 +17,11 @@ public interface AdminService {
 
 
     /**
+     * 查询指定的管理员（分页查询）
+     */
+
+
+    /**
      * 删除图片
      */
     public void delete(Integer id);

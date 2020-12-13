@@ -1,7 +1,6 @@
 package com.yc.learning.service;
 
 import com.yc.learning.domain.ChapterDomain;
-import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Chapter;
 
 import java.util.List;
@@ -17,7 +16,6 @@ public interface ChapterService {
     /**
      * 查询指定的管理员（分页查询）
      */
-    public PageDomain<Chapter> listByPage(ChapterDomain Chapter);
 
 
     /**

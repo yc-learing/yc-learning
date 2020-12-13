@@ -24,6 +24,8 @@ public class AdminServiceImpl implements  AdminService{
         return list;
     }
 
+
+
     @Override
     public void delete(Integer id) {
             this.adminMapper.deleteByPrimaryKey(id);

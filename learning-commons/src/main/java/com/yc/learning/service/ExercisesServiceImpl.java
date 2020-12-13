@@ -27,22 +27,7 @@ public class ExercisesServiceImpl implements  ExercisesService{
         return list;
     }
 
-    @Transactional(readOnly = true)
-    @Override
-    public PageDomain<Exercises> listByPage(ExercisesDomain domain) {
-        Example example =new Example(Exercises.class);  //条件
-        //分页查询条件
-        PageHelper.startPage(domain.getPage(), domain.getPageSize());
-        //排序条件
-        //Criteria：查询的规则
-        Example.Criteria c = example.createCriteria();
-        if (CommonUtils.isNotNull(domain.getContent())) {
-            //条件创建  where 1= 1 and description like '%xxx%'
 
-            c.andLike("description", "%" + domain.getContent() + "%");
-        }
-        return  null;
-    }
 
     @Override
     public void delete(Integer id) {

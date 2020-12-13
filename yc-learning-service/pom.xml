@@ -16,5 +16,6 @@
         <module>learning-user-service</module>
         <module>learning-exam-service</module>
         <module>learning-practice-service</module>
+        <module>learning-web</module>
     </modules>
 </project>
