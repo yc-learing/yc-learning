@@ -8,15 +8,15 @@ import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author liyan
- * @create 2020-12-2020/12/12-19:17
- */
+@Service
+@Transactional
 public class BackModule_AdminService extends AdminServiceImpl {
 
     @Autowired(required = false)
@@ -27,13 +27,9 @@ public class BackModule_AdminService extends AdminServiceImpl {
         //分页条件设置
         PageHelper.startPage(adminDomain.getPage(), adminDomain.getPageSize());
         //排序条件
-        example.setOrderByClause("id desc");
+        example.setOrderByClause("aid desc");
         //  Criteria: 查询的规则
         Example.Criteria c = example.createCriteria();
-        if (CommonUtils.isNotNull(adminDomain.getAid())) {
-            //条件创建    where 1=1 and description like '%xx%';
-            c.andLike("aid", "%" + adminDomain.getAid() + "%");
-        }
         if (CommonUtils.isNotNull(adminDomain.getAname())) {
             //条件创建    where 1=1 and description like '%xx%';
             c.andLike("aname", "%" + adminDomain.getAname() + "%");
@@ -62,3 +58,4 @@ public class BackModule_AdminService extends AdminServiceImpl {
     }
 
 }
+
