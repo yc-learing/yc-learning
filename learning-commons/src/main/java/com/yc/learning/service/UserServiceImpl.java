@@ -3,6 +3,7 @@ package com.yc.learning.service;
 import com.yc.learning.dao.impl.UserMapper;
 import com.yc.learning.domain.UserDomain;
 import com.yc.learning.entity.User;
+import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void insert(UserDomain domain) {
-        User user = new User(null,domain.getUname(),domain.getUpwd(),
+        User user = new User(null,domain.getUname(), MD5Utils.stringToMD5(domain.getUpwd()),
                 domain.getTel(),domain.getEmail(),domain.getQq(),
                 domain.getVx(),domain.getClasses()
                 ,domain.getRegistrytime(),domain.getEndtime()
