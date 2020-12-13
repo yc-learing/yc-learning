@@ -45,10 +45,6 @@ public class UserServiceImpl implements UserService{
                 domain.getVx(),domain.getClasses()
                 ,domain.getRegistrytime(),domain.getEndtime()
                 ,domain.getStatus());
-
-        /**
-         *TODO:uuid生成
-         */
         this.UserMapper.insert(user);
         domain.setUid(user.getUid());
     }

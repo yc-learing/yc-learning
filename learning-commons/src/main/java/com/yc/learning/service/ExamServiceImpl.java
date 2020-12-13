@@ -1,15 +1,11 @@
 package com.yc.learning.service;
 
-import com.github.pagehelper.PageHelper;
 import com.yc.learning.dao.impl.ExamMapper;
 import com.yc.learning.domain.ExamDomain;
-import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Exam;
-import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -54,9 +50,6 @@ public class ExamServiceImpl implements ExamService{
         exam.setEname(domain.getEname());
         exam.setStatus(domain.getStatus());
         exam.setTemp(domain.getTemp());
-        /**
-         * TODO:要用uuid来生成来插入
-         */
        this.ExamMapper.insert(exam);
        domain.setExid(exam.getExid());
     }

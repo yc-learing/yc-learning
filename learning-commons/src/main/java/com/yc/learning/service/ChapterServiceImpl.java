@@ -35,7 +35,7 @@ public class ChapterServiceImpl implements  ChapterService{
     public ChapterDomain findOne(Integer id) {
         Chapter Chapter =this.ChapterMapper.selectByPrimaryKey(id);
         ChapterDomain ChapterDomain = new ChapterDomain(
-                Chapter.getChid(),Chapter.getCname(),Chapter.getPchid(),Chapter.getCid(),
+                Chapter.getChid(),Chapter.getCname(),Chapter.getCid(),
                 Chapter.getTemp()
         );
         return ChapterDomain;
@@ -46,9 +46,7 @@ public class ChapterServiceImpl implements  ChapterService{
         Chapter chapter = new Chapter();
         chapter.setCid(domain.getCid());
         chapter.setCname(domain.getCname());
-        chapter.setCid(domain.getCid());
         chapter.setTemp(domain.getTemp());
-
         this.ChapterMapper.insert(chapter);
         domain.setChid(chapter.getChid());
     }
