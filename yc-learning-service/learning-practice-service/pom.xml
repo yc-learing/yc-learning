@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>learning-practice-service</artifactId>
-
+    <packaging>pom</packaging>
     <modules>
         <module>practice-service-domain</module>
         <module>practice-service-restapi</module>
