@@ -23,6 +23,7 @@ public class BackModule_UserController {
     @RequestMapping(value = "/findByPage",method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String uname){
         return CompletableFuture.supplyAsync(()->{
+
             Map<String ,Object> map=new HashMap<>();
             try {
                 UserDomain userDomain=new UserDomain();

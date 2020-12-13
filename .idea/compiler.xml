@@ -6,37 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-hystrix-dashborad" />
-        <module name="user-service-client" />
-        <module name="learning-commons" />
-        <module name="learning-exam-service" />
-        <module name="learning-practice-service" />
-        <module name="backstage-domain" />
-        <module name="backstage-client" />
-        <module name="base-config" />
         <module name="base-security" />
-        <module name="base-zuul-gateway" />
-        <module name="backstage-restapi" />
-        <module name="backstage-web" />
-        <module name="base-eureka" />
-        <module name="base-turbine" />
+        <module name="learning-commons" />
+        <module name="backstage-domain" />
         <module name="learning-web" />
         <module name="user-service-domain" />
         <module name="user-service-restapi" />
+        <module name="base-eureka" />
+        <module name="base-config" />
+        <module name="base-hystrix-dashborad" />
+        <module name="backstage-client" />
+        <module name="user-service-client" />
+        <module name="learning-practice-service" />
+        <module name="base-zuul-gateway" />
+        <module name="backstage-restapi" />
+        <module name="base-turbine" />
+        <module name="learning-exam-service" />
+        <module name="backstage-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="admin-client" target="1.5" />
-      <module name="admin-domain" target="1.5" />
-      <module name="admin-web" target="1.5" />
-      <module name="backstage-admin-service" target="1.5" />
       <module name="backstage-client" target="1.8" />
       <module name="backstage-domain" target="1.8" />
-      <module name="backstage-exam-service" target="1.5" />
-      <module name="backstage-maintenance-service" target="1.5" />
       <module name="backstage-restapi" target="1.8" />
       <module name="backstage-service" target="1.8" />
-      <module name="backstage-user-service" target="1.5" />
       <module name="backstage-web" target="1.8" />
       <module name="base-config" target="1.8" />
       <module name="base-eureka" target="1.8" />
@@ -58,6 +51,7 @@
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="backstage-client" options="" />
       <module name="backstage-domain" options="" />
@@ -69,9 +63,14 @@
       <module name="base-security" options="" />
       <module name="base-turbine" options="" />
       <module name="base-zuul-gateway" options="" />
+      <module name="learning-commons" options="" />
       <module name="learning-exam-service" options="" />
       <module name="learning-practice-service" options="" />
       <module name="learning-user-service" options="" />
+      <module name="learning-web" options="" />
+      <module name="user-service-client" options="" />
+      <module name="user-service-domain" options="" />
+      <module name="user-service-restapi" options="" />
       <module name="yc-learning-service" options="" />
     </option>
   </component>

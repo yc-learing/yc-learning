@@ -54,15 +54,16 @@ spring:
     # 合并多个DruidDataSource的监控数据
     #useGlobalDataSourceStat=true
     #redis缓存配置，暂时还没有用到,不要导入redis的starter
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    #    password: 12345678
-#    pool:
-#      max-idle: 8
-#      min-idle: 0
-#      max-active: 8
-#      max-wait: -1
+
+
+
+  redis:
+    host: 39.105.183.155
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        min-idle: 0
 
 #监控配置
 info:

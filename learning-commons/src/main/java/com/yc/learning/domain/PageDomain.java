@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 //分页的实体
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PageDomain<T> {
+public class PageDomain<T> implements Serializable {
     private Integer page = 0;   //当前第几页
     private Integer pageSize = 2;  //每页多少条
     private Long total = 0L;  //总记录数

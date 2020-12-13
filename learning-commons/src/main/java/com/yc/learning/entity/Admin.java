@@ -6,12 +6,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Table(name = "admin")
-public class Admin {
+public class Admin implements Serializable {
     @Id
     private Integer aid;
     private String aname;

@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.AdminMapper;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
@@ -22,7 +23,21 @@ public class BackModule_AdminService extends AdminServiceImpl {
     @Autowired(required = false)
     private AdminMapper adminMapper;
 
-    public PageDomain<AdminDomain> listByPage(AdminDomain adminDomain) {
+//    @Autowired
+//    private RedisTemplate redisTemplate;
+
+    @RedisAnnotation(useRedis = true)
+    public PageDomain<AdminDomain> listByPage(AdminDomain adminDomain) throws InstantiationException, IllegalAccessException {
+//        ValueOperations<String, PageDomain<AdminDomain>> operations = redisTemplate.opsForValue();
+//        String key ="BackModule_AdminService"+adminDomain.getAid();
+//        boolean haskey = redisTemplate.hasKey("BackModule_AdminService"+adminDomain.getAid());
+//        if (haskey) {
+//            PageDomain<AdminDomain> redis = operations.get(key);
+//            System.out.println(redis);
+//            System.out.println("从缓存中获得数据："+redis);
+//            System.out.println("------------------------------------");
+//            return redis;
+//        }     前置增强代码
         Example example = new Example(Admin.class);   //条件
         //分页条件设置
         PageHelper.startPage(adminDomain.getPage(), adminDomain.getPageSize());
@@ -54,6 +69,7 @@ public class BackModule_AdminService extends AdminServiceImpl {
             }
         }
         pageDomain.setData(r);
+//        operations.set(key,pageDomain);   后置增强代码
         return pageDomain;
     }
 
