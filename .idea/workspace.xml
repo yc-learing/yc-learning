@@ -13,56 +13,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建">
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/AdminMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/ChapterMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/CourseMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/ExamMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/ExercisesMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/RecordMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/AdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/WebSecurityConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/bean/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/ZuulApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/conf/ZuulConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/filter/AuthorizedRequestFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/config/DruidConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/MisBaseMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/AdminDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ChapterDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/CourseDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExamDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExercisesDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/PageDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/RecordDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/UserDomain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exercises.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Record.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/pom.xml" afterDir="false" />
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/user-service-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/user-service-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/user-service-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/user-service-domain.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,17 +103,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestService.insertAdmin">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestService.insertAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backstage-domain" />
       <extension name="coverage">
@@ -166,53 +115,6 @@
       <option name="MAIN_CLASS_NAME" value="com.yc.learning.TestService" />
       <option name="METHOD_NAME" value="insertAdmin" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="backstage-service" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="backstage-service" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -262,7 +164,19 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -350,12 +264,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="还原" />
@@ -441,10 +356,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434168146" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607434187369">
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607820855445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434187369" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607820855445" />
     <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -465,7 +380,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java</url>
           <line>23</line>
-          <properties class="com.yc.learning.TestService" method="insertAdmin">
+          <properties class="com.yc.learning.TestService">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />

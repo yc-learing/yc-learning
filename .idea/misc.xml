@@ -6,8 +6,6 @@
         <option value="$PROJECT_DIR$/base-microservice/pom.xml" />
         <option value="$PROJECT_DIR$/backstage-service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -17,6 +15,8 @@
         <option value="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/pom.xml" />
         <option value="$PROJECT_DIR$/backstage-service/backstage-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/practice-service-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/pom.xml" />
+        <option value="$PROJECT_DIR$/yc-learning-service/learning-web/pom.xml" />
       </set>
     </option>
   </component>
