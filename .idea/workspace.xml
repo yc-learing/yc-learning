@@ -13,7 +13,57 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="domain的第一次测试" />
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="基础服务框架搭建">
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/AdminMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/ChapterMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/CourseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/ExamMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/ExercisesMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/RecordMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/dao/impl/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/AdminService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/WebSecurityConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/bean/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/dao/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/ZuulApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/conf/ZuulConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/filter/AuthorizedRequestFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/config/DruidConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/MisBaseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/AdminDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ChapterDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/CourseDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExamDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExercisesDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/PageDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/RecordDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/UserDomain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Admin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exercises.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Record.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +89,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HillCheung" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,13 +98,15 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="E:\ideaUltimate\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
         <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1lMTqeV0fKPXiMl99ILcEZYifMh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,8 +117,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="12" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,19 +128,32 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\ideaworkspeace\yc-learning" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaworkspace\yc-learning\yc-learning-service\learning-user-service\user-service-client" />
+      <recent name="D:\ideaworkspace\yc-learning\yc-learning-service\learning-user-service\user-service-domain" />
       <recent name="F:\ideaworkspeace\yc-learning\learning-commons\src\main\java\com\yc\learning\util" />
       <recent name="F:\ideaworkspeace\yc-learning\learning-commons\src\main\java\com\yc\learning" />
       <recent name="D:\ideaworkspace\yc-learning\learning-commons\src\main\java\com\yc\learning\util" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestService.insertAdmin">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestService.insertAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backstage-domain" />
       <extension name="coverage">
@@ -191,10 +256,13 @@
       <list>
         <item itemvalue="JUnit.TestService.insertAdmin" />
         <item itemvalue="JUnit.TestService.insertAdmin" />
+        <item itemvalue="JUnit.TestService.insertAdmin" />
+        <item itemvalue="JUnit.TestService.insertAdmin" />
+        <item itemvalue="JUnit.TestService.insertAdmin" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -213,6 +281,7 @@
       <workItem from="1607431800187" duration="14000" />
       <workItem from="1607482769143" duration="28000" />
       <workItem from="1607482816045" duration="1210000" />
+      <workItem from="1607769503906" duration="1180000" />
     </task>
     <task id="LOCAL-00001" summary="还原">
       <created>1607407984029</created>
@@ -351,11 +420,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607426952074" />
-    <state x="440" y="95" key="SettingsEditor" timestamp="1607820408057">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="352" y="0" key="SettingsEditor" timestamp="1607770275205">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607483087589" />
-    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607820408057" />
+    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607770275205" />
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607516837132" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607519625303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -372,13 +441,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434168146" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607820242297">
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607434187369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607820242297" />
-    <state x="335" y="181" key="new project wizard" timestamp="1607431226079">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434187369" />
+    <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="268" y="143" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1607770353224" />
     <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607431226079" />
     <state x="725" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1607518768982">
       <screen x="0" y="0" width="1920" height="1040" />
