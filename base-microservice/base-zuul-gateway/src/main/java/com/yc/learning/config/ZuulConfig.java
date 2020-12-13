@@ -1,4 +1,4 @@
-package com.yc.learning.conf;
+package com.yc.learning.config;
 
 import com.yc.learning.filter.AuthorizedRequestFilter;
 import org.springframework.context.annotation.Bean;

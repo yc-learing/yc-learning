@@ -3,6 +3,7 @@ package com.yc.learning.service;
 import com.yc.learning.dao.impl.AdminMapper;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.entity.Admin;
+import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,7 +43,7 @@ public class AdminServiceImpl implements  AdminService{
     public void insert(AdminDomain admin) {
         Admin a = new Admin();
         a.setAname(admin.getAname());
-        a.setApwd(admin.getApwd());
+        a.setApwd(MD5Utils.stringToMD5(admin.getApwd()));
         a.setStatus(admin.getStatus());
         this.adminMapper.insert(a);
         // 在这里  mybatis完成了两步操作: 1. insert   2. select 到最新的id后，存到admin中

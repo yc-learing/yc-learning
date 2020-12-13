@@ -21,6 +21,6 @@ public class MD5Utils {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(stringToMD5("test"));
+		System.out.println(stringToMD5("a"));
 	}
 }

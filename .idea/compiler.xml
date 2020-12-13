@@ -16,11 +16,13 @@
         <module name="base-security" />
         <module name="base-zuul-gateway" />
         <module name="backstage-restapi" />
-        <module name="practice-service-domain" />
         <module name="backstage-web" />
+        <module name="practice-service-domain" />
         <module name="base-eureka" />
         <module name="base-turbine" />
         <module name="user-service-domain" />
+        <module name="learning-web" />
+        <module name="user-service-restapi" />
         <module name="practice-service-restapi" />
       </profile>
     </annotationProcessing>
