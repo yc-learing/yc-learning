@@ -28,8 +28,8 @@ public class AdminServiceImpl implements  AdminService{
 
 
     @Override
-    public void delete(Integer id) {
-            this.adminMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+            return adminMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -40,15 +40,12 @@ public class AdminServiceImpl implements  AdminService{
     }
 
     @Override
-    public void insert(AdminDomain admin) {
+    public int insert(AdminDomain admin) {
         Admin a = new Admin();
         a.setAname(admin.getAname());
         a.setApwd(MD5Utils.stringToMD5(admin.getApwd()));
         a.setStatus(admin.getStatus());
-        this.adminMapper.insert(a);
-        // 在这里  mybatis完成了两步操作: 1. insert   2. select 到最新的id后，存到admin中
-        //admin中的id已经获取到
-        //关键:
-        admin.setAid(a.getAid());
+        return  adminMapper.insert(a);
+
     }
 }

@@ -1,4 +1,4 @@
-package learning;
+package com.yc.learning;
 
 import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.session.SqlSessionFactory;

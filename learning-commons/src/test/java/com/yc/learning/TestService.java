@@ -1,4 +1,4 @@
-package learning;
+package com.yc.learning;
 
 import com.sun.istack.internal.logging.Logger;
 import com.yc.learning.domain.AdminDomain;
