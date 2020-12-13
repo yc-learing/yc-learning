@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class CourseDomain extends PageDomain{
     private Integer cid;
     private String coursename;
-    private String describe;
+    private String descr;
     private String pic;
     private Integer status;
 
