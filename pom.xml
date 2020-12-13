@@ -22,6 +22,8 @@
         <module>backstage-service</module>
         <module>learning-commons</module>
         <module>yc-learning-service</module>
+        <module>yc-learning-service/learning-practice-service/practice-service-domain</module>
+        <module>yc-learning-service/learning-practice-service/practice-service-restapi</module>
     </modules>
     <dependencies>
         <dependency>
