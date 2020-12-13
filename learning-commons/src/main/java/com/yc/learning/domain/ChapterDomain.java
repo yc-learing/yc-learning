@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 public class ChapterDomain extends PageDomain{
     private Integer chid;
     private String cname;
-    private Integer pchid;
     private Integer cid;
     private String temp;
 
