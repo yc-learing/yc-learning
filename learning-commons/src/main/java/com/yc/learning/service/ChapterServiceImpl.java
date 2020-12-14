@@ -52,11 +52,5 @@ public class ChapterServiceImpl implements  ChapterService{
         domain.setChid(chapter.getChid());
     }
 
-    @Override
-    public void update(ChapterDomain chapter) {
-        Example example =new Example(chapter.getClass());
-        Chapter c =new Chapter(chapter.getChid(),chapter.getCname(),chapter.getCid(),chapter.getTemp());
-        example.createCriteria();
-        ChapterMapper.updateByExample(c,example);
-    }
+
 }
