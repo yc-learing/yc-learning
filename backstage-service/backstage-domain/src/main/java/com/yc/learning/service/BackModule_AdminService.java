@@ -26,8 +26,9 @@ public class BackModule_AdminService extends AdminServiceImpl {
 //    @Autowired
 //    private RedisTemplate redisTemplate;
 
+    @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
-    public PageDomain<AdminDomain> listByPage(AdminDomain adminDomain) throws InstantiationException, IllegalAccessException {
+    public PageDomain<AdminDomain> findByPage(AdminDomain adminDomain,Integer page, Integer pageSize) throws InstantiationException, IllegalAccessException {
 //        ValueOperations<String, PageDomain<AdminDomain>> operations = redisTemplate.opsForValue();
 //        String key ="BackModule_AdminService"+adminDomain.getAid();
 //        boolean haskey = redisTemplate.hasKey("BackModule_AdminService"+adminDomain.getAid());
@@ -58,6 +59,7 @@ public class BackModule_AdminService extends AdminServiceImpl {
         PageDomain<AdminDomain> pageDomain = new PageDomain<AdminDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(adminDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         //List<Pic> list = picMapper.selectByExample(example);
         List<AdminDomain> r = new ArrayList<AdminDomain>();
@@ -65,6 +67,8 @@ public class BackModule_AdminService extends AdminServiceImpl {
         if (pageInfo.getList()!= null) {
             for (Admin a : pageInfo.getList()) {
                 AdminDomain ad = new AdminDomain(a.getAid(), a.getAname(),a.getApwd(),a.getStatus());
+                ad.setPage(adminDomain.getPage());
+                ad.setPageSize(adminDomain.getPageSize());
                 r.add(ad);
             }
         }

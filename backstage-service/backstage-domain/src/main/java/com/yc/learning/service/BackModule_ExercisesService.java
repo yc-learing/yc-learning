@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.ExercisesMapper;
 import com.yc.learning.domain.ExercisesDomain;
 import com.yc.learning.domain.PageDomain;
@@ -22,7 +23,8 @@ public class BackModule_ExercisesService extends ExamServiceImpl{
     private ExercisesMapper exercisesMapper;
 
     @Transactional(readOnly = true)
-    public PageDomain<ExercisesDomain> findByPage(ExercisesDomain exercisesDomain) {
+    @RedisAnnotation(useRedis = true)
+    public PageDomain<ExercisesDomain> findByPage(ExercisesDomain exercisesDomain,Integer page, Integer pageSize) {
         Example example = new Example(Exercises.class);   //条件
         //分页条件设置
         PageHelper.startPage(exercisesDomain.getPage(), exercisesDomain.getPageSize());
@@ -39,6 +41,7 @@ public class BackModule_ExercisesService extends ExamServiceImpl{
         PageDomain<ExercisesDomain> pageDomain = new PageDomain<ExercisesDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(exercisesDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         List<ExercisesDomain> r = new ArrayList<ExercisesDomain>();
         //从pageInfo中取记录数
@@ -46,6 +49,8 @@ public class BackModule_ExercisesService extends ExamServiceImpl{
             for (Exercises e : pageInfo.getList()) {
                 ExercisesDomain ed=new ExercisesDomain(e.getEid(),e.getCid(),e.getType(),e.getContent(),e.getOptionA(),e.getOptionB(),
                         e.getOptionC(),e.getOptionD(),e.getAnswer(),e.getAnalysis(),e.getInputtime(),e.getAname(),e.getTemp());
+                ed.setPage(exercisesDomain.getPage());
+                ed.setPageSize(exercisesDomain.getPageSize());
                 r.add(ed);
             }
         }

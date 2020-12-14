@@ -26,10 +26,10 @@ spring:
   #          brokers: 39.99.175.175
   application:
     name: backstage-service   #应用服务名
-  security:
-    user:
-      name: admin
-      password: a
+#  security:
+#    user:
+#      name: admin
+#      password: a
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver

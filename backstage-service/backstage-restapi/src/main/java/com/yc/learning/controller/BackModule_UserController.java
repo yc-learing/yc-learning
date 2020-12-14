@@ -36,7 +36,7 @@ public class BackModule_UserController {
                 if (CommonUtils.isNotNull(uname)) {
                     userDomain.setUname(uname);
                 }
-                PageDomain<UserDomain> pageDomain=userService.findByPage(userDomain);
+                PageDomain<UserDomain> pageDomain=userService.findByPage(userDomain,page,pageSize);
                 map.put("code",1);
                 map.put("data",pageDomain);
                 return new Gson().toJson(map);

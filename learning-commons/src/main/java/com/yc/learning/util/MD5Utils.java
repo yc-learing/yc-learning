@@ -1,5 +1,6 @@
 package com.yc.learning.util;
 
+import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -20,7 +21,15 @@ public class MD5Utils {
 		return md5code;
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(stringToMD5("a"));
+	public static void main(String[] args) throws ClassNotFoundException {
+		String s="BackModule_AdminService[adminDomain]=[AdminDomain(aid=null, aname=o, apwd=null, status=null)]";
+		String s1 = s.split("=")[1].split("\\(")[0];
+		s1=s1.substring(1,s1.length());
+		//String c=Class.forName("com.yc.learning.domain."+s1).getSuperclass().getSimpleName();
+		Class c=Class.forName("com.yc.learning.domain."+s1).getSuperclass();
+		Field[] fields = c.getDeclaredFields();
+		for (Field field : fields) {
+			System.out.println(field.getName());
+		}
 	}
 }

@@ -142,7 +142,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:15.0" level="project" />
     <orderEntry type="library" name="Maven: io.reactivex:rxjava-reactive-streams:1.2.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.tobato:fastdfs-client:1.27.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.30" level="project" />
@@ -208,10 +208,26 @@
     <orderEntry type="library" name="Maven: tk.mybatis:mapper-spring:1.0.5" level="project" />
     <orderEntry type="library" name="Maven: tk.mybatis:mapper-extra:1.0.5" level="project" />
     <orderEntry type="library" name="Maven: tk.mybatis:mapper-spring-boot-autoconfigure:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-starter:1.2.12" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper-spring-boot-autoconfigure:1.2.12" level="project" />
     <orderEntry type="library" name="Maven: com.github.pagehelper:pagehelper:5.1.10" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-cache:2.1.17.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.1.18.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-redis:2.1.17.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:2.1.20.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:2.1.20.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:5.1.18.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.lettuce:lettuce-core:5.1.8.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.52.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.52.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.52.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.52.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.52.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.52.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.2.20.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.10" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
   </component>
 </module>

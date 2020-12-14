@@ -43,7 +43,7 @@ public class BackModule_CourseController {
                 if (CommonUtils.isNotNull(coursename)) {
                     courseDomain.setCoursename(coursename);
                 }
-                PageDomain<CourseDomain> pageDomain = courseService.listByPage(courseDomain);
+                PageDomain<CourseDomain> pageDomain = courseService.findByPage(courseDomain,page,pageSize);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);
