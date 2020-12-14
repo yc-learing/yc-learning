@@ -9,19 +9,18 @@
         <module name="base-security" />
         <module name="learning-commons" />
         <module name="backstage-domain" />
-        <module name="learning-web" />
         <module name="user-service-domain" />
-        <module name="user-service-restapi" />
+        <module name="practice-service-restapi" />
         <module name="base-eureka" />
         <module name="base-config" />
         <module name="base-hystrix-dashborad" />
         <module name="backstage-client" />
+        <module name="learning-exam-service" />
         <module name="user-service-client" />
-        <module name="learning-practice-service" />
         <module name="base-zuul-gateway" />
+        <module name="practice-service-domain" />
         <module name="backstage-restapi" />
         <module name="base-turbine" />
-        <module name="learning-exam-service" />
         <module name="backstage-web" />
       </profile>
     </annotationProcessing>
@@ -43,6 +42,8 @@
       <module name="learning-practice-service" target="1.8" />
       <module name="learning-user-service" target="1.8" />
       <module name="learning-web" target="1.8" />
+      <module name="practice-service-domain" target="1.8" />
+      <module name="practice-service-restapi" target="1.8" />
       <module name="user-service-client" target="1.8" />
       <module name="user-service-domain" target="1.8" />
       <module name="user-service-restapi" target="1.8" />
@@ -68,6 +69,8 @@
       <module name="learning-practice-service" options="" />
       <module name="learning-user-service" options="" />
       <module name="learning-web" options="" />
+      <module name="practice-service-domain" options="" />
+      <module name="practice-service-restapi" options="" />
       <module name="user-service-client" options="" />
       <module name="user-service-domain" options="" />
       <module name="user-service-restapi" options="" />

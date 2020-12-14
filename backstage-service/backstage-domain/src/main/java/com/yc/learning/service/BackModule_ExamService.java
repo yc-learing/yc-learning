@@ -1,6 +1,8 @@
 package com.yc.learning.service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.ExamMapper;
 import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.domain.PageDomain;
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +27,7 @@ public class BackModule_ExamService {
     @Autowired(required = false)
     private ExamMapper examMapper;
 
+    @RedisAnnotation(useRedis = true)
     public PageDomain<ExamDomain> listByPage(ExamDomain examDomain) {
         Example example = new Example(Exam.class);   //条件
         //分页条件设置

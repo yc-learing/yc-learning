@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.UserMapper;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.domain.UserDomain;
@@ -20,7 +21,7 @@ import java.util.List;
 public class BackModule_UserService extends UserServiceImpl{
     @Autowired(required = false)
     private UserMapper userMapper;
-
+    @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
     public PageDomain<UserDomain> findByPage(UserDomain userDomain){
         Example example = new Example(User.class);   //条件

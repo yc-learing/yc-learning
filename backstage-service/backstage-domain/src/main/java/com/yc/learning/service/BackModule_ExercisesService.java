@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.ExercisesMapper;
 import com.yc.learning.domain.ExercisesDomain;
 import com.yc.learning.domain.PageDomain;
@@ -21,6 +22,7 @@ public class BackModule_ExercisesService extends ExamServiceImpl{
     @Autowired(required = false)
     private ExercisesMapper exercisesMapper;
 
+    @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
     public PageDomain<ExercisesDomain> findByPage(ExercisesDomain exercisesDomain) {
         Example example = new Example(Exercises.class);   //条件

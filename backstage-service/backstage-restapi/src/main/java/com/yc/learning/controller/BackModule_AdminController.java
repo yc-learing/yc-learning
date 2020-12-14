@@ -39,7 +39,7 @@ public class BackModule_AdminController {
                 if (CommonUtils.isNotNull(status)) {
                     adminDomain.setStatus(status);
                 }
-                PageDomain<AdminDomain> pageDomain = adminService.findByPage(adminDomain);
+                PageDomain<AdminDomain> pageDomain = adminService.listByPage(adminDomain);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);

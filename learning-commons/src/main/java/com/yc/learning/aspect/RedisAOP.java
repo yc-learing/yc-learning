@@ -39,7 +39,10 @@ public class RedisAOP {
 //        Object[] args = joinPoint.getArgs(); // 参数值
 //
 //        String[] argNames = ((MethodSignature)joinPoint.getSignature()).getParameterNames(); // 参数名
+
+
         // 参数值
+
         String value = Arrays.toString(joinPoint.getArgs());
         //参数名字
         String args =Arrays.toString(((MethodSignature)joinPoint.getSignature()).getParameterNames());// 参数名
@@ -114,7 +117,7 @@ public class RedisAOP {
 
         Object proceed =joinPoint.proceed();
         //将查询的对象存入redis缓存
-        operations.set(key,proceed,60,TimeUnit.SECONDS );
+        operations.set(key,proceed,60,TimeUnit.MINUTES );
 
         System.out.println("缓存更新操作更新成功");
         return proceed;
@@ -133,7 +136,7 @@ public class RedisAOP {
 
         Object proceed =joinPoint.proceed();
         //将查询的对象存入redis缓存
-        operations.set(key,proceed,60,TimeUnit.SECONDS );
+        operations.set(key,proceed,60,TimeUnit.MINUTES );
         System.out.println("加入缓存"+proceed);
         return proceed;
     }

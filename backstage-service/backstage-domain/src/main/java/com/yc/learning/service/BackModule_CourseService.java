@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.CourseMapper;
 import com.yc.learning.domain.CourseDomain;
 import com.yc.learning.domain.PageDomain;
@@ -25,6 +26,8 @@ public class BackModule_CourseService {
     @Autowired(required = false)
     private CourseMapper courseMapper;
 
+    @Transactional(readOnly = true)
+    @RedisAnnotation(useRedis = true)
     public PageDomain<CourseDomain> listByPage(CourseDomain courseDomain) {
         Example example = new Example(Course.class);   //条件
         //分页条件设置

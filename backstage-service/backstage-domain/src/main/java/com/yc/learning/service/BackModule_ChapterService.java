@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.ChapterMapper;
 import com.yc.learning.domain.ChapterDomain;
 import com.yc.learning.domain.PageDomain;
@@ -21,6 +22,7 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
     @Autowired(required = false)
     private ChapterMapper chapterMapper;
 
+    @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
     public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain) {
         Example example = new Example(Chapter.class);   //条件

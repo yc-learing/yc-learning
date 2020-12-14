@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.RecordMapper;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.domain.RecordDomain;
@@ -20,6 +21,7 @@ public class BackModule_RecordService extends RecordServiceImpl{
     @Autowired(required = false)
     private RecordMapper recordMapper;
 
+    @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
     public PageDomain<RecordDomain> findByPage(RecordDomain recordDomain) {
         Example example = new Example(Record.class);   //条件
