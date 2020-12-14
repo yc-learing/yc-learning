@@ -21,9 +21,8 @@ import java.util.List;
 public class BackModule_UserService extends UserServiceImpl{
     @Autowired(required = false)
     private UserMapper userMapper;
-
-    @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
+    @Transactional(readOnly = true)
     public PageDomain<UserDomain> findByPage(UserDomain userDomain,Integer page, Integer pageSize){
         Example example = new Example(User.class);   //条件
         //分页条件设置

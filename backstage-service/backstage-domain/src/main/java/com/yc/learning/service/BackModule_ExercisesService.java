@@ -22,8 +22,8 @@ public class BackModule_ExercisesService extends ExamServiceImpl{
     @Autowired(required = false)
     private ExercisesMapper exercisesMapper;
 
-    @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
+    @Transactional(readOnly = true)
     public PageDomain<ExercisesDomain> findByPage(ExercisesDomain exercisesDomain,Integer page, Integer pageSize) {
         Example example = new Example(Exercises.class);   //条件
         //分页条件设置

@@ -42,7 +42,10 @@ public class RedisAOP {
 //        Object[] args = joinPoint.getArgs(); // 参数值
 //
 //        String[] argNames = ((MethodSignature)joinPoint.getSignature()).getParameterNames(); // 参数名
+
+
         // 参数值
+
         String value = Arrays.toString(joinPoint.getArgs());
         // 参数名
         String args =Arrays.toString(((MethodSignature)joinPoint.getSignature()).getParameterNames());

@@ -6,6 +6,7 @@ import com.yc.learning.entity.Chapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -50,4 +51,6 @@ public class ChapterServiceImpl implements  ChapterService{
         this.ChapterMapper.insert(chapter);
         domain.setChid(chapter.getChid());
     }
+
+
 }
