@@ -21,7 +21,7 @@ public interface BackModule_AdminClient {
     @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-admin/findByPage",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String findByPage (@RequestParam("page") Integer page, @RequestParam("limit") Integer pageSize, @RequestParam("aname") String aname);
+    String findByPage (@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize, @RequestParam("aname") String aname);
 
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/insert",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,

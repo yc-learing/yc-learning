@@ -23,9 +23,9 @@ public class BackModule_AdminFuture {
 
     @Async
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize,
-                                              String uname) {
+                                              String aname) {
         return CompletableFuture.supplyAsync(() -> {
-            return adminClientService.findByPage(page, pageSize, uname);
+            return adminClientService.findByPage(page, pageSize, aname);
         });
     }
 
