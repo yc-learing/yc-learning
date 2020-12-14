@@ -24,7 +24,8 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
 
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain) {
+    @RedisAnnotation(useRedis = true)
+    public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain,Integer page, Integer pageSize) {
         Example example = new Example(Chapter.class);   //条件
         //分页条件设置
         PageHelper.startPage(chapterDomain.getPage(), chapterDomain.getPageSize());
@@ -41,12 +42,15 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
         PageDomain<ChapterDomain> pageDomain = new PageDomain<ChapterDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(chapterDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         List<ChapterDomain> r = new ArrayList<ChapterDomain>();
         //从pageInfo中取记录数
         if (pageInfo.getList()!= null) {
             for (Chapter ch : pageInfo.getList()) {
                 ChapterDomain cd=new ChapterDomain(ch.getChid(),ch.getCname(),ch.getCid(),ch.getTemp());
+                cd.setPage(chapterDomain.getPage());
+                cd.setPageSize(chapterDomain.getPageSize());
                 r.add(cd);
             }
         }

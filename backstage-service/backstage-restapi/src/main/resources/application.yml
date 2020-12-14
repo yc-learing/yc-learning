@@ -24,6 +24,12 @@ spring:
   #      kafka:
   #        binder:
   #          brokers: 39.99.175.175
+  application:
+    name: backstage-service   #应用服务名
+#  security:
+#    user:
+#      name: admin
+#      password: a
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -64,6 +70,17 @@ spring:
       pool:
         max-active: 8
         min-idle: 0
+
+#服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:a@eureka1:7301/eureka
+  instance:
+    preferIpAddress: true
+    instance-id: backstage-service   #实例名
+    lease-expiration-duration-in-seconds: 90  #如果现在超过了5s的时间间隔( default: 90 s )
+    lease-renewal-interval-in-seconds: 30   #设置心跳的时间间隔( default:30s )
 
 #监控配置
 info:

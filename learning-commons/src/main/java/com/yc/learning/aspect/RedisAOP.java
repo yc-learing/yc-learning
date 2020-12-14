@@ -14,8 +14,11 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Aspect
@@ -44,14 +47,42 @@ public class RedisAOP {
         // 参数值
 
         String value = Arrays.toString(joinPoint.getArgs());
+        // 参数名
+        String args =Arrays.toString(((MethodSignature)joinPoint.getSignature()).getParameterNames());
+//       String  superClassValue= value.split("=")[0].split("\\(")[0];
+//        superClassValue=superClassValue.substring(1,superClassValue.length());
+//        Class c=Class.forName("com.yc.learning.domain."+superClassValue).getSuperclass();
+//        Object pagedomain = c.newInstance();
+//        Field[] fields = c.getDeclaredFields();
+//        Method [] targetMethods=c.getMethods();
+//        ArrayList<Method> list =new ArrayList();
+//
+//        StringBuffer stringBuffer =new StringBuffer();
+//        for (Method method : targetMethods) {
+//            if(method.getName().contains("get")){
+//                list.add(method);
+//
+//            }
+//        }
+//        list.remove(list.size()-1);
+//        StringBuffer superClassValuesb=new StringBuffer("  [pageDomain(");
+//        for(int i =0;i<list.size()-1;i++){
+//            Method method = list.get(i);
+//            Object o = method.invoke(pagedomain,null);
+//            if(i==list.size()-2){
+//
+//                superClassValuesb.append(method.getName()+"="+o);
+//            }else {
+//
+//                superClassValuesb.append(method.getName()+"="+o+", ");
+//            }
+//        }
         //参数名字
-        String args =Arrays.toString(((MethodSignature)joinPoint.getSignature()).getParameterNames());// 参数名
-
+//        value=value+superClassValuesb.append(")]").toString();
         //代理对象
         Class<?> aClass = joinPoint.getTarget().getClass();
         //class名字
         String className =aClass.getSimpleName();
-//        System.out.println("方法名字："+methodName);
         Signature sig = joinPoint.getSignature();
         MethodSignature msig = null;
         if (!(sig instanceof MethodSignature)) {
@@ -61,7 +92,6 @@ public class RedisAOP {
         Object target = joinPoint.getTarget();
         Method currentMethod = target.getClass().getMethod(msig.getName(), msig.getParameterTypes());
         RedisAnnotation annotation = currentMethod.getAnnotation(RedisAnnotation.class);
-//        System.out.println(annotation);
         //获得该注释需要搞什么
         System.out.println("是否使用缓存"+annotation.useRedis()+"   是否删除缓存"+annotation.deleteRedis()+"    " +
                 "是否更新缓存"+annotation.updateRedis());
@@ -88,9 +118,17 @@ public class RedisAOP {
 
 
 
-//        System.out.println( Arrays.toString(argNames));
-//        System.out.println( Arrays.toString(args));
         return proceed;
+    }
+
+    private static Field[] getAllFields(Class<?> clazz) {
+        List<Field> fieldList = new ArrayList<>();
+        while (clazz != null){
+            fieldList.addAll(new ArrayList<>(Arrays.asList(clazz.getDeclaredFields())));
+            clazz = clazz.getSuperclass();
+        }
+        Field[] fields = new Field[fieldList.size()];
+        return fieldList.toArray(fields);
     }
     //删除缓存
     private Object deleteRedis(String key, ProceedingJoinPoint joinPoint) throws Throwable {

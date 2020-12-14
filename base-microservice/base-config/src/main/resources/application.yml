@@ -17,7 +17,7 @@ spring:
 #          username: shanxiaozhi
 #          password: 1999080304xyly
          git: #git服务器配置
-           uri: https://github.com/jjyyds/pic-config.git
+           uri: https://github.com/shanxiaozhi/learning_config.git
            basedir: D:/git-config #指定缓存路径
            default-label: main
 #    bus:

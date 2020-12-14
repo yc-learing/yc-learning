@@ -27,8 +27,9 @@ public class BackModule_ExamService {
     @Autowired(required = false)
     private ExamMapper examMapper;
 
+    @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
-    public PageDomain<ExamDomain> listByPage(ExamDomain examDomain) {
+    public PageDomain<ExamDomain> findByPage(ExamDomain examDomain,Integer page, Integer pageSize) {
         Example example = new Example(Exam.class);   //条件
         //分页条件设置
         PageHelper.startPage(examDomain.getPage(),examDomain.getPageSize());
@@ -45,6 +46,7 @@ public class BackModule_ExamService {
         PageDomain<ExamDomain> pageDomain = new PageDomain<ExamDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(examDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         //List<Pic> list = picMapper.selectByExample(example);
         List<ExamDomain> r = new ArrayList<ExamDomain>();
@@ -52,6 +54,8 @@ public class BackModule_ExamService {
         if (pageInfo.getList()!= null) {
             for (Exam e : pageInfo.getList()) {
                 ExamDomain ed = new ExamDomain(e.getExid(), e.getEname(),e.getEids(),e.getCreatetime(),e.getExamtime(),e.getClasses(),e.getAname(),e.getStatus(),e.getTemp());
+                ed.setPage(examDomain.getPage());
+                ed.setPageSize(examDomain.getPageSize());
                 r.add(ed);
             }
         }

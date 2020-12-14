@@ -28,7 +28,7 @@ public class BackModule_CourseService {
 
     @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
-    public PageDomain<CourseDomain> listByPage(CourseDomain courseDomain) {
+    public PageDomain<CourseDomain> findByPage(CourseDomain courseDomain,Integer page, Integer pageSize) {
         Example example = new Example(Course.class);   //条件
         //分页条件设置
         PageHelper.startPage(courseDomain.getPage(),courseDomain.getPageSize());
@@ -45,6 +45,7 @@ public class BackModule_CourseService {
         PageDomain<CourseDomain> pageDomain = new PageDomain<CourseDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(courseDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         //List<Pic> list = picMapper.selectByExample(example);
         List<CourseDomain> r = new ArrayList<CourseDomain>();
@@ -52,6 +53,8 @@ public class BackModule_CourseService {
         if (pageInfo.getList()!= null) {
             for (Course c : pageInfo.getList()) {
                 CourseDomain cd = new CourseDomain(c.getCid(),c.getCoursename(),c.getDescr(),c.getPic(),c.getStatus());
+                cd.setPage(courseDomain.getPage());
+                cd.setPageSize(courseDomain.getPageSize());
                 r.add(cd);
             }
         }

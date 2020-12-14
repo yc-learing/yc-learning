@@ -23,7 +23,8 @@ public class BackModule_UserService extends UserServiceImpl{
     private UserMapper userMapper;
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    public PageDomain<UserDomain> findByPage(UserDomain userDomain){
+    @RedisAnnotation(useRedis = true)
+    public PageDomain<UserDomain> findByPage(UserDomain userDomain,Integer page, Integer pageSize){
         Example example = new Example(User.class);   //条件
         //分页条件设置
         PageHelper.startPage(userDomain.getPage(), userDomain.getPageSize());
@@ -50,6 +51,8 @@ public class BackModule_UserService extends UserServiceImpl{
             for (User u : pageInfo.getList()) {
                 UserDomain ud = new UserDomain(u.getUid(), u.getUname(),u.getUpwd(),u.getTel(),u.getEmail(),
                         u.getQq(),u.getVx(),u.getClasses(),u.getRegistrytime(),u.getEndtime(),u.getStatus());
+                ud.setPage(userDomain.getPage());
+                ud.setPageSize(userDomain.getPageSize());
                 list.add(ud);
             }
         }
