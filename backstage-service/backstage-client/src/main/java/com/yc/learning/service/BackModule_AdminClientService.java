@@ -22,7 +22,7 @@ public class BackModule_AdminClientService {
 
     @HystrixCommand(fallbackMethod = "findOneFallback")
     public String findOne(Integer id)  {
-        return new Gson().toJson(adminClient.findOne(id));
+        return adminClient.findOne(id);
     }
 
     private String findOneFallback(Integer id) {
@@ -34,7 +34,7 @@ public class BackModule_AdminClientService {
 
     @HystrixCommand(fallbackMethod = "findByPageFallback")
     public String findByPage(Integer page, Integer pageSize,String aname) {
-            return new Gson().toJson(adminClient.findByPage(page,pageSize,aname));
+            return adminClient.findByPage(page,pageSize,aname);
     }
 
     private String findByPageFallback(Integer page, Integer pageSize, String aname) {
@@ -46,7 +46,7 @@ public class BackModule_AdminClientService {
 
     @HystrixCommand(fallbackMethod = "insertFallback")
     public String insert(AdminDomain adminDomain) {
-            return new Gson().toJson(adminClient.insert(adminDomain));
+            return adminClient.insert(adminDomain);
     }
 
     private String insertFallback(AdminDomain picDomain) {
@@ -58,7 +58,7 @@ public class BackModule_AdminClientService {
 
     @HystrixCommand(fallbackMethod = "deleteFallback")
     public String delete(Integer id) {
-        return new Gson().toJson(adminClient.delete(id));
+        return adminClient.delete(id);
     }
 
     private String deleteFallback(Integer id) {
