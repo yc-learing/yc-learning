@@ -24,7 +24,6 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
 
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    @RedisAnnotation(useRedis = true)
     public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain,Integer page, Integer pageSize) {
         Example example = new Example(Chapter.class);   //条件
         //分页条件设置

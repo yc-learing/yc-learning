@@ -6,6 +6,7 @@ import com.yc.learning.entity.Chapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -49,5 +50,13 @@ public class ChapterServiceImpl implements  ChapterService{
         chapter.setTemp(domain.getTemp());
         this.ChapterMapper.insert(chapter);
         domain.setChid(chapter.getChid());
+    }
+
+    @Override
+    public void update(ChapterDomain chapter) {
+        Example example =new Example(chapter.getClass());
+        Chapter c =new Chapter(chapter.getChid(),chapter.getCname(),chapter.getCid(),chapter.getTemp())
+        example.createCriteria();
+        ChapterMapper.updateByExample(c,example);
     }
 }

@@ -23,7 +23,6 @@ public class BackModule_RecordService extends RecordServiceImpl{
 
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    @RedisAnnotation(useRedis = true)
     public PageDomain<RecordDomain> findByPage(RecordDomain recordDomain,Integer page, Integer pageSize) {
         Example example = new Example(Record.class);   //条件
         //分页条件设置

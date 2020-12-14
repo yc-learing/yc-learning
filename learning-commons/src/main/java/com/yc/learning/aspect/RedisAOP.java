@@ -93,14 +93,14 @@ public class RedisAOP {
         Method currentMethod = target.getClass().getMethod(msig.getName(), msig.getParameterTypes());
         RedisAnnotation annotation = currentMethod.getAnnotation(RedisAnnotation.class);
         //获得该注释需要搞什么
-        System.out.println("是否使用缓存"+annotation.useRedis()+"   是否删除缓存"+annotation.deleteRedis()+"    " +
+        logger.info("该方法是否使用缓存"+annotation.useRedis()+"   是否删除缓存"+annotation.deleteRedis()+"    " +
                 "是否更新缓存"+annotation.updateRedis());
 
 
         //获得key必须要获得类名+方法名+args
-        String key = className+args+"="+value;
-
+        String key = className+methodName+args+"="+value;
         System.out.println(key);
+
 
         Object proceed=null;
         if(annotation.useRedis()==true){
@@ -135,12 +135,13 @@ public class RedisAOP {
         Boolean hasKey = redisTemplate.hasKey(key);
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
         if(hasKey){
-            System.out.println("进行删除缓存操作");
+            logger.info(key+"进行删除缓存操作");
             redisTemplate.delete(key);
+            logger.info(key+"删除缓存成功！！");
         }
         Object proceed =joinPoint.proceed();
-        System.out.println("删除缓存成功！！");
         return proceed;
+
     }
 
 
@@ -149,7 +150,7 @@ public class RedisAOP {
         Boolean hasKey = redisTemplate.hasKey(key);
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
         if(hasKey){
-            System.out.println("进行更新缓存操作");
+            logger.info("进行更新缓存操作");
             redisTemplate.delete(key);
         }
 
@@ -157,8 +158,9 @@ public class RedisAOP {
         //将查询的对象存入redis缓存
         operations.set(key,proceed,60,TimeUnit.MINUTES );
 
-        System.out.println("缓存更新操作更新成功");
+        logger.info("缓存更新操作更新成功");
         return proceed;
+
     }
 
 
@@ -168,14 +170,14 @@ public class RedisAOP {
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
 
         if(hasKey){
-            System.out.println("从缓存中取出");
+            logger.info(key+"从缓存中取出");
             return (Object) operations.get(key);
         }
 
         Object proceed =joinPoint.proceed();
         //将查询的对象存入redis缓存
         operations.set(key,proceed,60,TimeUnit.MINUTES );
-        System.out.println("加入缓存"+proceed);
+        logger.info(key+"加入缓存"+proceed);
         return proceed;
     }
 

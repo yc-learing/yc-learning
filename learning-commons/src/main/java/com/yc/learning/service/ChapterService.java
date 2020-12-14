@@ -37,4 +37,7 @@ public interface ChapterService {
      * @return
      */
     public void insert(ChapterDomain Chapter);
+
+
+    public void update(ChapterDomain Chapter);
 }

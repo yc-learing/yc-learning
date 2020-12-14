@@ -23,7 +23,6 @@ public class BackModule_UserService extends UserServiceImpl{
     private UserMapper userMapper;
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    @RedisAnnotation(useRedis = true)
     public PageDomain<UserDomain> findByPage(UserDomain userDomain,Integer page, Integer pageSize){
         Example example = new Example(User.class);   //条件
         //分页条件设置
