@@ -15,5 +15,5 @@ public interface BackModule_ChapterClient {
     @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-chapter/findByPage",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String findByPage(@RequestParam("page")Integer page,@RequestParam("limit")Integer pageSize,@RequestParam("cname") String cname);
+    String findByPage(@RequestParam("page")Integer page,@RequestParam("pageSize")Integer pageSize,@RequestParam("cname") String cname);
 }

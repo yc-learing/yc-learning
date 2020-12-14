@@ -16,7 +16,7 @@ public class BackModule_ChapterWebController {
     private BackModule_ChapterFuture chapterFuture;
 
     @RequestMapping(value = "findByPage",method = RequestMethod.GET)
-    public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "limit",required = false) Integer pageSize, @RequestParam(value = "cname",required = false) String cname) {
+    public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "cname",required = false) String cname) {
         return chapterFuture.findByPage(page, pageSize, cname);
     }
 }
