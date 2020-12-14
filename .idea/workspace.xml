@@ -13,42 +13,74 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminServiceImpl.java" afterDir="false" />
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="domain的第一次测试">
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml~a6f219cd8c68085e89ce9c5bab65ecdf577c233f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml~a6f219cd8c68085e89ce9c5bab65ecdf577c233f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ChapterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ChapterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExercisesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExercisesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ChapterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExercisesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExercisesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/BackModuleApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/BackModuleApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/aspect/RedisAOP.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/aspect/RedisAOP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/CourseDomain.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/CourseDomain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/CourseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/CourseServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/RedisUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/RedisUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="module" />
-    </option>
-  </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Aspect" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,7 +88,7 @@
     <option name="BRANCH" value="jjyyds" />
   </component>
   <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="jjyyds" />
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -67,36 +99,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="liyan" />
-                    <option name="lastUsedInstant" value="1607943968" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1607943967" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Maven\repository" />
-        <option name="mavenHome" value="D:/Maven/apache-maven-3.6.1" />
+        <option name="localRepository" value="F:\maven\reposity" />
+        <option name="mavenHome" value="D:\apache-maven-3.6.3-bin\apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -128,21 +135,25 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\future" />
+      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\client" />
+      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\service" />
+      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-domain\src\main\java\com\yc\learning\config" />
+      <recent name="D:\ideaworkspace\yc-learning\yc-learning-service\learning-user-service\user-service-client" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yc.learning.config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\ideaworkspeace\yc-learning" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\liyan\Desktop\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\future" />
-      <recent name="C:\Users\liyan\Desktop\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\config" />
-      <recent name="C:\Users\liyan\Desktop\yc-learning\backstage-service\backstage-client\src\main\java" />
-      <recent name="D:\ideaworkspace\yc-learning\yc-learning-service\learning-user-service\user-service-client" />
-      <recent name="D:\ideaworkspace\yc-learning\yc-learning-service\learning-user-service\user-service-domain" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,16 +164,27 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackModuleApp (1)">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yc.learning.Test" />
-      <module name="backstage-restapi" />
+  <component name="RunManager" selected="Application.MD5Utils">
+    <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yc.learning.util.MD5Utils" />
+      <module name="learning-commons" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yc.learning.*" />
+          <option name="PATTERN" value="com.yc.learning.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,6 +201,53 @@
       <option name="MAIN_CLASS_NAME" value="com.yc.learning.TestService" />
       <option name="METHOD_NAME" value="insertAdmin" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="backstage-service" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="backstage-service" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -247,32 +316,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.BackModuleApp (1)" />
+        <item itemvalue="Application.MD5Utils" />
         <item itemvalue="Spring Boot.BackModuleApp" />
         <item itemvalue="JUnit.TestService.insertAdmin" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="Spring Boot.BackModuleApp (1)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.22727273" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -292,9 +343,10 @@
       <workItem from="1607482769143" duration="28000" />
       <workItem from="1607482816045" duration="1210000" />
       <workItem from="1607769503906" duration="1180000" />
-      <workItem from="1607779821570" duration="38000" />
-      <workItem from="1607820322482" duration="6652000" />
-      <workItem from="1607846294690" duration="14318000" />
+      <workItem from="1607824082388" duration="3349000" />
+      <workItem from="1607827560559" duration="5773000" />
+      <workItem from="1607847166055" duration="2110000" />
+      <workItem from="1607849293675" duration="10187000" />
     </task>
     <task id="LOCAL-00001" summary="还原">
       <created>1607407984029</created>
@@ -363,95 +415,102 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="还原" />
     <MESSAGE value="domain的第一次测试" />
     <MESSAGE value="基础服务框架搭建" />
     <MESSAGE value="项目框架搭建" />
-    <MESSAGE value="后台用户及管理员分页对外接口实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台用户及管理员分页对外接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目框架搭建" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1607517674286">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1607849212899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607517674286" />
-    <state x="612" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1607773290573">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607849212899" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1607826152031">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="612" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607773290573" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607515505561" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607826152031" />
+    <state x="491" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1607822595135">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="491" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607822595135" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607850278084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607850278084" />
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409518322" />
-    <state x="719" y="208" key="FileChooserDialogImpl" timestamp="1607846445889">
+    <state x="719" y="208" key="FileChooserDialogImpl" timestamp="1607426950594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="719" y="208" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607846445889" />
-    <state width="1427" height="32" key="GridCell.Tab.0.bottom" timestamp="1607846196863">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196863" />
-    <state width="1427" height="32" key="GridCell.Tab.0.center" timestamp="1607846196863">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196863" />
-    <state width="1427" height="32" key="GridCell.Tab.0.left" timestamp="1607846196863">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196863" />
-    <state width="1427" height="32" key="GridCell.Tab.0.right" timestamp="1607846196863">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196863" />
-    <state width="1427" height="32" key="GridCell.Tab.1.bottom" timestamp="1607846196864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196864" />
-    <state width="1427" height="32" key="GridCell.Tab.1.center" timestamp="1607846196864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196864" />
-    <state width="1427" height="32" key="GridCell.Tab.1.left" timestamp="1607846196864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196864" />
-    <state width="1427" height="32" key="GridCell.Tab.1.right" timestamp="1607846196864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="955" height="112" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607826312628" />
-    <state width="1427" height="32" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607846196864" />
-    <state x="540" y="262" key="IDE.errors.dialog" timestamp="1607839089095">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607839089095" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1607482524279">
+    <state x="719" y="208" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607426950594" />
+    <state width="1223" height="261" key="GridCell.Tab.0.bottom" timestamp="1607943636308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1223" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.0.center" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.0.left" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.0.right" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.1.bottom" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.1.center" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.1.left" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1223" height="261" key="GridCell.Tab.1.right" timestamp="1607943636308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1223" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607943636308" />
+    <state width="1293" height="299" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state x="540" y="262" key="IDE.errors.dialog" timestamp="1607428910447">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607428910447" />
+    <state x="374" y="85" key="Maven.ArtifactSearchDialog" timestamp="1607858066643">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1607482524279" />
+    <state x="374" y="85" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607858066643" />
     <state x="292" y="55" key="MergeDialog" timestamp="1607432084299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -464,15 +523,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607426952074" />
-    <state x="540" y="160" key="SettingsEditor" timestamp="1607847007288">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607771182965" />
-    <state x="540" y="160" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607847007288" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607820787537">
+    <state x="352" y="17" width="996" height="707" key="SettingsEditor" timestamp="1607942430512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607820787537" />
+    <state x="352" y="17" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607942430512" />
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607850527481" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607770800986">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607770800986" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607519625303" />
     <state x="517" y="190" key="chooseDestDirectoryDialog" timestamp="1607775181194">
       <screen x="0" y="0" width="1536" height="824" />
@@ -482,31 +541,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607426476686" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1607848048192">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1607848048192" />
     <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607431936187">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431936187" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607434168146">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607824054561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607434168146" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607944590277">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824054561" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607824035031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607944590277" />
-    <state x="742" y="385" key="git4idea.rebase.GitRebaseDialog" timestamp="1607944524027">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="742" y="385" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607944524027" />
-    <state x="701" y="262" key="git4idea.rebase.GitRebaseEditor" timestamp="1607944530112">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="701" y="262" key="git4idea.rebase.GitRebaseEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607944530112" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824035031" />
     <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="268" y="143" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1607770353224" />
     <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607431226079" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1607841334252">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607841334252" />
     <state x="725" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1607518768982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -526,6 +585,19 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java</url>
+          <line>23</line>
+          <properties class="com.yc.learning.util.MD5Utils" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/BackModuleApp.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

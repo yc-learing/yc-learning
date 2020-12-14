@@ -35,7 +35,7 @@ public class BackModule_ExercisesController {
                 if (CommonUtils.isNotNull(content)) {
                     exercisesDomain.setContent(content);
                 }
-                PageDomain<ExercisesDomain> pageDomain = exercisesService.findByPage(exercisesDomain);
+                PageDomain<ExercisesDomain> pageDomain = exercisesService.findByPage(exercisesDomain,page,pageSize);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);

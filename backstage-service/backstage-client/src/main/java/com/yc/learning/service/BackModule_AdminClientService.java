@@ -35,8 +35,6 @@ public class BackModule_AdminClientService {
     @HystrixCommand(fallbackMethod = "findByPageFallback")
     public String findByPage(Integer page, Integer pageSize,String aname) {
             return new Gson().toJson(adminClient.findByPage(page,pageSize,aname));
-
-
     }
 
     private String findByPageFallback(Integer page, Integer pageSize, String aname) {
@@ -65,7 +63,7 @@ public class BackModule_AdminClientService {
 
     private String deleteFallback(Integer id) {
         Map map = new HashMap();
-        map.put("code", "-1");
+        map.put("code", "0");
         map.put("msg", "服务异常，无法删除" + id);
         return new Gson().toJson(map);
     }

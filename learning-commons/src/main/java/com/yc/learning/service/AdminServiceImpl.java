@@ -45,7 +45,6 @@ public class AdminServiceImpl implements  AdminService{
         a.setAname(admin.getAname());
         a.setApwd(MD5Utils.stringToMD5(admin.getApwd()));
         a.setStatus(admin.getStatus());
-        adminMapper.updateByPrimaryKey()
         return  adminMapper.insert(a);
 
     }

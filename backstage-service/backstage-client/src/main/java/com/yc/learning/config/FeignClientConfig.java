@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class FeignClientConfig {
 
     //加入安全配置
-    //@Bean
+    @Bean
     public BasicAuthRequestInterceptor getBasicAuthRequestInterceptor() {
         return new BasicAuthRequestInterceptor("admin", "a");
     }
@@ -20,4 +20,3 @@ public class FeignClientConfig {
     }
 
 }
-

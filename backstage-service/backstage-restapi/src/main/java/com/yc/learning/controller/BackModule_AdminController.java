@@ -18,10 +18,10 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping("/back-admin")
 public class BackModule_AdminController {
     private static Logger logger = LoggerFactory.getLogger(BackModule_AdminController.class);
+
     @Autowired(required = false)
     private BackModule_AdminService adminService;
 
-    //分页查找
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize,  String aname, Integer status) {
         return CompletableFuture.supplyAsync(() -> {
@@ -41,7 +41,7 @@ public class BackModule_AdminController {
                 if (CommonUtils.isNotNull(status)) {
                     adminDomain.setStatus(status);
                 }
-                PageDomain<AdminDomain> pageDomain = adminService.findByPage(adminDomain);
+                PageDomain<AdminDomain> pageDomain = adminService.findByPage(adminDomain,page,pageSize);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);
@@ -94,6 +94,4 @@ public class BackModule_AdminController {
 
         });
     }
-
-
 }

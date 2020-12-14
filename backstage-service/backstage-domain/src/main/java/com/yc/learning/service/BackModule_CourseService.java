@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.CourseMapper;
 import com.yc.learning.domain.CourseDomain;
 import com.yc.learning.domain.PageDomain;
@@ -25,7 +26,9 @@ public class BackModule_CourseService {
     @Autowired(required = false)
     private CourseMapper courseMapper;
 
-    public PageDomain<CourseDomain> listByPage(CourseDomain courseDomain) {
+    @Transactional(readOnly = true)
+    @RedisAnnotation(useRedis = true)
+    public PageDomain<CourseDomain> findByPage(CourseDomain courseDomain,Integer page, Integer pageSize) {
         Example example = new Example(Course.class);   //条件
         //分页条件设置
         PageHelper.startPage(courseDomain.getPage(),courseDomain.getPageSize());
@@ -42,6 +45,7 @@ public class BackModule_CourseService {
         PageDomain<CourseDomain> pageDomain = new PageDomain<CourseDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(courseDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         //List<Pic> list = picMapper.selectByExample(example);
         List<CourseDomain> r = new ArrayList<CourseDomain>();
@@ -49,6 +53,8 @@ public class BackModule_CourseService {
         if (pageInfo.getList()!= null) {
             for (Course c : pageInfo.getList()) {
                 CourseDomain cd = new CourseDomain(c.getCid(),c.getCoursename(),c.getDescr(),c.getPic(),c.getStatus());
+                cd.setPage(courseDomain.getPage());
+                cd.setPageSize(courseDomain.getPageSize());
                 r.add(cd);
             }
         }

@@ -33,7 +33,7 @@ public class BackModule_RecordController {
                 if (CommonUtils.isNotNull(pageSize)) {
                     recordDomain.setPageSize(pageSize);
                 }
-                PageDomain<RecordDomain> pageDomain = recordService.findByPage(recordDomain);
+                PageDomain<RecordDomain> pageDomain = recordService.findByPage(recordDomain,page,pageSize);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);

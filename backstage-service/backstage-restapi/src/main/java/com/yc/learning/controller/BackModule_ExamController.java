@@ -39,7 +39,7 @@ public class BackModule_ExamController {
                 if (CommonUtils.isNotNull(ename)) {
                     examDomain.setAname(ename);
                 }
-                PageDomain<ExamDomain> pageDomain=examService.listByPage(examDomain);
+                PageDomain<ExamDomain> pageDomain=examService.findByPage(examDomain,page,pageSize);
                 map.put("code",1);
                 map.put("data",pageDomain);
                 return new Gson().toJson(map);

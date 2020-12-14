@@ -24,6 +24,12 @@ spring:
   #      kafka:
   #        binder:
   #          brokers: 39.99.175.175
+  application:
+    name: backstage-service   #应用服务名
+#  security:
+#    user:
+#      name: admin
+#      password: a
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -54,15 +60,27 @@ spring:
     # 合并多个DruidDataSource的监控数据
     #useGlobalDataSourceStat=true
     #redis缓存配置，暂时还没有用到,不要导入redis的starter
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    #    password: 12345678
-#    pool:
-#      max-idle: 8
-#      min-idle: 0
-#      max-active: 8
-#      max-wait: -1
+
+
+
+  redis:
+    host: 39.105.183.155
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        min-idle: 0
+
+#服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:a@eureka1:7301/eureka
+  instance:
+    preferIpAddress: true
+    instance-id: backstage-service   #实例名
+    lease-expiration-duration-in-seconds: 90  #如果现在超过了5s的时间间隔( default: 90 s )
+    lease-renewal-interval-in-seconds: 30   #设置心跳的时间间隔( default:30s )
 
 #监控配置
 info:
