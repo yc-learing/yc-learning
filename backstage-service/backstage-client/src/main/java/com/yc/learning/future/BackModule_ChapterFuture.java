@@ -10,7 +10,7 @@ import java.util.concurrent.CompletableFuture;
 // 对外公开的业务层
 @Component
 public class BackModule_ChapterFuture {
-    @Autowired(required = false)
+    @Autowired
     private BackModule_ChapterClientService chapterClientService;//业务层
 
     //分页查询
