@@ -13,81 +13,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="后台分页对外接口实现">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_tobato_fastdfs_client_1_27_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_10_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_10_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_coobird_thumbnailator_0_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_eureka_1_4_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_ChapterClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/config/FeignClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_ChapterFuture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_ChapterClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/BackWebApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/service/AsyncThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/service/FastefsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_ChapterWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/META-INF/backstage-domain.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/BackModuleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/BackModuleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/BackModuleApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/BackModuleApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-config/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/src/main/java/com/yc/learning/conf/ZuulConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/src/main/java/com/yc/learning/config/ZuulConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/conf/ZuulConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ChapterDomain.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ChapterDomain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ChapterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ChapterServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExamServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExercisesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExercisesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RecordServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/src/main/java/com/yc/learning/controllers/PricaticeModule_PricaticeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/user-service-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/user-service-restapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" afterDir="false" />
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="后台chapter-web实现">
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
