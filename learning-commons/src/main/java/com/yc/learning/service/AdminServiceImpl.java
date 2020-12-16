@@ -6,6 +6,7 @@ import com.yc.learning.entity.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -49,5 +50,14 @@ public class AdminServiceImpl implements  AdminService{
         //admin中的id已经获取到
         //关键:
         admin.setAid(a.getAid());
+    }
+
+
+    @Override
+    public int update(AdminDomain admin) {
+        Admin a=new Admin(admin.getAid(), admin.getAname(), admin.getApwd(), admin.getStatus() );
+        Example example = new Example(Admin.class);
+        example.createCriteria().andEqualTo("aid", a.getAid());
+        return adminMapper.updateByExampleSelective(a, example);
     }
 }

@@ -32,9 +32,19 @@ public interface UserService {
     public UserDomain findOne(Integer id);
 
     /**
-     * 修改管理员的信息
+     * 插入管理员的信息
      * @param User
      * @return
      */
     public void insert(UserDomain User);
+
+    /**
+     * 修改管理员的信息
+     * @param User
+     * @return
+     */
+    public int update(UserDomain User);
+
+
+
 }

@@ -11,13 +11,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @Transactional
 public class BackModule_AdminService extends AdminServiceImpl {
+
+    @RedisAnnotation(deleteRedis = true)
+    @Override
+    public int update(AdminDomain admin) {
+        return super.update(admin);
+    }
+
 
     @Autowired(required = false)
     private AdminMapper adminMapper;
@@ -57,6 +63,7 @@ public class BackModule_AdminService extends AdminServiceImpl {
         pageDomain.setData(r);
         return pageDomain;
     }
+
 
 }
 

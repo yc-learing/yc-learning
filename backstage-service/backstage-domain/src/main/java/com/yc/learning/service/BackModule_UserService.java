@@ -21,6 +21,14 @@ public class BackModule_UserService extends UserServiceImpl{
     @Autowired(required = false)
     private UserMapper userMapper;
 
+
+    @RedisAnnotation(deleteRedis = true)
+    @Override
+    public int update(UserDomain admin) {
+        return super.update(admin);
+    }
+
+
     @Transactional(readOnly = true)
     public PageDomain<UserDomain> findByPage(UserDomain userDomain){
         Example example = new Example(User.class);   //条件
