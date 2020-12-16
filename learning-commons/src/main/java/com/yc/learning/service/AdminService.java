@@ -40,4 +40,10 @@ public interface AdminService {
      * @return
      */
     public int insert(AdminDomain admin);
+    /**
+     * 修改管理员的信息
+     * @param admin
+     * @return
+     */
+    public int update(AdminDomain admin);
 }
