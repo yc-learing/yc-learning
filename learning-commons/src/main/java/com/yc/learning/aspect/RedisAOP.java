@@ -19,6 +19,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Aspect
@@ -98,7 +99,7 @@ public class RedisAOP {
 
 
         //获得key必须要获得类名+方法名+args
-        String key = className+methodName+args+"="+value;
+        String key = className+args+"="+value;
         System.out.println(key);
 
 
@@ -134,9 +135,13 @@ public class RedisAOP {
     private Object deleteRedis(String key, ProceedingJoinPoint joinPoint) throws Throwable {
         Boolean hasKey = redisTemplate.hasKey(key);
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
+        //若插入一条数据 分页查询必须要全部刷新
+        int c = key.indexOf('[');
+        String ClassName = key.substring(0, c);
+        Set keys = redisTemplate.keys("*" + ClassName + "*");
         if(hasKey){
             logger.info(key+"进行删除缓存操作");
-            redisTemplate.delete(key);
+            redisTemplate.delete(keys);
             logger.info(key+"删除缓存成功！！");
         }
         Object proceed =joinPoint.proceed();

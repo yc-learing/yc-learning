@@ -62,4 +62,15 @@ public class BackModule_ExamService {
         pageDomain.setData(r);
         return pageDomain;
     }
+
+
+    /**
+     * 进行更新操作
+     * @param examDomain
+     * @return
+     */
+    public int update(Exam exam){
+        Example example =new Example(Exam.class);
+        return examMapper.updateByExample(exam,example);
+    }
 }

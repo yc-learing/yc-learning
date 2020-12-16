@@ -14,215 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="redis合并findbypage">
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/admin_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/easyui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/blank.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/cancel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/clear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/cut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/edit_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/edit_remove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/filesave.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/filter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/large_chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/large_clipart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/large_picture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/large_shapes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/large_smartart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/lock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/mini_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/mini_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/mini_refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/no.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/ok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/print.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/redo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/reload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/sum.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/tip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/icons/undo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/accordion_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/blank.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/calendar_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/combo_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/datagrid_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/datebox_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/layout_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/linkbutton_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/menu_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/messager_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/pagination_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/panel_tools.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/passwordbox_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/passwordbox_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/searchbox_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/slider_handle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/spinner_arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/tabs_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/tagbox_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/tree_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/validatebox_warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/billboard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/ajaxfileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/easyui-lang-zh_CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/jquery.easyui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/user_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/config/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_ChapterClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_ChapterClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_ChapterFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_ChapterFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_ChapterWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_ChapterWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/RedisService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RedisService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ChapterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ChapterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/BackWebApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/BackWebApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,18 +102,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\ideaworkspeace\yc-learning" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.yc.learning.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static" />
       <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\future" />
       <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\client" />
       <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\service" />
       <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-domain\src\main\java\com\yc\learning\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yc.learning.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ideaworkspeace\yc-learning" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -336,17 +134,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -498,7 +285,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -522,6 +309,7 @@
       <workItem from="1607827560559" duration="5773000" />
       <workItem from="1607847166055" duration="2110000" />
       <workItem from="1607849293675" duration="10187000" />
+      <workItem from="1608119164890" duration="2944000" />
     </task>
     <task id="LOCAL-00001" summary="还原">
       <created>1607407984029</created>
@@ -696,11 +484,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607428910447" />
-    <state x="374" y="85" key="Maven.ArtifactSearchDialog" timestamp="1607858066643">
+    <state x="374" y="85" key="Maven.ArtifactSearchDialog" timestamp="1608123988619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1607482524279" />
-    <state x="374" y="85" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607858066643" />
+    <state x="374" y="85" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608123988619" />
     <state x="292" y="55" key="MergeDialog" timestamp="1607432084299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -743,19 +531,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824054561" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607824035031">
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1608119415605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824035031" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608119415605" />
+    <state x="769" y="413" key="git4idea.ui.GitResetDialog" timestamp="1608119344846">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="413" key="git4idea.ui.GitResetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608119344846" />
     <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="268" y="143" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1607770353224" />
     <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607431226079" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1607841334252">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1608120099560">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607841334252" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608120099560" />
     <state x="725" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1607518768982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -779,7 +571,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java</url>
           <line>23</line>
-          <properties class="com.yc.learning.util.MD5Utils" method="main">
+          <properties class="com.yc.learning.util.MD5Utils">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="5" />

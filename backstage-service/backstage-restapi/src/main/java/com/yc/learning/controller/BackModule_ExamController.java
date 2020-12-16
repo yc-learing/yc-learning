@@ -3,6 +3,7 @@ package com.yc.learning.controller;
 import com.google.gson.Gson;
 import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.domain.PageDomain;
+import com.yc.learning.entity.Exam;
 import com.yc.learning.service.BackModule_ExamService;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,25 @@ import java.util.concurrent.CompletableFuture;
 public class BackModule_ExamController {
     @Autowired(required = false)
     private BackModule_ExamService examService;
+
+
+    @RequestMapping(value = "/find",method =RequestMethod.GET)
+    public CompletableFuture<String> update(Exam exam){
+        return CompletableFuture.supplyAsync(()->{
+            Map<String ,Object> map=new HashMap<>();
+           try {
+                int result =examService.update(exam);
+               map.put("code",1);
+               map.put("data",result);
+               return new Gson().toJson(map);
+           }catch (Exception e){
+               map.put("code",0);
+               map.put("data","程序错误");
+               e.printStackTrace();
+               return new Gson().toJson(map);
+           }
+        });
+    }
 
     @RequestMapping(value = "/findByPage",method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String ename){
