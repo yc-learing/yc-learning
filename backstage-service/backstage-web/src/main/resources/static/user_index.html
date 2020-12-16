@@ -21,13 +21,13 @@ $(function(){
   var table = layui.table;
   tab=table.render({
     elem: '#user',
-    url:'../user.action?op=findPage',
+    url:'/user/findByPage',
    	parseData:function(res){
    		return{
    			"code":0,
    			"msg":"",
-   			"count":1000,
-   			"data":res
+   			"count":res.data.totalPages,
+   			"data":res.data.data
    		}
    	},
     cols: [[
@@ -59,12 +59,12 @@ $(function(){
     }
   });
   table.on('edit(tab)', function (obj) {
-      var balance = obj.value;//修改后的数据
-      //var field = obj.field;//修改的字段名
+      var value = obj.value;//修改后的数据
+      var field = obj.field;//修改的字段名
       var data = obj.data;//修改的当行数据
       //获取修改行的ID值
-      var ID = data.pid;                   
-      $.post("../product.action?op=update", {pid:ID, value:balance}, function (data) {
+      var ID = data.uid;
+      $.post("../product.action?op=update", {pid:ID, value:value,field:field}, function (data) {
           if (data.State) {
               layer.msg(data.Text);
           }else{

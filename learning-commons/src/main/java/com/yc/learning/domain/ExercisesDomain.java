@@ -13,7 +13,7 @@ import java.util.Date;
 public class ExercisesDomain extends PageDomain{
     @Id
     private Integer eid;
-    private Integer cid;
+    private Integer chid;
     private Integer type;
     private String content;
     private String optionA;
