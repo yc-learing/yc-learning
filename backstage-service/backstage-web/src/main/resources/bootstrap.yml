@@ -1,0 +1,47 @@
+spring:
+  redis:
+    host: 39.105.183.155
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        min-idle: 0
+  application:
+    name: backweb
+
+  #  profiles:
+  #    active: development
+#  cloud:
+#    config:
+#      name: picweb-config
+#      profile: beta
+#      label: main
+#      username: admin
+#      password: a
+#      discovery:
+#        enabled: true   # 通过配置中心加载配置文件
+#        service-id: BASE-MICROSERVICE-CONFIG   # 在eureka之中注册的服务ID
+#    stream:    # 联接消息中心
+#      kafka:
+#        binder:
+#          brokers: 39.99.175.175
+
+#服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:a@eureka1:7301/eureka
+    register-with-eureka: true   #自己不注册到eureka中，只做eureka的客户端，读取服务
+  instance:     #实例配置, 没有在eureka注册，所以有没有都没关系
+    preferIpAddress: true
+    instance-id: backweb
+    lease-expiration-duration-in-seconds: 90  #如果现在超过了5s的时间间隔( default: 90 s )
+    lease-renewal-interval-in-seconds: 30
+#这里将所有的actuator端口打开
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+

@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.UserMapper;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.domain.UserDomain;
@@ -20,17 +21,9 @@ import java.util.List;
 public class BackModule_UserService extends UserServiceImpl{
     @Autowired(required = false)
     private UserMapper userMapper;
-
-
-    @RedisAnnotation(deleteRedis = true)
-    @Override
-    public int update(UserDomain admin) {
-        return super.update(admin);
-    }
-
-
+    @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    public PageDomain<UserDomain> findByPage(UserDomain userDomain){
+    public PageDomain<UserDomain> findByPage(UserDomain userDomain,Integer page, Integer pageSize){
         Example example = new Example(User.class);   //条件
         //分页条件设置
         PageHelper.startPage(userDomain.getPage(), userDomain.getPageSize());
@@ -57,6 +50,8 @@ public class BackModule_UserService extends UserServiceImpl{
             for (User u : pageInfo.getList()) {
                 UserDomain ud = new UserDomain(u.getUid(), u.getUname(),u.getUpwd(),u.getTel(),u.getEmail(),
                         u.getQq(),u.getVx(),u.getClasses(),u.getRegistrytime(),u.getEndtime(),u.getStatus());
+                ud.setPage(userDomain.getPage());
+                ud.setPageSize(userDomain.getPageSize());
                 list.add(ud);
             }
         }

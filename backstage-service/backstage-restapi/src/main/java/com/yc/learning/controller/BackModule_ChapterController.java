@@ -36,7 +36,7 @@ public class BackModule_ChapterController {
                 if (CommonUtils.isNotNull(cname)) {
                     chapterDomain.setCname(cname);
                 }
-                PageDomain<ChapterDomain> pageDomain = chapterService.findByPage(chapterDomain);
+                PageDomain<ChapterDomain> pageDomain = chapterService.findByPage(chapterDomain,page,pageSize);
                 map.put("code", 1);
                 map.put("data", pageDomain);
                 return new Gson().toJson(map);

@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.AdminMapper;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
@@ -28,8 +29,22 @@ public class BackModule_AdminService extends AdminServiceImpl {
     @Autowired(required = false)
     private AdminMapper adminMapper;
 
+//    @Autowired
+//    private RedisTemplate redisTemplate;
+
     @Transactional(readOnly = true)
-    public PageDomain<AdminDomain> findByPage(AdminDomain adminDomain) {
+    @RedisAnnotation(useRedis = true)
+    public PageDomain<AdminDomain> findByPage(AdminDomain adminDomain,Integer page, Integer pageSize) throws InstantiationException, IllegalAccessException {
+//        ValueOperations<String, PageDomain<AdminDomain>> operations = redisTemplate.opsForValue();
+//        String key ="BackModule_AdminService"+adminDomain.getAid();
+//        boolean haskey = redisTemplate.hasKey("BackModule_AdminService"+adminDomain.getAid());
+//        if (haskey) {
+//            PageDomain<AdminDomain> redis = operations.get(key);
+//            System.out.println(redis);
+//            System.out.println("从缓存中获得数据："+redis);
+//            System.out.println("------------------------------------");
+//            return redis;
+//        }     前置增强代码
         Example example = new Example(Admin.class);   //条件
         //分页条件设置
         PageHelper.startPage(adminDomain.getPage(), adminDomain.getPageSize());
@@ -50,6 +65,7 @@ public class BackModule_AdminService extends AdminServiceImpl {
         PageDomain<AdminDomain> pageDomain = new PageDomain<AdminDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(adminDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         //List<Pic> list = picMapper.selectByExample(example);
         List<AdminDomain> r = new ArrayList<AdminDomain>();
@@ -57,10 +73,13 @@ public class BackModule_AdminService extends AdminServiceImpl {
         if (pageInfo.getList()!= null) {
             for (Admin a : pageInfo.getList()) {
                 AdminDomain ad = new AdminDomain(a.getAid(), a.getAname(),a.getApwd(),a.getStatus());
+                ad.setPage(adminDomain.getPage());
+                ad.setPageSize(adminDomain.getPageSize());
                 r.add(ad);
             }
         }
         pageDomain.setData(r);
+//        operations.set(key,pageDomain);   后置增强代码
         return pageDomain;
     }
 

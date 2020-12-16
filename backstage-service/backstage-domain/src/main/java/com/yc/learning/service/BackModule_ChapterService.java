@@ -2,6 +2,7 @@ package com.yc.learning.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.dao.impl.ChapterMapper;
 import com.yc.learning.domain.ChapterDomain;
 import com.yc.learning.domain.PageDomain;
@@ -21,8 +22,9 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
     @Autowired(required = false)
     private ChapterMapper chapterMapper;
 
+    @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
-    public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain) {
+    public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain,Integer page, Integer pageSize) {
         Example example = new Example(Chapter.class);   //条件
         //分页条件设置
         PageHelper.startPage(chapterDomain.getPage(), chapterDomain.getPageSize());
@@ -39,12 +41,15 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
         PageDomain<ChapterDomain> pageDomain = new PageDomain<ChapterDomain>();
         pageDomain.setTotal(pageInfo.getTotal());
         pageDomain.setPage(pageInfo.getPageNum());
+        pageDomain.setPageSize(chapterDomain.getPageSize());
         pageDomain.setTotalPages(pageInfo.getPages());
         List<ChapterDomain> r = new ArrayList<ChapterDomain>();
         //从pageInfo中取记录数
         if (pageInfo.getList()!= null) {
             for (Chapter ch : pageInfo.getList()) {
                 ChapterDomain cd=new ChapterDomain(ch.getChid(),ch.getCname(),ch.getCid(),ch.getTemp());
+                cd.setPage(chapterDomain.getPage());
+                cd.setPageSize(chapterDomain.getPageSize());
                 r.add(cd);
             }
         }

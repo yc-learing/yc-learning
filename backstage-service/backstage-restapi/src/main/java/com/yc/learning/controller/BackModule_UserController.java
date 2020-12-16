@@ -25,6 +25,7 @@ public class BackModule_UserController {
     @RequestMapping(value = "/findByPage",method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String uname){
         return CompletableFuture.supplyAsync(()->{
+
             Map<String ,Object> map=new HashMap<>();
             try {
                 UserDomain userDomain=new UserDomain();
@@ -37,7 +38,7 @@ public class BackModule_UserController {
                 if (CommonUtils.isNotNull(uname)) {
                     userDomain.setUname(uname);
                 }
-                PageDomain<UserDomain> pageDomain=userService.findByPage(userDomain);
+                PageDomain<UserDomain> pageDomain=userService.findByPage(userDomain,page,pageSize);
                 map.put("code",1);
                 map.put("data",pageDomain);
                 return new Gson().toJson(map);
@@ -49,4 +50,6 @@ public class BackModule_UserController {
             }
         });
     }
+
+
 }
