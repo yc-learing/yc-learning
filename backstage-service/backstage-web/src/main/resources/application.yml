@@ -5,6 +5,8 @@ server:
 spring:
   cloud:
     loadbalancer.retry.enabled: true
+  main:
+    allow-bean-definition-overriding: true
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
 ribbon.ConnectTimeout: 250
 ribbon.ReadTimeout: 1000

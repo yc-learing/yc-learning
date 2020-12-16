@@ -26,7 +26,7 @@ $(function(){
    		return{
    			"code":0,
    			"msg":"",
-   			"count":1000,
+   			"count":res.data.totalPages,
    			"data":res.data.data
    		}
    	},
@@ -51,12 +51,12 @@ $(function(){
     }
   });
   table.on('edit(tab)', function (obj) {
-      var status = obj.value;//修改后的数据
-      //var field = obj.field;//修改的字段名
+      var value = obj.value;//修改后的数据
+      var field = obj.field;//修改的字段名
       var data = obj.data;//修改的当行数据
       //获取修改行的ID值
       var ID = data.aid;
-      $.post("../admin.action?op=update", {aid:ID, value:status}, function (data) {
+      $.post("../admin.action?op=update", {aid:ID, value:value,field:field}, function (data) {
           if (data.State) {
               layer.msg(data.Text);
           }else{
