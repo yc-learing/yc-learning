@@ -13,15 +13,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="redis合并findbypage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ChapterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ChapterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_ExamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_ExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/BackWebApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/BackWebApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" afterDir="false" />
-    </list>
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="redis合并findbypage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
