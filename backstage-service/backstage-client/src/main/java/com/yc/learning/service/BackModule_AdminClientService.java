@@ -70,7 +70,6 @@ public class BackModule_AdminClientService {
 
     @HystrixCommand(fallbackMethod = "updateFallback")
     public String update(Integer aid,String value,String field) {
-        System.out.println("修改clientservice");
         return adminClient.update(aid,value,field);
     }
 

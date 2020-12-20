@@ -56,4 +56,22 @@ public class BackModule_CourseController {
         });
     }
 
+    //查询课程信息
+    @RequestMapping(value = "/findCoursenameWithCname", method = RequestMethod.GET)
+    public CompletableFuture<String> findCoursenameWithCname() {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try {
+                map.put("code", 1);
+                map.put("data", courseService.findCourseName());
+                return new Gson().toJson(map);
+            } catch (Exception e) {
+                map.put("code",0);
+                map.put("data","程序错误");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+        });
+    }
+
 }

@@ -19,4 +19,11 @@ public class BackModule_CourseFuture {
             return courseClientService.findByPage(page, pageSize, coursename);
         });
     }
+
+    @Async
+    public CompletableFuture<String> findCoursenameWithCname() {
+        return CompletableFuture.supplyAsync(() -> {
+            return courseClientService.findCoursenameWithCname();
+        });
+    }
 }

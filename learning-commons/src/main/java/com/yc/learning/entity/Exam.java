@@ -6,13 +6,14 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Table(name = "exam")
-public class Exam {
+public class Exam implements Serializable {
     @Id
     private Integer exid;
     private String ename;

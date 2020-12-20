@@ -20,4 +20,9 @@ public class BackModule_CourseWebController {
     public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "coursename",required = false) String coursename) {
         return courseFuture.findByPage(page, pageSize, coursename);
     }
+
+    @RequestMapping(value = "findCoursenameWithCname",method = RequestMethod.GET)
+    public CompletableFuture<String> findCoursenameWithCname() {
+        return courseFuture.findCoursenameWithCname();
+    }
 }

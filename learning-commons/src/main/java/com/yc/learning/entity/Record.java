@@ -6,11 +6,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Table(name = "record")
-public class Record {
+public class Record implements Serializable {
     @Id
     private Integer rid;
     private Integer exid;

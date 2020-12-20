@@ -37,4 +37,5 @@ public interface CourseService {
      * @return
      */
     public void insert(CourseDomain Course);
+
 }

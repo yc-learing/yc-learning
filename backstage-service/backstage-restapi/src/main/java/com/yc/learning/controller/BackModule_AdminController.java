@@ -78,7 +78,6 @@ public class BackModule_AdminController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public CompletableFuture<String> update(Integer aid,String value,String field) throws Exception {
         return CompletableFuture.supplyAsync(() -> {
-            System.out.println("修改restapi");
             Map<String, Object> map = new HashMap<>();
             try{
                 adminService.update( aid, value, field);

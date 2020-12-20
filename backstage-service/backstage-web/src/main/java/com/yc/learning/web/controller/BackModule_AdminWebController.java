@@ -25,7 +25,6 @@ public class BackModule_AdminWebController {
             @RequestParam(value = "aid") Integer aid,
             @RequestParam(value = "value") String value,
             @RequestParam(value = "field") String field){
-        System.out.println("修改Webcontroller");
         return adminFuture.update(aid,value,field);
     }
 }

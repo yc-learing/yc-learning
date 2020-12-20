@@ -19,4 +19,12 @@ public class BackModule_UserWebController {
     public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "uname",required = false) String uname) {
         return userFuture.findByPage(page, pageSize, uname);
     }
+
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    public CompletableFuture<String> update(
+            @RequestParam(value = "aid") Integer aid,
+            @RequestParam(value = "value") String value,
+            @RequestParam(value = "field") String field){
+        return userFuture.update(aid,value,field);
+    }
 }
