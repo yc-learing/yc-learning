@@ -7,13 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-// feign客户端要访问的是  zuul服务 BASE-ZUUL-GATEWAY
-@FeignClient(name = "BASE-ZUUL-GATEWAY",
+@FeignClient(name = "base-zuul-gateway",
         configuration = FeignClientConfig.class
 )  // 配置要按自定义的类FeignClientConfig
-public interface BackModule_ChapterClient {
-    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-chapter/findByPage",
+public interface BackModule_CourseClient {
+
+    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-course/findByPage",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String findByPage(@RequestParam("page")Integer page,@RequestParam("pageSize")Integer pageSize,@RequestParam("cname") String cname);
+    String findByPage (@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize, @RequestParam("coursename") String coursename);
+
 }

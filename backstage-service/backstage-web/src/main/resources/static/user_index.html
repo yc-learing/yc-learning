@@ -17,62 +17,64 @@
 <script>
 var tab;
 $(function(){
-	layui.use('table', function(){
-  var table = layui.table;
-  tab=table.render({
-    elem: '#user',
-    url:'../user.action?op=findPage',
-   	parseData:function(res){
-   		return{
-   			"code":0,
-   			"msg":"",
-   			"count":1000,
-   			"data":res
-   		}
-   	},
-    cols: [[
-      {field:'uid', title: '用户编号', sort: true},
-      {field:'uname', title: '学生姓名'},
-       {field:'upwd', title: '密码',templet:function(res){
-      	return '*********';//把密码变成*******
-      }},
-      {field:'tel', title: '电话号码'},
-      {field:'email', title: '邮箱'},
-      {field:'qq', title: 'QQ号码'},
-      {field:'vx', title: '微信'},
-      {field:'classes', title: '班级'},
-      {field:'registrytime', title: '注册时间'},
-      {field:'endtime', title: '结课时间'},
-      {field:'status', title: '状态',templet:function(res){
-  		 if(res.status==1){
-    		  return '可用';
-    	  }else if(res.status==2){
-    		  return '冻结';
-    	  }
-      }}
-      
-    ]],
-    page: true, //开启分页
-    request: {
-      pageName: 'pageNo', // page
-      limitName: 'pageSize' // limit
-    }
-  });
-  table.on('edit(tab)', function (obj) {
-      var balance = obj.value;//修改后的数据
-      //var field = obj.field;//修改的字段名
-      var data = obj.data;//修改的当行数据
-      //获取修改行的ID值
-      var ID = data.pid;                   
-      $.post("../product.action?op=update", {pid:ID, value:balance}, function (data) {
-          if (data.State) {
-              layer.msg(data.Text);
-          }else{
-               layer.msg(data.Text);
+  layui.use('table', function(){
+    var table = layui.table;
+    tab=table.render({
+      elem: '#user',
+      url:'/user/findByPage',
+      parseData:function(res){
+          return{
+              "code":res.code,
+              "msg":"",
+              "count":res.data.totalPages,
+              "data":res.data.data
           }
-     });
+      },
+      cols: [[
+        {field:'uid', title: '用户编号', sort: true},
+        {field:'uname', title: '学生姓名'},
+        {field:'upwd', title: '密码',templet:function(res){
+          return '*********';//把密码变成*******
+        }},
+        {field:'tel', title: '电话号码'},
+        {field:'email', title: '邮箱'},
+        {field:'qq', title: 'QQ号码'},
+        {field:'vx', title: '微信'},
+        {field:'classes', title: '班级'},
+        {field:'registrytime', title: '注册时间'},
+        {field:'endtime', title: '结课时间'},
+        {field:'status', title: '状态',templet:function(res){
+           if(res.status==1){
+             return '可用';
+           }else if(res.status==2){
+             return '冻结';
+           }
+        }}
+      ]],
+      response:{
+        statusCode: 1
+      },
+      page: true, //开启分页
+      request: {
+        pageName: 'pageNo', // page
+        limitName: 'pageSize' // limit
+      }
+    });
+    table.on('edit(tab)', function (obj) {
+        var value = obj.value;//修改后的数据
+        var field = obj.field;//修改的字段名
+        var data = obj.data;//修改的当行数据
+        //获取修改行的ID值
+        var ID = data.uid;
+        $.post("../product.action?op=update", {pid:ID, value:value,field:field}, function (data) {
+            if (data.State) {
+              layer.msg(data.Text);
+            }else{
+              layer.msg(data.Text);
+            }
+       });
+    });
   });
-});
 })
 </script>
 

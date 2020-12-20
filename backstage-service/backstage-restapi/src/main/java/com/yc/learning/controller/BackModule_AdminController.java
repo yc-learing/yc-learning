@@ -28,7 +28,6 @@ public class BackModule_AdminController {
             Map<String, Object> map = new HashMap<>();
             try {
                 AdminDomain adminDomain = new AdminDomain();
-
                 if (CommonUtils.isNotNull(page)) {
                     adminDomain.setPage(page);
                 }
@@ -72,6 +71,27 @@ public class BackModule_AdminController {
                 return new Gson().toJson(map);
             }
 
+        });
+    }
+
+    //修改
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public CompletableFuture<String> update(Integer aid,String value,String field) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            System.out.println("修改restapi");
+            Map<String, Object> map = new HashMap<>();
+            try{
+                adminService.update( aid, value, field);
+                logger.info("更新成功");
+                map.put("code", 1);
+                map.put("msg","更新成功");
+                return new Gson().toJson(map);
+            }catch (Exception e) {
+                map.put("code",0);
+                map.put("msg","更新失败");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
         });
     }
 
