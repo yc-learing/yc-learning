@@ -68,4 +68,16 @@ public class BackModule_AdminClientService {
         return new Gson().toJson(map);
     }
 
+    @HystrixCommand(fallbackMethod = "updateFallback")
+    public String update(Integer aid,String value,String field) {
+        System.out.println("修改clientservice");
+        return adminClient.update(aid,value,field);
+    }
+
+    private String updateFallback(Integer aid,String value,String field) {
+        Map map = new HashMap();
+        map.put("code", "0");
+        map.put("msg", "服务异常，无法更新");
+        return new Gson().toJson(map);
+    }
 }

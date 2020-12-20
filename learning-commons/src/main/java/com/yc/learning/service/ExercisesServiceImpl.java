@@ -35,7 +35,7 @@ public class ExercisesServiceImpl implements  ExercisesService{
     public ExercisesDomain findOne(Integer id) {
         Exercises e =this.ExercisesMapper.selectByPrimaryKey(id);
         ExercisesDomain ExercisesDomain = new ExercisesDomain(
-                e.getEid(), e.getCid(), e.getType(),
+                e.getEid(), e.getChid(), e.getType(),
                 e.getContent(),e.getOptionA(),e.getOptionB(),e.getOptionC()
                 ,e.getOptionD(),e.getAnswer(),e.getAnalysis(),e.getInputtime()
                 ,e.getAname(),e.getTemp());
@@ -46,7 +46,7 @@ public class ExercisesServiceImpl implements  ExercisesService{
     public void insert(ExercisesDomain domain) {
         Exercises exercises = new Exercises();
         exercises.setEid(domain.getEid());
-       exercises.setCid(domain.getCid());
+       exercises.setChid(domain.getChid());
        exercises.setType(domain.getType());
        exercises.setContent(domain.getContent());
        exercises.setOptionA(domain.getOptionA());

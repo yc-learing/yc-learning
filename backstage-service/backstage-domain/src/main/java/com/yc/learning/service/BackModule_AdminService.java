@@ -23,7 +23,8 @@ public class BackModule_AdminService extends AdminServiceImpl {
     @Autowired(required = false)
     private AdminMapper adminMapper;
 
-
+//    @Autowired
+//    private RedisTemplate redisTemplate;
 
     @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
@@ -75,7 +76,6 @@ public class BackModule_AdminService extends AdminServiceImpl {
 //        operations.set(key,pageDomain);   后置增强代码
         return pageDomain;
     }
-
 
 
 

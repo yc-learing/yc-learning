@@ -28,8 +28,8 @@ public class AdminServiceImpl implements  AdminService{
 
 
     @Override
-    public int delete(Integer id) {
-            return adminMapper.deleteByPrimaryKey(id);
+    public void delete(Integer id) {
+            this.adminMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -47,5 +47,15 @@ public class AdminServiceImpl implements  AdminService{
         a.setStatus(admin.getStatus());
         return  adminMapper.insert(a);
 
+    }
+
+
+
+    @Override
+    public int update( Integer aid,String value,String field) {
+        if("apwd".equals(field)){
+            value=MD5Utils.stringToMD5((String) value);
+        }
+        return adminMapper.update(aid, value, field);
     }
 }
