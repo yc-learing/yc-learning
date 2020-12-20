@@ -77,5 +77,7 @@ public class BackModule_AdminService extends AdminServiceImpl {
         return pageDomain;
     }
 
+
+
 }
 

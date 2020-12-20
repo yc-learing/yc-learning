@@ -17,54 +17,53 @@
 <script>
 var tab;
 $(function(){
-	layui.use('table', function(){
-  var table = layui.table;
-  tab=table.render({
-    elem: '#admin',
-    url:'/admin/findByPage',
-   	parseData:function(res){
-   		return{
-   			"code":0,
-   			"msg":"",
-   			"count":res.data.totalPages,
-   			"data":res.data.data
-   		}
-   	},
-    cols: [[
-      {field:'aid', title: '管理员编号', sort: true},
-      {field:'aname', title: '名称' },
-      {field:'apwd', title: '密码',templet:function(res){
-      	return '*********';//把密码变成*******
-      }},
-      {field:'status', title: '状态',edit:"text",templet:function(res){
-  		 if(res.status==1){
-    		  return '可用';
-    	  }else if(res.status==2){
-    		  return '冻结';
-    	  }
-      }}
-    ]],
-    page: true, //开启分页
-    request: {
-      pageName: 'pageNo', // page
-      limitName: 'pageSize' // limit
-    }
-  });
-  table.on('edit(tab)', function (obj) {
-      var value = obj.value;//修改后的数据
-      var field = obj.field;//修改的字段名
-      var data = obj.data;//修改的当行数据
-      //获取修改行的ID值
-      var ID = data.aid;
-      $.post("../admin.action?op=update", {aid:ID, value:value,field:field}, function (data) {
-          if (data.State) {
-              layer.msg(data.Text);
-          }else{
-               layer.msg(data.Text);
+  layui.use('table', function(){
+    var table = layui.table;
+    tab=table.render({
+      elem: '#admin',
+      url:'/admin/findByPage',
+      parseData:function(res){
+          return{
+              "code":res.code,
+              "msg":"",
+              "count":res.data.totalPages,
+              "data":res.data.data
           }
-     });
+      },
+      cols: [[
+        {field:'aid', title: '管理员编号', sort: true},
+        {field:'aname', title: '名称' ,edit:"text"},
+        {field:'apwd', title: '密码',templet:function(res){
+          return '*********';//把密码变成*******
+        }},
+        {field:'status', title: '状态',edit:"text",templet:function(res){
+           if(res.status==1){
+             return '可用';
+           }else if(res.status==2){
+             return '冻结';
+           }
+        }}
+      ]],
+      response:{
+        statusCode: 1
+      },
+      page: true, //开启分页
+      request: {
+        pageName: 'pageNo', // page
+        limitName: 'pageSize' // limit
+      }
+    });
+    table.on('edit(tab)', function (obj) {
+        var value = obj.value;//修改后的数据
+        var field = obj.field;//修改的字段名
+        var data = obj.data;//修改的当行数据
+        //获取修改行的ID值
+        var ID = data.aid;
+        $.post("/admin/update", {aid:ID, value:value,field:field}, function (data) {
+              layer.msg(data.msg);
+       });
+    });
   });
-});
 })
 </script>
 

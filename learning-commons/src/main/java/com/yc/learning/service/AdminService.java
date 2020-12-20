@@ -35,9 +35,16 @@ public interface AdminService {
     public AdminDomain findOne(Integer id);
 
     /**
+     * 插入管理员的信息
+     * @param admin
+     * @return
+     */
+    public int insert(AdminDomain admin);
+
+    /**
      * 修改管理员的信息
      * @param admin
      * @return
      */
-    public void insert(AdminDomain admin);
+    public int update(Integer aid,String value,String field);
 }
