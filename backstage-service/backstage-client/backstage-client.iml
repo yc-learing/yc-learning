@@ -8,6 +8,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
+          <factory-entry name="Entities" />
           <factory-entry name="backstage-client" />
         </datasource-mapping>
         <naming-strategy-map />

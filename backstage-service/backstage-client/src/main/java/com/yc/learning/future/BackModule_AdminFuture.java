@@ -43,4 +43,11 @@ public class BackModule_AdminFuture {
             return adminClientService.delete(id);
         });
     }
+
+    @Async
+    public CompletableFuture<String> update(Integer aid,Object value,String field) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.update(aid,value,field);
+        });
+    }
 }

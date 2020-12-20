@@ -30,4 +30,7 @@ public interface BackModule_AdminClient {
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/back-proxy/back-admin/{id}")
     String delete(@RequestParam("id") Integer id);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/update")
+    String update(@RequestParam("aid")Integer aid,@RequestParam("value")Object value,@RequestParam("field")String field);
 }

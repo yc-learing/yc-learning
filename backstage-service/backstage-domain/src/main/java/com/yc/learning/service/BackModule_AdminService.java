@@ -19,11 +19,11 @@ import java.util.List;
 @Transactional
 public class BackModule_AdminService extends AdminServiceImpl {
 
-    @RedisAnnotation(deleteRedis = true)
-    @Override
-    public int update(AdminDomain admin) {
-        return super.update(admin);
-    }
+//    @RedisAnnotation(deleteRedis = true)
+//    @Override
+//    public int update(AdminDomain admin) {
+//        return super.update(admin);
+//    }
 
 
     @Autowired(required = false)

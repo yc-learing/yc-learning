@@ -45,5 +45,5 @@ public interface AdminService {
      * @param admin
      * @return
      */
-    public int update(AdminDomain admin);
+    public int update(Integer aid,Object value,String field);
 }

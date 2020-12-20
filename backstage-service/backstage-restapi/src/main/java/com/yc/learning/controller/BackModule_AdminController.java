@@ -63,11 +63,11 @@ public class BackModule_AdminController {
                 adminService.insert(adminDomain);
                 logger.info("新增->ID=" + adminDomain.getAid());
                 map.put("code", 1);
-                map.put("data", "注册成功");
+                map.put("msg", "注册成功");
                 return new Gson().toJson(map);
             }catch (Exception e) {
                 map.put("code",0);
-                map.put("data","注册失败");
+                map.put("msg","注册失败");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }
@@ -87,7 +87,27 @@ public class BackModule_AdminController {
                 return new Gson().toJson(map);
             }catch (Exception e) {
                 map.put("code",0);
-                map.put("data","刪除失败");
+                map.put("msg","刪除失败");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+
+        });
+    }
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public CompletableFuture<String> update(Integer aid,Object value,String field) throws Exception {
+
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try{
+                adminService.update( aid, value, field);
+                logger.info("更新成功");
+                map.put("code", 1);
+                map.put("msg","更新失败");
+                return new Gson().toJson(map);
+            }catch (Exception e) {
+                map.put("code",0);
+                map.put("msg","更新失败");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }

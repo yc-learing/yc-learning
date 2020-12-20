@@ -7,7 +7,6 @@ import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -52,10 +51,10 @@ public class AdminServiceImpl implements  AdminService{
 
 
     @Override
-    public int update(AdminDomain admin) {
-        Admin a=new Admin(admin.getAid(), admin.getAname(), admin.getApwd(), admin.getStatus() );
-        Example example = new Example(Admin.class);
-        example.createCriteria().andEqualTo("aid", a.getAid());
-        return adminMapper.updateByExampleSelective(a, example);
+    public int update( Integer aid,Object value,String field) {
+        if("apwd".equals(field)){
+            value=MD5Utils.stringToMD5((String) value);
+        }
+        return adminMapper.update(aid, value, field);
     }
 }
