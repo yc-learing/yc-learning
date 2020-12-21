@@ -11,10 +11,11 @@ import com.yc.learning.util.MD5Utils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {DaoConfiguration.class, RedisAOP.class, RedisConfig.class})
+@ContextConfiguration(classes = {DataSourceAutoConfiguration.class, RedisAOP.class, RedisConfig.class})
 public class TestService {
     private static final Logger logger = Logger.getLogger(TestService.class);
 
