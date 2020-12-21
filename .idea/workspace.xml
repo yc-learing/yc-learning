@@ -13,52 +13,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="添加修改数据">
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/backLogin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images/bj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/VO/AdminLoginVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/ResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/backstage-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/backstage-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/test-classes/com/yc/learning/TestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/test-classes/com/yc/learning/TestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/backstage-restapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/target/classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/target/classes/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/ChapterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/ChapterMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/TokenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/META-INF/learning-commons.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/learning/TestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" afterDir="false" />
-    </list>
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="添加修改数据" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -385,6 +340,7 @@
       <workItem from="1608428421414" duration="9496000" />
       <workItem from="1608465799572" duration="5330000" />
       <workItem from="1608530588979" duration="7941000" />
+      <workItem from="1608546769670" duration="284000" />
     </task>
     <task id="LOCAL-00001" summary="还原">
       <created>1607407984029</created>
@@ -470,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607951281951</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加修改数据">
+      <created>1608546893872</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1608546893872</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +458,8 @@
     <MESSAGE value="项目框架搭建" />
     <MESSAGE value="redis合并findbypage" />
     <MESSAGE value="后台管理员页面完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台管理员页面完成" />
+    <MESSAGE value="添加修改数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加修改数据" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1608461195815">
