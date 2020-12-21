@@ -15,30 +15,83 @@
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/main/java/com/yc/learning/service/BackModule_AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/test-classes/com/yc/learning/TestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-domain/target/test-classes/com/yc/learning/TestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/service/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/aspect/RedisAOP.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/aspect/RedisAOP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/AdminMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/RedisUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/RedisUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExamService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/test-classes/com/yc/learning/TestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/target/classes/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/target/classes/com/yc/learning/HystrixDashboradApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/WebSecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/bean/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-turbine/target/classes/com/yc/learning/TurbineApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/ZuulApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/filter/AuthorizedRequestFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/annotaion/RedisAnnotation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/aspect/RedisAOP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/config/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/MisBaseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/AdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ChapterMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/CourseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ExamMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ExercisesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/RecordMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/AdminDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ChapterDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/CourseDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExamDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExercisesDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/PageDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/RecordDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/UserDomain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exercises.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ChapterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/CourseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/CourseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExamService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExamServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExercisesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExercisesServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RecordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RecordServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/CommonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/CopyUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/RedisUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/YcConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/META-INF/learning-commons.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/com/yc/learning/DaoConfiguration$MyBatisMapperScannerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/com/yc/learning/DaoConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/com/yc/learning/TestService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +123,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="liyan" />
+        <entry key="$PROJECT_DIR$" value="HillCheung" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -213,7 +266,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="backstage-service" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -226,7 +279,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="backstage-service" />
       <option name="filePath" />
       <option name="vmParameters" />
@@ -321,38 +374,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MD5Utils" />
+      <item itemvalue="JUnit.TestService.update" />
+      <item itemvalue="JUnit.TestService.insertAdmin" />
+      <item itemvalue="Spring Boot.ConfigApp" />
+      <item itemvalue="Spring Boot.EurekaApp" />
+      <item itemvalue="Spring Boot.HystrixDashboradApp" />
+      <item itemvalue="Spring Boot.TurbineApp" />
+      <item itemvalue="Spring Boot.ZuulApp" />
+      <item itemvalue="Spring Boot.BackModuleApp (1)" />
+      <item itemvalue="Spring Boot.BackWebApp" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MD5Utils" />
-        <item itemvalue="JUnit.TestService.update" />
-        <item itemvalue="JUnit.TestService.insertAdmin" />
         <item itemvalue="Spring Boot.BackWebApp" />
         <item itemvalue="Spring Boot.BackModuleApp (1)" />
+        <item itemvalue="JUnit.TestService.insertAdmin" />
+        <item itemvalue="JUnit.TestService.update" />
+        <item itemvalue="Application.MD5Utils" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.2585596" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -483,13 +525,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="还原" />
@@ -526,26 +567,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="208" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607426950594" />
-    <state width="1723" height="273" key="GridCell.Tab.0.bottom" timestamp="1608125483440">
+    <state width="1322" height="284" key="GridCell.Tab.0.bottom" timestamp="1608548769399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1723" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608125483440" />
-    <state width="1723" height="273" key="GridCell.Tab.0.center" timestamp="1608125483440">
+    <state width="1322" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
+    <state width="1322" height="284" key="GridCell.Tab.0.center" timestamp="1608548769399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608036352399" />
-    <state width="1723" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608125483440" />
-    <state width="1723" height="273" key="GridCell.Tab.0.left" timestamp="1608125483440">
+    <state width="1322" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
+    <state width="1322" height="284" key="GridCell.Tab.0.left" timestamp="1608548769399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608036352399" />
-    <state width="1723" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608125483440" />
-    <state width="1723" height="273" key="GridCell.Tab.0.right" timestamp="1608125483440">
+    <state width="1322" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
+    <state width="1322" height="284" key="GridCell.Tab.0.right" timestamp="1608548769399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1723" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608125483440" />
+    <state width="1322" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
     <state width="1200" height="251" key="GridCell.Tab.1.bottom" timestamp="1608036352400">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -588,11 +629,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607426952074" />
-    <state x="440" y="95" width="996" height="707" key="SettingsEditor" timestamp="1608114824523">
+    <state x="440" y="95" width="996" height="707" key="SettingsEditor" timestamp="1608548742168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="352" y="17" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607942430512" />
-    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608114824523" />
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608548742168" />
     <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607951387680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -618,10 +659,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608114877793" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1608119630175">
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1608548723131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608119630175" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608548723131" />
     <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -654,7 +695,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java</url>
-          <line>36</line>
+          <line>23</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

@@ -109,7 +109,7 @@ public class RedisAOP {
             return proceed;
         }
         else if(annotation.updateRedis()==true){
-             proceed = updateRedis(key, joinPoint);
+            proceed = updateRedis(key, joinPoint);
         }
         else if(annotation.deleteRedis()==true){
             proceed= deleteRedis(key,  joinPoint);
