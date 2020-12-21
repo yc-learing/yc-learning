@@ -24,7 +24,7 @@ public interface AdminService {
     /**
      * 删除图片
      */
-    public void delete(Integer id);
+    public int delete(Integer id);
 
     /**
      * 根据id查图片详情(    图片的metadata )
@@ -35,16 +35,15 @@ public interface AdminService {
     public AdminDomain findOne(Integer id);
 
     /**
-     * 插入管理员的信息
+     * 修改管理员的信息
      * @param admin
      * @return
      */
     public int insert(AdminDomain admin);
-
     /**
      * 修改管理员的信息
      * @param admin
      * @return
      */
-    public int update(Integer aid,String value,String field);
+    public int update(Integer aid,Object value,String field);
 }

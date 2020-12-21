@@ -14,15 +14,6 @@ public class BackModule_AdminFuture {
     @Autowired
     private BackModule_AdminClientService adminClientService;   //业务层
 
-
-    @Async   //异步调用
-    public CompletableFuture<String> login(String aname,String apwd) {
-        return CompletableFuture.supplyAsync(() -> {
-            return adminClientService.login(aname,apwd);
-        });
-    }
-
-
     @Async   //异步调用
     public CompletableFuture<String> findOne(Integer id) {
         return CompletableFuture.supplyAsync(() -> {
@@ -54,15 +45,9 @@ public class BackModule_AdminFuture {
     }
 
     @Async
-    public CompletableFuture<String> update(Integer aid,String value,String field) {
+    public CompletableFuture<String> update(Integer aid,Object value,String field) {
         return CompletableFuture.supplyAsync(() -> {
             return adminClientService.update(aid,value,field);
-        });
-    }
-
-    public CompletableFuture<String> check(String token) {
-        return CompletableFuture.supplyAsync(() -> {
-            return adminClientService.check(token);
         });
     }
 }

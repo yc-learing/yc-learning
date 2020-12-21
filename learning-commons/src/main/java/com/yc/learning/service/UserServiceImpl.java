@@ -6,18 +6,19 @@ import com.yc.learning.entity.User;
 import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
 public class UserServiceImpl implements UserService{
 
     @Autowired(required = false)
-    private UserMapper UserMapper;
+    private UserMapper userMapper;
 
     @Transactional(readOnly = true)
     @Override
     public List<User> findAll() {
-        List<User> list = UserMapper.selectAll();
+        List<User> list = userMapper.selectAll();
 
         return list;
     }
@@ -26,12 +27,12 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void delete(Integer id) {
-        this.UserMapper.deleteByPrimaryKey(id);
+        this.userMapper.deleteByPrimaryKey(id);
     }
 
     @Override
     public UserDomain findOne(Integer id) {
-        User user =this.UserMapper.selectByPrimaryKey(id);
+        User user =this.userMapper.selectByPrimaryKey(id);
         UserDomain domain = new UserDomain(
                user.getUid(),user.getUname(),user.getUpwd(),user.getTel(),user.getEmail(),
                 user.getQq(),user.getVx(),user.getClasses(),user.getRegistrytime(),
@@ -46,7 +47,17 @@ public class UserServiceImpl implements UserService{
                 domain.getVx(),domain.getClasses()
                 ,domain.getRegistrytime(),domain.getEndtime()
                 ,domain.getStatus());
-        this.UserMapper.insert(user);
+        this.userMapper.insert(user);
         domain.setUid(user.getUid());
+    }
+
+    @Override
+    public int update(UserDomain user) {
+        User u=new User(user.getUid(),user.getUname(),MD5Utils.stringToMD5(user.getUpwd()),user.getTel(),user.getEmail(),
+                user.getQq(),user.getVx(),user.getClasses(),user.getRegistrytime(),
+                user.getEndtime(),user.getStatus());
+        Example example = new Example(User.class);
+        example.createCriteria().andEqualTo("uid", user.getUid());
+        return userMapper.updateByExampleSelective(u, example);
     }
 }

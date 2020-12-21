@@ -8,14 +8,10 @@ import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
 import com.yc.learning.util.CommonUtils;
-import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,32 +19,18 @@ import java.util.List;
 @Transactional
 public class BackModule_AdminService extends AdminServiceImpl {
 
+//    @RedisAnnotation(deleteRedis = true)
+//    @Override
+//    public int update(AdminDomain admin) {
+//        return super.update(admin);
+//    }
+
+
     @Autowired(required = false)
     private AdminMapper adminMapper;
 
-    @Autowired(required = false)
-    private RedisTemplate redisTemplate;
-    
-    
-    @RedisAnnotation(deleteRedis = true)
-    @Override
-    public int update( Integer aid,String value,String field) {
-        return   super.update(aid,value,field);
-    }
-
-
-
-
-
-
-    @Transactional(readOnly = true)
-    public Admin login(Admin admin){
-        Example example = new Example(Admin.class);   //条件
-        example.createCriteria().andEqualTo("aname",admin.getAname()).andEqualTo("apwd", MD5Utils.stringToMD5(admin.getApwd()));
-        List<Admin> admins = adminMapper.selectByExample(example);
-        return admins.size()==0?null:admins.get(0);
-    }
-
+//    @Autowired
+//    private RedisTemplate redisTemplate;
 
     @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
@@ -99,14 +81,6 @@ public class BackModule_AdminService extends AdminServiceImpl {
         pageDomain.setData(r);
 //        operations.set(key,pageDomain);   后置增强代码
         return pageDomain;
-    }
-
-
-    public Admin check(String token) {
-        ValueOperations<String,Admin> valueOperations = redisTemplate.opsForValue();
-        Admin admin = valueOperations.get(token);
-        System.err.println(admin);
-        return admin;
     }
 
 

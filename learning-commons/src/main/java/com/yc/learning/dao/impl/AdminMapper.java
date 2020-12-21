@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Update;
 
 @Mapper
 public interface AdminMapper extends MisBaseMapper<Admin> {
+
     @Update("update  admin set ${field}=#{value} where aid=#{aid}")
-    public int update(@Param("aid") Integer aid, @Param("value")String value, @Param("field")String field);
+    public int update(@Param("aid") Integer aid, @Param("value")Object value, @Param("field")String field);
 }

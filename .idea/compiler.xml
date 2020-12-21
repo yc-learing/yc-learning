@@ -6,24 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-hystrix-dashborad" />
-        <module name="user-service-client" />
-        <module name="learning-commons" />
-        <module name="learning-exam-service" />
-        <module name="backstage-domain" />
-        <module name="backstage-client" />
-        <module name="base-config" />
         <module name="base-security" />
-        <module name="base-zuul-gateway" />
-        <module name="backstage-restapi" />
-        <module name="backstage-web" />
-        <module name="practice-service-domain" />
-        <module name="base-eureka" />
-        <module name="learning-web" />
+        <module name="learning-commons" />
+        <module name="backstage-domain" />
         <module name="user-service-domain" />
-        <module name="base-turbine" />
-        <module name="user-service-restapi" />
         <module name="practice-service-restapi" />
+        <module name="user-service-restapi" />
+        <module name="base-eureka" />
+        <module name="base-config" />
+        <module name="base-hystrix-dashborad" />
+        <module name="backstage-client" />
+        <module name="learning-exam-service" />
+        <module name="user-service-client" />
+        <module name="base-zuul-gateway" />
+        <module name="practice-service-domain" />
+        <module name="backstage-restapi" />
+        <module name="base-turbine" />
+        <module name="learning-web" />
+        <module name="backstage-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

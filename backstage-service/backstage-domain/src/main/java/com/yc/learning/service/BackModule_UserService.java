@@ -19,6 +19,13 @@ import java.util.List;
 @Service
 @Transactional
 public class BackModule_UserService extends UserServiceImpl{
+
+    @RedisAnnotation(deleteRedis = true)
+    @Override
+    public int update(UserDomain user) {
+        return super.update(user);
+    }
+
     @Autowired(required = false)
     private UserMapper userMapper;
     @RedisAnnotation(useRedis = true)
