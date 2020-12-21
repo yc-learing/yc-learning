@@ -8,7 +8,10 @@ import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
 import com.yc.learning.util.CommonUtils;
+import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -23,8 +26,29 @@ public class BackModule_AdminService extends AdminServiceImpl {
     @Autowired(required = false)
     private AdminMapper adminMapper;
 
-//    @Autowired
-//    private RedisTemplate redisTemplate;
+    @Autowired(required = false)
+    private RedisTemplate redisTemplate;
+    
+    
+    @RedisAnnotation(deleteRedis = true)
+    @Override
+    public int update( Integer aid,String value,String field) {
+        return   super.update(aid,value,field);
+    }
+
+
+
+
+
+
+    @Transactional(readOnly = true)
+    public Admin login(Admin admin){
+        Example example = new Example(Admin.class);   //条件
+        example.createCriteria().andEqualTo("aname",admin.getAname()).andEqualTo("apwd", MD5Utils.stringToMD5(admin.getApwd()));
+        List<Admin> admins = adminMapper.selectByExample(example);
+        return admins.size()==0?null:admins.get(0);
+    }
+
 
     @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
@@ -77,6 +101,13 @@ public class BackModule_AdminService extends AdminServiceImpl {
         return pageDomain;
     }
 
+
+    public Admin check(String token) {
+        ValueOperations<String,Admin> valueOperations = redisTemplate.opsForValue();
+        Admin admin = valueOperations.get(token);
+        System.err.println(admin);
+        return admin;
+    }
 
 
 }

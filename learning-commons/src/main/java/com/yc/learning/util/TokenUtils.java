@@ -1,71 +1,63 @@
 package com.yc.learning.util;
 
+
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
+import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
+import com.auth0.jwt.exceptions.JWTCreationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-/**
- * @desc   使用token验证用户是否登录
- * @author zm
- **/
+import java.util.*;
+
+@Component
 public class TokenUtils {
-    //设置过期时间
-    private static final long EXPIRE_DATE=30*60*100000;
-    //token秘钥
-    private static final String TOKEN_SECRET = "ZCfasfhuaUUHufguGuwu2020BQWE";
+    @Autowired
+    private RedisTemplate redisTemplate;
+    private static final Logger log = LoggerFactory.getLogger(TokenUtils.class);
 
-    public static String token (String username,String password){
 
-        String token = "";
+    public static String createToken(Map<String, String> map, Integer expireSeconds) {
+        String token = null;
+        Map<String, Object> mapHeader = new HashMap<>();
+        mapHeader.put("alg", "HS256");
+        mapHeader.put("typ", "JWT");
+        JWTCreator.Builder jwtBuilder = JWT.create();
+        jwtBuilder.withHeader(mapHeader);
+
+        if (map != null && !map.isEmpty()) {
+            Set<Map.Entry<String, String>> setEntry = map.entrySet();
+            for (Map.Entry<String, String> entry : setEntry) {
+                jwtBuilder.withClaim(entry.getKey(), entry.getValue());
+            }
+        }
+
+        if (expireSeconds != null && expireSeconds > 0) {
+            Calendar nowTime = Calendar.getInstance();
+            int calendarField = Calendar.SECOND;
+            nowTime.add(calendarField, expireSeconds);
+            Date expiresDate = nowTime.getTime();
+            jwtBuilder.withExpiresAt(expiresDate);
+        }
+        jwtBuilder.withIssuedAt(new Date());
+
         try {
-            //过期时间
-            Date date = new Date(System.currentTimeMillis()+EXPIRE_DATE);
-            //秘钥及加密算法
-            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-            //设置头部信息
-            Map<String,Object> header = new HashMap<>();
-            header.put("typ","JWT");
-            header.put("alg","HS256");
-            //携带username，password信息，生成签名
-            token = JWT.create()
-                    .withHeader(header)
-                    .withClaim("username",username)
-                    .withClaim("password",password).withExpiresAt(date)
-                    .sign(algorithm);
-        }catch (Exception e){
+            token = jwtBuilder.sign(Algorithm.HMAC256("GODZILLALOGINtoken"));
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
-            return  null;
+        } catch (JWTCreationException e) {
+            e.printStackTrace();
         }
         return token;
     }
-
-    public static boolean verify(String token){
-        /**
-         * @desc   验证token，通过返回true
-         * @params [token]需要校验的串
-         **/
-        try {
-            Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
-            JWTVerifier verifier = JWT.require(algorithm).build();
-            DecodedJWT jwt = verifier.verify(token);
-            return true;
-        }catch (Exception e){
-            e.printStackTrace();
-            return  false;
-        }
-    }
-    public static void main(String[] args) {
-        String username ="zhangsan";
-        String password = "123";
-        String token = token(username,password);
-        System.out.println(token);
-        boolean b = verify(
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6IjEyMyIsImV4cCI6MTYwODYyOTAwMiwidXNlcm5hbWUiOiJ6aGFuZ3NhbiJ9.oc86qa0MnRg6dJDi2ONs-nhApNMgYXcAMXw680dlbYY\n" +
-                        "");
-        System.out.println(b);
+    public static String createToken(String aname,String apwd) {
+        Map<String, String> mapClaim = new HashMap<>();
+        mapClaim.put("aname", aname);
+        mapClaim.put("apwd",apwd);
+        Integer expireSeconds = 2* 60 * 60;// 这里设置过期时间为两个小时
+        return createToken(mapClaim, expireSeconds);
     }
 }

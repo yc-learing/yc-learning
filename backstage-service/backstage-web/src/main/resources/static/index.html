@@ -208,12 +208,16 @@
 					aname:''
 				},
 				mounted:function(){
+					console.log(localStorage.getItem("token"));
 					axios({
-						url:'../admin.action?op=check',
+						url:'../admin/check',
 						method:'post',
-						params:{}
+						params:{token:localStorage.getItem("token")}
 					}).then(result=>{
+						console.log(result);
 						if(!result.data.admin){
+							alert("用户token失效，请重新登录");
+							localStorage.removeItem("token");
 							location.href='backLogin.html';
 						}else{
 							this.aname=result.data.admin.aname;

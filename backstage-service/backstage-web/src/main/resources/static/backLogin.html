@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>管理员登陆 - QAdmin后台模板</title>
+    <meta name="keywords" content="qadmin,qadmin模板,后台模板,qadmin后台模板">
+    <meta name="description" content="qadmin是一个轻量级后台模板,基于layui框架开发,简洁而不简单">
+    <link rel="stylesheet" href="./css/layui.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./static/layui/layui.js"></script>
+</head>
+
+<body id="login">
+<div class="login">
+    <h2>源辰后台界面</h2>
+        <div class="layui-form-item">
+            <input type="username" id="aname"   name="user" placeholder="用户名" class="layui-input">
+            <i class="layui-icon input-icon">&#xe66f;</i>
+        </div>
+        <div class="layui-form-item">
+            <input type="password" id="apwd" name="pwd" placeholder="密码" class="layui-input">
+            <i class="layui-icon input-icon">&#xe673;</i>
+        </div>
+        <div class="layui-form-item">
+            <input type="checkbox" name="box" lay-skin="primary" title="记住密码" checked=""> <a class="back"
+                                                                                             href="javascript:;"
+                                                                                             style="margin-top: 10px">忘记密码</a>
+        </div>
+        <div class="layui-form-item">
+            <button style="width: 100%" class="layui-btn" onclick="login()">立即登录</button>
+
+        </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/axios.js"></script>
+    <script>
+        $(function () {
+            console.log(localStorage.getItem("token"))
+            let item = localStorage.getItem("token");
+            if (item!=null){
+                window.location.href="index.html";
+            }
+        })
+        function login() {
+
+        var apwd =$('#apwd').val();
+        var aname =$('#aname').val();
+        axios({
+            url:'../admin/login',
+            method:'post',
+            params:{aname:aname,apwd:apwd}
+        }).then(result=>{
+            console.log(result);
+            if (result.data.code==0){
+                alert(result.data.msg);
+            }else{
+                alert("登录成功！！！！");
+                localStorage.setItem("token",result.data.token);
+                window.location.href="index.html";
+                console.log(result);
+            }
+        })
+    }
+
+
+
+    </script>
+</div>
+</body>
+
+</html>

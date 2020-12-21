@@ -5,5 +5,6 @@ import com.yc.learning.entity.Chapter;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface ChapterMapper extends MisBaseMapper<Chapter> {
+public interface    ChapterMapper extends MisBaseMapper<Chapter> {
+
 }

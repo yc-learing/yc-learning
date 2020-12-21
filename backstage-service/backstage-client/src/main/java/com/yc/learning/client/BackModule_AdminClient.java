@@ -35,4 +35,15 @@ public interface BackModule_AdminClient {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String update(@RequestParam("aid")Integer aid,@RequestParam("value")String value,@RequestParam("field")String field);
+
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/login",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String login(@RequestParam("aname") String aname, @RequestParam("apwd") String apwd);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
+                   consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+                   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String check(@RequestParam("token") String token);
 }
