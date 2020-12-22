@@ -50,7 +50,6 @@ public class ChapterServiceImpl implements  ChapterService{
         return ChapterMapper.insert(chapter);
     }
 
-    @Override
     public void update(ChapterDomain Chapter) {
 
     }
