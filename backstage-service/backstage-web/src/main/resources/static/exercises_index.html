@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/layui.css"  media="all">
+</head>
+<body>
+ 
+<table class="layui-hide" id="exercises" lay-filter="tab"></table>
+              
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="layui/layui.js" charset="utf-8"></script>
+<script>
+var tab;
+$(function(){
+  layui.use('table', function(){
+    var table = layui.table;
+    tab=table.render({
+      elem: '#exercises',
+      url:'/exercises/findByPage',
+      parseData:function(res){
+          return{
+              "code":res.code,
+              "msg":"",
+              "count":res.data.totalPages,
+              "data":res.data.data
+          }
+      },
+      cols: [[
+        {field:'eid', title: '题号', sort: true},
+        {field:'type', title: '题型',templet:function(res){
+           if(res.type==1){
+             return '单选';
+           }else if(res.type==2){
+             return '多选';
+           }else if(res.type==3){
+             return '判断';
+           }else if(res.type==4){
+             return '综合';
+           }
+        }},
+        {field:'content', title: '题干'},
+        {field:'aname', title: '作者'}
+      ]],
+      response:{
+        statusCode: 1
+      },
+      page: true, //开启分页
+      request: {
+        pageName: 'pageNo', // page
+        limitName: 'pageSize' // limit
+      }
+    });
+    // table.on('edit(tab)', function (obj) {
+    //     var value = obj.value;//修改后的数据
+    //     var field = obj.field;//修改的字段名
+    //     var data = obj.data;//修改的当行数据
+    //     //获取修改行的ID值
+    //     var ID = data.aid;
+    //     $.post("/admin/update", {aid:ID, value:value,field:field}, function (data) {
+    //       alert("修改成功");
+    //    });
+    // });
+  });
+})
+</script>
+
+</body>
+</html>

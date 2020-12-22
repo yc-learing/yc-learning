@@ -3,18 +3,17 @@ package com.yc.learning.service;
 import com.alibaba.druid.support.json.JSONUtils;
 import com.google.gson.Gson;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.yc.learning.VO.AdminLoginVo;
 import com.yc.learning.client.BackModule_AdminClient;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.entity.Admin;
 import com.yc.learning.util.MD5Utils;
 import com.yc.learning.util.TokenUtils;
+import com.yc.learning.vo.AdminLoginVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import sun.security.provider.MD5;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -84,7 +83,6 @@ public class BackModule_AdminClientService {
 
     @HystrixCommand(fallbackMethod = "updateFallback")
     public String update(Integer aid,String value,String field) {
-        System.out.println("修改clientservice");
         return adminClient.update(aid,value,field);
     }
 
@@ -103,7 +101,7 @@ public class BackModule_AdminClientService {
         try {
 
             if(login!=null){
-                Map parse=(HashMap)JSONUtils.parse(login);
+                Map parse=(HashMap) JSONUtils.parse(login);
                 Integer code = (Integer) parse.get("code");
                 if(code==1){
                     AdminLoginVo adminLoginVo = adminLoginVo(admin);

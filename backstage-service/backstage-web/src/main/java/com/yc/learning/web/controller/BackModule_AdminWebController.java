@@ -12,9 +12,10 @@ import java.util.concurrent.CompletableFuture;
 @RestController
 @RequestMapping("/admin")
 public class BackModule_AdminWebController {
+    private static Logger logger = LoggerFactory.getLogger(BackModule_AdminWebController.class.getName());
+
     @Autowired(required = false)
     private BackModule_AdminFuture adminFuture;
-    private static Logger logger = LoggerFactory.getLogger(BackModule_AdminWebController.class.getName());
 
     @RequestMapping(value = "findByPage",method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "aname",required = false) String aname) {
@@ -26,10 +27,8 @@ public class BackModule_AdminWebController {
             @RequestParam(value = "aid") Integer aid,
             @RequestParam(value = "value") String value,
             @RequestParam(value = "field") String field){
-        System.out.println("修改Webcontroller");
         return adminFuture.update(aid,value,field);
     }
-
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public CompletableFuture<String> login(
@@ -45,7 +44,4 @@ public class BackModule_AdminWebController {
         logger.info("token为："+token);
         return adminFuture.check(token);
     }
-
-
-
 }

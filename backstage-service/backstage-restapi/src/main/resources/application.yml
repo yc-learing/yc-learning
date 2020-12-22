@@ -3,7 +3,7 @@ server:
 
 mybatis:
   configuration:
-    map-underscore-to-camel-case: true    #将_转为驼峰命名
+    map-underscore-to-camel-case: false    #将_转为驼峰命名
 mapper:
   identity: MYSQL   # 标识列用mysql  配置主键自动增长
 logging:

@@ -71,20 +71,20 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/axios.js"></script>
 	<script>
-		// $(function () {
-		// 	console.log(localStorage.getItem("token"))
-		// 	let item = localStorage.getItem("token");
-		// 	if (item!=null){
-		// 		window.location.href="index.html";
-		// 	}
-		// })
+		$(function () {
+			console.log(localStorage.getItem("token"))
+			let item = localStorage.getItem("token");
+			if (item!=null){
+				window.location.href="index.html";
+			}
+		})
 		function login() {
 
 			var apwd =$('#apwd').val();
 			var aname =$('#aname').val();
 
 			axios({
-				url:'../admin/login',
+				url:'/admin/login',
 				method:'post',
 				data:{aname:aname,apwd:apwd}
 			}).then(result=>{

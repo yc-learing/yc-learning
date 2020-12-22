@@ -17,4 +17,6 @@ public interface BackModule_CourseClient {
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String findByPage (@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize, @RequestParam("coursename") String coursename);
 
+    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-course/findCoursenameWithCname")
+    String findCoursenameWithCname();
 }

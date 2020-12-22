@@ -12,26 +12,24 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
 
     @Autowired(required = false)
-    private UserMapper UserMapper;
+    private UserMapper userMapper;
 
     @Transactional(readOnly = true)
     @Override
     public List<User> findAll() {
-        List<User> list = UserMapper.selectAll();
+        List<User> list = userMapper.selectAll();
 
         return list;
     }
 
-
-
     @Override
-    public void delete(Integer id) {
-        this.UserMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return userMapper.deleteByPrimaryKey(id);
     }
 
     @Override
     public UserDomain findOne(Integer id) {
-        User user =this.UserMapper.selectByPrimaryKey(id);
+        User user =this.userMapper.selectByPrimaryKey(id);
         UserDomain domain = new UserDomain(
                user.getUid(),user.getUname(),user.getUpwd(),user.getTel(),user.getEmail(),
                 user.getQq(),user.getVx(),user.getClasses(),user.getRegistrytime(),
@@ -40,13 +38,20 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void insert(UserDomain domain) {
+    public int insert(UserDomain domain) {
         User user = new User(null,domain.getUname(), MD5Utils.stringToMD5(domain.getUpwd()),
                 domain.getTel(),domain.getEmail(),domain.getQq(),
                 domain.getVx(),domain.getClasses()
                 ,domain.getRegistrytime(),domain.getEndtime()
                 ,domain.getStatus());
-        this.UserMapper.insert(user);
-        domain.setUid(user.getUid());
+        return userMapper.insert(user);
+    }
+
+    @Override
+    public int update(Integer uid,String value,String field){
+        if("upwd".equals(field)){
+            value=MD5Utils.stringToMD5((String) value);
+        }
+        return userMapper.update(uid, value, field);
     }
 }

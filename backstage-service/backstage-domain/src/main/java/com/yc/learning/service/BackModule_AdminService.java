@@ -28,27 +28,28 @@ public class BackModule_AdminService extends AdminServiceImpl {
 
     @Autowired(required = false)
     private RedisTemplate redisTemplate;
-    
-    
+
+
     @RedisAnnotation(deleteRedis = true)
     @Override
     public int update( Integer aid,String value,String field) {
         return   super.update(aid,value,field);
     }
 
-
-
-
-
-
     @Transactional(readOnly = true)
-    public Admin login(Admin admin){
+    public Admin login(Admin admin) {
         Example example = new Example(Admin.class);   //条件
-        example.createCriteria().andEqualTo("aname",admin.getAname()).andEqualTo("apwd", MD5Utils.stringToMD5(admin.getApwd()));
+        example.createCriteria().andEqualTo("aname", admin.getAname()).andEqualTo("apwd", MD5Utils.stringToMD5(admin.getApwd()));
         List<Admin> admins = adminMapper.selectByExample(example);
-        return admins.size()==0?null:admins.get(0);
+        return admins.size() == 0 ? null : admins.get(0);
     }
 
+    public Admin check(String token) {
+        ValueOperations<String,Admin> valueOperations = redisTemplate.opsForValue();
+        Admin admin = valueOperations.get(token);
+        System.err.println(admin);
+        return admin;
+    }
 
     @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
@@ -101,13 +102,6 @@ public class BackModule_AdminService extends AdminServiceImpl {
         return pageDomain;
     }
 
-
-    public Admin check(String token) {
-        ValueOperations<String,Admin> valueOperations = redisTemplate.opsForValue();
-        Admin admin = valueOperations.get(token);
-        System.err.println(admin);
-        return admin;
-    }
 
 
 }

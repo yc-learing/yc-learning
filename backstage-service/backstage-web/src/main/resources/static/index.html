@@ -48,8 +48,15 @@
 							</dl>
 						</li>
 						<li class="layui-nav-item">
-							<a href="#" data-url="order" data-title="订单管理" data-id="03" class="site-demo-active" data-type="tabAdd"></a>
-						</li>
+							<a class="" href="javascript:;">试题维护</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="#" data-url="add_exercises" data-title="录入试题" data-id="03" class="site-demo-active" data-type="tabAdd">录入试题</a>
+								</dd>
+								<dd>
+									<a href="#" data-url="exercises_index" data-title="查看题库" data-id="04" class="site-demo-active" data-type="tabAdd">查看题库</a>
+								</dd>
+							</dl>
 						<li class="layui-nav-item">
 							<a href="#" data-url="user" data-title="会员管理" data-id="04" class="site-demo-active" data-type="tabAdd"></a>
 						</li>
@@ -202,13 +209,20 @@
 		<script type="text/javascript" src="js/vue.js"></script>
 		<script type="text/javascript" src="js/axios.js"></script>
 		<script type="text/javascript">
+
+
 			var app=new Vue({
 				el:"#admin",
 				data:{
 					aname:''
 				},
 				mounted:function(){
-					console.log(localStorage.getItem("token"));
+					var token=localStorage.getItem("token");
+					if(token===null){
+						alert("请先登录！！");
+						window.location.href='login.html';
+					}
+					console.log(localStorage.getItem("token") 	);
 					axios({
 						url:'../admin/check',
 						method:'post',

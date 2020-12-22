@@ -12,16 +12,10 @@ public interface UserService {
      */
     public List<User> findAll();
 
-
-    /**
-     * 查询指定的管理员（分页查询）
-     */
-
-
     /**
      * 删除图片
      */
-    public void delete(Integer id);
+    public int delete(Integer id);
 
     /**
      * 根据id查图片详情(    图片的metadata )
@@ -36,5 +30,12 @@ public interface UserService {
      * @param User
      * @return
      */
-    public void insert(UserDomain User);
+    public int insert(UserDomain User);
+
+    /**
+     * 修改管理员的信息
+     * @param User
+     * @return
+     */
+    public int update(Integer uid,String value,String field);
 }
