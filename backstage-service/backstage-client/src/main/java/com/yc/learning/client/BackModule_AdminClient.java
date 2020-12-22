@@ -48,5 +48,5 @@ public interface BackModule_AdminClient {
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String check(@RequestParam("token") String token);
+    String check(@RequestParam(value = "token",required = false) String token);
 }

@@ -40,7 +40,7 @@ public class BackModule_AdminWebController {
 
     @RequestMapping(value = "check", method = RequestMethod.POST)
     public CompletableFuture<String> check(
-            @RequestParam(value = "token") String token){
+            @RequestParam(value = "token",required = false) String token){
         logger.info("token为："+token);
         return adminFuture.check(token);
     }
