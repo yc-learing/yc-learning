@@ -13,85 +13,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="">
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="token登录">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_AdminService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ChapterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_CourseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExamService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_ExercisesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_RecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/classes/com/yc/learning/service/BackModule_UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-domain/target/test-classes/com/yc/learning/TestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ChapterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_CourseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExamController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_ExercisesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_RecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/target/classes/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-hystrix-dashborad/target/classes/com/yc/learning/HystrixDashboradApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/WebSecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/bean/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/dao/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-security/target/classes/com/yc/learning/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-turbine/target/classes/com/yc/learning/TurbineApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/ZuulApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/fallback/ZuulFallBackHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base-microservice/base-zuul-gateway/target/classes/com/yc/learning/filter/AuthorizedRequestFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/annotaion/RedisAnnotation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/aspect/RedisAOP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/MisBaseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/AdminMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ChapterMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/CourseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ExamMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ExercisesMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/RecordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/AdminDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ChapterDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/CourseDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExamDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/ExercisesDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/PageDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/RecordDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/domain/UserDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exam.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exercises.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Record.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/AdminServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ChapterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/CourseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/CourseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExamService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExamServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExercisesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/ExercisesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/RecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/service/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/CommonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/CopyUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/MD5Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/RedisUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/util/YcConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/META-INF/learning-commons.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/com/yc/learning/DaoConfiguration$MyBatisMapperScannerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/com/yc/learning/DaoConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-commons/target/test-classes/com/yc/learning/TestService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,42 +46,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HillCheung" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1608119549" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="liyan" />
-                    <option name="lastUsedInstant" value="1608119516" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="F:\maven\reposity" />
-        <option name="mavenHome" value="D:\apache-maven-3.6.3-bin\apache-maven-3.6.3" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -184,7 +81,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/css/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -195,20 +92,24 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css\images" />
+      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css" />
+      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-web\src\main\resources\static\js" />
+      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-web\src\main\resources\static" />
       <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\future" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\client" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-client\src\main\java\com\yc\learning\service" />
-      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-domain\src\main\java\com\yc\learning\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yc.learning.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css\icons" />
       <recent name="F:\ideaworkspeace\yc-learning" />
     </key>
   </component>
@@ -342,6 +243,10 @@
     <configuration name="ConfigApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-config" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.ConfigApp" />
+      <option name="HIDE_BANNER" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -349,6 +254,10 @@
     <configuration name="EurekaApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.EurekaApp" />
+      <option name="HIDE_BANNER" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -356,6 +265,10 @@
     <configuration name="HystrixDashboradApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-hystrix-dashborad" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.HystrixDashboradApp" />
+      <option name="HIDE_BANNER" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -363,6 +276,9 @@
     <configuration name="TurbineApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-turbine" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.TurbineApp" />
+      <option name="HIDE_BANNER" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -370,21 +286,25 @@
     <configuration name="ZuulApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-zuul-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.ZuulApp" />
+      <option name="HIDE_BANNER" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MD5Utils" />
-      <item itemvalue="JUnit.TestService.update" />
-      <item itemvalue="JUnit.TestService.insertAdmin" />
       <item itemvalue="Spring Boot.ConfigApp" />
       <item itemvalue="Spring Boot.EurekaApp" />
       <item itemvalue="Spring Boot.HystrixDashboradApp" />
       <item itemvalue="Spring Boot.TurbineApp" />
       <item itemvalue="Spring Boot.ZuulApp" />
-      <item itemvalue="Spring Boot.BackModuleApp (1)" />
       <item itemvalue="Spring Boot.BackWebApp" />
+      <item itemvalue="Application.MD5Utils" />
+      <item itemvalue="JUnit.TestService.update" />
+      <item itemvalue="JUnit.TestService.insertAdmin" />
+      <item itemvalue="Spring Boot.BackModuleApp (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -421,7 +341,11 @@
       <workItem from="1607847166055" duration="2110000" />
       <workItem from="1607849293675" duration="10187000" />
       <workItem from="1607992604656" duration="12521000" />
-      <workItem from="1608444415580" duration="85000" />
+      <workItem from="1608173262029" duration="19000" />
+      <workItem from="1608428421414" duration="9496000" />
+      <workItem from="1608465799572" duration="5330000" />
+      <workItem from="1608530588979" duration="7941000" />
+      <workItem from="1608622915022" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="还原">
       <created>1607407984029</created>
@@ -507,18 +431,39 @@
       <option name="project" value="LOCAL" />
       <updated>1607951281951</updated>
     </task>
-    <task id="LOCAL-00013" summary="后台管理员页面完成">
-      <created>1608119617966</created>
+    <task id="LOCAL-00013" summary="token登录">
+      <created>1608548096116</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1608119617966</updated>
+      <updated>1608548096116</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="token登录">
+      <created>1608552432992</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608552432992</updated>
+    </task>
+    <task id="LOCAL-00015" summary="token登录">
+      <created>1608553960322</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1608553960322</updated>
+    </task>
+    <task id="LOCAL-00016" summary="token登录">
+      <created>1608622998686</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608622998686</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -539,18 +484,24 @@
     <MESSAGE value="项目框架搭建" />
     <MESSAGE value="redis合并findbypage" />
     <MESSAGE value="后台管理员页面完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台管理员页面完成" />
+    <MESSAGE value="token登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="token登录" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1607849212899">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1608461195815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607849212899" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1607826152031">
+    <state x="352" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1608449042567" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1608461195815" />
+    <state x="414" y="174" width="1174" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608469502155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="612" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607773290573" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607826152031" />
+    <state x="414" y="174" width="1174" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608469502155" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1608531534578">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="612" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608446446083" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608531534578" />
     <state x="491" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1607822595135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -559,54 +510,74 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607850278084" />
-    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1608119616933">
+    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608119616933" />
+    <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607409518322" />
     <state x="719" y="208" key="FileChooserDialogImpl" timestamp="1607426950594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="208" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607426950594" />
-    <state width="1322" height="284" key="GridCell.Tab.0.bottom" timestamp="1608548769399">
+    <state width="709" height="327" key="GridCell.Tab.0.bottom" timestamp="1608556052769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1322" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
-    <state width="1322" height="284" key="GridCell.Tab.0.center" timestamp="1608548769399">
+    <state width="1200" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608450767040" />
+    <state width="709" height="327" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052769" />
+    <state width="709" height="327" key="GridCell.Tab.0.center" timestamp="1608556052768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608036352399" />
-    <state width="1322" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
-    <state width="1322" height="284" key="GridCell.Tab.0.left" timestamp="1608548769399">
+    <state width="1200" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608450767040" />
+    <state width="709" height="327" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052768" />
+    <state width="709" height="327" key="GridCell.Tab.0.left" timestamp="1608556052768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608036352399" />
-    <state width="1322" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
-    <state width="1322" height="284" key="GridCell.Tab.0.right" timestamp="1608548769399">
+    <state width="1200" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608450767040" />
+    <state width="709" height="327" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052768" />
+    <state width="709" height="327" key="GridCell.Tab.0.right" timestamp="1608556052769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1322" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608548769399" />
-    <state width="1200" height="251" key="GridCell.Tab.1.bottom" timestamp="1608036352400">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1200" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608450767040" />
+    <state width="709" height="327" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052769" />
+    <state width="709" height="327" key="GridCell.Tab.1.bottom" timestamp="1608556052769">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1293" height="299" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
-    <state width="1200" height="251" key="GridCell.Tab.1.center" timestamp="1608036352400">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1200" height="245" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608450767041" />
+    <state width="709" height="327" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052769" />
+    <state width="709" height="327" key="GridCell.Tab.1.center" timestamp="1608556052769">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1293" height="299" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
-    <state width="1200" height="251" key="GridCell.Tab.1.left" timestamp="1608036352400">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1200" height="245" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608450767041" />
+    <state width="709" height="327" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052769" />
+    <state width="709" height="327" key="GridCell.Tab.1.left" timestamp="1608556052769">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1293" height="299" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
-    <state width="1200" height="251" key="GridCell.Tab.1.right" timestamp="1608036352400">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1200" height="245" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608450767041" />
+    <state width="709" height="327" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052769" />
+    <state width="709" height="327" key="GridCell.Tab.1.right" timestamp="1608556052769">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1200" height="251" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608036352400" />
-    <state width="1293" height="299" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607861902504" />
+    <state width="1200" height="245" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608450767041" />
+    <state width="709" height="327" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608556052769" />
+    <state width="1293" height="332" key="GridCell.Tab.2.bottom" timestamp="1608532363539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1200" height="245" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608450765748" />
+    <state width="1293" height="332" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608532363539" />
+    <state width="1293" height="332" key="GridCell.Tab.2.center" timestamp="1608532363539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1200" height="245" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1608450765748" />
+    <state width="1293" height="332" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608532363539" />
+    <state width="1293" height="332" key="GridCell.Tab.2.left" timestamp="1608532363539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1200" height="245" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1608450765748" />
+    <state width="1293" height="332" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608532363539" />
+    <state width="1293" height="332" key="GridCell.Tab.2.right" timestamp="1608532363539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1200" height="245" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1608450765748" />
+    <state width="1293" height="332" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608532363539" />
     <state x="540" y="262" key="IDE.errors.dialog" timestamp="1607428910447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -629,24 +600,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607426952074" />
-    <state x="440" y="95" width="996" height="707" key="SettingsEditor" timestamp="1608548742168">
+    <state x="440" y="95" width="996" height="707" key="SettingsEditor" timestamp="1608469565915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="17" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607942430512" />
-    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608548742168" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1607951387680">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="352" y="17" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608449688824" />
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608469565915" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608623297651">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607951387680" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607519625303" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608114146783" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608623297651" />
     <state x="517" y="190" key="chooseDestDirectoryDialog" timestamp="1607775181194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1607775181194" />
-    <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607426476686">
+    <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608622946983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607426476686" />
+    <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608622946983" />
     <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1607848048192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -655,31 +626,27 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="720" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607431936187" />
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1608114877793">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1607824054561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608114877793" />
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1608548723131">
+    <state x="744" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824054561" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog" timestamp="1607824035031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608548723131" />
+    <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824035031" />
     <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="268" y="143" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1607770353224" />
     <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607431226079" />
-    <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1608125253399">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="661" y="147" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608125253399" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1607841334252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607841334252" />
-    <state x="725" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1607518768982">
+    <state x="725" y="401" width="672" height="678" key="search.everywhere.popup" timestamp="1608471108017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="725" y="401" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607518768982" />
+    <state x="725" y="401" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608471108017" />
     <state x="491" y="324" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1607482596751">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -688,15 +655,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/BackModuleApp.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="3" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java</url>
+          <line>23</line>
+          <properties class="com.yc.learning.util.MD5Utils">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backstage-service/backstage-domain/src/test/java/com/yc/learning/TestService.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
