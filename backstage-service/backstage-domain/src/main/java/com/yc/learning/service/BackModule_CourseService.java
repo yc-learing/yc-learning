@@ -66,6 +66,8 @@ public class BackModule_CourseService {
      * 查询课程名并携带章节信息
      * @return
      */
+    @Transactional(readOnly = true)
+    @RedisAnnotation(useRedis = true)
     public List<Course> findCourseName(){
         return courseMapper.findCourseName();
     }

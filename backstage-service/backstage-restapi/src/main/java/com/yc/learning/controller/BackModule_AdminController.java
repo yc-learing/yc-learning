@@ -3,6 +3,7 @@ package com.yc.learning.controller;
 import com.google.gson.Gson;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
+import com.yc.learning.entity.Admin;
 import com.yc.learning.service.BackModule_AdminService;
 import com.yc.learning.util.CommonUtils;
 import org.slf4j.Logger;
@@ -46,7 +47,7 @@ public class BackModule_AdminController {
                 return new Gson().toJson(map);
             } catch (Exception e) {
                 map.put("code",0);
-                map.put("data","程序错误");
+                map.put("msg","程序错误");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }
@@ -62,15 +63,50 @@ public class BackModule_AdminController {
                 adminService.insert(adminDomain);
                 logger.info("新增->ID=" + adminDomain.getAid());
                 map.put("code", 1);
-                map.put("data", "注册成功");
+                map.put("msg", "注册成功");
                 return new Gson().toJson(map);
             }catch (Exception e) {
                 map.put("code",0);
-                map.put("data","注册失败");
+                map.put("msg","注册失败");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }
 
+        });
+    }
+
+    @RequestMapping(value = "login",method = RequestMethod.POST)
+    public  CompletableFuture<String> login(@RequestBody Admin admin)throws  Exception{
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try{
+                Admin login = adminService.login(admin);
+                if(login!=null){
+                    Integer status = login.getStatus();
+                    if(status==1){
+                        logger.info(login+"登录成功");
+                        map.put("code", 1);
+                        map.put("msg","登录成功");
+                    }
+                    else{
+                        logger.info(login+"该账户被冻结");
+                        map.put("code",0);
+                        map.put("msg","登录失败！该账户被冻结！！");
+                    }
+                    return new Gson().toJson(map);
+                }else{
+                    logger.info(admin+"账户或密码错误");
+                    map.put("code",0);
+                    map.put("msg","登录失败！账户名或密码错误！！");
+                    return new Gson().toJson(map);
+                }
+
+            }catch (Exception e) {
+                map.put("code",0);
+                map.put("msg","登录失败");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
         });
     }
 
@@ -103,10 +139,40 @@ public class BackModule_AdminController {
                 adminService.delete(id);
                 logger.info("删除->ID=" + id);
                 map.put("code", 1);
+                map.put("msg","删除成功");
                 return new Gson().toJson(map);
             }catch (Exception e) {
                 map.put("code",0);
-                map.put("data","刪除失败");
+                map.put("msg","刪除失败");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+
+        });
+    }
+
+    //检查用户是否登录
+    @RequestMapping(value = "/check",method = RequestMethod.POST)
+    public CompletableFuture<String> check(@RequestParam("token")String token) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try {
+                Admin check = adminService.check(token);
+                System.err.println(check);
+                logger.info("从redis查到登录的用户为:"+check);
+                logger.info("检查用户是否登录->token=" + token);
+                if(check==null){
+                    map.put("code",0);
+                    map.put("message","用户登录失效！！");
+                    return new Gson().toJson(map);
+                }
+                map.put("code", 1);
+                map.put("admin",check);
+                map.put("message","token查询登录用户成功！！");
+                return new Gson().toJson(map);
+            } catch (Exception e) {
+                map.put("code", 0);
+                map.put("msg", "程序错误");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }

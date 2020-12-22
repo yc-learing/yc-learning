@@ -16,4 +16,9 @@ public interface BackModule_ExamClient {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String findByPage (@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize, @RequestParam("ename") String ename);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-exam/findByExid",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String findByExid (@RequestParam("exid") Integer exid);
 }

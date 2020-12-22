@@ -27,8 +27,8 @@ public class ExamServiceImpl implements ExamService{
 
 
     @Override
-    public void delete(Integer id) {
-        this.ExamMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return ExamMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class ExamServiceImpl implements ExamService{
     }
 
     @Override
-    public void insert(ExamDomain domain) {
+    public int insert(ExamDomain domain) {
         Exam exam = new Exam();
         exam.setAname(domain.getAname());
         exam.setClasses(domain.getClasses());
@@ -50,7 +50,6 @@ public class ExamServiceImpl implements ExamService{
         exam.setEname(domain.getEname());
         exam.setStatus(domain.getStatus());
         exam.setTemp(domain.getTemp());
-       this.ExamMapper.insert(exam);
-       domain.setExid(exam.getExid());
+       return ExamMapper.insert(exam);
     }
 }

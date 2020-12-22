@@ -3,6 +3,7 @@ package com.yc.learning.controller;
 import com.google.gson.Gson;
 import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.domain.PageDomain;
+import com.yc.learning.entity.Exercises;
 import com.yc.learning.service.BackModule_ExamService;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
@@ -45,7 +47,25 @@ public class BackModule_ExamController {
                 return new Gson().toJson(map);
             }catch (Exception e){
                 map.put("code",0);
-                map.put("data","程序错误");
+                map.put("msg","程序错误");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+        });
+    }
+
+    @RequestMapping(value = "/findByExid",method = RequestMethod.GET)
+    public CompletableFuture<String> findByExid(Integer exid){
+        return CompletableFuture.supplyAsync(()->{
+            Map<String ,Object> map=new HashMap<>();
+            try {
+                List<Exercises> list=examService.findByExid(exid);
+                map.put("code",1);
+                map.put("data",list);
+                return new Gson().toJson(map);
+            }catch (Exception e){
+                map.put("code",0);
+                map.put("msg","程序错误");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }

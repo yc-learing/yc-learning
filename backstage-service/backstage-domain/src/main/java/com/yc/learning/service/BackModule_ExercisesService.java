@@ -18,7 +18,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class BackModule_ExercisesService extends ExamServiceImpl{
+public class BackModule_ExercisesService extends ExercisesServiceImpl{
     @Autowired(required = false)
     private ExercisesMapper exercisesMapper;
 
@@ -47,8 +47,8 @@ public class BackModule_ExercisesService extends ExamServiceImpl{
         //从pageInfo中取记录数
         if (pageInfo.getList()!= null) {
             for (Exercises e : pageInfo.getList()) {
-                ExercisesDomain ed=new ExercisesDomain(e.getEid(),e.getChid(),e.getType(),e.getContent(),e.getOptionA(),e.getOptionB(),
-                        e.getOptionC(),e.getOptionD(),e.getAnswer(),e.getAnalysis(),e.getInputtime(),e.getAname(),e.getTemp());
+                ExercisesDomain ed=new ExercisesDomain(e.getEid(),e.getChid(),e.getType(),e.getContent(),e.getOptiona(),e.getOptionb(),
+                        e.getOptionc(),e.getOptiond(),e.getAnswer(),e.getAnalysis(),e.getInputtime(),e.getAname(),e.getTemp());
                 ed.setPage(exercisesDomain.getPage());
                 ed.setPageSize(exercisesDomain.getPageSize());
                 r.add(ed);

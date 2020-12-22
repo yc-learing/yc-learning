@@ -20,4 +20,9 @@ public class BackModule_ExamWebController {
     public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "ename",required = false) String ename) {
         return examFuture.findByPage(page, pageSize, ename);
     }
+
+    @RequestMapping(value = "findByExid",method = RequestMethod.GET)
+    public CompletableFuture<String> findByExid(@RequestParam(value = "exid",required = false) Integer exid) {
+        return examFuture.findByExid(exid);
+    }
 }

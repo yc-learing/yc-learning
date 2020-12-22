@@ -3,6 +3,7 @@ package com.yc.learning.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,6 +12,7 @@ import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Data
 @Table(name = "user")
 public class User implements Serializable {

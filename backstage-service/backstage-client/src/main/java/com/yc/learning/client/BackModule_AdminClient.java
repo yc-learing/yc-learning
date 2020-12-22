@@ -2,9 +2,13 @@ package com.yc.learning.client;
 
 import com.yc.learning.config.FeignClientConfig;
 import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.entity.Admin;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author liyan
@@ -36,4 +40,13 @@ public interface BackModule_AdminClient {
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String update(@RequestParam("aid")Integer aid,@RequestParam("value")String value,@RequestParam("field")String field);
 
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/login",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String login(@RequestBody Admin admin);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String check(@RequestParam("token") String token);
 }

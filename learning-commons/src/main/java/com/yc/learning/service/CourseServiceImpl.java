@@ -27,8 +27,8 @@ public class CourseServiceImpl implements  CourseService {
 
 
     @Override
-    public void delete(Integer id) {
-        this.CourseMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return CourseMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -39,13 +39,12 @@ public class CourseServiceImpl implements  CourseService {
     }
 
     @Override
-    public void insert(CourseDomain domain) {
+    public int insert(CourseDomain domain) {
         Course course =new Course();
         course.setCoursename(domain.getCoursename());
         course.setDescr(domain.getDescr());
         course.setPic(domain.getPic());
         course.setStatus(domain.getStatus());
-        this.CourseMapper.insert(course);
-        domain.setCid(course.getCid());
+        return CourseMapper.insert(course);
     }
 }

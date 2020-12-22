@@ -46,7 +46,7 @@ public class BackModule_UserController {
                 return new Gson().toJson(map);
             }catch (Exception e){
                 map.put("code",0);
-                map.put("data","程序错误");
+                map.put("msg","程序错误");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }

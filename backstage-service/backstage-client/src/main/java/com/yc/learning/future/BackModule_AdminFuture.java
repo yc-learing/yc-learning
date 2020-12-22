@@ -1,6 +1,7 @@
 package com.yc.learning.future;
 
 import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.entity.Admin;
 import com.yc.learning.service.BackModule_AdminClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -36,7 +37,6 @@ public class BackModule_AdminFuture {
         });
     }
 
-
     @Async
     public CompletableFuture<String> delete(Integer id) {
         return CompletableFuture.supplyAsync(() -> {
@@ -48,6 +48,20 @@ public class BackModule_AdminFuture {
     public CompletableFuture<String> update(Integer aid,String value,String field) {
         return CompletableFuture.supplyAsync(() -> {
             return adminClientService.update(aid,value,field);
+        });
+    }
+
+    @Async   //异步调用
+    public CompletableFuture<String> login(Admin admin) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.login(admin);
+        });
+    }
+
+    @Async
+    public CompletableFuture<String> check(String token) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.check(token);
         });
     }
 }

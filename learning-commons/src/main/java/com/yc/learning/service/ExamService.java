@@ -21,7 +21,7 @@ public interface ExamService {
     /**
      * 删除图片
      */
-    public void delete(Integer id);
+    public int delete(Integer id);
 
     /**
      * 根据id查图片详情(    图片的metadata )
@@ -36,5 +36,5 @@ public interface ExamService {
      * @param Exam
      * @return
      */
-    public void insert(ExamDomain Exam);
+    public int insert(ExamDomain Exam);
 }

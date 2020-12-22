@@ -21,7 +21,7 @@ public interface CourseService {
     /**
      * 删除图片
      */
-    public void delete(Integer id);
+    public int delete(Integer id);
 
     /**
      * 根据id查图片详情(    图片的metadata )
@@ -36,6 +36,6 @@ public interface CourseService {
      * @param Course
      * @return
      */
-    public void insert(CourseDomain Course);
+    public int insert(CourseDomain Course);
 
 }
