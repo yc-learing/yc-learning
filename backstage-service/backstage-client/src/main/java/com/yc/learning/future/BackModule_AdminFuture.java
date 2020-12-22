@@ -1,6 +1,7 @@
 package com.yc.learning.future;
 
 import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.entity.Admin;
 import com.yc.learning.service.BackModule_AdminClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -16,9 +17,9 @@ public class BackModule_AdminFuture {
 
 
     @Async   //异步调用
-    public CompletableFuture<String> login(String aname,String apwd) {
+    public CompletableFuture<String> login(Admin admin) {
         return CompletableFuture.supplyAsync(() -> {
-            return adminClientService.login(aname,apwd);
+            return adminClientService.login(admin);
         });
     }
 

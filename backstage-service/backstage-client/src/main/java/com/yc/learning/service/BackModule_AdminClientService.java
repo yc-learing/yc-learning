@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import sun.security.provider.MD5;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -95,9 +96,9 @@ public class BackModule_AdminClientService {
     }
 
     @HystrixCommand(fallbackMethod = "loginFallback")
-    public String login(String aname, String apwd) {
+    public String login(Admin admin) {
         System.out.println("登录用户");
-        String login = adminClient.login(aname, apwd);
+        String login = adminClient.login(admin);
         System.err.println(login);
         try {
 
@@ -105,7 +106,7 @@ public class BackModule_AdminClientService {
                 Map parse=(HashMap)JSONUtils.parse(login);
                 Integer code = (Integer) parse.get("code");
                 if(code==1){
-                    AdminLoginVo adminLoginVo = adminLoginVo(aname, apwd);
+                    AdminLoginVo adminLoginVo = adminLoginVo(admin);
                     String s1 = new Gson().toJson(adminLoginVo);
                     System.out.println(s1);
                     return s1;
@@ -117,7 +118,7 @@ public class BackModule_AdminClientService {
         return login;
     }
 
-    private String loginFallback(String aname, String apwd) {
+    private String loginFallback(Admin admin) {
         Map map = new HashMap();
         map.put("code", "0");
         map.put("msg", "服务异常，无法登录");
@@ -131,9 +132,11 @@ public class BackModule_AdminClientService {
      * @param apwd
      * @return
      */
-    private AdminLoginVo adminLoginVo(String aname,String apwd){
+    private AdminLoginVo adminLoginVo(Admin admin){
+        String aname = admin.getAname();
+        String apwd = admin.getApwd();
         String adminToken = TokenUtils.createToken(aname,apwd);
-        Admin admin=new Admin(null,aname, MD5Utils.stringToMD5(apwd),null);
+        admin.setApwd(MD5Utils.stringToMD5(apwd));
         System.err.println(admin);
         redisTemplate.opsForValue().set(
                 String.format("GODZILLA:ADMIN:TOKEN:%s", adminToken),

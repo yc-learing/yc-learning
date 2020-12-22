@@ -104,9 +104,8 @@ public class BackModule_AdminController {
     }
 
     @RequestMapping(value = "login",method = RequestMethod.POST)
-    public  CompletableFuture<String> login(@RequestParam("aname") String anme,@RequestParam("apwd") String apwd)throws  Exception{
+    public  CompletableFuture<String> login(@RequestBody Admin admin)throws  Exception{
         return CompletableFuture.supplyAsync(() -> {
-            Admin admin =new Admin(null,anme,apwd,null);
             Map<String, Object> map = new HashMap<>();
             try{
                 Admin login = adminService.login(admin);
@@ -124,7 +123,7 @@ public class BackModule_AdminController {
                     }
                     return new Gson().toJson(map);
                 }else{
-                    logger.info(anme+"账户或密码错误"+apwd);
+                    logger.info(admin+"账户或密码错误");
                     map.put("code",0);
                     map.put("msg","登录失败！账户名或密码错误！！");
                     return new Gson().toJson(map);

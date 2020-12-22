@@ -2,6 +2,7 @@ package com.yc.learning.client;
 
 import com.yc.learning.config.FeignClientConfig;
 import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.entity.Admin;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -40,7 +41,7 @@ public interface BackModule_AdminClient {
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/login",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String login(@RequestParam("aname") String aname, @RequestParam("apwd") String apwd);
+    String login(@RequestBody Admin admin);
 
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
                    consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
