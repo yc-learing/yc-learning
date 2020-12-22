@@ -232,7 +232,7 @@
 						if(!result.data.admin){
 							alert("用户token失效，请重新登录");
 							localStorage.removeItem("token");
-							location.href='backLogin.html';
+							location.href='login.html';
 						}else{
 							this.aname=result.data.admin.aname;
 						}

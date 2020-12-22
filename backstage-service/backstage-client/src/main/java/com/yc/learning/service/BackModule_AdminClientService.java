@@ -96,10 +96,10 @@ public class BackModule_AdminClientService {
     @HystrixCommand(fallbackMethod = "loginFallback")
     public String login(Admin admin) {
         System.out.println("登录用户");
+        System.out.println(admin);
         String login = adminClient.login(admin);
         System.err.println(login);
         try {
-
             if(login!=null){
                 Map parse=(HashMap) JSONUtils.parse(login);
                 Integer code = (Integer) parse.get("code");

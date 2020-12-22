@@ -1,5 +1,6 @@
 server:
   port: 8095
+  max-http-header-size: 20480
 
 ##FeignClient超时设置
 spring:
