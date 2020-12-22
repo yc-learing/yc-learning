@@ -1,7 +1,7 @@
 package com.yc.learning.web.controller;
 
 import com.yc.learning.entity.Admin;
-import com.yc.learning.future.*;
+import com.yc.learning.future.BackModule_AdminFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

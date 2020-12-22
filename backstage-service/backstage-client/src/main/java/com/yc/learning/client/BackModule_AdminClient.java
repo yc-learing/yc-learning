@@ -2,6 +2,7 @@ package com.yc.learning.client;
 
 import com.yc.learning.config.FeignClientConfig;
 import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.entity.Admin;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,19 @@ public interface BackModule_AdminClient {
     @RequestMapping(method = RequestMethod.DELETE, value = "/back-proxy/back-admin/{id}")
     String delete(@RequestParam("id") Integer id);
 
-    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/update")
-    String update(@RequestParam("aid")Integer aid,@RequestParam("value")Object value,@RequestParam("field")String field);
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/update",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String update(@RequestParam("aid")Integer aid,@RequestParam("value")String value,@RequestParam("field")String field);
+
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/login",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String login(@RequestBody Admin admin);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
+                   consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+                   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String check(@RequestParam("token") String token);
 }

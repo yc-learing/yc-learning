@@ -1,6 +1,7 @@
 package com.yc.learning.future;
 
 import com.yc.learning.domain.AdminDomain;
+import com.yc.learning.entity.Admin;
 import com.yc.learning.service.BackModule_AdminClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -13,6 +14,15 @@ import java.util.concurrent.CompletableFuture;
 public class BackModule_AdminFuture {
     @Autowired
     private BackModule_AdminClientService adminClientService;   //业务层
+
+
+    @Async   //异步调用
+    public CompletableFuture<String> login(Admin admin) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.login(admin);
+        });
+    }
+
 
     @Async   //异步调用
     public CompletableFuture<String> findOne(Integer id) {
@@ -45,9 +55,15 @@ public class BackModule_AdminFuture {
     }
 
     @Async
-    public CompletableFuture<String> update(Integer aid,Object value,String field) {
+    public CompletableFuture<String> update(Integer aid,String value,String field) {
         return CompletableFuture.supplyAsync(() -> {
             return adminClientService.update(aid,value,field);
+        });
+    }
+
+    public CompletableFuture<String> check(String token) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.check(token);
         });
     }
 }
