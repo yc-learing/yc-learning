@@ -15,12 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="token登录">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/client/BackModule_AdminClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/future/BackModule_AdminFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning/controller/BackModule_AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-restapi/target/classes/com/yc/learning/controller/BackModule_AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/java/com/yc/learning/web/controller/BackModule_AdminWebController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,8 +309,8 @@
         <item itemvalue="Spring Boot.BackWebApp" />
         <item itemvalue="Spring Boot.BackModuleApp" />
         <item itemvalue="JUnit.TestService.login" />
-        <item itemvalue="JavaScript Debug.admin_index.html" />
         <item itemvalue="JUnit.TestService.insertAdmin" />
+        <item itemvalue="JavaScript Debug.admin_index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -601,11 +595,11 @@
     </state>
     <state x="352" y="17" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608449688824" />
     <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608469565915" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608547979861">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608624016511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608114146783" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608547979861" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608624016511" />
     <state x="517" y="190" key="chooseDestDirectoryDialog" timestamp="1607775181194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -651,14 +645,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java</url>
-          <line>23</line>
-          <properties class="com.yc.learning.util.MD5Utils">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java</url>
           <line>104</line>
