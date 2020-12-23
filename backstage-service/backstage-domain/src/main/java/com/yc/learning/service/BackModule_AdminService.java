@@ -9,6 +9,8 @@ import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
 import com.yc.learning.util.CommonUtils;
 import com.yc.learning.util.MD5Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -22,6 +24,8 @@ import java.util.List;
 @Service
 @Transactional
 public class BackModule_AdminService extends AdminServiceImpl {
+
+    private static Logger logger = LoggerFactory.getLogger(BackModule_AdminService.class);
 
     @Autowired(required = false)
     private AdminMapper adminMapper;
@@ -45,7 +49,11 @@ public class BackModule_AdminService extends AdminServiceImpl {
     }
 
     public Admin check(String token) {
+        if(token==null){
+            return null;
+        }
         ValueOperations<String,Admin> valueOperations = redisTemplate.opsForValue();
+        logger.info("从reidis查询的键为：-->"+token);
         Admin admin = valueOperations.get(token);
         System.err.println(admin);
         return admin;
@@ -103,6 +111,13 @@ public class BackModule_AdminService extends AdminServiceImpl {
     }
 
 
-
+    public int logout(String token) {
+        logger.info("删除token为："+token);
+        Boolean delete = redisTemplate.delete(token);
+        if(delete==true){
+            return 1;
+        }
+        return 0;
+    }
 }
 

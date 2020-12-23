@@ -1,4 +1,4 @@
-package com.yc.learning.VO;
+package com.yc.learning.vo;
 
 import com.yc.learning.entity.Admin;
 import lombok.Getter;

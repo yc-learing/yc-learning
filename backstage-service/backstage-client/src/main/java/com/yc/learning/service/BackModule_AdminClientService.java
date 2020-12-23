@@ -150,4 +150,10 @@ public class BackModule_AdminClientService {
         String check = adminClient.check(token);
         return check;
     }
+
+    public String logout(String token) {
+        log.info("删除token为："+token);
+        String check = adminClient.logout(token);
+        return check;
+    }
 }
