@@ -99,7 +99,7 @@ public class RedisAOP {
 
 
         //获得key必须要获得类名+方法名+args
-        String key = className+args+"="+value;
+        String key = className+methodName+args+"="+value;
         System.out.println(key);
 
 
