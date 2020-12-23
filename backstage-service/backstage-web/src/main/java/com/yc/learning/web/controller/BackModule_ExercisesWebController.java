@@ -21,7 +21,7 @@ public class BackModule_ExercisesWebController {
     @RequestMapping(value = "insert",method = RequestMethod.POST)
     public CompletableFuture<String> insert(@RequestBody ExercisesDomain exercisesDomain){
         System.out.println(exercisesDomain);
-        //return exercisesFuture.insert(exercisesDomain);
-        return null;
+        return exercisesFuture.insert(exercisesDomain);
+//        return null;
     }
 }
