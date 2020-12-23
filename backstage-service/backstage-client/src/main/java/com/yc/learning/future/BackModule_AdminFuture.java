@@ -64,4 +64,10 @@ public class BackModule_AdminFuture {
             return adminClientService.check(token);
         });
     }
+    @Async
+    public CompletableFuture<String> logout(String token) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.logout(token);
+        });
+    }
 }

@@ -89,15 +89,15 @@
 			}
 		</style>
 		<div id="add">
-			<form>
 				<div style="margin: 0 auto;width:1216px;border: 1px solid #DEDEDE;border-radius: 4px;margin-top:10px;">
 					<table width="100%" border="0" cellspacing="0" id="frmQuestion_table">
-						<tr   >
-							
+						<tr>
 							<td width="5%" height="42" class="code-td-hide">&nbsp;&nbsp;&nbsp;&nbsp;课程名:</td>
 							<td width="11%" class="code-td-hide">&nbsp;
+<!--								<a v-for="cch in courseChapters" >{{courseChapters}}</a>-->
 								<select name='version' id='version'  v-model="cid" style="width: 200px;height: 25px;">
-									<option v-for="cc in courseChapters"  :value="cc.cid">{{cc.coursename}}</option>
+										<option v-for="cch in this.courseChapters"   :value="cch.cid">{{cch.coursename}}
+										</option>
 								</select>
 							</td>
 							<td width="5%" height="42" class="code-td-hide">&nbsp;&nbsp;&nbsp;&nbsp;章节名:</td>
@@ -229,19 +229,32 @@
 				</div>
 
 
-			</form>
 		</div>
 		<iframe id="upload" name="upload" frameborder="0" style="display: none"></iframe>
-		
+
 		<script type="text/javascript" src="js/wangEditor.js"></script>
-		
+
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="js/vue.js"></script>
-		<script type="text/javascript" src="js/jquery-3.4.1.min.js">
-		</script>
+
+
 		<script type="text/javascript" src="js/axios.js"></script>
 		<script type="text/javascript">
 			var  customConfigArry=['head', 'bold','fontSize','fontName','italic','underline','strikeThrough', 'foreColor', 
      							   'backColor', 'list', 'justify', 'quote','emoticon','image', 'table','code', 'undo','redo'];
+
+			//添加创建wangEditor编辑器
+			const E = window.wangEditor
+			//题干框富文本编辑器创建
+			const editor = new E('#div1', '#div2')
+			//解析框富文本编辑器创建
+			const editor1 = new E('#div3', '#div4')
+			//单选题框富文本编辑器创建
+			const editor2 = new E('#div5', '#div6')
+			const editor3 = new E('#div7', '#div8')
+			const editor4 = new E('#div9', '#div10')
+			const editor5 = new E('#div11', '#div12')
+			const editor6 = new E('#answer_div5', '#answer_div6')
 			var vm = new Vue({
 				el: '#add',
 				data: {
@@ -260,20 +273,19 @@
 					
 				},
 				mounted: function() {
+					var _this=this;
+
 					//获取课程和章节
 					axios.get('/course/findCoursenameWithCname')
 				    .then(function (data) {
 				    	if(data.data.code>0){
-				    		this.courseChapters=data.data.data;
-							console.log(this.courseChapters);
+							_this.courseChapters=data.data.data;
+							console.log(_this.courseChapters);
 						}else{
 				    		alert("查询失败");
 				    	}
 				    })
-					//添加创建wangEditor编辑器
-					const E = window.wangEditor
-					//题干框富文本编辑器创建
-					const editor = new E('#div1', '#div2') 
+
 					/*文件上传*/
 //					 editor.config.showLinkImg = false
 //					 editor.config.uploadImgServer = '/Examination2.0/upload_uploadPic.action'
@@ -303,8 +315,7 @@
 					 }
 					 editor.create();
 					 
-					 //解析框富文本编辑器创建
-					 const editor1 = new E('#div3', '#div4') 
+
 					 editor1.config.onfocus = function () {
 						 $("#div3").css("marginTop","-40px");
 						 $("#div4").css("marginTop","15px");
@@ -316,8 +327,7 @@
 					 }
 					 editor1.create();
 					 
-					 //单选题框富文本编辑器创建
-					 const editor2 = new E('#div5', '#div6') 
+
 					 editor2.config.onfocus = function () {
 						 $("#div5").css("marginTop","-40px");
 						 $("#div6").css("marginTop","15px");
@@ -329,7 +339,7 @@
 					 }
 					 editor2.create();
 					 
-					 const editor3 = new E('#div7', '#div8') 
+
 					 editor3.config.onfocus = function () {
 						 $("#div7").css("marginTop","-40px");
 						 $("#div8").css("marginTop","15px");
@@ -339,9 +349,9 @@
 						 $("#div8").css("marginTop","5px");
 						 $(".toolbar3").hide();
 					 }
+
+
 					 editor3.create();
-					 
-					 const editor4 = new E('#div9', '#div10') 
 					 editor4.config.onfocus = function () {
 						 $("#div9").css("marginTop","-40px");
 						 $("#div10").css("marginTop","15px");
@@ -353,7 +363,7 @@
 					 }
 					 editor4.create();
 					 
-					 const editor5 = new E('#div11', '#div12') 
+
 					 editor5.config.onfocus = function () {
 						 $("#div11").css("marginTop","-40px");
 						 $("#div12").css("marginTop","15px");
@@ -364,7 +374,7 @@
 						 $(".toolbar5").hide();
 					 }
 					 editor5.create();
-					const editor6 = new E('#answer_div5', '#answer_div6') 
+
 					 editor6.config.onfocus = function () {
 						 $("#answer_div5").css("marginTop","-40px");
 						 $("#answer_div6").css("marginTop","15px");
@@ -391,12 +401,14 @@
 					 $(".toolbar3").hide();
 					 $(".toolbar4").hide();
 					 $(".toolbar5").hide();
-						 
+
 				},
 				methods: {
 					
 					checkQuestionType: function() {
-						
+
+						// $("#Single-multiple-selection").find("radio").remove();
+						// $("#Single-multiple-selection").find("checkbox").remove();
 						$('#Single-multiple-selection').css("display", "none");
 						$('#Single-multiple-answer').css("display", "none");
 						$('#Single-multiple-determine').css("display", "none");
@@ -407,6 +419,7 @@
 
 						}
 						if(this.type == 2) {
+
 							$('#Single-multiple-selection').css("display", "block");
 							$('#checkboxSpan').css("display", "block");
 							$('#radioSpan').css("display", "none");
@@ -424,9 +437,10 @@
 					},
 					
 					addexercise: function(){
-						this.content = editor.txt.html();
-						this.analysis = editor1.txt.html();						
-						if(type<=2){
+
+						this.content = editor1.txt.html();
+						this.analysis = editor.txt.html();
+						if(this.type<=2){
 							 this.optiona = editor2.txt.html();
 							
 							 this.optionb= editor3.txt.html();
@@ -435,7 +449,7 @@
 							
 							 this.optiond = editor5.txt.html();
 							
-							if (this.content.length<=0 || this.optiona.length<=0 || this.optionb.length<=0
+							if (this.aname<=0||this.content.length<=0 || this.optiona.length<=0 || this.optionb.length<=0
 									|| this.optionc.length<=0 || this.optiond.length<=0 ) {
 								alert("输入的内容不完整，请重新输入再添加！");
 								return false;
@@ -448,13 +462,16 @@
 							}
 							
 							if (this.type == 1) {
+								_this.answer="";
 								this.answer = $('input[name="radioAnswer"]:checked').val();
 								this.type=1;
 							} else {
 								var _this=this;
+								_this.answer="";
 								$('input[name="checkAnswer"]:checked').each(function() {
-									_this.answer += $(this).val()
+									_this.answer += $(this).val()+",";
 								});
+								_this.answer=_this.answer.substr(0, _this.answer.length-1);
 								if (_this.answer.length < 2) {
 									alert("复选题必须有两个或两个以上的答案");
 									return;
@@ -465,7 +482,7 @@
 							
 							this.answer = editor6.txt.html();
 							
-							if (this.content.length<=0 || this.answer.length<=0 ) {
+							if (this.aname<=0||this.content.length<=0 || this.answer.length<=0 ) {
 								alert("输入的内容不完整，请重新输入再添加！");
 								return false;
 							}
@@ -478,14 +495,14 @@
 							this.type=3;
 						}else if (this.type==4){
 							this.answer = $('input[name="dmAnswer"]:checked').val();
-							if (this.content.length<=0 || this.content=="<p><br></p>") {
+							if (this.aname<=0||this.content.length<=0 || this.content=="<p><br></p>") {
 								alert("输入的内容不完整，请重新输入再添加！");
 								return false;
 							}
 							this.type=4;
 						}
 						axios.post('/exercises/insert', {chid:this.chid,type:this.type,content:this.content,optiona:this.optiona,optionb:this.optionb,optionc:this.optionc,optiond:this.optiond,answer:this.answer,analysis:this.analysis,aname:this.aname}).then(function (data) {
-							if(data.data>0){
+							if(data.data.code>0){
 								alert("插入成功");
 							}else{
 								alert("插入失败");

@@ -1,6 +1,7 @@
 package com.yc.learning.controller;
 
 import com.google.gson.Gson;
+import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
@@ -22,6 +23,12 @@ public class BackModule_AdminController {
 
     @Autowired(required = false)
     private BackModule_AdminService adminService;
+
+
+    @RedisAnnotation(deleteRedis = true)
+    @RequestMapping(value = "/delete",method = RequestMethod.GET)
+    public void deleteTest(){
+    }
 
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize,  String aname, Integer status) {
@@ -75,6 +82,27 @@ public class BackModule_AdminController {
         });
     }
 
+
+    //修改
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public CompletableFuture<String> update(Integer aid,String value,String field) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try{
+                adminService.update( aid, value, field);
+                logger.info("更新成功");
+                map.put("code", 1);
+                map.put("msg","更新成功");
+                return new Gson().toJson(map);
+            }catch (Exception e) {
+                map.put("code",0);
+                map.put("msg","更新失败");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+        });
+    }
+
     @RequestMapping(value = "login",method = RequestMethod.POST)
     public  CompletableFuture<String> login(@RequestBody Admin admin)throws  Exception{
         return CompletableFuture.supplyAsync(() -> {
@@ -110,26 +138,6 @@ public class BackModule_AdminController {
         });
     }
 
-    //修改
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public CompletableFuture<String> update(Integer aid,String value,String field) throws Exception {
-        return CompletableFuture.supplyAsync(() -> {
-            Map<String, Object> map = new HashMap<>();
-            try{
-                adminService.update( aid, value, field);
-                logger.info("更新成功");
-                map.put("code", 1);
-                map.put("msg","更新成功");
-                return new Gson().toJson(map);
-            }catch (Exception e) {
-                map.put("code",0);
-                map.put("msg","更新失败");
-                e.printStackTrace();
-                return new Gson().toJson(map);
-            }
-        });
-    }
-
     //删除
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public CompletableFuture<String> delete(@PathVariable Integer id) throws Exception {
@@ -151,9 +159,10 @@ public class BackModule_AdminController {
         });
     }
 
+
     //检查用户是否登录
     @RequestMapping(value = "/check",method = RequestMethod.POST)
-    public CompletableFuture<String> check(@RequestParam("token")String token) throws Exception {
+    public CompletableFuture<String> check(@RequestBody(required = false)String token) throws Exception {
         return CompletableFuture.supplyAsync(() -> {
             Map<String, Object> map = new HashMap<>();
             try {
@@ -172,7 +181,27 @@ public class BackModule_AdminController {
                 return new Gson().toJson(map);
             } catch (Exception e) {
                 map.put("code", 0);
-                map.put("msg", "程序错误");
+                map.put("data", "微服务不可用，请重新再试");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+
+        });
+    }
+
+    //检查用户是否登录
+    @RequestMapping(value = "/logout",method = RequestMethod.POST)
+    public CompletableFuture<String> logout(@RequestBody(required = false)String token) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try {
+                int delete = adminService.logout(token);
+                map.put("code",1);
+                map.put("msg","删除token成功！！");
+                return new Gson().toJson(map);
+            } catch (Exception e) {
+                map.put("code", 0);
+                map.put("data", "微服务不可用，请重新再试");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }

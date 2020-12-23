@@ -49,4 +49,10 @@ public class ChapterServiceImpl implements  ChapterService{
         chapter.setTemp(domain.getTemp());
         return ChapterMapper.insert(chapter);
     }
+
+    public void update(ChapterDomain Chapter) {
+
+    }
+
+
 }

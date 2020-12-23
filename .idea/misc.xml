@@ -16,8 +16,6 @@
         <option value="$PROJECT_DIR$/backstage-service/backstage-exam-service/pom.xml" />
         <option value="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/pom.xml" />
         <option value="$PROJECT_DIR$/backstage-service/backstage-user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/pom.xml" />
       </set>
     </option>
   </component>

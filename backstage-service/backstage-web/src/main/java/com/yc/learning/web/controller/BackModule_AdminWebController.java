@@ -1,5 +1,6 @@
 package com.yc.learning.web.controller;
 
+import com.alibaba.druid.support.json.JSONUtils;
 import com.yc.learning.entity.Admin;
 import com.yc.learning.future.BackModule_AdminFuture;
 import org.slf4j.Logger;
@@ -7,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
@@ -40,8 +42,27 @@ public class BackModule_AdminWebController {
 
     @RequestMapping(value = "check", method = RequestMethod.POST)
     public CompletableFuture<String> check(
-            @RequestParam(value = "token",required = false) String token){
-        logger.info("token为："+token);
+            @RequestBody(required = false) String token){
+        HashMap map= (HashMap) JSONUtils.parse(token);
+         token = (String) map.get("token");
+        System.err.println(token);
+        logger.info("查询token值为："+token);
+        if(token==null){
+            return null;
+        }
         return adminFuture.check(token);
+    }
+
+    @RequestMapping(value = "logout", method = RequestMethod.POST)
+    public CompletableFuture<String> logout(
+            @RequestBody(required = false) String token){
+        HashMap map= (HashMap) JSONUtils.parse(token);
+        token = (String) map.get("token");
+        System.err.println(token);
+        logger.info("删除token值为："+token);
+        if(token==null){
+            return null;
+        }
+        return adminFuture.logout(token);
     }
 }

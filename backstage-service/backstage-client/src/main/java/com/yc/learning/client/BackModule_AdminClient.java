@@ -5,10 +5,7 @@ import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.entity.Admin;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author liyan
@@ -48,5 +45,10 @@ public interface BackModule_AdminClient {
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String check(@RequestParam(value = "token",required = false) String token);
+    String check(@RequestBody(required = false) String token);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/logout",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String logout(@RequestBody(required = false)String token);
 }

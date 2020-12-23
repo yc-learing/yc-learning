@@ -22,8 +22,8 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
     @Autowired(required = false)
     private ChapterMapper chapterMapper;
 
-    @Transactional(readOnly = true)
     @RedisAnnotation(useRedis = true)
+    @Transactional(readOnly = true)
     public PageDomain<ChapterDomain> findByPage(ChapterDomain chapterDomain,Integer page, Integer pageSize) {
         Example example = new Example(Chapter.class);   //条件
         //分页条件设置
@@ -56,4 +56,6 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
         pageDomain.setData(r);
         return pageDomain;
     }
+
+
 }

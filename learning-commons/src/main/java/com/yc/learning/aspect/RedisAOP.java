@@ -19,6 +19,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Aspect
@@ -42,7 +43,10 @@ public class RedisAOP {
 //        Object[] args = joinPoint.getArgs(); // 参数值
 //
 //        String[] argNames = ((MethodSignature)joinPoint.getSignature()).getParameterNames(); // 参数名
+
+
         // 参数值
+
         String value = Arrays.toString(joinPoint.getArgs());
         // 参数名
         String args =Arrays.toString(((MethodSignature)joinPoint.getSignature()).getParameterNames());
@@ -90,14 +94,14 @@ public class RedisAOP {
         Method currentMethod = target.getClass().getMethod(msig.getName(), msig.getParameterTypes());
         RedisAnnotation annotation = currentMethod.getAnnotation(RedisAnnotation.class);
         //获得该注释需要搞什么
-        System.out.println("是否使用缓存"+annotation.useRedis()+"   是否删除缓存"+annotation.deleteRedis()+"    " +
+        logger.info("该方法是否使用缓存"+annotation.useRedis()+"   是否删除缓存"+annotation.deleteRedis()+"    " +
                 "是否更新缓存"+annotation.updateRedis());
 
 
         //获得key必须要获得类名+方法名+args
-        String key = className+args+"="+value;
-
+        String key = className+methodName+args+"="+value;
         System.out.println(key);
+
 
         Object proceed=null;
         if(annotation.useRedis()==true){
@@ -105,7 +109,7 @@ public class RedisAOP {
             return proceed;
         }
         else if(annotation.updateRedis()==true){
-             proceed = updateRedis(key, joinPoint);
+            proceed = updateRedis(key, joinPoint);
         }
         else if(annotation.deleteRedis()==true){
             proceed= deleteRedis(key,  joinPoint);
@@ -131,13 +135,18 @@ public class RedisAOP {
     private Object deleteRedis(String key, ProceedingJoinPoint joinPoint) throws Throwable {
         Boolean hasKey = redisTemplate.hasKey(key);
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
+        //若插入一条数据 分页查询必须要全部刷新
+        int c = key.indexOf('[');
+        String ClassName = key.substring(0, c);
+        Set keys = redisTemplate.keys("*" + ClassName + "*");
         if(hasKey){
-            System.out.println("进行删除缓存操作");
-            redisTemplate.delete(key);
+            logger.info(key+"进行删除缓存操作");
+            redisTemplate.delete(keys);
+            logger.info(key+"删除缓存成功！！");
         }
         Object proceed =joinPoint.proceed();
-        System.out.println("删除缓存成功！！");
         return proceed;
+
     }
 
 
@@ -146,7 +155,7 @@ public class RedisAOP {
         Boolean hasKey = redisTemplate.hasKey(key);
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
         if(hasKey){
-            System.out.println("进行更新缓存操作");
+            logger.info("进行更新缓存操作");
             redisTemplate.delete(key);
         }
 
@@ -154,8 +163,9 @@ public class RedisAOP {
         //将查询的对象存入redis缓存
         operations.set(key,proceed,60,TimeUnit.MINUTES );
 
-        System.out.println("缓存更新操作更新成功");
+        logger.info("缓存更新操作更新成功");
         return proceed;
+
     }
 
 
@@ -165,14 +175,14 @@ public class RedisAOP {
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
 
         if(hasKey){
-            System.out.println("从缓存中取出");
+            logger.info(key+"从缓存中取出");
             return (Object) operations.get(key);
         }
 
         Object proceed =joinPoint.proceed();
         //将查询的对象存入redis缓存
         operations.set(key,proceed,60,TimeUnit.MINUTES );
-        System.out.println("加入缓存"+proceed);
+        logger.info(key+"加入缓存"+proceed);
         return proceed;
     }
 
