@@ -421,23 +421,7 @@
 					}
 					console.log("exid(考试编号):"+this.exid+"       uid(用户编号):"+this.uid+"      useranswer(用户答案):"+this.user_options);
 					//发送axios请求添加参数
-					axios({
-						url:'../exam/addRecord',
-						method:'POST',
-						data:{exid:this.exid,uid:this.uid,useranswer:this.user_options}
-					}).then(result=>{
-						console.log(result);
-						if (result.data.code==1){
-							alert('交卷成功！');
-							//添加成功!!
-							//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
-							// timer = setInterval("CountTimeDown()", 1000);
-						}else{
-							alert("微服务不可用，请联系管理员")
-						}
-					})
-				}else{
-
+					sumbitExam();
 				}
 			},
 			//添加标记
@@ -550,8 +534,8 @@
 						this.index=0;
 					}
 					console.log(this.exercies);
-					//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
-					// timer = setInterval("CountTimeDown()", 1000);
+					this.examtime=result.data.data[0].examtime;		//设置考试时间
+					timer = setInterval("CountTimeDown()", 1000);
 				}else{
 					alert("微服务不可用，请联系管理员")
 				}
@@ -559,7 +543,23 @@
 		}
 	});
 
-
+		function sumbitExam(){
+			axios({
+				url:'../exam/addRecord',
+				method:'POST',
+				data:{exid:this.exid,uid:this.uid,useranswer:this.user_options}
+			}).then(result=>{
+				console.log(result);
+				if (result.data.code==1){
+					alert('交卷成功！');
+					//添加成功!!
+					//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
+					// timer = setInterval("CountTimeDown()", 1000);
+				}else{
+					alert("微服务不可用，请联系管理员")
+				}
+			})
+		}
 
 		function CountTimeDown(){
 			if(app.$data.examtime>=0){
@@ -568,6 +568,7 @@
 				--app.$data.examtime;
 			}else{
 				clearInterval(timer);
+				sumbitExam();
 				alert("时间到，结束!");
 			}
 		}

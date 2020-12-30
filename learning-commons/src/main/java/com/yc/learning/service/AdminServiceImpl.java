@@ -49,9 +49,12 @@ public class AdminServiceImpl implements  AdminService{
 
     }
 
-
-
     @Override
+    public int update(Integer aid, Object value, String field) {
+        return 0;
+    }
+
+
     public int update( Integer aid,String value,String field) {
         if("apwd".equals(field)){
             value=MD5Utils.stringToMD5((String) value);
