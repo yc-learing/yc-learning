@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/layui.css"  media="all">
+</head>
+<body>
+<div class="layui-input-block" style="width: 1000px;margin-left: 0px">
+  <div class="layui-inline">
+    <label class="layui-form-label">学生姓名</label>
+    <div class="layui-input-inline">
+      <input type="text" id="send_uname" placeholder="请输入学生姓名" class="layui-input" style="display: inline-block; width: 200px">
+    </div>
+  </div>
+  <div class="layui-inline">
+    <label class="layui-form-label">试卷名</label>
+    <div class="layui-input-inline">
+      <input type="text" id="send_ename" placeholder="请输入试卷名" class="layui-input" style="display: inline-block; width: 200px">
+    </div>
+  </div>
+  <button id="do_search" type="button" class="layui-btn" style="height: 35px">搜索</button>
+</div>
+<table class="layui-hide" id="record" lay-filter="tab"></table>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="layui/layui.js" charset="utf-8"></script>
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-xs" lay-event="edit">查看</a>
+</script>
+<script>
+var tab;
+$(function(){
+  layui.use('table', function(){
+    var table = layui.table;
+    tab=table.render({
+      elem: '#record',
+      url:'/record/findVoByPage',
+      id:'tab',
+      parseData:function(res){
+          return{
+              "code":res.code,
+              "msg":"",
+              "count":res.data.total,
+              "data":res.data.data
+          }
+      },
+      cols: [[
+        {field:'rid', title: '记录编号', sort: true},
+        {field:'ename', title: '试卷名' },
+        {field:'uname', title: '学生姓名'},
+        {field:'grade', title: '成绩'},
+        {fixed: 'right', title: '操作',width:178, align:'center', toolbar: '#barDemo'}
+      ]],
+      response:{
+        statusCode: 1
+      },
+      page: true, //开启分页
+      request: {
+        pageName: 'page', // page
+        limitName: 'pageSize' // limit
+      }
+    });
+    // table.on('edit(tab)', function (obj) {
+    //     var value = obj.value;//修改后的数据
+    //     var field = obj.field;//修改的字段名
+    //     var data = obj.data;//修改的当行数据
+    //     //获取修改行的ID值
+    //     var ID = data.aid;
+    //     $.post("/admin/update", {aid:ID, value:value,field:field}, function (data) {
+    //       alert("修改成功");
+    //    });
+    // });
+    //监听工具条
+    table.on('tool(tab)', function(obj){
+      var data = obj.data;
+      if(obj.event === 'detail'){
+        layer.msg('ID：'+ data.id + ' 的查看操作');
+      } else if(obj.event === 'del'){
+        layer.confirm('真的删除行么', function(index){
+          obj.del();
+          layer.close(index);
+        });
+      } else if(obj.event === 'edit'){
+        layer.alert("持续更新中");
+      }
+    });
+    // 执行搜索，表格重载
+    $('#do_search').on('click', function () {
+      // 搜索条件
+      var uname = $('#send_uname').val();
+      var ename=$('#send_ename').val();
+      table.reload('tab', {
+        method: 'get',
+        url: '/record/findVoByPage?uname='+uname+'&ename='+ename
+      });
+    });
+  });
+})
+</script>
+
+</body>
+</html>
