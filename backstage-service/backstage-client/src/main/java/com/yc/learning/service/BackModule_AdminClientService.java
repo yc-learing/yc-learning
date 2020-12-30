@@ -126,8 +126,8 @@ public class BackModule_AdminClientService {
 
     /**
      * 生成AdminVO
-     * @param aname
-     * @param apwd
+     * @param
+     * @param
      * @return
      */
     private AdminLoginVo adminLoginVo(Admin admin){
@@ -136,6 +136,7 @@ public class BackModule_AdminClientService {
         String adminToken = TokenUtils.createToken(aname,apwd);
         admin.setApwd(MD5Utils.stringToMD5(apwd));
         System.err.println(admin);
+        log.info("存入管理员token为："+adminToken);
         redisTemplate.opsForValue().set(
                 String.format("GODZILLA:ADMIN:TOKEN:%s", adminToken),
                 admin,60*2, TimeUnit.MINUTES

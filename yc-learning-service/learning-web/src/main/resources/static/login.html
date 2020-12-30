@@ -80,11 +80,11 @@
                             <div class="bd">
                                 <div id="accounts">
                                     <div class="ecv2_form_item">
-                                        <input id="account" autocomplete="off" placeholder="请输入账号" v-modle="uname"
+                                        <input id="account" autocomplete="off" placeholder="请输入账号" v-model="uname"
                                                type="text" class="ecv2_input" value="">
                                     </div>
                                     <div class="ecv2_form_item">
-                                        <input id="password" autocomplete="off" placeholder="请输入密码" v-modle="upwd"
+                                        <input id="password" autocomplete="off" placeholder="请输入密码" v-model="upwd"
                                                type="password" name="password" class="ecv2_input">
                                     </div>
                                     <div class="ecv2_form_item ecv2_imgCode">
@@ -135,6 +135,39 @@
 <script type="text/javascript" src="js/axios.js"></script>
 <script type="text/javascript" src="js/vue.js"></script>
 <script type="text/javascript">
+
+    console.log(localStorage.getItem("token"));
+    $(function () {
+        console.log(localStorage.getItem("token"))
+        let item = localStorage.getItem("token");
+        if (item!=null){
+            alert("请安全退出后再登录用户!");
+            window.location.href="index.html";
+        }
+    })
+    function login() {
+
+
+
+
+
+
+        axios({
+            url:'/admin/login',
+            method:'post',
+            data:{aname:aname,apwd:apwd}
+        }).then(result=>{
+            console.log(result);
+            if (result.data.code==0){
+                alert(result.data.msg);
+            }else{
+                alert("登录成功！！！！");
+                localStorage.setItem("token",result.data.token);
+                window.location.href="index.html";
+                console.log(result);
+            }
+        })
+    }
     var verifyCode = new GVerify("v_container");
     document.getElementById("login").onclick = function () {
         var res = verifyCode.validate(document.getElementById("validateImgCode").value);
@@ -155,13 +188,15 @@
                 //判断uname和upw是否为空
                 if (this.uname == "") {
                     alert("用户名不能为空！")
+                    return;
                 }
                 if (this.upwd == "") {
                     alert("密码不能为空！")
+                    return;
                 }
                 axios.post('../user/login',
-                    {uname: this.uname, upwd: this.upwd}).then(function (data) {
-                    if (data.data > 0) {
+                    {uname: this.uname, upwd: this.upwd}).then(function (d) {
+                    if (d.data.code > 0) {
                         alert("登陆成功！")
                         window.location.href = "index.html";
                     } else {

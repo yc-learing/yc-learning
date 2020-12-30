@@ -1,6 +1,5 @@
 package com.yc.learning;
 
-import com.sun.istack.internal.logging.Logger;
 import com.yc.learning.aspect.RedisAOP;
 import com.yc.learning.dao.impl.ExamMapper;
 import com.yc.learning.domain.AdminDomain;
@@ -13,10 +12,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.logging.Logger;
+
+
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {DaoConfiguration.class, RedisAOP.class})
 public class TestService {
-    private static final Logger logger = Logger.getLogger(TestService.class);
+    //private static final Logger logger = Logger.getLogger(TestService.class);
 
     @Autowired
     private AdminService adminService;

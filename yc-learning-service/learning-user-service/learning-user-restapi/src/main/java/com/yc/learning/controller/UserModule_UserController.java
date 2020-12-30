@@ -39,6 +39,7 @@ public class UserModule_UserController {
                         logger.info(login+"登录成功");
                         map.put("code", 1);
                         map.put("msg","登录成功");
+                        map.put("data", login);
                     }
                     else{
                         logger.info(login+"该账户被冻结");

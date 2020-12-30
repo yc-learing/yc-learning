@@ -1,6 +1,5 @@
 package com.yc.learning;
 
-import com.sun.istack.internal.logging.Logger;
 import com.yc.learning.aspect.RedisAOP;
 import com.yc.learning.config.RedisConfig;
 import com.yc.learning.domain.AdminDomain;
@@ -15,10 +14,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.logging.Logger;
+
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {DaoConfiguration.class, RedisAOP.class, RedisConfig.class, RedisAutoConfiguration.class})
 public class TestService {
-    private static final Logger logger = Logger.getLogger(TestService.class);
+    private static final Logger logger = Logger.getLogger(TestService.class.getName());
 
     @Qualifier("backModule_AdminService")
     @Autowired(required = false)
@@ -26,7 +28,8 @@ public class TestService {
 
     @Autowired(required = false)
     private UserService userService;
-    @Autowired
+
+    @Autowired(required = false)
     private CourseService courseService;
 
     @Test

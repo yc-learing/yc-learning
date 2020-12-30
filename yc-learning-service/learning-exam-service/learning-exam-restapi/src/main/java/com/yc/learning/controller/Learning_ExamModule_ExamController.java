@@ -74,7 +74,6 @@ public class Learning_ExamModule_ExamController {
                 //先查找有没有考过试卷
                 int count = recordService.CountRecordByuid_exid(record);
                 if(count<=0){
-
                     int update= recordService.insert(record);
                     map.put("code","1");
                     if(update==1){
