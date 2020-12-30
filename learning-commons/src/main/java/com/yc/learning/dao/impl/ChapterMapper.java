@@ -8,7 +8,7 @@ import org.apache.ibatis.mapping.FetchType;
 import java.util.List;
 
 @Mapper
-public interface ChapterMapper extends MisBaseMapper<Chapter> {
+public interface    ChapterMapper extends MisBaseMapper<Chapter> {
 
     /**
      * 查询每个章节对应的试题

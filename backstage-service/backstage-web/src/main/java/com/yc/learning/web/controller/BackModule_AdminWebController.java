@@ -47,7 +47,8 @@ public class BackModule_AdminWebController {
          token = (String) map.get("token");
         System.err.println(token);
         logger.info("查询token值为："+token);
-        if(token==null){
+        if(token==null||token=="undefined"){
+            logger.error("没有从前端得到token");
             return null;
         }
         return adminFuture.check(token);

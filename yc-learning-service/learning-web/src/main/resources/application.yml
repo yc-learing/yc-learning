@@ -1,0 +1,21 @@
+server:
+  port: 8096
+  max-http-header-size: 20480
+
+##FeignClient超时设置
+spring:
+  cloud:
+    loadbalancer.retry.enabled: true
+  main:
+    allow-bean-definition-overriding: true
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+ribbon.ConnectTimeout: 250
+ribbon.ReadTimeout: 1000
+ribbon.OkToRetryOnAllOperations: true
+ribbon.MaxAutoRetriesNextServer: 2
+ribbon.MaxAutoRetries: 1
+
+---
+#spring devtools 更改类程序文件不使用热部署自动重启
+spring.devtools.restart.enabled: false
+spring.devtools.livereload.enabled: false

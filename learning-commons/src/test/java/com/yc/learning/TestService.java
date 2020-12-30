@@ -1,6 +1,8 @@
 package com.yc.learning;
 
 import com.sun.istack.internal.logging.Logger;
+import com.yc.learning.aspect.RedisAOP;
+import com.yc.learning.dao.impl.ExamMapper;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.service.AdminService;
 import com.yc.learning.service.UserService;
@@ -12,7 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {DaoConfiguration.class})
+@ContextConfiguration(classes = {DaoConfiguration.class, RedisAOP.class})
 public class TestService {
     private static final Logger logger = Logger.getLogger(TestService.class);
 
@@ -20,6 +22,8 @@ public class TestService {
     private AdminService adminService;
     @Autowired(required = false)
     private UserService userService;
+    @Autowired(required = false)
+    private ExamMapper examMapper;
 
     @Test
     public void insertAdmin(){
@@ -29,4 +33,11 @@ public class TestService {
 
         adminService.insert(domain);
     }
+
+    @Test
+    public void findbyClass(){
+        System.out.println(examMapper.findByClasses("78"));
+
+    }
+
 }

@@ -1,0 +1,242 @@
+/* //弹窗基本元素*/
+.hjpop_new {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.bjopacuty_new {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.popcontent_new {
+    position: relative;
+    width: 385px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: -240px;
+    border-radius: 10px;
+    top: 50%;
+}
+
+.closepop_new {
+    position: absolute;
+    right: -17px;
+    top: -17px;
+    width: 34px;
+    height: 34px;
+    background: url("") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.maincont_new {
+    padding: 30px;
+    box-sizing: border-box;
+    padding-top: 150px;
+    background: url("") left top -2px no-repeat;
+    background-size: 100% auto;
+}
+
+/* 登录弹窗通用样式 */
+.maincont_new .inputcommon {
+    width: 324px;
+    height: 40px;
+    line-height: 40px;
+    color: #999999;
+    font-size: 14px;
+    background: none;
+    border: 1px solid #999999;
+    padding: 0 18px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    border-radius: 3px;
+}
+
+.maincont_new .areacommon {
+    width: 324px;
+    height: 86px;
+    color: #999999;
+    font-size: 14px;
+    background: none;
+    border: 1px solid #999999;
+    padding: 10px 18px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    border-radius: 3px;
+    outline: none;
+    font-family: "微软雅黑";
+    resize: none;
+}
+
+.maincont_new input.duaninput {
+    width: 224px;
+    height: 40px;
+    line-height: 40px;
+    color: #999999;
+    font-size: 14px;
+    background: none;
+    border: 1px solid #999999;
+    padding: 0 18px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.maincont_new .inputright {
+    width: 88px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background: none;
+    background-color: #59BBFB;
+    padding: 0 5px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8px;
+}
+
+.maincont_new .butcommon {
+    display: inline-block;
+    width: 335px;
+    height: 61px;
+    line-height: 61px;
+    color: #fff;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background: url("") left -5px top no-repeat;
+    background-size: 100% auto;
+}
+
+.maincont_new .xieyicommon {
+    font-size: 14px;
+    color: #333333;
+}
+
+.maincont_new .xieyicommon input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    vertical-align: top;
+    -webkit-appearance: none;
+}
+
+.maincont_new .xieyicommon input:checked {
+    background: url("") center no-repeat;
+    background-size: 14px 14px;
+}
+
+.maincont_new .error_sty {
+    border: 1px solid #ED0E3D;
+    color: #ED0E3D;
+}
+
+/* 注册弹窗样式 */
+.pop_zhucediv .maincont_new .xieyicommon {
+    margin-top: 5px;
+    display: block;
+}
+
+
+/* 登录弹窗样式 */
+.pop_logindiv .loginmethod li {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    text-align: center;
+    color: #333333;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.pop_logindiv .loginmethod li.act {
+    color: #1D70A6;
+}
+
+.pop_logindiv .loginmethod li span {
+    cursor: pointer;
+}
+
+.pop_logindiv .loginmethod li.act span {
+    position: relative;
+}
+
+.pop_logindiv .loginmethod li.act span::after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #397CAD;
+}
+
+.pop_logindiv .logintips {
+    font-size: 14px;
+    color: #999;
+    margin: 10px 0;
+}
+
+.pop_logindiv .xieyicommon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pop_logindiv .tozhuce {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.pop_logindiv .tozhuce a {
+    color: #E23D2B;
+}
+
+.pop_logindiv .forgetmima {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: -14px;
+    color: #999999;
+}
+
+.pop_logindiv .mimaicon {
+    position: relative;
+}
+
+.pop_logindiv .mimaicon .mimachange {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: url("") center no-repeat;
+    background-size: 18px auto;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+
+.pop_logindiv .mimaicon .mimachange.open {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: url("") center no-repeat;
+    background-size: 18px auto;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}

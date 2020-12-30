@@ -242,6 +242,7 @@
 					if(token===null){
 						alert("请先登录！！");
 						window.location.href='login.html';
+						return;
 					}
 					console.log(localStorage.getItem("token") 	);
 					axios({
