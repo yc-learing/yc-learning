@@ -5,7 +5,10 @@ import com.yc.learning.domain.CourseDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.service.BackModule_CourseService;
 import com.yc.learning.util.CommonUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +24,8 @@ import java.util.concurrent.CompletableFuture;
 @RestController
 @RequestMapping("/back-course")
 public class BackModule_CourseController {
+
+    private static Logger logger = LoggerFactory.getLogger(BackModule_CourseController.class);
 
     @Autowired
     private BackModule_CourseService courseService;
@@ -71,6 +76,18 @@ public class BackModule_CourseController {
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }
+        });
+    }
+
+    @RequestMapping(value = "/save",method = RequestMethod.POST)
+    public CompletableFuture<String> save(@RequestBody CourseDomain courseDomain) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            courseService.insert(courseDomain);
+            logger.info("新增->ID=" + courseDomain.getCid());
+            Map<String, Object> map = new HashMap<>();
+            map.put("code", 1);
+            map.put("data", courseDomain);
+            return new Gson().toJson(map);
         });
     }
 

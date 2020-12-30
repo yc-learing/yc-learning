@@ -20,9 +20,6 @@ public class MD5Utils {
 		return md5code;
 	}
 	
-	public static void main(String[] args) throws ClassNotFoundException {
-		Object val ="a";
-		Object a =MD5Utils.stringToMD5((String)val);
-		System.out.println((String) a);
+	public static void main(String[] args){
 	}
 }

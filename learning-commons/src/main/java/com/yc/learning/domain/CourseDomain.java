@@ -13,6 +13,4 @@ public class CourseDomain extends PageDomain{
     private String descr;
     private String pic;
     private Integer status;
-
-
 }

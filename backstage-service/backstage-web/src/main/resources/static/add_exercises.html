@@ -96,8 +96,7 @@
 							<td width="11%" class="code-td-hide">&nbsp;
 <!--								<a v-for="cch in courseChapters" >{{courseChapters}}</a>-->
 								<select name='version' id='version'  v-model="cid" style="width: 200px;height: 25px;">
-										<option v-for="cch in this.courseChapters"   :value="cch.cid">{{cch.coursename}}
-										</option>
+										<option v-for="cch in this.courseChapters"   :value="cch.cid">{{cch.coursename}}</option>
 								</select>
 							</td>
 							<td width="5%" height="42" class="code-td-hide">&nbsp;&nbsp;&nbsp;&nbsp;章节名:</td>
@@ -286,6 +285,23 @@
 				    	}
 				    })
 
+					var token =localStorage.getItem("token");
+					axios({
+						url:'../admin/check',
+						method:'post',
+						data:{token:token}
+					}).then(result=>{
+						console.log(result);
+						if(!result.data.admin){
+							alert("用户token失效，请重新登录");
+							localStorage.removeItem("token");
+							location.href='login.html';
+						}else{
+							this.aname=result.data.admin.aname;
+							console.log(this.aname);
+						}
+					})
+
 					/*文件上传*/
 //					 editor.config.showLinkImg = false
 //					 editor.config.uploadImgServer = '/Examination2.0/upload_uploadPic.action'
@@ -438,16 +454,16 @@
 					
 					addexercise: function(){
 
-						this.content = editor1.txt.html();
-						this.analysis = editor.txt.html();
+						this.content = editor.txt.html().trim();
+						this.analysis = editor1.txt.html().trim();
 						if(this.type<=2){
-							 this.optiona = editor2.txt.html();
+							 this.optiona = editor2.txt.html().trim();
 							
-							 this.optionb= editor3.txt.html();
+							 this.optionb= editor3.txt.html().trim();
 							
-							 this.optionc = editor4.txt.html();
+							 this.optionc = editor4.txt.html().trim();
 							
-							 this.optiond = editor5.txt.html();
+							 this.optiond = editor5.txt.html().trim();
 							
 							if (this.aname<=0||this.content.length<=0 || this.optiona.length<=0 || this.optionb.length<=0
 									|| this.optionc.length<=0 || this.optiond.length<=0 ) {
@@ -462,7 +478,7 @@
 							}
 							
 							if (this.type == 1) {
-								_this.answer="";
+								this.answer="";
 								this.answer = $('input[name="radioAnswer"]:checked').val();
 								this.type=1;
 							} else {

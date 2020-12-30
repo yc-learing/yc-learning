@@ -20,8 +20,11 @@ public class BackModule_ExercisesWebController {
 
     @RequestMapping(value = "insert",method = RequestMethod.POST)
     public CompletableFuture<String> insert(@RequestBody ExercisesDomain exercisesDomain){
-        System.out.println(exercisesDomain);
         return exercisesFuture.insert(exercisesDomain);
-//        return null;
+    }
+
+    @RequestMapping(value = "findVoByPage",method = RequestMethod.GET)
+    public CompletableFuture<String> findVoByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "chid",required = false) Integer chid,@RequestParam(value = "cid",required = false) Integer cid) {
+        return exercisesFuture.findVoByPage(page, pageSize, chid,cid);
     }
 }

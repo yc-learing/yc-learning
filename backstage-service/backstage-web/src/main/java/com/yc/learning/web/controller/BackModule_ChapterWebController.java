@@ -19,4 +19,10 @@ public class BackModule_ChapterWebController {
     public CompletableFuture<String> findByPage(@RequestParam(value = "page",required = false) Integer page, @RequestParam(value = "pageSize",required = false) Integer pageSize, @RequestParam(value = "cname",required = false) String cname) {
         return chapterFuture.findByPage(page, pageSize, cname);
     }
+
+    //查询章节对应的试题
+    @RequestMapping(value = "findWithExercises",method = RequestMethod.GET)
+    public CompletableFuture<String> findWithExercises() {
+        return chapterFuture.findWithExercises();
+    }
 }

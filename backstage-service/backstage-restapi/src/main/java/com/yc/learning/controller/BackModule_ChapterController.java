@@ -48,4 +48,25 @@ public class BackModule_ChapterController {
             }
         });
     }
+
+    /**
+     * 查询每一章节的试题信息
+     * @return
+     */
+    @RequestMapping(value = "/findWithExercises", method = RequestMethod.GET)
+    public CompletableFuture<String> findWithExercises() {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try {
+                map.put("code", 1);
+                map.put("data", chapterService.findWithExercises());
+                return new Gson().toJson(map);
+            } catch (Exception e) {
+                map.put("code",0);
+                map.put("msg","程序错误");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+        });
+    }
 }

@@ -48,7 +48,7 @@ public class ExamServiceImpl implements ExamService{
         exam.setEids(domain.getEids());
         exam.setExamtime(domain.getExamtime());
         exam.setEname(domain.getEname());
-        exam.setStatus(domain.getStatus());
+        exam.setStatus(0);
         exam.setTemp(domain.getTemp());
        return ExamMapper.insert(exam);
     }

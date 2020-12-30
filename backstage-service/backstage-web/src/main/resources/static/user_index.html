@@ -26,7 +26,7 @@ $(function(){
           return{
               "code":res.code,
               "msg":"",
-              "count":res.data.totalPages,
+              "count":res.data.total,
               "data":res.data.data
           }
       },
@@ -56,7 +56,7 @@ $(function(){
       },
       page: true, //开启分页
       request: {
-        pageName: 'pageNo', // page
+        pageName: 'page', // page
         limitName: 'pageSize' // limit
       }
     });

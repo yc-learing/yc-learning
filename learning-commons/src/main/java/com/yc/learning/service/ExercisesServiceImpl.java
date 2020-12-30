@@ -38,7 +38,7 @@ public class ExercisesServiceImpl implements  ExercisesService{
                 e.getEid(), e.getChid(), e.getType(),
                 e.getContent(),e.getOptiona(),e.getOptionb(),e.getOptionc()
                 ,e.getOptiond(),e.getAnswer(),e.getAnalysis(),e.getInputtime()
-                ,e.getAname(),e.getTemp());
+                ,e.getAname(),null);
         return ExercisesDomain;
     }
 

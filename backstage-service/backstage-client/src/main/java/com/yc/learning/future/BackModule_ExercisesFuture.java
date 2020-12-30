@@ -14,9 +14,9 @@ public class BackModule_ExercisesFuture {
     private BackModule_ExercisesClientService exercisesClientService;
 
     @Async
-    public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String ename) {
+    public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String content) {
         return CompletableFuture.supplyAsync(() -> {
-            return exercisesClientService.findByPage(page, pageSize, ename);
+            return exercisesClientService.findByPage(page, pageSize, content);
         });
     }
 
@@ -24,6 +24,13 @@ public class BackModule_ExercisesFuture {
     public CompletableFuture<String> insert(ExercisesDomain exercisesDomain) {
         return CompletableFuture.supplyAsync(() -> {
             return exercisesClientService.insert(exercisesDomain);
+        });
+    }
+
+    @Async
+    public CompletableFuture<String> findVoByPage(Integer page, Integer pageSize, Integer chid,Integer cid) {
+        return CompletableFuture.supplyAsync(() -> {
+            return exercisesClientService.findVoByPage(page, pageSize, chid,cid);
         });
     }
 }

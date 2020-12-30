@@ -1,7 +1,6 @@
 package com.yc.learning.controller;
 
 import com.google.gson.Gson;
-import com.yc.learning.annotaion.RedisAnnotation;
 import com.yc.learning.domain.AdminDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Admin;
@@ -25,10 +24,6 @@ public class BackModule_AdminController {
     private BackModule_AdminService adminService;
 
 
-    @RedisAnnotation(deleteRedis = true)
-    @RequestMapping(value = "/delete",method = RequestMethod.GET)
-    public void deleteTest(){
-    }
 
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize,  String aname, Integer status) {

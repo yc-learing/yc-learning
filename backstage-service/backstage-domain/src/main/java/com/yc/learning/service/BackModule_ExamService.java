@@ -68,8 +68,20 @@ public class BackModule_ExamService extends ExamServiceImpl{
      * 根据exid查看试卷详细试题
      * @return
      */
+    @RedisAnnotation(useRedis = true)
     public List<Exercises> findByExid(Integer exid){
         ExamDomain examDomain=findOne(exid);
         return examMapper.findByEids(examDomain.getEids());
+    }
+
+    /**
+     * 生成考卷
+     * @param domain
+     * @return
+     */
+    @RedisAnnotation(deleteRedis = true)
+    @Override
+    public int insert(ExamDomain domain) {
+        return super.insert(domain);
     }
 }

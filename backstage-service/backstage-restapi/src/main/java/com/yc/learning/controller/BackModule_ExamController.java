@@ -7,6 +7,7 @@ import com.yc.learning.entity.Exercises;
 import com.yc.learning.service.BackModule_ExamService;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -62,6 +63,24 @@ public class BackModule_ExamController {
                 List<Exercises> list=examService.findByExid(exid);
                 map.put("code",1);
                 map.put("data",list);
+                return new Gson().toJson(map);
+            }catch (Exception e){
+                map.put("code",0);
+                map.put("msg","程序错误");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+        });
+    }
+
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public CompletableFuture<String> addExam(@RequestBody ExamDomain domain){
+        return CompletableFuture.supplyAsync(()->{
+            Map<String ,Object> map=new HashMap<>();
+            try {
+                examService.insert(domain);
+                map.put("code",1);
+                map.put("msg","添加成功");
                 return new Gson().toJson(map);
             }catch (Exception e){
                 map.put("code",0);

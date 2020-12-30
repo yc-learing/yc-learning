@@ -23,6 +23,7 @@ public class BackModule_UserService extends UserServiceImpl{
 
     @Autowired(required = false)
     private UserMapper userMapper;
+
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly = true)
     public PageDomain<UserDomain> findByPage(UserDomain userDomain,Integer page, Integer pageSize){

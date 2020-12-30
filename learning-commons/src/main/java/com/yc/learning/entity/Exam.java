@@ -25,7 +25,7 @@ public class Exam implements Serializable {
     private String eids;
     private Date createtime;
     private Integer examtime;
-    private Integer classes;
+    private String classes;
     private String aname;
     private Integer status;
     private String temp;

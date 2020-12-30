@@ -1,5 +1,6 @@
 package com.yc.learning.future;
 
+import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.service.BackModule_ExamClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -20,11 +21,17 @@ public class BackModule_ExamFuture {
         });
     }
 
-    //分页查询
     @Async
     public CompletableFuture<String> findByExid(Integer exid) {
         return CompletableFuture.supplyAsync(() -> {
             return examClientService.findByExid(exid);
+        });
+    }
+
+    @Async
+    public CompletableFuture<String> addExam(ExamDomain examDomain) {
+        return CompletableFuture.supplyAsync(() -> {
+            return examClientService.addExam(examDomain);
         });
     }
 }

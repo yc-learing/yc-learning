@@ -37,5 +37,4 @@ public class TestService {
 
         adminService.insert(domain);
     }
-
 }
