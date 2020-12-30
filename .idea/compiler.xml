@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="2048" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base-hystrix-dashborad" />
-        <module name="user-service-client" />
-        <module name="learning-commons" />
-        <module name="learning-exam-service" />
-        <module name="backstage-domain" />
-        <module name="backstage-client" />
-        <module name="base-config" />
         <module name="base-security" />
-        <module name="base-zuul-gateway" />
-        <module name="backstage-restapi" />
-        <module name="backstage-web" />
-        <module name="practice-service-domain" />
-        <module name="base-eureka" />
-        <module name="learning-web" />
-        <module name="user-service-domain" />
-        <module name="base-turbine" />
-        <module name="user-service-restapi" />
+        <module name="learning-commons" />
+        <module name="backstage-domain" />
+        <module name="learning-exam-client" />
         <module name="practice-service-restapi" />
+        <module name="base-eureka" />
+        <module name="base-config" />
+        <module name="base-hystrix-dashborad" />
+        <module name="backstage-web" />
+        <module name="backstage-client" />
+        <module name="learning-user-client" />
+        <module name="learning-user-domain" />
+        <module name="base-zuul-gateway" />
+        <module name="practice-service-domain" />
+        <module name="backstage-restapi" />
+        <module name="learning-exam-domain" />
+        <module name="base-turbine" />
+        <module name="learning-web" />
+        <module name="learning-exam-restapi" />
+        <module name="learning-user-restapi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,15 +43,18 @@
       <module name="base-turbine" target="1.8" />
       <module name="base-zuul-gateway" target="1.8" />
       <module name="learning-commons" target="1.8" />
+      <module name="learning-exam-client" target="1.8" />
+      <module name="learning-exam-domain" target="1.8" />
+      <module name="learning-exam-restapi" target="1.8" />
       <module name="learning-exam-service" target="1.8" />
       <module name="learning-practice-service" target="1.8" />
+      <module name="learning-user-client" target="1.8" />
+      <module name="learning-user-domain" target="1.8" />
+      <module name="learning-user-restapi" target="1.8" />
       <module name="learning-user-service" target="1.8" />
       <module name="learning-web" target="1.8" />
       <module name="practice-service-domain" target="1.8" />
       <module name="practice-service-restapi" target="1.8" />
-      <module name="user-service-client" target="1.8" />
-      <module name="user-service-domain" target="1.8" />
-      <module name="user-service-restapi" target="1.8" />
       <module name="yc-learning" target="1.8" />
       <module name="yc-learning-service" target="1.8" />
     </bytecodeTargetLevel>
@@ -67,15 +73,19 @@
       <module name="base-turbine" options="" />
       <module name="base-zuul-gateway" options="" />
       <module name="learning-commons" options="" />
+      <module name="learning-exam-client" options="" />
+      <module name="learning-exam-domain" options="" />
+      <module name="learning-exam-restapi" options="" />
       <module name="learning-exam-service" options="" />
       <module name="learning-practice-service" options="" />
+      <module name="learning-user-client" options="" />
+      <module name="learning-user-domain" options="" />
+      <module name="learning-user-restapi" options="" />
       <module name="learning-user-service" options="" />
       <module name="learning-web" options="" />
       <module name="practice-service-domain" options="" />
       <module name="practice-service-restapi" options="" />
-      <module name="user-service-client" options="" />
-      <module name="user-service-domain" options="" />
-      <module name="user-service-restapi" options="" />
+      <module name="yc-learning" options="" />
       <module name="yc-learning-service" options="" />
     </option>
   </component>

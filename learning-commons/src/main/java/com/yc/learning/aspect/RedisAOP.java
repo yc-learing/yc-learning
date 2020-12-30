@@ -139,11 +139,9 @@ public class RedisAOP {
         int c = key.indexOf('[');
         String ClassName = key.substring(0, c);
         Set keys = redisTemplate.keys("*" + ClassName + "*");
-        if(hasKey){
             logger.info(key+"进行删除缓存操作");
             redisTemplate.delete(keys);
             logger.info(key+"删除缓存成功！！");
-        }
         Object proceed =joinPoint.proceed();
         return proceed;
 
@@ -171,6 +169,7 @@ public class RedisAOP {
 
     //useRedis
     private Object PutCachRedis(String key,ProceedingJoinPoint  joinPoint) throws Throwable {
+        logger.info("从缓存中取出:"+key);
         Boolean hasKey = redisTemplate.hasKey(key);
         ValueOperations<String, Object> operations = redisTemplate.opsForValue();
 

@@ -1,5 +1,6 @@
 package com.yc.learning.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.Date;
 @ToString
 @Data
 @Table(name = "exercises")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Exercises implements Serializable {
     @Id
     private Integer eid;
