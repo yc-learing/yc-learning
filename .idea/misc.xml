@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$" />
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/base-microservice/pom.xml" />
-        <option value="$PROJECT_DIR$/backstage-service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/backstage-service/backstage-admin-service/pom.xml" />
-        <option value="$PROJECT_DIR$/backstage-service/backstage-exam-service/pom.xml" />
-        <option value="$PROJECT_DIR$/backstage-service/backstage-maintenance-service/pom.xml" />
-        <option value="$PROJECT_DIR$/backstage-service/backstage-user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/pom.xml" />
-        <option value="$PROJECT_DIR$/yc-learning-service/user-service-domain/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

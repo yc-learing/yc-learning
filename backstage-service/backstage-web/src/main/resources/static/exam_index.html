@@ -37,7 +37,15 @@ $(function(){
         {field:'examtime', title: '考试时长'},
         {field:'classes', title: '适用班级'},
         {field:'aname',title:'作者'},
-        {field:'status', title: '状态'},
+        {field:'status', title: '状态',templet:function(res){
+            if(res.status==0){
+              return '未开考';
+            }else if(res.status==1){
+              return '开考';
+            }else if(res.status==2){
+              return '已评卷';
+            }
+        }}
       ]],
       response:{
         statusCode: 1
