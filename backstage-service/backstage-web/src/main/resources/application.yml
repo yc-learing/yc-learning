@@ -8,7 +8,7 @@ spring:
     loadbalancer.retry.enabled: true
   main:
     allow-bean-definition-overriding: true
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 15000
 ribbon.ConnectTimeout: 250
 ribbon.ReadTimeout: 1000
 ribbon.OkToRetryOnAllOperations: true
@@ -19,3 +19,21 @@ ribbon.MaxAutoRetries: 1
 #spring devtools 更改类程序文件不使用热部署自动重启
 spring.devtools.restart.enabled: false
 spring.devtools.livereload.enabled: false
+
+#fdfs相关配置
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:
+    width: 150
+    height: 150
+  tracker-list:
+    - 120.79.175.237:22122
+
+spring.jmx.enabled: false
+
+file.path.head: http://120.79.175.237/
+
+logging:
+  level:
+    com.yc: debug

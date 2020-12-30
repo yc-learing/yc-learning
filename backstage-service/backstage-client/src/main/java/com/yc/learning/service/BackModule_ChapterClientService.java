@@ -25,4 +25,16 @@ public class BackModule_ChapterClientService {
         map.put("msg", "服务异常");
         return new Gson().toJson(map);
     }
+
+    @HystrixCommand(fallbackMethod = "findWithExercisesFallback")
+    public String findWithExercises(){
+        return chapterClient.findWithExercises();
+    }
+
+    private String findWithExercisesFallback(){
+        Map map = new HashMap();
+        map.put("code", "0");
+        map.put("msg", "服务异常");
+        return new Gson().toJson(map);
+    }
 }

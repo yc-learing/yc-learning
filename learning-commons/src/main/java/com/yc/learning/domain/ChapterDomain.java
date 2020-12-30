@@ -12,6 +12,4 @@ public class ChapterDomain extends PageDomain{
     private String cname;
     private Integer cid;
     private String temp;
-
-
 }

@@ -23,4 +23,9 @@ public interface BackModule_ExercisesClient {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String insert(@RequestBody ExercisesDomain exercisesDomain);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-exercises/findVoByPage",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String findVoByPage(@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize,@RequestParam("chid") Integer chid,@RequestParam("cid")Integer cid);
 }

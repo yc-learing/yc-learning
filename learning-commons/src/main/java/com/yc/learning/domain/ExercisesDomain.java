@@ -28,5 +28,4 @@ public class ExercisesDomain extends PageDomain{
     private String aname;
     private String temp;
 
-
 }

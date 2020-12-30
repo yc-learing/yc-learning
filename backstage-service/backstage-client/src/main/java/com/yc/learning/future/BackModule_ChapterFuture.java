@@ -20,4 +20,11 @@ public class BackModule_ChapterFuture {
             return chapterClientService.findByPage(page, pageSize, cname);
         });
     }
+
+    @Async
+    public CompletableFuture<String> findWithExercises() {
+        return CompletableFuture.supplyAsync(() -> {
+            return chapterClientService.findWithExercises();
+        });
+    }
 }

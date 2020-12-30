@@ -16,4 +16,9 @@ public interface BackModule_ChapterClient {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String findByPage(@RequestParam("page")Integer page,@RequestParam("pageSize")Integer pageSize,@RequestParam("cname") String cname);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-chapter/findWithExercises",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String findWithExercises();
 }

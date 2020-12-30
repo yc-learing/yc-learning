@@ -1,5 +1,6 @@
 package com.yc.learning.future;
 
+import com.yc.learning.domain.CourseDomain;
 import com.yc.learning.service.BackModule_CourseClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -12,7 +13,6 @@ public class BackModule_CourseFuture {
     @Autowired
     private BackModule_CourseClientService courseClientService;
 
-    //分页查询
     @Async
     public CompletableFuture<String> findByPage(Integer page, Integer pageSize, String coursename) {
         return CompletableFuture.supplyAsync(() -> {
@@ -24,6 +24,13 @@ public class BackModule_CourseFuture {
     public CompletableFuture<String> findCoursenameWithCname() {
         return CompletableFuture.supplyAsync(() -> {
             return courseClientService.findCoursenameWithCname();
+        });
+    }
+
+    @Async
+    public CompletableFuture<String> create(CourseDomain courseDomain) {
+        return CompletableFuture.supplyAsync(() -> {
+            return courseClientService.create(courseDomain);
         });
     }
 }

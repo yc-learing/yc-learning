@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/layui.css"  media="all">
+  <link rel="stylesheet" href="css/modules/layer/default/layer.css">
+</head>
+<body>
+<div class="layui-form">
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">试卷名称</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" placeholder="请输入试卷名称" name="ename">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">创建时间</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd" name="createtime">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label" >考试时长</label>
+      <div class="layui-input-inline" >
+        <input type="text" class="layui-input" placeholder="请输入考试时长(分钟)" name="examtime">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">班级</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" placeholder="请输入考试班级" name="classes">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">作者</label>
+      <div class="layui-input-inline">
+        <input id="aname" type="text" class="layui-input" name="aname">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="app">
+  <label class="layui-form-label">课程</label>
+  <div>
+    <select name="quiz1" v-model="cid" style="width: 200px;height: 25px;" id="course">
+      <option v-for="cch in this.courseChapters"   :value="cch.cid">{{cch.coursename}}</option>
+    </select>
+  </div>
+  <label class="layui-form-label">章节</label>
+  <div>
+    <input id="chapter-chid" style="display: none"/>
+    <select name="quiz2" v-for="cc in courseChapters" v-if="cid==cc.cid" v-model="chid" style="width: 200px;height: 25px;" id="chapter" @change="getChid(chid)">
+      <option v-for="c in cc.chapters " :value="c.chid">{{c.cname}}</option>
+    </select>
+  </div>
+</div>
+<table class="layui-hide" id="exam" lay-filter="tab"></table>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="layui/layui.js" charset="utf-8"></script>
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container">
+    <button class="layui-btn layui-btn-sm" lay-event="addexam">添加考卷</button>
+    <button class="layui-btn layui-btn-sm" lay-event="checkexam">预览考卷</button>
+    <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+    <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button><br>
+  </div>
+</script>
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-xs" lay-event="edit">查看</a>
+</script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/axios.js"></script>
+<script>
+  var app=new Vue({
+    el:'#app',
+    data:{
+      cid:1,
+      courseChapters:[],
+      chid:0
+    },
+    mounted: function() {
+      var _this = this;
+      //获取课程和章节
+      axios.get('/course/findCoursenameWithCname')
+              .then(function (data) {
+                if (data.data.code > 0) {
+                  _this.courseChapters = data.data.data;
+                } else {
+                  alert("查询失败");
+                }
+              })
+    },
+    methods:{
+      getChid(id){
+        $("#chapter-chid").attr("value", id);
+        $("#chapter-chid").trigger("change");
+      }
+    }
+  });
+
+var tab;
+var token=localStorage.getItem("token");
+$(function(){
+  axios({
+    url:'../admin/check',
+    method:'post',
+    data:{token:token}
+  }).then(result=>{
+    if(!result.data.admin){
+      alert("用户token失效，请重新登录");
+      localStorage.removeItem("token");
+      location.href='login.html';
+    }else{
+      $('input[name="aname"]').val(result.data.admin.aname);
+    }
+  });
+
+  var gloable_eids = new Array();// 勾选的pm_code集合
+  var table_data = new Array();// 表格数据缓存
+  layui.use('table', function(){
+    var table = layui.table;
+    tab=table.render({
+      elem: '#exam',
+      id:'tab',
+      toolbar: '#toolbarDemo',
+      title: '试题数据表',
+      url:'/exercises/findVoByPage',
+      parseData:function(res){
+          return{
+              "code":res.code,
+              "msg":"",
+              "count":res.data.total,
+              "data":res.data.data
+          }
+      },
+      cols: [[
+        {type: 'checkbox', fixed: 'left'},
+        {field:'eid', title: '题号',width:75,sort: true},
+        {field:'type', title: '题型',width:70,templet:function(res){
+           if(res.type==1){
+             return '单选';
+           }else if(res.type==2){
+             return '多选';
+           }else if(res.type==3){
+             return '判断';
+           }else if(res.type==4){
+             return '综合';
+           }
+        }},
+        {field:'coursename', title: '课程',width:150},
+        {field:'cname', title: '章节',width:150},
+        {field:'content', title: '题干',width:700,templet:function (res){
+          return '<div>'+res.content+'</div>';
+          }},
+        {fixed: 'right', title: '操作',width:178, align:'center', toolbar: '#barDemo'}
+      ]],
+      response:{
+        statusCode: 1
+      },
+      page: true, //开启分页
+      request: {
+        pageName: 'page', // page
+        limitName: 'pageSize' // limit
+      },done:function(res,curr,count){
+        $('table tr').on('click',function(){
+          $('table tr').css('background','');
+          $(this).css('background','<%=PropKit.use("config.properties").get("table_color")%>');
+        });
+        // 设置换页勾选之前的
+        table_data = res.data;
+        //在缓存中找到eid ,然后设置data表格中的选中状态
+        //循环所有数据，找出对应关系，设置checkbox选中状态
+        for(var i=0;i<res.data.length;i++){
+          for(var j=0;j<gloable_eids.length;j++){
+            if(res.data[i].eid==gloable_eids[j]){
+              //这里才是真正的有效勾选
+              res.data[i]["LAY_CHECKED"]='true';
+              //找到对应数据改变勾选样式，呈现出选中效果
+              var index= res.data[i]['LAY_TABLE_INDEX'];
+              $('.layui-table tr[data-index=' + index + '] input[type="checkbox"]').prop('checked', true);
+              $('.layui-table tr[data-index=' + index + '] input[type="checkbox"]').next().addClass('layui-form-checked');
+            }
+          }
+        }
+        //设置全选checkbox的选中状态，只有改变LAY_CHECKED的值， table.checkStatus才能抓取到选中的状态
+        var checkStatus = table.checkStatus('tab');
+        if(checkStatus.isAll){
+          $(' .layui-table-header th[data-field="0"] input[type="checkbox"]').prop('checked', true);
+          $('.layui-table-header th[data-field="0"] input[type="checkbox"]').next().addClass('layui-form-checked');
+        }
+      }
+    });
+    //监听工具条
+    table.on('tool(tab)', function(obj){
+      var data = obj.data;
+      if(obj.event === 'detail'){
+        layer.msg('ID：'+ data.id + ' 的查看操作');
+      } else if(obj.event === 'del'){
+        layer.confirm('真的删除行么', function(index){
+          obj.del();
+          layer.close(index);
+        });
+      } else if(obj.event === 'edit'){//JSON.stringify(data.content).replace(/\,|\:|\"|\{|\}/g,"")
+        layer.alert('<div class="layui-bg-gray" ><h1>题干</h1>'+'<br>'+ data.content+'<br>'+
+                '<h1>选项</h1>'+'<br>'+
+                '<div>'+'A.'+data.optiona+'</div>'+
+                '<div>'+'B.'+data.optionb+'</div>'+
+                '<div>'+'C.'+data.optionc+'</div>'+
+                '<div>'+'D.'+data.optiond+'</div>'+'<br>'+
+                '<h1>答案</h1>'+data.answer+'<br>'+
+                '<h1>解析</h1>'+'<br>'+ data.analysis+'</div>'
+                ,{ area: ['600px', '550px'],anim: 1,shade: [0.8, '#393D49'],title: ['试题详情', 'font-size:18px;'],skin: 'demo-class'});
+      }
+    });
+    //复选框选中监听,将选中的id 设置到缓存数组,或者删除缓存数组
+    table.on('checkbox(tab)', function (obj) {
+      if(obj.checked==true){
+        if(obj.type=='one'){
+          gloable_eids.push(obj.data.eid);
+        }else{
+          for(var i=0;i<table_data.length;i++){
+            gloable_eids.push(table_data[i].eid);
+          }
+        }
+      }else{
+        if(obj.type=='one'){
+          for(var i=0;i<gloable_eids.length;i++){
+            if(gloable_eids[i]==obj.data.eid){
+              gloable_eids.remove(i);
+            }
+          }
+        }else{
+          for(var i=0;i<gloable_eids.length;i++){
+            for(var j=0;j<table_data.length;j++){
+              if(gloable_eids[i]==table_data[j].eid){
+                gloable_eids.remove(i);
+              }
+            }
+          }
+        }
+      }
+    });
+    //工具栏事件
+    table.on('toolbar(tab)', function(obj){
+      var checkStatus = table.checkStatus(obj.config.id);
+      switch(obj.event){
+        case 'addexam':
+          var data = gloable_eids;
+          console.log(data.length);
+          var eids='';
+          for (var i=0,len=data.length;i<len;i++){
+            if(i==len-1){
+              eids+=data[i];
+            }else{
+              eids+=data[i]+',';
+            }
+          }
+          var aname=$('input[name="aname"]').val();
+          var ename=$('input[name="ename"]').val();
+          var createtime=$('input[name="createtime"]').val();
+          var examtime=$('input[name="examtime"]').val();
+          var classes=$('input[name="classes"]').val();
+          if(aname=='' || aname==null || ename=='' || ename==null || createtime=='' || createtime==null || examtime=='' || examtime==null || classes=='' || classes==null){
+            alert("请填写完整内容！");
+            return;
+          }
+          var flag=confirm("是否添加?");
+          if(flag){
+            axios({
+              url:'/exam/add',
+              method:'post',
+              data:{ename:ename,eids:eids,aname:aname,createtime:createtime,examtime:examtime,classes:classes}
+            }).then(result=>{
+              if(!result.data){
+              }else{
+              }
+            });
+          }else{
+            alert("取消添加");
+          }
+          break;
+        case 'checkexam':
+          var data=gloable_eids;
+          layer.alert('持续更新中'+'<br>'+'<h1>已选题号</h1><br>'+data,
+                  { area: ['600px', '550px'],anim: 1,shade: [0.8, '#393D49'],title: ['试卷详情', 'font-size:18px;']});
+          break;
+        case 'getCheckLength':
+          var data = checkStatus.data;
+          layer.msg('选中了：'+ gloable_eids.length + ' 个');
+          break;
+        case 'isAll':
+          layer.msg(checkStatus.isAll ? '全选': '未全选')
+          break;
+      };
+    });
+    $(document).ready(function(){
+      $('#course').change(function(){
+        // 搜索条件
+        var cid = $("#course").val();
+        table.reload('tab', {
+          method: 'get',
+          url: '/exercises/findVoByPage?cid='+cid
+        });
+      });
+      $('#chapter-chid').change(function(){
+        var chid=$("#chapter-chid").val();
+        // 搜索条件
+        table.reload('tab', {
+          method: 'get',
+          url: '/exercises/findVoByPage?chid='+chid
+        });
+      });
+    });
+  });
+});
+layui.use('laydate', function() {
+  var laydate = layui.laydate;
+  //常规用法
+  laydate.render({
+    elem: '#test1'
+  });
+});
+</script>
+
+</body>
+</html>

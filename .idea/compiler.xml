@@ -9,7 +9,6 @@
         <module name="base-hystrix-dashborad" />
         <module name="user-service-client" />
         <module name="learning-commons" />
-        <module name="learning-exam-service" />
         <module name="backstage-domain" />
         <module name="backstage-client" />
         <module name="base-config" />

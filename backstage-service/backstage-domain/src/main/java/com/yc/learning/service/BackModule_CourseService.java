@@ -22,7 +22,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class BackModule_CourseService {
+public class BackModule_CourseService extends CourseServiceImpl{
     @Autowired(required = false)
     private CourseMapper courseMapper;
 
@@ -71,4 +71,5 @@ public class BackModule_CourseService {
     public List<Course> findCourseName(){
         return courseMapper.findCourseName();
     }
+
 }

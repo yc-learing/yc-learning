@@ -57,5 +57,13 @@ public class BackModule_ChapterService extends ChapterServiceImpl{
         return pageDomain;
     }
 
-
+    /**
+     * 查询每一章节对应的试题信息
+     * @return
+     */
+    @Transactional(readOnly = true)
+    @RedisAnnotation(useRedis = true)
+    public List<Chapter> findWithExercises(){
+        return chapterMapper.findWithExercises();
+    }
 }

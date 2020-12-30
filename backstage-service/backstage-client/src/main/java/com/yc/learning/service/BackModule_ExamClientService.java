@@ -3,6 +3,7 @@ package com.yc.learning.service;
 import com.google.gson.Gson;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.yc.learning.client.BackModule_ExamClient;
+import com.yc.learning.domain.ExamDomain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,18 @@ public class BackModule_ExamClientService {
     }
 
     private String findByExidFallback(Integer exid){
+        Map map = new HashMap();
+        map.put("code", "0");
+        map.put("msg", "服务异常");
+        return new Gson().toJson(map);
+    }
+
+    @HystrixCommand(fallbackMethod = "addExamFallback")
+    public String addExam(ExamDomain examDomain){
+        return examClient.addExam(examDomain);
+    }
+
+    private String addExamFallback(ExamDomain examDomain){
         Map map = new HashMap();
         map.put("code", "0");
         map.put("msg", "服务异常");

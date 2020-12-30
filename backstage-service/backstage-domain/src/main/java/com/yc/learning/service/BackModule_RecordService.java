@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Transactional
 public class BackModule_RecordService extends RecordServiceImpl{
     @Autowired(required = false)
     private RecordMapper recordMapper;

@@ -45,6 +45,8 @@ public class CourseServiceImpl implements  CourseService {
         course.setDescr(domain.getDescr());
         course.setPic(domain.getPic());
         course.setStatus(domain.getStatus());
-        return CourseMapper.insert(course);
+        int i=CourseMapper.insert(course);
+        domain.setCid(course.getCid());
+        return i;
     }
 }

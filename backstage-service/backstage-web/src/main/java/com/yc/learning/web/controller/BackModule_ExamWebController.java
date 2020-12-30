@@ -1,11 +1,9 @@
 package com.yc.learning.web.controller;
 
+import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.future.BackModule_ExamFuture;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,8 +19,15 @@ public class BackModule_ExamWebController {
         return examFuture.findByPage(page, pageSize, ename);
     }
 
+    //根据exid查询试卷详细信息
     @RequestMapping(value = "findByExid",method = RequestMethod.GET)
     public CompletableFuture<String> findByExid(@RequestParam(value = "exid",required = false) Integer exid) {
         return examFuture.findByExid(exid);
+    }
+
+    @RequestMapping(value = "add",method = RequestMethod.POST)
+    public CompletableFuture<String> addExam(@RequestBody ExamDomain examDomain) {
+        System.out.println(examDomain);
+        return examFuture.addExam(examDomain);
     }
 }

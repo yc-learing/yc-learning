@@ -11,6 +11,18 @@ import java.util.List;
 public interface ChapterMapper extends MisBaseMapper<Chapter> {
 
     /**
+     * 查询每个章节对应的试题
+     * @return
+     */
+    @Select("select * from chapter")
+    @Results(id = "exercisesMap",value = {
+            @Result(id = true,column = "chid",property = "chid"),
+            @Result(column = "cname",property = "cname"),
+            @Result(property = "exercises",column = "chid",many = @Many(select = "com.yc.learning.dao.impl.ExercisesMapper.findByChid",fetchType = FetchType.EAGER))
+    })
+    public List<Chapter> findWithExercises();
+
+    /**
      * 查询所有章节，并携带课程信息
      * @return
      */
@@ -31,4 +43,12 @@ public interface ChapterMapper extends MisBaseMapper<Chapter> {
      */
     @Select("select * from chapter where cid=#{cid}")
     public List<Chapter> findByCid(Integer cid);
+
+    /**
+     * 根据chid查询章节信息
+     * @param chid
+     * @return
+     */
+    @Select("select * from chapter where chid=#{chid}")
+    public Chapter findByChid(Integer chid);
 }

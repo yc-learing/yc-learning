@@ -8,6 +8,7 @@ import lombok.ToString;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,4 +22,5 @@ public class Chapter implements Serializable {
     private Integer cid;
     private String temp;
     private Course course;//关联课程
+    private List<Exercises> exercises;//关联试题
 }
