@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-scrapbook-source="https://uc.educity.cn/tiku/examinationModeCopy.html?mode=exe&amp;&amp;testId=12239239&amp;&amp;subjectCode=100110011003&amp;&amp;sjId=203900"
+      data-scrapbook-create="20201227064437983">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录-考试</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link id="layuicss-skinlayercss" rel="stylesheet" href="css/layer.css" media="all">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/logincommon.css">
+    <link rel="stylesheet" href="css/poplogin.css">
+    <link rel="stylesheet" href="css/layer-1.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <!--[if lt IE 9] -->
+    <script src="js/htl5shix.min.js"></script>
+    <script src="js/respnd.min.js"></script>
+</head>
+
+<body>
+
+
+<!--  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js?v=161101"></script>-->
+<!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js?v=161101"></script>-->
+<div class="ecv2_header" id="app">
+    <div class="ecv2_header_tools ecv2_container clearfix">
+        <div class="fl">
+            <ul>
+                <li>
+                    <a href="https://www.educity.cn/" target="_blank" title="首页">首页</a>
+                </li>
+                <li>
+                    <a href="https://www.educity.cn/chat/wechat.html" target="_blank" title=""> <img
+                            src="img/icon_top_wechat.png" alt=""> 微信 </a>
+                </li>
+                <li>
+                    <a href="https://www.educity.cn/chat/qq.html" target="_blank" title=""> <img
+                            src="img/icon_top_QQ.png" alt=""> QQ </a>
+                </li>
+            </ul>
+        </div>
+        <div class="fr">
+            <span class="login_res"> <a @click="login()">登录</a></span>
+        </div>
+
+    </div>
+    <div class="ecv2_hs_logo">
+        <div class="ecv2_container clearfix">
+            <div class="ecv2_logo fl">
+                <a href="https://www.educity.cn/" target="_blank" title="首页"> <img src="img/img_login.png" alt=""> </a>
+                <a href="javascript:"><span>专注在线教育20年</span></a>
+            </div>
+            <div class="ecv2_logo_nav fr">
+                <ul>
+                    <!--头部菜单栏-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ecv2_main_bg">
+        <div class="ecv2_container" style="padding: 40px 0;">
+            <div class="ecv2_loginAboutBox">
+                <div class="ecv2_left ecv2_login_wheel" style="width: 426px;margin: 43px 90px 52px;">
+                    <h2 style="color:#2590d7;margin-top: 20px;">源辰信息科技 <span>精品培训</span></h2>
+                    <p>打造湖南实战培训第一品牌</p>
+                    <div style=" width: 426px;height: 404px;overflow: hidden;">
+                        <ul>
+                            <li><img src="img/login.jpg" style="width:100%; height:auto"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ecv2_right">
+                    <div class="ecv2_loginForm">
+                        <div class="ecv2_loginTabs">
+                            <div class="bd">
+                                <div id="accounts">
+                                    <div class="ecv2_form_item">
+                                        <input id="account" autocomplete="off" placeholder="请输入账号" v-model="uname"
+                                               type="text" class="ecv2_input" value="">
+                                    </div>
+                                    <div class="ecv2_form_item">
+                                        <input id="password" autocomplete="off" placeholder="请输入密码" v-model="upwd"
+                                               type="password" name="password" class="ecv2_input">
+                                    </div>
+                                    <div class="ecv2_form_item ecv2_imgCode">
+
+                                        <input id="validateImgCode" autocomplete="off" placeholder="请输入图片验证码"
+                                               type="text" class="ecv2_input" value="">
+                                        <div id="v_container" title="点击刷新验证码" class="validate-png" height="70"
+                                             width="105" alt="" style="display:block">
+                                        </div>
+                                        <div class="ecv2_form_error" style="display: none;margin-top: 0;">
+                                            账号或密码错误
+                                        </div>
+                                        <a id="login" href="javascript:" class="ecv2_form_subBtn"
+                                           @click="login()">登　录</a>
+                                        <dl>
+                                            <dt>
+                                                <a href="https://www.educity.cn/retrievePassword.html">忘记密码？</a>
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ecv2_footer">
+            <div class="ecv2_footer_top">
+
+            </div>
+            <div class="ecv2_footer_bottom">
+                <p>PMP<sup>®</sup>，PMI<sup>®</sup>- PMI-ACP<sup>®</sup>和PMBOK<sup>®</sup>是Project Management
+                    Institute，Inc.的注册商标 <br>湖南优积谷网络科技有限公司　版权所有　©2001-2020
+                    <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">湘ICP备16018319号-4</a>
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43019002000749"
+                       target="_blank" rel="nofollow">湘公网安备43019002000749号</a><br>
+                    出版物经营许可证：430104201800021　高新技术企业证书：GR201743000253　广播电视节目制作经营许可证：(湘)字00306号　ISO培训质量认证：05320Q30844R0M
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/code.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/axios.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+
+    console.log(localStorage.getItem("token"));
+    $(function () {
+        console.log(localStorage.getItem("token"))
+        let item = localStorage.getItem("token");
+        if (item!=null){
+            alert("请安全退出后再登录用户!");
+            window.location.href="index.html";
+        }
+    })
+    function login() {
+
+
+
+
+
+
+        axios({
+            url:'/admin/login',
+            method:'post',
+            data:{aname:aname,apwd:apwd}
+        }).then(result=>{
+            console.log(result);
+            if (result.data.code==0){
+                alert(result.data.msg);
+            }else{
+                alert("登录成功！！！！");
+                localStorage.setItem("token",result.data.token);
+                window.location.href="index.html";
+                console.log(result);
+            }
+        })
+    }
+    var verifyCode = new GVerify("v_container");
+    document.getElementById("login").onclick = function () {
+        var res = verifyCode.validate(document.getElementById("validateImgCode").value);
+        if (res) {
+            alert("验证正确");
+        } else {
+            alert("验证码错误");
+        }
+    }
+    var v = new Vue({
+        el: "#app",
+        data: {
+            uname: "",
+            upwd: ""
+        },
+        methods: {
+            login: function () {
+                //判断uname和upw是否为空
+                if (this.uname == "") {
+                    alert("用户名不能为空！")
+                    return;
+                }
+                if (this.upwd == "") {
+                    alert("密码不能为空！")
+                    return;
+                }
+                axios.post('../user/login',
+                    {uname: this.uname, upwd: this.upwd}).then(function (d) {
+                    if (d.data.code > 0) {
+                        alert("登陆成功！")
+                        window.location.href = "index.html";
+                    } else {
+                        alert("登陆失败！")
+                    }
+                })
+
+
+            }
+        }
+    });
+
+
+</script>
