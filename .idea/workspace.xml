@@ -13,7 +13,116 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="后台登录整合" />
+    <list default="true" id="189b11b1-4919-43af-ae2d-aa5c6a5a0b42" name="Default Changelist" comment="token登录优化">
+      <change afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/vo/UserLoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-client/src/main/java/com/yc/learning/client/Learning_ExamModule_ExamClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-client/src/main/java/com/yc/learning/config/FeignClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-client/src/main/java/com/yc/learning/future/Learning_ExamModule_ExamFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-client/src/main/java/com/yc/learning/service/Learning_ExamModule_ExamClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-domain/src/main/java/com/yc/learning/service/Learning_ExamModule_ExamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-domain/src/main/java/com/yc/learning/service/Learning_ExamModule_RecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-domain/src/test/java/com/yc/learning/DaoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-domain/src/test/java/com/yc/learning/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-restapi/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-restapi/src/main/java/com/yc/learning/controller/Learning_ExamModule_ExamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-restapi/src/main/java/com/yc/learning/learning_Exam_RestapiApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-restapi/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-client/src/main/java/com.yc.learning/client/UserModule_UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-client/src/main/java/com.yc.learning/config/FeignClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-client/src/main/java/com.yc.learning/future/UserModule_UserFuture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-client/src/main/java/com.yc.learning/service/UserModule_UserClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-domain/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-domain/src/main/java/com/yc/learning/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-domain/src/main/java/com/yc/learning/service/UserModule_UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-domain/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-restapi/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-restapi/src/main/java/com/yc/learning/UserModuleApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-restapi/src/main/java/com/yc/learning/controller/UserModule_UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/learning-user-restapi/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/java/com/yc/learning/Learning_WebApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/java/com/yc/learning/controller/Learning_ExamModule_WebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/java/com/yc/learning/controller/UserModel_UserWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/java/com/yc/learning/service/AsyncThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/java/com/yc/learning/service/FastefsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/examinationMode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/layer-1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/logincommon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/myCollection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/personal-common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/poplogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/studyCenter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/sweetalert.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/css/swiper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/exam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/icon_index_login_me.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/icon_question.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/icon_top_QQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/icon_top_footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/icon_top_wechat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/img_login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/img/toux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/ajaxfileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/axios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/easyui-lang-zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/htl5shix.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/jquery.easyui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/respnd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/backstage-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/backLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/backLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backstage-service/backstage-web/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/learning-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/learning-commons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/aspect/RedisAOP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/ExamMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/ExamMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/RecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/dao/impl/RecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Chapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Chapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Exercises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/src/test/java/com/yc/learning/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/src/test/java/com/yc/learning/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ExamMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/dao/impl/ExamMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Chapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exercises.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Exercises.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/Record.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/learning-commons/target/classes/com/yc/learning/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-exam-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-client/user-service-client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-domain/user-service-domain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-user-service/user-service-restapi/user-service-restapi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning-service/learning-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning-service/learning-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc-learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yc-learning.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +151,19 @@
     <option name="NEW_BASE" value="jjyyds" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="HillCheung" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -53,7 +175,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\apache-maven-3.6.3-bin\apache-maven-3.6.3" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -79,7 +201,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/backstage-service/backstage-restapi/src/main/java/com/yc/learning" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yc-learning-service/learning-web/src/main/resources/static/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,16 +219,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\ideaworkspeace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css\icons" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static\js" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css" />
-      <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css\images" />
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-web\src\main\resources\static\js" />
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-web\src\main\resources\static\img" />
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-web\src\main\resources\static\css" />
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-user-service\learning-user-restapi\src\main\java\com\yc\learning" />
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-user-service\learning-user-restapi\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yc.learning" />
       <recent name="com.yc.learning.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-web\src\main\resources\static" />
+      <recent name="F:\ideaworkspeace\yc-learning\yc-learning-service\learning-user-service\learning-user-client\src\main\java" />
       <recent name="D:\ideaworkspace\yc-learning\backstage-service\backstage-web\src\main\resources\static\css\icons" />
       <recent name="F:\ideaworkspeace\yc-learning" />
     </key>
@@ -119,9 +244,25 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackWebApp">
-    <configuration name="TestService.insertAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backstage-domain" />
+  <component name="RunManager" selected="Spring Boot.UserModuleApp">
+    <configuration name="TestService.findbyClass (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning-exam-domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="learning" />
+      <option name="MAIN_CLASS_NAME" value="learning.TestService" />
+      <option name="METHOD_NAME" value="findbyClass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestService.findbyClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning-commons" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yc.learning.*" />
@@ -130,30 +271,11 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.yc.learning" />
       <option name="MAIN_CLASS_NAME" value="com.yc.learning.TestService" />
-      <option name="METHOD_NAME" value="insertAdmin" />
+      <option name="METHOD_NAME" value="findbyClass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="TestService.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backstage-domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yc.learning.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yc.learning" />
-      <option name="MAIN_CLASS_NAME" value="com.yc.learning.TestService" />
-      <option name="METHOD_NAME" value="login" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="admin_index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/yc-learning/backstage-web/static/admin_index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="backstage-service" />
@@ -202,19 +324,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackModuleApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="BackModuleApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backstage-restapi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.BackModuleApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackWebApp (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="learning-web" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yc.learning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.BackModuleApp" />
-      <option name="HIDE_BANNER" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.BackWebApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,7 +353,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.BackWebApp" />
-      <option name="HIDE_BANNER" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -257,9 +381,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Learning_WebApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="learning-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yc.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.Learning_WebApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TurbineApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="base-turbine" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.TurbineApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserModuleApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="learning-user-restapi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.UserModuleApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -271,25 +418,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="learning_Exam_RestapiApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="learning-exam-restapi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.learning.learning_Exam_RestapiApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.admin_index.html" />
-      <item itemvalue="JUnit.TestService.insertAdmin" />
+      <item itemvalue="JUnit.TestService.findbyClass" />
+      <item itemvalue="JUnit.TestService.findbyClass (1)" />
       <item itemvalue="Spring Boot.ConfigApp" />
       <item itemvalue="Spring Boot.EurekaApp" />
       <item itemvalue="Spring Boot.HystrixDashboradApp" />
       <item itemvalue="Spring Boot.TurbineApp" />
       <item itemvalue="Spring Boot.ZuulApp" />
       <item itemvalue="Spring Boot.BackModuleApp" />
+      <item itemvalue="Spring Boot.learning_Exam_RestapiApp" />
+      <item itemvalue="Spring Boot.UserModuleApp" />
       <item itemvalue="Spring Boot.BackWebApp" />
-      <item itemvalue="JUnit.TestService.login" />
+      <item itemvalue="Spring Boot.BackWebApp (1)" />
+      <item itemvalue="Spring Boot.Learning_WebApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Learning_WebApp" />
+        <item itemvalue="JUnit.TestService.findbyClass" />
+        <item itemvalue="JUnit.TestService.findbyClass (1)" />
+        <item itemvalue="Spring Boot.BackWebApp (1)" />
         <item itemvalue="Spring Boot.BackWebApp" />
-        <item itemvalue="Spring Boot.BackModuleApp" />
-        <item itemvalue="JUnit.TestService.login" />
-        <item itemvalue="JUnit.TestService.insertAdmin" />
-        <item itemvalue="JavaScript Debug.admin_index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +481,17 @@
       <workItem from="1608548223680" duration="7775000" />
       <workItem from="1608608371264" duration="16084000" />
       <workItem from="1608706065598" duration="6467000" />
-      <workItem from="1608720908663" duration="317000" />
+      <workItem from="1609049180082" duration="4350000" />
+      <workItem from="1609151917143" duration="9286000" />
+      <workItem from="1609209575643" duration="26286000" />
+      <workItem from="1609289855377" duration="7846000" />
+      <workItem from="1609300048526" duration="139000" />
+      <workItem from="1609300193312" duration="295000" />
+      <workItem from="1609300493736" duration="77000" />
+      <workItem from="1609300575645" duration="1295000" />
+      <workItem from="1609308800006" duration="4194000" />
+      <workItem from="1609313538859" duration="332000" />
+      <workItem from="1609313886328" duration="1525000" />
     </task>
     <task id="LOCAL-00001" summary="还原">
       <created>1607407984029</created>
@@ -431,14 +598,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608633921841</updated>
     </task>
-    <task id="LOCAL-00016" summary="后台登录整合">
-      <created>1608721233063</created>
+    <task id="LOCAL-00016" summary="token登录优化">
+      <created>1608721359663</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1608721233064</updated>
+      <updated>1608721359663</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="token登录优化">
+      <created>1608721704497</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608721704497</updated>
+    </task>
+    <task id="LOCAL-00018" summary="token登录优化">
+      <created>1609050938838</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609050938839</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,23 +646,29 @@
     <MESSAGE value="后台管理员页面完成" />
     <MESSAGE value="后台修改完成" />
     <MESSAGE value="后台登录整合" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台登录整合" />
+    <MESSAGE value="token登录优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="token登录优化" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="352" y="0" key="#Project_Structure" timestamp="1608627433512">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="586" y="198" key="#Inspections" timestamp="1609315340723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1609315340723" />
+    <state x="440" y="94" key="#Project_Structure" timestamp="1609309577379">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="352" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1608627433512" />
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1607849212899" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608626565405">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1609309577379" />
+    <state x="279" y="85" width="1174" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609211504883">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1608626565405" />
-    <state x="612" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1608446446083">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="279" y="85" width="1174" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609211504883" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1609292342631">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="612" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1608446446083" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607826152031" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1609292342631" />
     <state x="491" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1607822595135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -490,10 +677,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="367" y="279" width="802" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1608553370181" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607850278084">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609315399324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607850278084" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609315399324" />
     <state x="560" y="109" width="1292" height="821" key="CommitChangelistDialog2" timestamp="1607409518322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -506,46 +693,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="420" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608706474363" />
-    <state width="1293" height="324" key="GridCell.Tab.0.bottom" timestamp="1608721024950">
+    <state width="1293" height="325" key="GridCell.Tab.0.bottom" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608641806461" />
-    <state width="1293" height="324" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024950" />
-    <state width="1293" height="324" key="GridCell.Tab.0.center" timestamp="1608721024950">
+    <state width="1293" height="325" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.0.center" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608641806461" />
-    <state width="1293" height="324" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024950" />
-    <state width="1293" height="324" key="GridCell.Tab.0.left" timestamp="1608721024950">
+    <state width="1293" height="325" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.0.left" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608641806461" />
-    <state width="1293" height="324" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024950" />
-    <state width="1293" height="324" key="GridCell.Tab.0.right" timestamp="1608721024950">
+    <state width="1293" height="325" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.0.right" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608641806461" />
-    <state width="1293" height="324" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024950" />
-    <state width="1293" height="324" key="GridCell.Tab.1.bottom" timestamp="1608721024951">
+    <state width="1293" height="325" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.1.bottom" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608641806462" />
-    <state width="1293" height="324" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024951" />
-    <state width="1293" height="324" key="GridCell.Tab.1.center" timestamp="1608721024951">
+    <state width="1293" height="325" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.1.center" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608641806462" />
-    <state width="1293" height="324" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024951" />
-    <state width="1293" height="324" key="GridCell.Tab.1.left" timestamp="1608721024950">
+    <state width="1293" height="325" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.1.left" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608641806462" />
-    <state width="1293" height="324" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024950" />
-    <state width="1293" height="324" key="GridCell.Tab.1.right" timestamp="1608721024951">
+    <state width="1293" height="325" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
+    <state width="1293" height="325" key="GridCell.Tab.1.right" timestamp="1609315386379">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1200" height="241" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608641806462" />
-    <state width="1293" height="324" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608721024951" />
+    <state width="1293" height="325" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609315386379" />
     <state width="1293" height="327" key="GridCell.Tab.2.bottom" timestamp="1608643036437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -588,16 +775,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607426952074" />
-    <state x="352" y="17" width="996" height="707" key="SettingsEditor" timestamp="1608449688824">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="440" y="95" width="996" height="707" key="SettingsEditor" timestamp="1609298740939">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="352" y="17" width="996" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608449688824" />
-    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607850527481" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608721237369">
+    <state x="440" y="95" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609298740939" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609050941158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608633926870" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608721237368" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609050941158" />
     <state x="517" y="190" key="chooseDestDirectoryDialog" timestamp="1607775181194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -622,15 +809,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607824035031" />
-    <state x="268" y="143" key="new project wizard" timestamp="1607770353224">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="268" y="143" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1607770353224" />
-    <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607431226079" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1607841334252">
+    <state x="335" y="181" key="new project wizard" timestamp="1609300223398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607841334252" />
+    <state x="268" y="143" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1607770353224" />
+    <state x="335" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1609300223398" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1609299226347">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609299226347" />
     <state x="580" y="318" width="672" height="538" key="search.everywhere.popup" timestamp="1608468202685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -645,20 +832,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/learning-commons/src/main/java/com/yc/learning/util/MD5Utils.java</url>
-          <line>23</line>
-          <properties class="com.yc.learning.util.MD5Utils" method="main">
+          <url>file://$PROJECT_DIR$/yc-learning-service/learning-exam-service/learning-exam-domain/src/test/java/com/yc/learning/TestService.java</url>
+          <line>22</line>
+          <properties class="learning.TestService" method="findbyClass">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/backstage-service/backstage-client/src/main/java/com/yc/learning/service/BackModule_AdminClientService.java</url>
-          <line>118</line>
-          <properties class="com.yc.learning.service.BackModule_AdminClientService" method="loginFallback">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,6 +7,7 @@ import com.yc.learning.dao.impl.ExamMapper;
 import com.yc.learning.domain.ExamDomain;
 import com.yc.learning.domain.PageDomain;
 import com.yc.learning.entity.Exam;
+import com.yc.learning.entity.Exercises;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class BackModule_ExamService {
+public class BackModule_ExamService extends ExamServiceImpl{
 
     @Autowired(required = false)
     private ExamMapper examMapper;
@@ -63,14 +64,12 @@ public class BackModule_ExamService {
         return pageDomain;
     }
 
-
     /**
-     * 进行更新操作
-     * @param examDomain
+     * 根据exid查看试卷详细试题
      * @return
      */
-    public int update(Exam exam){
-        Example example =new Example(Exam.class);
-        return examMapper.updateByExample(exam,example);
+    public List<Exercises> findByExid(Integer exid){
+        ExamDomain examDomain=findOne(exid);
+        return examMapper.findByEids(examDomain.getEids());
     }
 }

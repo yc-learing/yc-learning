@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-scrapbook-source="https://uc.educity.cn/tiku/examinationModeCopy.html?mode=exe&amp;&amp;testId=12239239&amp;&amp;subjectCode=100110011003&amp;&amp;sjId=203900"
+	  data-scrapbook-create="20201227064437983">
+<head>
+	<link rel="stylesheet" href="css/exam.css" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>title</title>
+	<meta name="keywords" content="软考,系统架构设计师">
+	<meta name="description" content="2018年下半年系统架构设计师考试上午真题（专业解析+参考答案）,软考,系统架构设计师">
+	<!-- Bootstrap -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/swiper.min.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/sweetalert.css" rel="stylesheet">
+
+	<link href="css/personal-common.css" rel="stylesheet">
+	<link href="css/studyCenter.css" rel="stylesheet">
+	<link href="css/myCollection.css" rel="stylesheet">
+	<link href="css/examinationMode.css" rel="stylesheet">
+	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+	<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+	<!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<style>
+		.cbox p{
+			display: inline;
+		}
+	</style>
+	<![endif]-->
+</head>
+<
+<body class="bgc1">
+<div id="app">
+<!--  加群modal -->
+<div class="modal fade" id="jiaqunSty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="jiaqunid3" style="text-align:center"></h4>
+			</div>
+			<div class="modal-body heightAuto " id="jiaqunid"></div>
+			<div class="modal-footer" id="jiaqunid2"></div>
+
+
+
+		</div>
+	</div>
+</div>
+
+<header class="box-shadow">
+	<div class="container clearfix" id="navigation">
+		<div class="pull-left">
+			<ul id="ul-left" class="ul-listStyle-none">
+				<li>
+					<span class="top-footer-sprite-bg inline-block icon-home"></span>
+					<a class="mgl5" href="https://www.educity.cn/" target="_blank">首页</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pull-right head_dl">
+			<ul id="ul-right" class="ul-listStyle-none">
+				<div class="" style="min-width:100px;float: right;padding-left: 30px;min-height: 30px;">
+					<li class="ydl" style="display: list-item;">
+						<a target="_blank" href="https://uc.educity.cn/personalCenter/basicInfo.html"><img src="img/toux.png" class="inline-block icon-custom-img head_userImg"><span
+								class="head_userName nowrap" style="width:76.28px">用户名字</span></a>
+						<ul class="list-unstyled menu-percenter" style="width:81px;left: 20px;">
+							<li><a target="_blank" href="https://uc.educity.cn/personalCenter/basicInfo.html">个人中心</a></li>
+							<li><a target="_blank" href="https://uc.educity.cn/personalCenter/myOrder.html">我的订单</a></li>
+							<li><a target="_blank" href="https://uc.educity.cn/personalCenter/accountSettings.html">账号设置</a></li>
+							<hr>
+							<li><a href="javascript:" class="logout">安全退出</a></li>
+						</ul>
+					</li>
+					<li class="wdl" style="float: left; display: none;"><a href="https://www.educity.cn/login/register.html" target="_blank">注册</a></li>
+					<li class="wdl" style="float: left; margin-left: 25px; display: none;"> <a href="https://www.educity.cn/login/"
+																							   target="_blank">登录</a></li>
+				</div>
+			</ul>
+		</div>
+	</div>
+</header>
+
+
+
+<div class="subjectBody bgc1">
+	<div class="container">
+		<div id="paperTitleWrap">
+			<div class="subTitle">
+				<a href="https://www.educity.cn/" target="_blank">首页</a> &gt; <a href="https://www.educity.cn/tiku" target="_blank">题库</a>
+				&gt;{{exam.ename}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-9">
+				<div id="paperDetailWrap">
+					<div class="bg-fff box-shadow right-title bgc1">
+						<div class="modeTitle">
+							<h4 class="center">{{exam.ename}}</h4>
+							<!-- <div class="center">
+                            <span>本卷共分为2大题，总分100分</span>
+                            <span class="mgl20">答题时间：30分钟</span>
+                        </div> -->
+						</div>
+					</div>
+				</div>
+
+				<!--背景图片设置
+                -->
+				<div class="bg-fff box-shadow mgt10 subject-content bgc1"
+					 style="background-image: url(&quot;<!--20232781.png-->&quot;);
+							background-position: initial;
+							background-size: initial; background-repeat: initial; background-attachment: initial;
+							background-origin: initial; background-clip: initial;">
+					<!-- <div class="single">
+                    一，单项选择题（共10题，每题10分，共100分。每题的四个选项中只有一个正确答案。）
+                </div> -->
+					<div id="paperWrap" v-for="(item,i) in exercies" >
+						<div v-show="i==index">
+						<div class="single-content row">
+							<div class="singleL">
+								<span class="icon_index_login_me inline-block icon-Select"></span>
+							</div>
+							<div class="lh2">第{{index+1}}
+								<span style="color:#286090;" v-show="exercies[index].type===1">（单选题）</span>
+								<span style="color:#286090;" v-show="exercies[index].type===2">（多选题）</span>
+							</div>
+
+							<div class="singleR stId" worked="N" data-zhuguan="N" data-sttype="95" data-datikaid="12239239" data-id="454917"
+								 data-stid="454917" data-subjectcode="100110011003">
+								<div >
+									<p v-html="exercies[index].content"> </p>
+
+								</div>
+								<!--图片地址-->
+<!--								<div style="text-align: center;"><img src="ryU7gb8CHG.png" style="max-width:100%;">图片<br></div>-->
+							</div>
+
+
+						</div>
+						<div class="answerWrap row answerRow" data-answer-length="1">
+							<!-- 多选题或者不定项 -->
+
+							<!-- 单选题或者判断题 -->
+
+							<div class="answerList mgb20" >
+								<div class="answerTitle">
+									<small>问题{{index+1}}选项</small>
+								</div>
+								<div class="answerContent aw0" data-answer-i="0" >
+
+									<div class="answerContentList mgt10"  v-show="i==index" >
+										<span class="cbox" v-show="i==index">
+											<!--多选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===2" :id="'slec0A'+i" type="checkbox" :name="'optionsRadiosduoxuan'+i" value="A"  @click="domarkduoxuan(i)">
+											<!--单选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===1" :id="'slec0A'+i" type="radio" :name="'optionsRadios'+i" value="A"  @click="domark(i)">
+											<!--问题选项-->
+											<b v-html="'A.'+exercies[i].optiona"></b></span><br/>
+										<span class="cbox" v-show="i==index">
+											<!--多选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===2" :id="'slec0A'+i" type="checkbox" :name="'optionsRadiosduoxuan'+i" value="B"  @click="domarkduoxuan(i)">
+											<!--单选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===1" :id="'slec0B'+i" type="radio" :name="'optionsRadios'+i" value="B"  @click="domark(i)">
+											<!--问题选项-->
+											<b v-html="'B.'+exercies[i].optionb"></b></span><br/>
+										<span class="cbox" v-show="i==index">
+											<!--多选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===2" :id="'slec0A'+i" type="checkbox" :name="'optionsRadiosduoxuan'+i" value="C"  @click="domarkduoxuan(i)">
+											<!--单选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===1" :id="'slec0C'+i" type="radio" :name="'optionsRadios'+i" value="C"  @click="domark(i)">
+											<!--问题选项-->
+											<b v-html="'C.'+exercies[i].optionc"></b></span><br/>
+										<span class="cbox "v-show="i==index">
+											<!--多选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===2" :id="'slec0A'+i" type="checkbox" :name="'optionsRadiosduoxuan'+i" value="D"  @click="domarkduoxuan(i)">
+											<!--单选题-->
+											<input  class="answerInpt" v-show="exercies[index].type===1" :id="'slec0D'+i" type="radio" :name="'optionsRadios'+i" value="D"  @click="domark(i)">
+											<!--问题选项-->
+											<b v-html="'D.'+exercies[i].optiond"></b></span><br/>
+									</div>
+<!--									<div class="answerContentList mgt10">-->
+<!--										<span class="cbox"><input class="answerInpt" :id="slec0A" type="radio" :name=index value="A"></span>-->
+<!--											A.{{exercies[index].optiona}}-->
+
+<!--									</div>-->
+
+<!--									<div class="answerContentList mgt10">-->
+<!--										<span class="cbox"><input class="answerInpt" id="slec0B" type="radio" :name=index value="B"></span>-->
+<!--											B.{{exercies[index].optionb}}-->
+
+<!--									</div>-->
+
+<!--									<div class="answerContentList mgt10">-->
+<!--										<span class="cbox"><input class="answerInpt" id="slec0C" type="radio" :name=index value="C"></span>-->
+<!--											C.{{exercies[index].optionc}}-->
+
+<!--									</div>-->
+
+<!--									<div class="answerContentList mgt10">-->
+<!--										<span class="cbox"><input class="answerInpt" id="slec0D" type="radio" :name=index value="D"></span>-->
+<!--											D.{{exercies[index].optiond}}-->
+
+<!--									</div>-->
+
+								</div>
+							</div>
+
+
+						</div>
+						<div class="collect clearfix" v-for="(item,i) in exercies">
+
+							<div class="pull-right" v-show="i==index">
+
+								<span class="unCollectText addBiaoji" @click="Biaoji(index)" v-show="i==index" :id="'biaoji'+i">标记</span>
+<!--								<span class="icon_index_login_me inline-block icon-Unerror jiucuo" data-id="454917"></span> <span class="jiucuo"-->
+<!--																																  data-id="454917">纠错</span>-->
+							</div>
+						</div>
+
+						<div class="analysisAnswer none">
+
+							<div class="answerEnd">
+										<span>参考答案：
+
+
+
+											D&nbsp;
+
+
+
+
+										</span>
+							</div>
+							<div class="shitiDesp pdt15">
+								<div class="shitiTrip">
+									<span class="icon_index_login_me inline-block icon-anysis"></span>
+									<span class="shitiLevel">试题解析：</span>
+								</div>
+								<div class="shitiText lh2">
+
+									<p>最短移臂调度是指每次找距离当前磁头所在柱面最近的柱面。<br></p>
+									<p><br>1、初始位置是21柱面，所以请求序列中最近的柱面是23，对应请求号2、3、8；（排除选项C）<br><br>2、当前柱面是23，请求序列中最近的柱面是17，对应请求号是1、5、7；（排除选项A和选项B）<br><br>3、当前柱面号是17，请求序列中最近的柱面是32，对应请求号是4、6；（排除选项A、B、C）<br><br>4、当前柱面号是32，请求序列中最近的柱面是38，对应请求号是9；
+										（排除选项B）<br><br>综上，只有选项D满足。</p>
+
+								</div>
+							</div>
+							<div class="doPane note">
+
+								<span>笔记</span>
+							</div>
+							<div class="doPane question">
+								<span>提问</span>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="bijixq clearfix" id="bijixq">
+
+				</div>
+
+
+
+				<div class="bg-fff box-shadow mgt10 row row-rest none bgc1" id="examModeMsg">
+					<div class="col-md-6 center bp20 bLeftWrap ">
+						<span class="icon_index_login_me inline-block icon-left-arrow"></span>
+						<span>上一题</span>
+					</div>
+					<div class="col-md-6 center bp20 bRightWrap">
+						<span>下一题</span>
+						<span class="icon_index_login_me inline-block icon-right-arrow"></span>
+					</div>
+				</div>
+				<div class="bg-fff box-shadow mgt10 row row-rest bgc1" id="exeModeMsg">
+					<div class="col-md-6 center bp20 bLeftWrap notclickn " v-if="this.index===0">
+						<span class="icon_index_login_me inline-block icon-left-arrow"></span>
+						<span>上一题</span>
+					</div>
+					<div class="col-md-6 center bp20 bLeftWrap "@click="lastExercises" v-if="this.index!=0">
+						<span class="icon_index_login_me inline-block icon-left-arrow"></span>
+						<span>上一题</span>
+					</div>
+					<div class="col-md-6 center bp20 bRightWrap notclickn" v-if="this.index===exercies.length-1">
+						<span >下一题</span>
+						<span class="icon_index_login_me inline-block icon-right-arrow"></span>
+					</div>
+					<div class="col-md-6 center bp20 bRightWrap" @click="nextExercises" v-if="this.index!=exercies.length-1">
+						<span >下一题</span>
+						<span class="icon_index_login_me inline-block icon-right-arrow"></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div id="scantronWrap">
+					<div class="bg-fff box-shadow pdb20 bgc1">
+						<div class="countTime">
+							<i class="icon_question inline-block icon-biao"> </i>
+							<span class="timeRe" id="time"><span class="fen" id="fen" >{{minutes}}</span>:<span class="miao" id="miao">{{seconds}}</span></span>
+							<div class="inline-block zanTing">
+								<i class="icon_question inline-block icon-stop mgl20 pause"> </i>
+								<span class="pause sp">时间暂停</span>
+							</div>
+						</div>
+						<h4 class="center answerCard">答题卡</h4>
+
+
+
+						<div class="cbnWrap">
+							<h5>单选题</h5>
+							<div id="timu">
+
+
+								<span :id="i" value="-1" class="ISpan finishISpan unFinishISpan noMark " v-for="(item,i) in exercies" @click="change_exercise(i)">{{i+1}}</span>
+
+
+							</div>
+						</div>
+
+
+						<div class="spanExplain">
+							<div class="row">
+								<div class="col-md-12 center">
+									<span class="ISpan finishISpan unFinishISpan spanMark icon_question inline-block"></span>
+									<span>标记</span>
+								</div>
+								<div class="col-md-12 center">
+									<span class="ISpan finishISpan unFinishISpan icon_question inline-block"></span>
+									<span>未做</span>
+								</div>
+								<div class="col-md-12 center">
+									<span class="ISpan finishISpan"></span>
+									<span>已做</span>
+								</div>
+							</div>
+						</div>
+						<div class="exBtn">
+						</div>
+						<div class="exBtn">
+							<button type="button" class="btn btn-primary submitExam" @click="sumbitExam()">我要交卷</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 纠错的model -->
+<div class="modal fade" id="jiucuo" tabindex="-1" role="dialog" aria-labelledby="">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+
+				<p class="title2">纠错内容</p>
+				<textarea maxlength="500" name="name" placeholder="请输入纠错内容" style="resize:none;"></textarea>
+			</div>
+			<div class="modal-footer">
+				<div class="center">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" id="saveStuAttention" data-dismiss="modal">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+</footer>
+
+<!-- <script src="https://lstatic.educity.cn/public/js/var.js"></script> -->
+</div>
+</body>
+<script src="js/axios.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+
+	var app =new Vue({
+		el:'#app',
+		data:{
+			classes:'81',
+			exid: '1',
+			exercies: {},
+			exam:"",
+			index:-1,
+			examtime: 10,  //10分钟，按秒计算，自己调整!		考试倒计时
+			minutes:'',
+			seconds:'',
+			user_options:'',
+			uid:'1'
+		},
+		methods:{
+			sumbitExam:function(){
+				var flag =confirm(`是否要交卷?`);
+				if (flag==true){
+					console.log('交卷！');
+					//获取所有的答案
+					var $timuList=$('#timu span');
+					for (let i = 0; i < $timuList.length; i++) {
+						var indexi=i;
+						indexi++;
+						var user_option=$('#'+i).attr('value');
+						if (i ==0 ){
+							this.user_options+=indexi+"."+user_option+"";
+						}else if (i ==$timuList.length-1){
+							this.user_options+=","+indexi+"."+user_option;
+						}else{
+							this.user_options+=","+indexi+"."+user_option;
+						}
+					}
+					console.log("exid(考试编号):"+this.exid+"       uid(用户编号):"+this.uid+"      useranswer(用户答案):"+this.user_options);
+					//发送axios请求添加参数
+					axios({
+						url:'../exam/addRecord',
+						method:'POST',
+						data:{exid:this.exid,uid:this.uid,useranswer:this.user_options}
+					}).then(result=>{
+						console.log(result);
+						if (result.data.code==1){
+							alert('交卷成功！');
+							//添加成功!!
+							//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
+							// timer = setInterval("CountTimeDown()", 1000);
+						}else{
+							alert("微服务不可用，请联系管理员")
+						}
+					})
+				}else{
+
+				}
+			},
+			//添加标记
+			Biaoji:function(index){
+
+				let $1 = $('#biaoji'+index);
+				let html = $1.text();
+				if (html =='取消标记'){
+					let timumark =$('#'+index);
+					alert('取消标记成功！！');
+					$1.html('标记');
+					var classAttributes =timumark.attr('class');
+					console.log(classAttributes);
+					if (classAttributes==='ISpan finishISpan unFinishISpan noMark spanMark icon_question inline-block'){
+						console.log('未做题目，取消标记');
+						timumark.attr('class','ISpan finishISpan unFinishISpan noMark ')
+					}else{
+						console.log('已做题目，取消标记');
+						timumark.attr('class','ISpan finishISpan noMark')
+					}
+				}else{
+					alert('添加标记成功！！');
+					let timumark =$('#'+index);
+					var classAttributes =timumark.attr('class');
+					console.log(classAttributes);
+					if (classAttributes=='ISpan finishISpan unFinishISpan noMark '){
+						console.log('未做题目，添加标记');
+						timumark.attr('class','ISpan finishISpan unFinishISpan noMark spanMark icon_question inline-block')
+					}else{
+						console.log('已做题目，添加标记');
+						timumark.attr('class','ISpan finishISpan noMark spanMark icon_question inline-block')
+					}
+
+
+					$1.html('取消标记')
+				}
+			},
+			//标记以及做题目
+			domarkduoxuan:function(index){
+				let $timu= $('#'+index);
+				var classAttributes=$timu.attr('class');
+				object =document.getElementsByName('optionsRadiosduoxuan'+index);
+				var user_options= $('input[type="checkbox"]:checked').val();
+				var user_option;
+				for (k in object){
+					if(object[k].checked){
+						user_option+=object[k].value;
+					}
+				}
+				user_option=user_option.replace('undefined','');
+				console.log('用户选择的选择题为:'+user_option);
+				value= $timu.attr("value",user_option);
+				classAttributes=classAttributes.replace('unFinishISpan','');
+				$timu.attr('class',classAttributes);
+			},
+			domark:function(index){
+				let $timu= $('#'+index);
+				var classAttributes=$timu.attr('class');
+				var user_option= $('input[name="optionsRadios'+index+'"]:checked').val();
+				value= $timu.attr("value",user_option);
+				classAttributes=classAttributes.replace('unFinishISpan','');
+				$timu.attr('class',classAttributes);
+			},
+			//切换试题
+			change_exercise:function(i){
+				let $exercise  = $('#'+i);
+				let option = $('input[name="optionsRadios'+i+'"]:checked').val();
+				var value =$('#'+i).attr('value');
+				this.index=i;
+				// if (value==-1){
+				//
+				// 	$('input[type=radio][name="optionsRadios"]:checked').prop("checked", false);
+				// }else{
+				// 	alert('之前选中的答案为：'+value);
+				// 	console.log('#slec0'+value);
+				// 	$('#slec0'+value).attr("checked",true);
+				// }
+				// console.log("第"+i+"题选中的答案为："+option);
+				// console.log(value)
+				value= $('#'+i).attr("value",option);
+			},
+			lastExercises:function () {
+				if (this.index===0){
+					alert('不能返回上一题了！！');
+				}else{
+					this.index--;
+				}
+			},
+			nextExercises:function () {
+				if(this.index==this.exercies.length-1){
+					alert("不能再下一题了")
+				}else{
+					this.index++;
+				}
+			},
+
+		},
+		mounted:function () {
+			//考试信息
+			axios({
+				url:'../exam/findExerciesByExam',
+				method:'GET',
+				params:{exid:this.exid}
+			}).then(result=>{
+
+				if (result.data.code==1){
+					this.exam=result.data.data[0];
+					this.exercies=result.data.data[1];
+					if (this.index=-1){
+						this.index=0;
+					}
+					console.log(this.exercies);
+					//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
+					// timer = setInterval("CountTimeDown()", 1000);
+				}else{
+					alert("微服务不可用，请联系管理员")
+				}
+			})
+		}
+	});
+
+
+
+		function CountTimeDown(){
+			if(app.$data.examtime>=0){
+				app.$data.minutes =Math.floor(app.$data.examtime / 60);
+				app.$data.seconds = Math.floor(app.$data.examtime % 60);
+				--app.$data.examtime;
+			}else{
+				clearInterval(timer);
+				alert("时间到，结束!");
+			}
+		}
+
+</script>
+
+</html>

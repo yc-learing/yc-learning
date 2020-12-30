@@ -26,7 +26,7 @@
 							<img src="http://t.cn/RCzsdCq" class="layui-nav-img">{{aname}}
 						</a>
 						<li class="layui-nav-item">
-							<a href="../admin.action?op=logout">退出</a>
+							<a href="javascript:logout()">退出</a>
 						</li>
 					</li>
 				</ul>
@@ -48,8 +48,15 @@
 							</dl>
 						</li>
 						<li class="layui-nav-item">
-							<a href="#" data-url="order" data-title="订单管理" data-id="03" class="site-demo-active" data-type="tabAdd"></a>
-						</li>
+							<a class="" href="javascript:;">试题维护</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="#" data-url="add_exercises" data-title="录入试题" data-id="03" class="site-demo-active" data-type="tabAdd">录入试题</a>
+								</dd>
+								<dd>
+									<a href="#" data-url="exercises_index" data-title="查看题库" data-id="04" class="site-demo-active" data-type="tabAdd">查看题库</a>
+								</dd>
+							</dl>
 						<li class="layui-nav-item">
 							<a href="#" data-url="user" data-title="会员管理" data-id="04" class="site-demo-active" data-type="tabAdd"></a>
 						</li>
@@ -202,28 +209,55 @@
 		<script type="text/javascript" src="js/vue.js"></script>
 		<script type="text/javascript" src="js/axios.js"></script>
 		<script type="text/javascript">
+			var token=localStorage.getItem("token");
+			function logout() {
+				let b = confirm("是否要退出登录！");
+				console.log(b);
+				if (b ===true){
+
+					axios({
+						url:'../admin/logout',
+						method:'post',
+						data:{token:token}
+					}).then(result=>{
+						console.log(result);
+						if(result.data.code===1){
+							localStorage.removeItem("token");
+							location.href='login.html';
+						}
+					})
+				}
+			}
+
 			var app=new Vue({
 				el:"#admin",
 				data:{
 					aname:''
 				},
 				mounted:function(){
-					console.log(localStorage.getItem("token"));
+
+					if(token===null){
+						alert("请先登录！！");
+						window.location.href='login.html';
+						return;
+					}
+					console.log(localStorage.getItem("token") 	);
 					axios({
 						url:'../admin/check',
 						method:'post',
-						params:{token:localStorage.getItem("token")}
+						data:{token:token}
 					}).then(result=>{
 						console.log(result);
 						if(!result.data.admin){
 							alert("用户token失效，请重新登录");
 							localStorage.removeItem("token");
-							location.href='backLogin.html';
+							location.href='login.html';
 						}else{
 							this.aname=result.data.admin.aname;
 						}
 					})
-				}
+				},
+
 			})
 		</script>
 	</body>

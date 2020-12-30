@@ -6,7 +6,6 @@ import com.yc.learning.entity.User;
 import com.yc.learning.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -23,11 +22,9 @@ public class UserServiceImpl implements UserService{
         return list;
     }
 
-
-
     @Override
-    public void delete(Integer id) {
-        this.userMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return userMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -41,23 +38,20 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void insert(UserDomain domain) {
+    public int insert(UserDomain domain) {
         User user = new User(null,domain.getUname(), MD5Utils.stringToMD5(domain.getUpwd()),
                 domain.getTel(),domain.getEmail(),domain.getQq(),
                 domain.getVx(),domain.getClasses()
                 ,domain.getRegistrytime(),domain.getEndtime()
                 ,domain.getStatus());
-        this.userMapper.insert(user);
-        domain.setUid(user.getUid());
+        return userMapper.insert(user);
     }
 
     @Override
-    public int update(UserDomain user) {
-        User u=new User(user.getUid(),user.getUname(),MD5Utils.stringToMD5(user.getUpwd()),user.getTel(),user.getEmail(),
-                user.getQq(),user.getVx(),user.getClasses(),user.getRegistrytime(),
-                user.getEndtime(),user.getStatus());
-        Example example = new Example(User.class);
-        example.createCriteria().andEqualTo("uid", user.getUid());
-        return userMapper.updateByExampleSelective(u, example);
+    public int update(Integer uid,String value,String field){
+        if("upwd".equals(field)){
+            value=MD5Utils.stringToMD5((String) value);
+        }
+        return userMapper.update(uid, value, field);
     }
 }

@@ -25,4 +25,16 @@ public class BackModule_CourseClientService {
         map.put("msg", "服务异常");
         return new Gson().toJson(map);
     }
+
+    @HystrixCommand(fallbackMethod = "findCoursenameWithCnameFallback")
+    public String findCoursenameWithCname(){
+        return courseClient.findCoursenameWithCname();
+    }
+
+    private String findCoursenameWithCnameFallback(){
+        Map map = new HashMap();
+        map.put("code", "0");
+        map.put("msg", "服务异常");
+        return new Gson().toJson(map);
+    }
 }

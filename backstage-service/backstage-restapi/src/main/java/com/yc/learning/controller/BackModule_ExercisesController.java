@@ -6,10 +6,10 @@ import com.yc.learning.domain.PageDomain;
 import com.yc.learning.service.BackModule_ExercisesService;
 import com.yc.learning.util.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
@@ -41,10 +41,29 @@ public class BackModule_ExercisesController {
                 return new Gson().toJson(map);
             } catch (Exception e) {
                 map.put("code",0);
-                map.put("data","程序错误");
+                map.put("msg","程序错误");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }
+        });
+    }
+
+    @RequestMapping(value = "insert",method = RequestMethod.POST)
+    public CompletableFuture<String> insert (@RequestBody ExercisesDomain exercisesDomain) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try {
+                exercisesService.insert(exercisesDomain);
+                map.put("code", 1);
+                map.put("msg", "添加成功");
+                return new Gson().toJson(map);
+            }catch (Exception e) {
+                map.put("code",0);
+                map.put("msg","注册失败");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+
         });
     }
 }

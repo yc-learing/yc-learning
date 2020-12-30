@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>笔试题录入</title>
+		<style type="text/css">
+			#frmQuestion_table {
+				font-size: 9pt;
+				color: #0066CC;
+			}
+			
+			.toolbar {
+				border: 1px solid #ccc;
+			}
+			
+			.toolbar .w-e-menu {
+				float: left;
+			}
+			
+			.text {
+				border: 1px solid #ccc;
+				min-height: 44px;
+				font-size: 16px;
+				width: 800px;
+			}
+			
+			.text p {
+				word-wrap: break-word;
+			}
+			
+			.text .w-e-text {
+				overflow: auto;
+			}
+			
+			.question_stem {
+				width: 60px;
+				background: #F2F2F2;
+				min-height: 44px;
+				border: 1px solid #DCDCDC;
+				float: left;
+				margin-top: 5px;
+				border-radius: 3px 0 0 3px;
+				text-align: center;
+				line-height: 44px;
+			}
+			
+			.inp_L1 {
+				background-repeat: no-repeat;
+				BORDER-TOP-WIDTH: 0px;
+				BACKGROUND-POSITION: -4px -55px;
+				BORDER-LEFT-WIDTH: 0px;
+				BORDER-BOTTOM-WIDTH: 0px;
+				WIDTH: 82px;
+				COLOR: #464646;
+				LINE-HEIGHT: 23px;
+				HEIGHT: 23px;
+				BORDER-RIGHT-WIDTH: 0px
+			}
+			
+			.inp_L2 {
+				background-repeat: no-repeat;
+				BORDER-TOP-WIDTH: 0px;
+				BACKGROUND-POSITION: -4px -80px;
+				BORDER-LEFT-WIDTH: 0px;
+				BORDER-BOTTOM-WIDTH: 0px;
+				WIDTH: 82px;
+				COLOR: #464646;
+				LINE-HEIGHT: 23px;
+				HEIGHT: 23px;
+				BORDER-RIGHT-WIDTH: 0px
+			}
+			
+			.code-td-hide {
+				font-size: 9pt;
+				color: #0066CC;
+			}
+			
+			.hide_img {
+				display: none;
+				z-index: 9999;
+				position: absolute;
+				right: 55px;
+			}
+			
+			#code_demo_img:hover+.hide_img {
+				display: block;
+			}
+		</style>
+		<div id="add">
+				<div style="margin: 0 auto;width:1216px;border: 1px solid #DEDEDE;border-radius: 4px;margin-top:10px;">
+					<table width="100%" border="0" cellspacing="0" id="frmQuestion_table">
+						<tr>
+							<td width="5%" height="42" class="code-td-hide">&nbsp;&nbsp;&nbsp;&nbsp;课程名:</td>
+							<td width="11%" class="code-td-hide">&nbsp;
+<!--								<a v-for="cch in courseChapters" >{{courseChapters}}</a>-->
+								<select name='version' id='version'  v-model="cid" style="width: 200px;height: 25px;">
+										<option v-for="cch in this.courseChapters"   :value="cch.cid">{{cch.coursename}}
+										</option>
+								</select>
+							</td>
+							<td width="5%" height="42" class="code-td-hide">&nbsp;&nbsp;&nbsp;&nbsp;章节名:</td>
+							<td width="11%" class="code-td-hide">&nbsp;
+								<select v-for="cc in courseChapters" v-if="cid==cc.cid" v-model="chid"    id='chapter'  style="width: 200px;height: 25px;">
+									<option v-for="c in cc.chapters " :value="c.chid">{{c.cname}}</option>
+								</select>
+							</td>
+							<td width="5%"><span class="fontColor">&nbsp;&nbsp;&nbsp;&nbsp;题目类型:</span>
+							</td>
+							<td width="11%">&nbsp;
+								<select style="width: 200px;height: 25px;" v-model="type" @change="checkQuestionType" id="question-type">
+									<option value="1">单选题</option>
+									<option value="2">多选题</option>
+									<option value="3">简答题</option>
+									<option value="4">判断题</option>
+								</select>
+							</td>
+							<td width="5%" height="42" class="code-td-hide" >&nbsp;&nbsp;&nbsp;&nbsp;作者:</td>
+							</td>
+							<td width="11%">&nbsp;
+								<input type="text" id="author" name="author" v-model="aname" style="width: 200px;height: 19px;"/>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div style="width:950px;margin: 0 auto;margin-top: 3%;">
+					<div id="div_question" class="question" style="float: left;">
+						<div class="question_stem" id="div_question_context">题干</div>
+						<div style="float: left;">
+							<div id="div1" class="toolbar" style="width: 800px;display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="div2" class="text" style="margin-top:5px;"></div>
+						</div>
+					</div>
+					<div class="question" style="float: left;margin-top: 5%;">
+						<div class="question_stem">解析</div>
+						<div style="float: left;">
+							<div id="div3" class="toolbar1" style="width: 800px;display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="div4" class="text" style=" margin-top:5px;"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 选择题和多选题 -->
+				<div id="Single-multiple-selection" style="width:950px;margin: 0 auto;margin-top: 3%;">
+					<div class="question" style="float: left;margin-top: 5%;width: 100%;">
+						<div style="width:300px;">
+							<div class="question_stem">答案 </div>
+							<div style="float: left; height: 44px; line-height: 44px; margin-top: 7px; margin-left: 5px;">
+								<span id="radioSpan"> <input type="radio" name="radioAnswer"
+						value="A" checked> A &nbsp; <input type="radio"
+						name="radioAnswer" value="B"> B &nbsp; <input type="radio"
+						name="radioAnswer" value="C"> C &nbsp; <input type="radio"
+						name="radioAnswer" value="D"> D
+					</span>
+							</div>
+							<div style="float: left; height: 44px; line-height: 44px; margin-top: 7px; margin-left: 5px;">
+								<span id="checkboxSpan" style="display: none;"> <input
+						name="checkAnswer" type="checkbox" id="checkAnswerA" value="A">
+						A&nbsp; <input name="checkAnswer" type="checkbox"
+						id="checkAnswerB" value="B"> B&nbsp; <input
+						name="checkAnswer" type="checkbox" id="checkAnswerC" value="C">
+						C &nbsp; <input name="checkAnswer" type="checkbox"
+						id="checkAnswerD" value="D"> D
+					</span> <br> <span id="spanH"></span>
+							</div>
+						</div>
+					</div>
+					<div class="question" style="float: left;margin-top: 5%;width: 100%;">
+						<div class="question_stem">A</div>
+						<div style="float: left;">
+							<div id="div5" class="toolbar2" style="display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="div6" class="text" style=" margin-top:5px;width: 750px;"></div>
+						</div>
+					</div>
+					<div class="question" style="float: left;margin-top: 4%;width: 100%;">
+						<div class="question_stem">B</div>
+						<div style="float: left;">
+							<div id="div7" class="toolbar3" style="display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="div8" class="text" style=" margin-top:5px;width: 750px;"></div>
+						</div>
+					</div>
+					<div class="question" style="float: left;margin-top: 4%;width: 100%;">
+						<div class="question_stem">C</div>
+						<div style="float: left;">
+							<div id="div9" class="toolbar4" style="display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="div10" class="text" style=" margin-top:5px;width: 750px;"></div>
+						</div>
+					</div>
+					<div class="question" style="float: left;margin-top: 4%;width: 100%;">
+						<div class="question_stem">D</div>
+						<div style="float: left;">
+							<div id="div11" class="toolbar5" style="display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="div12" class="text" style=" margin-top:5px;width: 750px;"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- 简答题 -->
+				<div id="Single-multiple-answer" style="width:950px;margin: 0 auto;margin-top: 3%;display: none;">
+					<p style="color: red;font-size: 16px;float: left;">如编程题不知格式怎么录,请去浏览题库参照</p><br/>
+					<div class="question" style="float: left;margin-top: 5%;width: 100%;">
+						<div class="question_stem">答案</div>
+						<div style="float: left;">
+							<div id="answer_div5" class="toolbar8" style="display: none;margin-top: -33px;border: 1px solid #ccc;"></div>
+							<div id="answer_div6" class="text" style=" margin-top:5px;width: 750px;"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 判断题 -->
+				<div id="Single-multiple-determine" style="width:950px;margin: 0 auto;margin-top: 3%;display: none;">
+					<!-- <p style="color: red;font-size: 16px;float: left;">判断题暂时不提供修改和查看</p><br/> -->
+					<div class="question" style="float: left;margin-top: 5%;width: 100%;">
+						<div class="question_stem">答案</div>
+						<div style="float: left; height: 45px;line-height: 45px;margin-left:20px;margin-top: 6px;">
+							<span> 
+					<input type="radio" name="dmAnswer"	value="1" checked>正确 &nbsp; 
+					<input type="radio"	name="dmAnswer" value="0">错误
+				</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="question" style="float: left;width: 100%;text-align: center;margin-bottom: 30px;margin-top: 50px;">
+					<input type="button" class="inp_L1" name="Submit3" value="添加题目" onMouseOver="this.className='inp_L2'" onMouseOut="this.className='inp_L1'" @click="addexercise">
+				</div>
+
+
+		</div>
+		<iframe id="upload" name="upload" frameborder="0" style="display: none"></iframe>
+
+		<script type="text/javascript" src="js/wangEditor.js"></script>
+
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+
+
+		<script type="text/javascript" src="js/axios.js"></script>
+		<script type="text/javascript">
+			var  customConfigArry=['head', 'bold','fontSize','fontName','italic','underline','strikeThrough', 'foreColor', 
+     							   'backColor', 'list', 'justify', 'quote','emoticon','image', 'table','code', 'undo','redo'];
+
+			//添加创建wangEditor编辑器
+			const E = window.wangEditor
+			//题干框富文本编辑器创建
+			const editor = new E('#div1', '#div2')
+			//解析框富文本编辑器创建
+			const editor1 = new E('#div3', '#div4')
+			//单选题框富文本编辑器创建
+			const editor2 = new E('#div5', '#div6')
+			const editor3 = new E('#div7', '#div8')
+			const editor4 = new E('#div9', '#div10')
+			const editor5 = new E('#div11', '#div12')
+			const editor6 = new E('#answer_div5', '#answer_div6')
+			var vm = new Vue({
+				el: '#add',
+				data: {
+					cid:1,
+					courseChapters:[],
+					chid:1,
+					type:1,
+					content:"",
+					optiona:"",
+					optionb:"",
+					optionc:"",
+					optiond:"",
+					answer:"",
+					analysis:"",
+					aname:""
+					
+				},
+				mounted: function() {
+					var _this=this;
+
+					//获取课程和章节
+					axios.get('/course/findCoursenameWithCname')
+				    .then(function (data) {
+				    	if(data.data.code>0){
+							_this.courseChapters=data.data.data;
+							console.log(_this.courseChapters);
+						}else{
+				    		alert("查询失败");
+				    	}
+				    })
+
+					/*文件上传*/
+//					 editor.config.showLinkImg = false
+//					 editor.config.uploadImgServer = '/Examination2.0/upload_uploadPic.action'
+//					 editor.config.uploadFileName = 'myFileName'
+//					 editor.config.menus = customConfigArry
+//					 editor.config.pasteFilterStyle = false
+//					 editor.config.pasteTextHandle =function(content){
+//							// content 即粘贴过来的内容（html 或 纯文本），可进行自定义处理然后返回
+//						 if (content == '' && !content) return ''
+//						 var str = content;
+//						 str = str.toString().replace(/<xml>[\s\S]*?<\/xml>/ig, '');
+//						 str = str.toString().replace(/<style>[\s\S]*?<\/style>/ig, '');
+//						 //str = str.toString().replace(/<\/?[^>]*>/g, '');
+//						 str = str.toString().replace(/[ | ]*\n/g, '\n');
+//						 str = str.toString().replace(/&nbsp;/ig, ' ');
+//						 //str = str.toString().replace(/\s/g,"");
+//						 return str;
+//					 }
+					 editor.config.onfocus = function () {
+						 $("#div1").css("marginTop","-40px");
+						 $("#div2").css("marginTop","15px");
+					     $(".toolbar").show();
+					 }
+					 editor.config.onblur = function (html) {
+						  $("#div2").css("marginTop","5px");
+						 $(".toolbar").hide();
+					 }
+					 editor.create();
+					 
+
+					 editor1.config.onfocus = function () {
+						 $("#div3").css("marginTop","-40px");
+						 $("#div4").css("marginTop","15px");
+					     $(".toolbar1").show();
+					 }
+					 editor1.config.onblur = function (html) {
+						 $("#div4").css("marginTop","5px");
+						 $(".toolbar1").hide();
+					 }
+					 editor1.create();
+					 
+
+					 editor2.config.onfocus = function () {
+						 $("#div5").css("marginTop","-40px");
+						 $("#div6").css("marginTop","15px");
+					     $(".toolbar2").show();
+					 }
+					 editor2.config.onblur = function (html) {
+						 $("#div6").css("marginTop","5px");
+						 $(".toolbar2").hide();
+					 }
+					 editor2.create();
+					 
+
+					 editor3.config.onfocus = function () {
+						 $("#div7").css("marginTop","-40px");
+						 $("#div8").css("marginTop","15px");
+					     $(".toolbar3").show();
+					 }
+					 editor3.config.onblur = function (html) {
+						 $("#div8").css("marginTop","5px");
+						 $(".toolbar3").hide();
+					 }
+
+
+					 editor3.create();
+					 editor4.config.onfocus = function () {
+						 $("#div9").css("marginTop","-40px");
+						 $("#div10").css("marginTop","15px");
+					     $(".toolbar4").show();
+					 }
+					 editor4.config.onblur = function (html) {
+						 $("#div10").css("marginTop","5px");
+						 $(".toolbar4").hide();
+					 }
+					 editor4.create();
+					 
+
+					 editor5.config.onfocus = function () {
+						 $("#div11").css("marginTop","-40px");
+						 $("#div12").css("marginTop","15px");
+					     $(".toolbar5").show();
+					 }
+					 editor5.config.onblur = function (html) {
+						 $("#div12").css("marginTop","5px");
+						 $(".toolbar5").hide();
+					 }
+					 editor5.create();
+
+					 editor6.config.onfocus = function () {
+						 $("#answer_div5").css("marginTop","-40px");
+						 $("#answer_div6").css("marginTop","15px");
+					     $(".toolbar8").show();
+					 }
+					 editor6.config.onblur = function (html) {
+						 $("#answer_div6").css("marginTop","5px");
+						 $(".toolbar8").hide();
+					 }
+					 editor6.create();
+
+					 $('.w-e-menu').css('width', '32px');
+					 $('.w-e-menu').css('height', '21px');
+					 $("#div2").css("marginTop","5px");
+					 $("#div4").css("marginTop","5px");
+					 $("#div6").css("marginTop","5px");
+					 $("#div8").css("marginTop","5px");
+					 $("#div10").css("marginTop","5px"); 
+					 $("#div12").css("marginTop","5px"); 
+					
+					 $(".toolbar").hide();
+					 $(".toolbar1").hide();
+					 $(".toolbar2").hide();
+					 $(".toolbar3").hide();
+					 $(".toolbar4").hide();
+					 $(".toolbar5").hide();
+
+				},
+				methods: {
+					
+					checkQuestionType: function() {
+
+						// $("#Single-multiple-selection").find("radio").remove();
+						// $("#Single-multiple-selection").find("checkbox").remove();
+						$('#Single-multiple-selection').css("display", "none");
+						$('#Single-multiple-answer').css("display", "none");
+						$('#Single-multiple-determine').css("display", "none");
+						if(this.type == 1) {
+							$('#Single-multiple-selection').css("display", "block");
+							$('#checkboxSpan').css("display", "none");
+							$('#radioSpan').css("display", "block");
+
+						}
+						if(this.type == 2) {
+
+							$('#Single-multiple-selection').css("display", "block");
+							$('#checkboxSpan').css("display", "block");
+							$('#radioSpan').css("display", "none");
+
+						}
+						if(this.type == 3) {
+							$('#Single-multiple-answer').css("display", "block");
+
+						}
+						if(this.type == 4) {
+							$('#Single-multiple-determine').css("display", "block");
+
+						}
+					
+					},
+					
+					addexercise: function(){
+
+						this.content = editor1.txt.html();
+						this.analysis = editor.txt.html();
+						if(this.type<=2){
+							 this.optiona = editor2.txt.html();
+							
+							 this.optionb= editor3.txt.html();
+							
+							 this.optionc = editor4.txt.html();
+							
+							 this.optiond = editor5.txt.html();
+							
+							if (this.aname<=0||this.content.length<=0 || this.optiona.length<=0 || this.optionb.length<=0
+									|| this.optionc.length<=0 || this.optiond.length<=0 ) {
+								alert("输入的内容不完整，请重新输入再添加！");
+								return false;
+							}
+							
+							if (this.content.length=="<p><br></p>" || this.optiona.length=="<p><br></p>" || this.optionb.length=="<p><br></p>"
+									|| this.optionc.length=="<p><br></p>" || this.optiond.length=="<p><br></p>" ) {
+								alert("输入的内容不完整，请重新输入再添加！");
+								return false;
+							}
+							
+							if (this.type == 1) {
+								_this.answer="";
+								this.answer = $('input[name="radioAnswer"]:checked').val();
+								this.type=1;
+							} else {
+								var _this=this;
+								_this.answer="";
+								$('input[name="checkAnswer"]:checked').each(function() {
+									_this.answer += $(this).val()+",";
+								});
+								_this.answer=_this.answer.substr(0, _this.answer.length-1);
+								if (_this.answer.length < 2) {
+									alert("复选题必须有两个或两个以上的答案");
+									return;
+								}
+								this.type=2;
+							}
+						}else if (this.type==3){
+							
+							this.answer = editor6.txt.html();
+							
+							if (this.aname<=0||this.content.length<=0 || this.answer.length<=0 ) {
+								alert("输入的内容不完整，请重新输入再添加！");
+								return false;
+							}
+							
+							if (this.content=="<p><br></p>" || this.answer=="<p><br></p>" ) {
+								alert("输入的内容不完整，请重新输入再添加！");
+								return false;
+							}
+							
+							this.type=3;
+						}else if (this.type==4){
+							this.answer = $('input[name="dmAnswer"]:checked').val();
+							if (this.aname<=0||this.content.length<=0 || this.content=="<p><br></p>") {
+								alert("输入的内容不完整，请重新输入再添加！");
+								return false;
+							}
+							this.type=4;
+						}
+						axios.post('/exercises/insert', {chid:this.chid,type:this.type,content:this.content,optiona:this.optiona,optionb:this.optionb,optionc:this.optionc,optiond:this.optiond,answer:this.answer,analysis:this.analysis,aname:this.aname}).then(function (data) {
+							if(data.data.code>0){
+								alert("插入成功");
+							}else{
+								alert("插入失败");
+							}
+						})
+				    }
+					
+				}
+			});
+
+		</script>

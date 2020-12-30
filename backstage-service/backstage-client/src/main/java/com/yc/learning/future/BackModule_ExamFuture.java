@@ -19,4 +19,12 @@ public class BackModule_ExamFuture {
             return examClientService.findByPage(page, pageSize, ename);
         });
     }
+
+    //分页查询
+    @Async
+    public CompletableFuture<String> findByExid(Integer exid) {
+        return CompletableFuture.supplyAsync(() -> {
+            return examClientService.findByExid(exid);
+        });
+    }
 }

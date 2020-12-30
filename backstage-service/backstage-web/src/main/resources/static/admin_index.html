@@ -60,7 +60,7 @@ $(function(){
         //获取修改行的ID值
         var ID = data.aid;
         $.post("/admin/update", {aid:ID, value:value,field:field}, function (data) {
-              layer.msg(data.msg);
+          alert("修改成功");
        });
     });
   });

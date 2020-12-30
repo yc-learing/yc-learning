@@ -37,14 +37,18 @@ public interface BackModule_AdminClient {
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String update(@RequestParam("aid")Integer aid,@RequestParam("value")String value,@RequestParam("field")String field);
 
-
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/login",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String login(@RequestBody Admin admin);
 
     @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/check",
-                   consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
-                   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    String check(@RequestParam("token") String token);
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String check(@RequestBody(required = false) String token);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/back-proxy/back-admin/logout",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String logout(@RequestBody(required = false)String token);
 }

@@ -1,0 +1,86 @@
+/* 个人中心特殊头部通用样式（只是个人中心下面的页面必须引用） */
+#accountSettingsHeader {
+    height: 100px;
+    /* background-color: antiquewhite; */
+    position: relative;
+}
+.seachGroup {
+    position: relative;
+}
+.seachIcon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1000;
+}
+.seachInpt {
+    padding-left: 30px;
+}
+
+.cCenter {
+    padding-right: 40px;
+}
+
+.rightWrap {
+    margin-top: 21.5px;
+}
+
+.leftWrap {
+    margin-top: 27.5px;
+}
+
+#personTitleWrap {
+    height: 70px;
+    background-color: rgb(59, 124, 185);
+}
+
+#personTitle {
+    height: 100px;
+}
+
+.personFt {
+    color: #fff;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.alert-self {
+    padding: 3px 10px !important;
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+}
+
+#left-menu {
+    padding: 10px 0 20px 0;
+}
+
+#left-menu a {
+    color: #333;
+}
+
+.active>a {
+    color: #337ab7 !important;
+}
+
+#left-menu>ul {
+    padding-left: 0px !important;
+}
+
+#left-menu>ul>li {
+    padding: 10px 20px;
+    height: 40px;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+li.active {
+    border-left: 2px solid rgb(76, 155, 227);
+    color: rgb(76, 155, 227);
+}
+
+.span-active {
+    border-bottom: 2px solid rgb(76, 155, 227);
+    color: rgb(76, 155, 227);
+    padding-bottom: 5px;
+}

@@ -4,7 +4,8 @@ import com.sun.istack.internal.logging.Logger;
 import com.yc.learning.aspect.RedisAOP;
 import com.yc.learning.config.RedisConfig;
 import com.yc.learning.domain.AdminDomain;
-import com.yc.learning.service.AdminService;
+import com.yc.learning.service.BackModule_AdminService;
+import com.yc.learning.service.CourseService;
 import com.yc.learning.service.UserService;
 import com.yc.learning.util.MD5Utils;
 import org.junit.Test;
@@ -21,9 +22,12 @@ public class TestService {
 
     @Qualifier("backModule_AdminService")
     @Autowired(required = false)
-    private AdminService adminService;
+    private BackModule_AdminService adminService;
+
     @Autowired(required = false)
     private UserService userService;
+    @Autowired
+    private CourseService courseService;
 
     @Test
     public void insertAdmin(){
@@ -34,9 +38,4 @@ public class TestService {
         adminService.insert(domain);
     }
 
-    @Test
-    public  void  update(){
-
-        adminService.update(3, 0, "status");
-    }
 }

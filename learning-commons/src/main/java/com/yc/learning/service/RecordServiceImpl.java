@@ -27,8 +27,8 @@ public class RecordServiceImpl implements  RecordService {
 
 
     @Override
-    public void delete(Integer id) {
-        this.RecordMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return RecordMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -41,14 +41,13 @@ public class RecordServiceImpl implements  RecordService {
     }
 
     @Override
-    public void insert(RecordDomain domain) {
+    public int insert(RecordDomain domain) {
         Record record = new Record();
         record.setExid(domain.getExid());
         record.setGrade(domain.getGrade());
         record.setUid(domain.getUid());
         record.setUseranswer(domain.getUseranswer());
         record.setTemp(domain.getTemp());
-        this.RecordMapper.insert(record);
-        domain.setRid(record.getRid());
+        return RecordMapper.insert(record);
     }
 }

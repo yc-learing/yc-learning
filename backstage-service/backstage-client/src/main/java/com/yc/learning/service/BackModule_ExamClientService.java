@@ -25,4 +25,16 @@ public class BackModule_ExamClientService {
         map.put("msg", "服务异常");
         return new Gson().toJson(map);
     }
+
+    @HystrixCommand(fallbackMethod = "findByExidFallback")
+    public String findByExid(Integer exid){
+        return examClient.findByExid(exid);
+    }
+
+    private String findByExidFallback(Integer exid){
+        Map map = new HashMap();
+        map.put("code", "0");
+        map.put("msg", "服务异常");
+        return new Gson().toJson(map);
+    }
 }

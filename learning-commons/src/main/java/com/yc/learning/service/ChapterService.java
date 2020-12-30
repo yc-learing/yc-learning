@@ -21,7 +21,7 @@ public interface ChapterService {
     /**
      * 删除图片
      */
-    public void delete(Integer id);
+    public int delete(Integer id);
 
     /**
      * 根据id查图片详情(    图片的metadata )
@@ -36,8 +36,5 @@ public interface ChapterService {
      * @param Chapter
      * @return
      */
-    public void insert(ChapterDomain Chapter);
-
-
-    public void update(ChapterDomain Chapter);
+    public int insert(ChapterDomain Chapter);
 }

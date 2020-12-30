@@ -54,7 +54,7 @@ public class BackModule_AdminController {
                 return new Gson().toJson(map);
             } catch (Exception e) {
                 map.put("code",0);
-                map.put("data","程序错误");
+                map.put("msg","程序错误");
                 e.printStackTrace();
                 return new Gson().toJson(map);
             }
@@ -82,11 +82,11 @@ public class BackModule_AdminController {
         });
     }
 
+
     //修改
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public CompletableFuture<String> update(Integer aid,String value,String field) throws Exception {
         return CompletableFuture.supplyAsync(() -> {
-            System.out.println("修改restapi");
             Map<String, Object> map = new HashMap<>();
             try{
                 adminService.update( aid, value, field);
@@ -147,6 +147,7 @@ public class BackModule_AdminController {
                 adminService.delete(id);
                 logger.info("删除->ID=" + id);
                 map.put("code", 1);
+                map.put("msg","删除成功");
                 return new Gson().toJson(map);
             }catch (Exception e) {
                 map.put("code",0);
@@ -157,30 +158,11 @@ public class BackModule_AdminController {
 
         });
     }
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public CompletableFuture<String> update(Integer aid,Object value,String field) throws Exception {
 
-        return CompletableFuture.supplyAsync(() -> {
-            Map<String, Object> map = new HashMap<>();
-            try{
-                adminService.update( aid, value, field);
-                logger.info("更新成功");
-                map.put("code", 1);
-                map.put("msg","更新失败");
-                return new Gson().toJson(map);
-            }catch (Exception e) {
-                map.put("code",0);
-                map.put("msg","更新失败");
-                e.printStackTrace();
-                return new Gson().toJson(map);
-            }
-
-        });
-    }
 
     //检查用户是否登录
     @RequestMapping(value = "/check",method = RequestMethod.POST)
-    public CompletableFuture<String> check(@RequestParam("token")String token) throws Exception {
+    public CompletableFuture<String> check(@RequestBody(required = false)String token) throws Exception {
         return CompletableFuture.supplyAsync(() -> {
             Map<String, Object> map = new HashMap<>();
             try {
@@ -196,6 +178,26 @@ public class BackModule_AdminController {
                 map.put("code", 1);
                 map.put("admin",check);
                 map.put("message","token查询登录用户成功！！");
+                return new Gson().toJson(map);
+            } catch (Exception e) {
+                map.put("code", 0);
+                map.put("data", "微服务不可用，请重新再试");
+                e.printStackTrace();
+                return new Gson().toJson(map);
+            }
+
+        });
+    }
+
+    //检查用户是否登录
+    @RequestMapping(value = "/logout",method = RequestMethod.POST)
+    public CompletableFuture<String> logout(@RequestBody(required = false)String token) throws Exception {
+        return CompletableFuture.supplyAsync(() -> {
+            Map<String, Object> map = new HashMap<>();
+            try {
+                int delete = adminService.logout(token);
+                map.put("code",1);
+                map.put("msg","删除token成功！！");
                 return new Gson().toJson(map);
             } catch (Exception e) {
                 map.put("code", 0);

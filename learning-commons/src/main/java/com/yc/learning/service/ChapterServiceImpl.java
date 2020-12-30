@@ -27,8 +27,8 @@ public class ChapterServiceImpl implements  ChapterService{
 
 
     @Override
-    public void delete(Integer id) {
-        this.ChapterMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return ChapterMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -42,16 +42,14 @@ public class ChapterServiceImpl implements  ChapterService{
     }
 
     @Override
-    public void insert(ChapterDomain domain) {
+    public int insert(ChapterDomain domain) {
         Chapter chapter = new Chapter();
         chapter.setCid(domain.getCid());
         chapter.setCname(domain.getCname());
         chapter.setTemp(domain.getTemp());
-        this.ChapterMapper.insert(chapter);
-        domain.setChid(chapter.getChid());
+        return ChapterMapper.insert(chapter);
     }
 
-    @Override
     public void update(ChapterDomain Chapter) {
 
     }

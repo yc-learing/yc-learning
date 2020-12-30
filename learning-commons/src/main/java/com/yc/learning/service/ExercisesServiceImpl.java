@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -20,15 +21,14 @@ public class ExercisesServiceImpl implements  ExercisesService{
     @Override
     public List<Exercises> findAll() {
         List<Exercises> list = ExercisesMapper.selectAll();
-
         return list;
     }
 
 
 
     @Override
-    public void delete(Integer id) {
-        this.ExercisesMapper.deleteByPrimaryKey(id);
+    public int delete(Integer id) {
+        return ExercisesMapper.deleteByPrimaryKey(id);
     }
 
     @Override
@@ -36,29 +36,28 @@ public class ExercisesServiceImpl implements  ExercisesService{
         Exercises e =this.ExercisesMapper.selectByPrimaryKey(id);
         ExercisesDomain ExercisesDomain = new ExercisesDomain(
                 e.getEid(), e.getChid(), e.getType(),
-                e.getContent(),e.getOptionA(),e.getOptionB(),e.getOptionC()
-                ,e.getOptionD(),e.getAnswer(),e.getAnalysis(),e.getInputtime()
+                e.getContent(),e.getOptiona(),e.getOptionb(),e.getOptionc()
+                ,e.getOptiond(),e.getAnswer(),e.getAnalysis(),e.getInputtime()
                 ,e.getAname(),e.getTemp());
         return ExercisesDomain;
     }
 
     @Override
-    public void insert(ExercisesDomain domain) {
+    public int insert(ExercisesDomain domain) {
         Exercises exercises = new Exercises();
         exercises.setEid(domain.getEid());
        exercises.setChid(domain.getChid());
        exercises.setType(domain.getType());
        exercises.setContent(domain.getContent());
-       exercises.setOptionA(domain.getOptionA());
-       exercises.setOptionB(domain.getOptionB());
-       exercises.setOptionC(domain.getOptionC());
-       exercises.setOptionD(domain.getOptionD());
+       exercises.setOptiona(domain.getOptiona());
+       exercises.setOptionb(domain.getOptionb());
+       exercises.setOptionc(domain.getOptionc());
+       exercises.setOptiond(domain.getOptiond());
        exercises.setAnswer(domain.getAnswer());
        exercises.setAnalysis(domain.getAnalysis());
-       exercises.setInputtime(domain.getInputtime());
+       exercises.setInputtime(new Date(System.currentTimeMillis()));
        exercises.setAname(domain.getAname());
        exercises.setTemp(domain.getTemp());
-       this.ExercisesMapper.insert(exercises);
-       domain.setEid(exercises.getEid());
+       return ExercisesMapper.insert(exercises);
     }
 }

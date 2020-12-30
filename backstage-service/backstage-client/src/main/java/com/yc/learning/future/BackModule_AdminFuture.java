@@ -15,15 +15,6 @@ public class BackModule_AdminFuture {
     @Autowired
     private BackModule_AdminClientService adminClientService;   //业务层
 
-
-    @Async   //异步调用
-    public CompletableFuture<String> login(Admin admin) {
-        return CompletableFuture.supplyAsync(() -> {
-            return adminClientService.login(admin);
-        });
-    }
-
-
     @Async   //异步调用
     public CompletableFuture<String> findOne(Integer id) {
         return CompletableFuture.supplyAsync(() -> {
@@ -46,7 +37,6 @@ public class BackModule_AdminFuture {
         });
     }
 
-
     @Async
     public CompletableFuture<String> delete(Integer id) {
         return CompletableFuture.supplyAsync(() -> {
@@ -61,9 +51,23 @@ public class BackModule_AdminFuture {
         });
     }
 
+    @Async   //异步调用
+    public CompletableFuture<String> login(Admin admin) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.login(admin);
+        });
+    }
+
+    @Async
     public CompletableFuture<String> check(String token) {
         return CompletableFuture.supplyAsync(() -> {
             return adminClientService.check(token);
+        });
+    }
+    @Async
+    public CompletableFuture<String> logout(String token) {
+        return CompletableFuture.supplyAsync(() -> {
+            return adminClientService.logout(token);
         });
     }
 }

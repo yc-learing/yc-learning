@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>My Login Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="css/images/logo.jpg" alt="logo">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Login</h4>
+								<div class="form-group">
+									<label for="aname">account</label>
+									<input id="aname" type="email" class="form-control"  name="email" value="" required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="apwd">Password
+										<a href="forgot.html" class="float-right">
+										</a>
+									</label>
+									<input id="apwd" type="password" class="form-control" name="password" required data-eye>
+								    <div class="invalid-feedback">
+								    	Password is required
+							    	</div>
+								</div>
+
+								<div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<label for="remember" class="custom-control-label">Remember Me</label>
+									</div>
+								</div>
+
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block" id="login_sumbit" onclick="login()">
+										登录
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Don't have an account? <a href="register.html">Create One</a>
+								</div>
+						</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; 2017 &mdash; Your Company 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/login.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/axios.js"></script>
+	<script>
+		console.log(localStorage.getItem("token"));
+		$(function () {
+			console.log(localStorage.getItem("token"))
+			let item = localStorage.getItem("token");
+			if (item!=null){
+				alert("请安全退出后再登录用户!");
+				window.location.href="index.html";
+			}
+		})
+		function login() {
+
+			let $loginSumbit = $('#login_sumbit');
+			$loginSumbit.attr('disabled','disable');
+			$loginSumbit.text('登录中....');
+			var apwd =$('#apwd').val();
+			var aname =$('#aname').val();
+
+			axios({
+				url:'/admin/login',
+				method:'post',
+				data:{aname:aname,apwd:apwd}
+			}).then(result=>{
+				console.log(result);
+				if (result.data.code==0){
+					$loginSumbit.removeAttr('disabled');
+					$loginSumbit.text('Login');
+					alert(result.data.msg);
+				}else{
+					alert("登录成功！！！！");
+					localStorage.setItem("token",result.data.token);
+					window.location.href="index.html";
+					console.log(result);
+				}
+			})
+		}
+	</script>
+</body>
+</html>
