@@ -4,9 +4,8 @@ import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.yc.learning.view.UserJson;
+import com.yc.learning.vo.UserJson;
 import com.yc.learning.vo.UserLoginVo;
 import com.yc.learning.client.UserModule_UserClient;
 import com.yc.learning.entity.User;
@@ -50,12 +49,14 @@ public class UserModule_UserClientService {
                     System.out.println(user_data);
                     //从数据库查到有相应的值
                     //将map转换为实体bean类
-                    log.info("为"+user_data+"加入到缓存中");
-                    userLoginVo(user_data); //存到redis中
+                    UserLoginVo userLoginVo = userLoginVo(user_data);//存到redis中
                     HashMap map =new HashMap();
                     map.put("code",1);
                     map.put("msg","登陆成功!");
-                    map.put("data",user_data);
+                    String s1 = new Gson().toJson(userLoginVo);
+                    String token = userLoginVo.getToken();
+                    map.put("token",token);
+                    System.out.println(new Gson().toJson(map));
                     return new Gson().toJson(map);
                 }
             }
@@ -84,11 +85,14 @@ public class UserModule_UserClientService {
         String userToken = TokenUtils.createToken(aname,apwd);
         user.setUpwd(MD5Utils.stringToMD5(apwd));
         System.err.println(user);
+        log.info("加入缓存key="+user);
         redisTemplate.opsForValue().set(
                 String.format("GODZILLA:USER:TOKEN:%s", userToken),
                 user,60*2, TimeUnit.MINUTES
         );
-        return null;
+        UserLoginVo userLoginVo=new UserLoginVo();
+        userLoginVo.setToken(userToken);
+        return userLoginVo;
     }
 
     public String check(String token) {

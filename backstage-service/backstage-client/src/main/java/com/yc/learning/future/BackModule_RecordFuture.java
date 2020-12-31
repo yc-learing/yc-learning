@@ -18,4 +18,11 @@ public class BackModule_RecordFuture {
             return recordClientService.findByPage(page, pageSize);
         });
     }
+
+    @Async
+    public CompletableFuture<String> findVoByPage(Integer page, Integer pageSize,String uname,String ename) {
+        return CompletableFuture.supplyAsync(() -> {
+            return recordClientService.findVoByPage(page, pageSize,uname,ename);
+        });
+    }
 }

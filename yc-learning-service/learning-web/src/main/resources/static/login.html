@@ -136,22 +136,7 @@
 <script type="text/javascript" src="js/vue.js"></script>
 <script type="text/javascript">
 
-    console.log(localStorage.getItem("token"));
-    $(function () {
-        console.log(localStorage.getItem("token"))
-        let item = localStorage.getItem("token");
-        if (item!=null){
-            alert("请安全退出后再登录用户!");
-            window.location.href="index.html";
-        }
-    })
     function login() {
-
-
-
-
-
-
         axios({
             url:'/admin/login',
             method:'post',
@@ -163,7 +148,7 @@
             }else{
                 alert("登录成功！！！！");
                 localStorage.setItem("token",result.data.token);
-                window.location.href="index.html";
+                window.location.href="info.html";
                 console.log(result);
             }
         })
@@ -196,15 +181,26 @@
                 }
                 axios.post('../user/login',
                     {uname: this.uname, upwd: this.upwd}).then(function (d) {
-                    if (d.data.code > 0) {
+                    if (d.data.code == 1) {
+                        var token =d.data.token;
+                        console.log(token);
+                        localStorage.setItem("token",token);
                         alert("登陆成功！")
-                        window.location.href = "index.html";
+                        window.location.href = "info.html";
                     } else {
                         alert("登陆失败！")
                     }
                 })
 
 
+            }
+        },
+        mounted:function () {
+            var localStoragetoken=localStorage.getItem("token");
+            console.log("页面保存的token为："+localStoragetoken);
+            if (localStoragetoken!=null &&localStoragetoken!=""){
+                alert("请从index.html安全退出登录！");
+                window.location.href='info.html';
             }
         }
     });

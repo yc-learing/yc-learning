@@ -40,7 +40,7 @@ public class UserModel_UserWebController {
             @RequestBody(required = false) String token){
         HashMap map= (HashMap) JSONUtils.parse(token);
         token = (String) map.get("token");
-        System.err.println(token);
+        System.err.println("web端传过来的token为："+token);
         logger.info("查询token值为："+token);
         if(token==null){
             return null;
