@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-scrapbook-source="https://uc.educity.cn/personalCenter/studyCenter.html" data-scrapbook-create="20201229102826258">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>
+			个人中心/学习中心
+		</title>
+
+		<!-- Bootstrap -->
+		
+		<link href="css/common.css" rel="stylesheet">
+		<link href="css/personal-common.css" rel="stylesheet">
+		<link href="css/myCollection.css" rel="stylesheet">
+		<link href="css/myPagination.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+
+	<body>
+	<div id="app">
+	<div class="box-shadow">
+	<div class="container clearfix" id="navigation">
+		<div class="pull-left">
+			<ul id="ul-left" class="ul-listStyle-none">
+				<li>
+					<span class="top-footer-sprite-bg inline-block icon-home"></span>
+					<a class="mgl5" href="" target="_blank">首页</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pull-right head_dl">
+			<ul id="ul-right" class="ul-listStyle-none">
+				<div class="" style="min-width:100px;float: right;padding-left: 30px;min-height: 30px;">
+					<li class="ydl" style="display: list-item;">
+						<a target="_blank" ><img src="img/toux.png" class="inline-block icon-custom-img head_userImg"><span
+								class="head_userName nowrap" style="width:76.28px " >{{userInfo.uname}}</span></a>
+						<ul class="list-unstyled menu-percenter" style="width:81px;left: 20px;">
+							<li><a class="logout" @click="logout">安全退出</a></li>
+						</ul>
+					</li>
+					<li class="wdl" style="float: left; display: none;"><a href="https://www.educity.cn/login/register.html" target="_blank">注册</a></li>
+					<li class="wdl" style="float: left; margin-left: 25px; display: none;"> <a href="https://www.educity.cn/login/"
+																							   target="_blank">登录</a></li>
+				</div>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+
+
+
+			<!--  加群modal -->
+			<div class="modal fade" id="jiaqunSty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<h4 class="modal-title" id="jiaqunid3" style="text-align:center"></h4>
+						</div>
+						<div class="modal-body heightAuto " id="jiaqunid"></div>
+						<div class="modal-footer" id="jiaqunid2"></div>
+
+					</div>
+				</div>
+			</div>
+
+			<header class="box-shadow">
+
+			</header>
+
+			<div id="personTitleWrap">
+				<div class="container clearfix" id="personTitle">
+					<div class="row"></div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row crow">
+					<div class="col-md-2">
+						<div class="bg-fff box-shadow" id="left-menu">
+							<ul class="ul-listStyle-none" id="select">
+								<li class="active" data-url-key="basicInfo.html">
+									<a @click="change($event,1)">基本信息</a>
+								</li>
+								<li class="noactive" data-url-key="feedBack.html">
+									<a @click="change($event,2)">我的考试</a>
+								</li>
+								<li class="noactive" data-url-key="myWxcodes.html">
+									<a @click="change($event,3)">联系方式</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="col-md-10">
+
+						<div class="bg-fff box-shadow" id="right-title">
+							<ul class="ul-listStyle-none clearfix">
+								<h3>基本信息</h3>
+							</ul>
+						</div>
+						<div id="baseinfo" class="commonForm mgt20" style="display: block;">
+							<div class="bg-fff box-shadow mgt10 subTabList-content row row-rest" id="loadStuWrap">
+								<div>
+									<table class="table" style="border: 1px;margin: 0 auto;background: snow" width="50%" cellpadding="5" cellspacing="0">
+										<tbody>
+
+											<tr>
+												<td>姓名</td>
+												<td><input readonly="readonly" type="text" style="width:95% ;text-align: center;font-weight: bolder" v-model="userInfo.uname"></td>
+												<td>手机电话</td>
+												<td>
+													<input  readonly="readonly" type="text" style="width:95%;text-align: center;font-weight: bolder" v-model="userInfo.tel">
+												</td>
+											</tr>
+
+											<tr>
+												<td>电子邮箱</td>
+												<td><input readonly="readonly" type="text" style="width:95%;text-align: center;font-weight: bolder" v-model="userInfo.email"></td>
+												<td>QQ</td>
+												<td><input readonly="readonly" type="text" style="width:95% ;text-align: center;font-weight: bolder" v-model="userInfo.qq"></td>
+											</tr>
+
+											<tr>
+												<td>微信</td>
+												<td><input readonly="readonly" type="text" style="width: 95%;text-align: center;font-weight: bolder " v-model="userInfo.vx"></td>
+												<td>班级</td>
+												<td><input readonly="readonly" type="text" style="width: 95%;text-align: center;font-weight: bolder" v-model="userInfo.classes"></td>
+											</tr>
+
+											<tr>
+												<td>开课时间</td>
+												<td><input readonly="readonly" style="width: 95%;text-align: center;font-weight: bolder " type="text" v-model="userInfo.registrytime"></td>
+												<td>结课时间</td>
+												<td><input readonly="readonly" style="width: 95%;text-align: center;font-weight: bolder " type="text" v-model="userInfo.endtime"></td>
+											</tr>
+
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+						<div id="examinfo" class="commonForm mgt20" style="display:none">
+							<div class="bg-fff box-shadow mgt10 subTabList-content row row-rest" id="loadStuWrap">
+								<div>
+									<table class="table" style="border: 1px;margin: 0 auto;background: snow" width="50%" cellpadding="5" cellspacing="0">
+										<tbody>
+
+											<thead>
+												<tr>
+													<th>试卷名</th>
+													<th>出题人</th>
+													<th>考试时长</th>
+													<th>考生成绩</th>
+
+												</tr>
+											</thead>
+											<tr v-for="e in examInfo">
+												<th>{{e.ename}}</th>
+												<th>{{e.aname}}</th>
+												<th>{{e.examtime}}</th>
+												<th>{{e.grade}}</th>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+
+						<div id="tikuForm" class="commonForm none mgt20" style="display: none;">
+
+							<div class="pull-left center mgl30 exam-list test-record titleBankFlow" id="test-record">
+								<div>
+									<i class="icon_index_login_me inline-block icon-start-test"> </i>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+
+			</footer>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/axios.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+	v = new Vue({
+		el: "#app",
+		data: {
+			//考试记录信息
+			examInfo: [],
+			//学生基本信息
+			userInfo: {}
+
+		},
+		mounted:function () {
+			var localStoragetoken=localStorage.getItem("token");
+			console.log("页面保存的token为："+localStoragetoken);
+			if (localStoragetoken=='' ||localStoragetoken==null){
+				alert("请先登录！！");
+				window.location.href='login.html';
+				return;
+
+			}else{
+				//发送axios请求从redis查看token是否失效
+				axios({
+					url:'../user/check',
+					method:'post',
+					data:{token:localStoragetoken}
+				}).then(result=>{
+					console.log(result);
+					if (result.data.code==0){
+						alert("用户token失效，请重新登录");
+						localStorage.removeItem("token");
+						location.href='login.html';
+					}else{
+						if (result.data.user!=null){
+							this.userInfo=result.data.user;
+						}
+					}
+					// if(!result.data){
+					//  alert("用户token失效，请重新登录");
+					//  localStorage.removeItem("token");
+					//  location.href='login.html';
+					// }else{
+					//  this.aname=result.data.admin.aname;
+					// }
+				})
+			}
+		},
+		
+		methods: {
+			change: function(e, value) {
+
+				$("#select").find("li").attr("class", "noactive");
+				$(e.target).parent().attr("class", "active");
+				if(value == 1) {
+					//显示个人信息
+					$("#baseinfo").css("display", "block");
+					$("#examinfo").css("display", "none");
+				}else if(value == 2){
+					//显示考试信息
+					$("#baseinfo").css("display", "none");
+					$("#examinfo").css("display", "block");
+
+				}
+			},
+			logout:function () {
+				var token =localStorage.getItem("token");
+				let b = confirm("是否要退出登录！");
+				console.log(b);
+				if (b ===true){
+
+					axios({
+						url:'../user/logout',
+						method:'post',
+						data:{token:token}
+					}).then(result=>{
+						console.log(result);
+						if(result.data.code===1){
+							localStorage.removeItem("token");
+							location.href='login.html';
+						}
+					})
+				}
+			}
+		}
+	});
+</script>

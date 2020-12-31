@@ -37,7 +37,6 @@
 	</style>
 	<![endif]-->
 </head>
-<
 <body class="bgc1">
 <div id="app">
 <!--  加群modal -->
@@ -217,11 +216,11 @@
 
 
 						</div>
-						<div class="collect clearfix" v-for="(item,i) in exercies">
+						<div class="collect clearfix" >
 
-							<div class="pull-right" v-show="i==index">
+							<div class="pull-right" >
 
-								<span class="unCollectText addBiaoji" @click="Biaoji(index)" v-show="i==index" :id="'biaoji'+i">标记</span>
+								<p class="unCollectText addBiaoji"  @click="Biaoji(index)" :id="'biaoji'+i">标记</p>
 <!--								<span class="icon_index_login_me inline-block icon-Unerror jiucuo" data-id="454917"></span> <span class="jiucuo"-->
 <!--																																  data-id="454917">纠错</span>-->
 							</div>
@@ -346,7 +345,7 @@
 						<div class="exBtn">
 						</div>
 						<div class="exBtn">
-							<button type="button" class="btn btn-primary submitExam" @click="sumbitExam()">我要交卷</button>
+							<button type="button" class="btn btn-primary submitExam" @click="sumbitExamOnConfrim()">我要交卷</button>
 						</div>
 					</div>
 				</div>
@@ -398,81 +397,78 @@
 			minutes:'',
 			seconds:'',
 			user_options:'',
-			uid:'1'
+			uid:'2'
 		},
 		methods:{
+
 			sumbitExam:function(){
+				//获取所有的答案
+				var $timuList=$('#timu span');
+				for (let i = 0; i < $timuList.length; i++) {
+					var indexi=i;
+					indexi++;
+					var user_option=$('#'+i).attr('value');
+					if (i ==0 ){
+						this.user_options+=indexi+"."+user_option+"";
+					}else if (i ==$timuList.length-1){
+						this.user_options+=","+indexi+"."+user_option;
+					}else{
+						this.user_options+=","+indexi+"."+user_option;
+					}
+				}
+				console.log("exid(考试编号):"+this.exid+"       uid(用户编号):"+this.uid+"      useranswer(用户答案):"+this.user_options);
+				axios({
+					url:'../exam/addRecord',
+					method:'POST',
+					data:{exid:this.exid, uid:this.uid,useranswer:this.user_options}
+				}).then(result=>{
+					if (result.data.code==1){
+						alert("交卷成功！！");
+					}else{
+						alert("微服务不可用，请联系管理员")
+					}
+				})
+			},
+
+
+			sumbitExamOnConfrim:function(){
 				var flag =confirm(`是否要交卷?`);
 				if (flag==true){
-					console.log('交卷！');
-					//获取所有的答案
-					var $timuList=$('#timu span');
-					for (let i = 0; i < $timuList.length; i++) {
-						var indexi=i;
-						indexi++;
-						var user_option=$('#'+i).attr('value');
-						if (i ==0 ){
-							this.user_options+=indexi+"."+user_option+"";
-						}else if (i ==$timuList.length-1){
-							this.user_options+=","+indexi+"."+user_option;
-						}else{
-							this.user_options+=","+indexi+"."+user_option;
-						}
-					}
-					console.log("exid(考试编号):"+this.exid+"       uid(用户编号):"+this.uid+"      useranswer(用户答案):"+this.user_options);
+					console.log('确认交卷!')
 					//发送axios请求添加参数
-					axios({
-						url:'../exam/addRecord',
-						method:'POST',
-						data:{exid:this.exid,uid:this.uid,useranswer:this.user_options}
-					}).then(result=>{
-						console.log(result);
-						if (result.data.code==1){
-							alert('交卷成功！');
-							//添加成功!!
-							//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
-							// timer = setInterval("CountTimeDown()", 1000);
-						}else{
-							alert("微服务不可用，请联系管理员")
-						}
-					})
+					this.sumbitExam();
+					clearInterval(timer);
 				}else{
 
 				}
 			},
 			//添加标记
 			Biaoji:function(index){
-
-				let $1 = $('#biaoji'+index);
-				let html = $1.text();
+				let $biaoji = $('#biaoji'+index);
+				console.log('biaoji'+index);
+				let html = $biaoji.text();
+				console.log(html);
 				if (html =='取消标记'){
 					let timumark =$('#'+index);
 					alert('取消标记成功！！');
-					$1.html('标记');
+					$biaoji.text('标记');
 					var classAttributes =timumark.attr('class');
 					console.log(classAttributes);
 					if (classAttributes==='ISpan finishISpan unFinishISpan noMark spanMark icon_question inline-block'){
-						console.log('未做题目，取消标记');
 						timumark.attr('class','ISpan finishISpan unFinishISpan noMark ')
 					}else{
-						console.log('已做题目，取消标记');
 						timumark.attr('class','ISpan finishISpan noMark')
 					}
 				}else{
+					$biaoji.text('取消标记');
 					alert('添加标记成功！！');
 					let timumark =$('#'+index);
 					var classAttributes =timumark.attr('class');
-					console.log(classAttributes);
 					if (classAttributes=='ISpan finishISpan unFinishISpan noMark '){
-						console.log('未做题目，添加标记');
 						timumark.attr('class','ISpan finishISpan unFinishISpan noMark spanMark icon_question inline-block')
 					}else{
-						console.log('已做题目，添加标记');
 						timumark.attr('class','ISpan finishISpan noMark spanMark icon_question inline-block')
 					}
-
-
-					$1.html('取消标记')
 				}
 			},
 			//标记以及做题目
@@ -488,7 +484,6 @@
 					}
 				}
 				user_option=user_option.replace('undefined','');
-				console.log('用户选择的选择题为:'+user_option);
 				value= $timu.attr("value",user_option);
 				classAttributes=classAttributes.replace('unFinishISpan','');
 				$timu.attr('class',classAttributes);
@@ -549,8 +544,7 @@
 					if (this.index=-1){
 						this.index=0;
 					}
-					console.log(this.exercies);
-					//this.examtime=result.data.data[0].examtime*60;		//设置考试时间
+					// this.examtime=result.data.data[0].examtime/5;		//设置考试时间
 					// timer = setInterval("CountTimeDown()", 1000);
 				}else{
 					alert("微服务不可用，请联系管理员")
@@ -568,6 +562,7 @@
 				--app.$data.examtime;
 			}else{
 				clearInterval(timer);
+				app.sumbitExam();
 				alert("时间到，结束!");
 			}
 		}

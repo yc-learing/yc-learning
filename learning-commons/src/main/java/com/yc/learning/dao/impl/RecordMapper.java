@@ -14,6 +14,6 @@ public interface RecordMapper extends MisBaseMapper<Record> {
     @Select("select count(*) from record  where exid=#{exid} and uid =#{uid}")
     public Integer countUidInExid(@Param("exid") Integer exid, @Param("uid") Integer uid);
 
-    @Update("update record set useranswer=#{useranswer} where exid=#{exid} and uid =#{uid}")
-    int updateRecordByExid_Uid(@Param("exid") Integer exid, @Param("uid") Integer uid,@Param("useranswer") String useranswer);
+    @Update("update record set useranswer=#{useranswer},grade=#{grade} where exid=#{exid} and uid =#{uid}")
+    int updateRecordByExid_Uid(@Param("exid") Integer exid, @Param("uid") Integer uid,@Param("useranswer") String useranswer,@Param("grade")Double grade);
 }

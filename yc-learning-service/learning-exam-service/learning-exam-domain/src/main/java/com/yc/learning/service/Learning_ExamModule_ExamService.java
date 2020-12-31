@@ -24,6 +24,7 @@ public class Learning_ExamModule_ExamService extends ExamServiceImpl{
         return  examMapper.findByClasses(classes);
     }
 
+
     @RedisAnnotation(useRedis = true)
     @Transactional(readOnly =  true)
     public List<Object> findExerciesByExam(Integer exid){

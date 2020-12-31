@@ -15,4 +15,9 @@ public interface BackModule_RecordClient {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     String findByPage (@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/back-proxy/back-record/findVoByPage",
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    String findVoByPage (@RequestParam("page") Integer page, @RequestParam("pageSize") Integer pageSize,@RequestParam("uname")String uname,@RequestParam("ename")String ename);
 }

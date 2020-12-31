@@ -1,5 +1,6 @@
 package com.yc.learning.service;
 
+import com.yc.learning.vo.UserJson;
 import com.yc.learning.dao.impl.UserMapper;
 import com.yc.learning.entity.User;
 import org.slf4j.Logger;
@@ -41,18 +42,20 @@ public class UserModule_UserService extends UserServiceImpl{
         return users.size() == 0 ? null : users.get(0);
     }
 
-    public User check(String token) {
+    public UserJson check(String token) {
         if(token==null){
             return null;
         }
-        ValueOperations<String,User> valueOperations = redisTemplate.opsForValue();
+        token="GODZILLA:USER:TOKEN:"+token;
+        ValueOperations<String,UserJson> valueOperations = redisTemplate.opsForValue();
         logger.info("从reidis查询的键为：-->"+token);
-        User user = valueOperations.get(token);
+        UserJson user = valueOperations.get(token);
         System.err.println(user);
         return user;
     }
 
     public int logout(String token) {
+        token="GODZILLA:USER:TOKEN:"+token;
         logger.info("删除token为："+token);
         Boolean delete = redisTemplate.delete(token);
         if(delete==true){

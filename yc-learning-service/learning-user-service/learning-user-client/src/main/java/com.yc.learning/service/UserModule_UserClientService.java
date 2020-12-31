@@ -1,8 +1,11 @@
 package com.yc.learning.service;
 
 import com.alibaba.druid.support.json.JSONUtils;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.yc.learning.vo.UserJson;
 import com.yc.learning.vo.UserLoginVo;
 import com.yc.learning.client.UserModule_UserClient;
 import com.yc.learning.entity.User;
@@ -33,25 +36,34 @@ public class UserModule_UserClientService {
 
     @HystrixCommand(fallbackMethod = "loginFallback")
     public String login(User user) {
-        System.out.println("登录用户");
-        System.out.println(user);
-        String login = userClient.login(user);
-        System.err.println(login);
+        String jsonString = userClient.login(user);
+        System.err.println(jsonString);  //返回的json数据
         try {
-            if(login!=null){
-                Map parse=(HashMap) JSONUtils.parse(login);
+            if(jsonString!=null){
+                Map parse=(HashMap) JSONUtils.parse(jsonString);
                 Integer code = (Integer) parse.get("code");
                 if(code==1){
-                    UserLoginVo userLoginVo = new UserLoginVo(user);
+                    Map mapdata =(HashMap) parse.get("data");
+                    JSON json = (JSON) JSON.toJSON(mapdata);
+                    UserJson user_data = JSONObject.toJavaObject((JSON) JSONObject.toJSON(mapdata), UserJson.class);
+                    System.out.println(user_data);
+                    //从数据库查到有相应的值
+                    //将map转换为实体bean类
+                    UserLoginVo userLoginVo = userLoginVo(user_data);//存到redis中
+                    HashMap map =new HashMap();
+                    map.put("code",1);
+                    map.put("msg","登陆成功!");
                     String s1 = new Gson().toJson(userLoginVo);
-                    System.out.println(s1);
-                    return s1;
+                    String token = userLoginVo.getToken();
+                    map.put("token",token);
+                    System.out.println(new Gson().toJson(map));
+                    return new Gson().toJson(map);
                 }
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        return login;
+        return jsonString;
     }
 
     private String loginFallback(User user) {
@@ -64,21 +76,22 @@ public class UserModule_UserClientService {
 
     /**
      * 生成AdminVO
-     * @param user                                                     
+     * @param user
      * @return
      */
-    private UserLoginVo userLoginVo(User user){
+    private UserLoginVo userLoginVo(UserJson user){
         String aname = user.getUname();
         String apwd = user.getUpwd();
-        String adminToken = TokenUtils.createToken(aname,apwd);
+        String userToken = TokenUtils.createToken(aname,apwd);
         user.setUpwd(MD5Utils.stringToMD5(apwd));
         System.err.println(user);
+        log.info("加入缓存key="+user);
         redisTemplate.opsForValue().set(
-                String.format("GODZILLA:ADMIN:TOKEN:%s", adminToken),
+                String.format("GODZILLA:USER:TOKEN:%s", userToken),
                 user,60*2, TimeUnit.MINUTES
         );
-        UserLoginVo userLoginVo =new UserLoginVo(user);
-        userLoginVo.setToken("GODZILLA:ADMIN:TOKEN:"+adminToken);
+        UserLoginVo userLoginVo=new UserLoginVo();
+        userLoginVo.setToken(userToken);
         return userLoginVo;
     }
 

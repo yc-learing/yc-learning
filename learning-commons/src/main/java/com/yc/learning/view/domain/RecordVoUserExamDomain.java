@@ -17,4 +17,6 @@ public class RecordVoUserExamDomain extends PageDomain {
     private Integer exid;
     private String ename;
     private String eids;
+    private Integer examtime;
+    private String aname;
 }

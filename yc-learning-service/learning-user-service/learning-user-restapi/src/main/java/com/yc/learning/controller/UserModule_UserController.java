@@ -1,6 +1,7 @@
 package com.yc.learning.controller;
 
 import com.google.gson.Gson;
+import com.yc.learning.vo.UserJson;
 import com.yc.learning.entity.User;
 import com.yc.learning.service.UserModule_UserService;
 import org.slf4j.Logger;
@@ -39,6 +40,7 @@ public class UserModule_UserController {
                         logger.info(login+"登录成功");
                         map.put("code", 1);
                         map.put("msg","登录成功");
+                        map.put("data", login);
                     }
                     else{
                         logger.info(login+"该账户被冻结");
@@ -70,7 +72,7 @@ public class UserModule_UserController {
         return CompletableFuture.supplyAsync(() -> {
             Map<String, Object> map = new HashMap<>();
             try {
-                User check = userService.check(token);
+                UserJson check = userService.check(token);
                 System.err.println(check);
                 logger.info("从redis查到登录的用户为:"+check);
                 logger.info("检查用户是否登录->token=" + token);

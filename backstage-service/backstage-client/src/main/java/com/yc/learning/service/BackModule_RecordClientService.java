@@ -25,4 +25,16 @@ public class BackModule_RecordClientService {
         map.put("msg", "服务异常");
         return new Gson().toJson(map);
     }
+
+    @HystrixCommand(fallbackMethod = "findVoByPageFallback")
+    public String findVoByPage(Integer page,Integer pageSize,String uname,String ename){
+        return recordClient.findVoByPage(page,pageSize,uname,ename);
+    }
+
+    private String findVoByPageFallback(Integer page,Integer pageSize,String uname,String ename){
+        Map map = new HashMap();
+        map.put("code", "0");
+        map.put("msg", "服务异常");
+        return new Gson().toJson(map);
+    }
 }
