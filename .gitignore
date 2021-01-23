@@ -1,10 +1,37 @@
+<<<<<<< HEAD
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+**/src/main/**/target/
+**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+=======
 # Created by .ignore support plugin (hsz.mobi)
 ### Example user template template
 ### Example user template
+>>>>>>> jjyyds
 
 # IntelliJ project files
 .idea/
 .gitignore
+<<<<<<< HEAD
+.mvn/
+**/target
+=======
 .class
 target/
 *.iml
@@ -114,3 +141,4 @@ yc-learning-service/learning-user-service/learning-user-service.iml
 yc-learning-service/learning-web/src/test/
 yc-learning-service/learning-web/target/
 yc-learning-service/yc-learning-service.iml
+>>>>>>> jjyyds

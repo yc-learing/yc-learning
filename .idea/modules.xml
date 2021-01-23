@@ -27,7 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-web/learning-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-domain/practice-service-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" filepath="$PROJECT_DIR$/yc-learning-service/learning-practice-service/practice-service-restapi/practice-service-restapi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yc-learning.iml" filepath="$PROJECT_DIR$/yc-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/yc-learning.iml" filepath="$PROJECT_DIR$/.idea/yc-learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/yc-learning-service/yc-learning-service.iml" filepath="$PROJECT_DIR$/yc-learning-service/yc-learning-service.iml" />
     </modules>
   </component>
